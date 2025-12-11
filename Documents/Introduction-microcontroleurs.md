@@ -363,8 +363,8 @@ Voici un aperçu de quelques IDEs disponibles:
 | **MPLAB® X IDE**<br>Version Windows, MacOS et Linux<br>Pour MCU de type **PIC**<br>[Disponible ici](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide) | <img src="../images/Capture-decran-le-2021-07-15-a-09.56.09.png" alt="" width="700"/> |
 | **STM32CubeIDE**<br>Version Windows, MacOS et Linux<br>Pour MCU de type **STM32**<br>[Disponible ici](https://www.st.com/en/development-tools/stm32cubeide.html) | <img src="../images/Capture-decran-le-2021-07-15-a-10.52.05.png" alt="" width="700"/> |
 | **ESP-IDF**<br>Version Windows, MacOS et Linux<br>Pour MCU de type **ESP** (ESP32, ESP8266)<br>NOTE: S'utilise à partir de la ligne de commandes.<br>[Disponible ici](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#get-started-get-esp-idf) | <img src="../images/Capture-decran-le-2021-07-15-a-10.41.25.png" alt="" width="700"/> |
-| **Arduino IDE**<br>Environnement de développement pour une **multitude de MCU**s et de plateformes de prototypage.<br>Version Windows, MacOS et Linux<br>[Disponible ici](https://www.arduino.cc/en/software) | <img src="../images/capture-decran-le-2021-07-15-a-10.27.25.png" alt="" width=700"/> |
-| **PlatformIO**<br>Environnement de développement pour une **multitude de MCU**s et de plateformes de prototypage.<br>Sous VS Code<br> | <img src="../images/Capture-decran-le-2021-07-15-a-10.27.25.png" alt="" width=700"/> |
+| **Arduino IDE**<br>Environnement de développement pour une **multitude de MCU**s et de plateformes de prototypage.<br>Version Windows, MacOS et Linux<br>[Disponible ici](https://www.arduino.cc/en/software) | <img src="../images/capture-decran-le-2021-07-15-a-10.27.25.png" alt="" width="700"/> |
+| **PlatformIO**<br>Environnement de développement pour une **multitude de MCU**s et de plateformes de prototypage.<br>Sous VS Code<br> | <img src="../images/platformio.png" alt="" width="700"/> |
 
 *Tableau 07*
 

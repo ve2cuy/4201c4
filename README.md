@@ -8,17 +8,17 @@
 ## Documents
 
 - [Plan de cours]()
-- [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md)
+- [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md) 👍
 - [Arduino Uno]()
 - [Émulateurs Arduino en ligne; Wokwi, TinkerCad]()
 - [Premiers pas avec Wokwi]()
 - [Les modules Grove]()
-- [Hello World – Arduino IDE et Wokwi]()
+- [Hello World – Arduino IDE et Wokwi](Documents/Hello-world.md) 👍
 - [Hello World – PlatformIO]()
 - [Les variables de type scalaire]()
 - [Compilation conditionnelle]()
 - [Électronique – concepts de base]()
-- [Arduino – Serial.println(val), digitalRead() et l’instruction while()pour la gestion du bouton]()
+- [Arduino – Serial.println(val), digitalRead() et l’instruction while()pour la gestion du bouton](Documents/Serial-println-et-digitalread.md) 🧠
 - [Gestion du bruit sur un bouton – bounce2]()
 - [Arduino – Lecture/écriture d’une valeur analogique – analogRead()analogWrite() PWM]()
 - [Grove – Module LCD-RGB i2c (sprintf, switch, io stream, #ifdef, op ternaire, i % j)]()
