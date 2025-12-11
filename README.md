@@ -1,4 +1,9 @@
-# 4201C4 - Objets connectés
+# 420-1C4 - Objets connectés
+
+<p align="center">
+    <img src="images/arduino.png" alt="Arduino" width="300" />
+</p>
+
 
 ## Documents
 
