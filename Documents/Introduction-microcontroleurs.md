@@ -93,16 +93,16 @@ Les microcontrôleurs sont aussi parfois appelés 'System on a Chip' ou **SoC**.
 
 Nous retrouvons les microcontrôleurs dans une multitude d'appareils électroniques tels que:
 
-| Appareil |
-|----------|
-| Four micro-ondes |
-| Thermostat intelligent |
-| Manette de jeux |
-| Clavier d'ordinateur |
-| Souris d'ordinateur |
-| Voiture |
-| Plateforme de prototypage |
-| Ligne de montage industrielle |
+| Appareil | Image |
+|----------| ----- |
+| Four micro-ondes | <img src="../images/Microwave_oven_icon-e1626190920557.png" alt="" width="100"/>  |
+| Thermostat intelligent | <img src="../images/1941816.png" alt="" width="100"/> |
+| Manette de jeux | <img src="../images/pngfind.com-joystick-png-1301456.png" alt="" width="100"/> |
+| Clavier d'ordinateur | <img src="../images/pngfind.com-computer-mouse-png-1139411.png" alt="" width="100"/> |
+| Souris d'ordinateur | <img src="../images/pngfind.com-mouse-png-5297538-e1626192157484.png" alt="" width="100"/> |
+| Voiture | <img src="../images/pngfind.com-car-png-icon-1896112.png" alt="" width="100"/> |
+| Plateforme de prototypage | <img src="../images/pngfind.com-electronics-icon-png-893304.png" alt="" width="100"/> |
+| Ligne de montage industrielle | <img src="../images/noun_Robotic_arm_1933331.png" alt="" width="100"/> |
 
 *Tableau 01*
 
@@ -160,14 +160,14 @@ Comme par exemple:
 
 Les ***microcontrôleurs*** sont habituellement disponibles sous la forme d'un unique ***circuit intégré (IC)*** adoptant un des boîtiers suivants:
 
-| Acronyme | Description |
-|----------|-------------|
-| **DIP** | Dual Inline Package |
-| **SOIC** | Small Outline Integrated Circuit |
-| **QFP/TQFP** | (Thin) Quad Flat Package |
-| **PGA** | Pin Grid Array |
-| **BGA** | Ball Grid Array |
-| **MLP** | Micro Leadframe Package |
+| Acronyme | Description | Image |
+|----------|-------------| ------------ |
+| **DIP** | Dual Inline Package |  <img src="../images/20191024141451Mda9zW.png" alt="" width="100"/>  |
+| **SOIC** | Small Outline Integrated Circuit | <img src="../images/20191024141451iO9Hpl.png" alt="" width="100"/>  |
+| **QFP/TQFP** | (Thin) Quad Flat Package | <img src="../images/51dc6e21ce395f0807000000.png" alt="" width="100"/>  |
+| **PGA** | Pin Grid Array | <img src="../images/220px-Cyrix_IBM_CPU_6x86MX_PR200_bottom.jpg" alt="" width="100"/>  |
+| **BGA** | Ball Grid Array | <img src="../images/20191024141451sgHAnb.png" alt="" width="100"/>  |
+| **MLP** | Micro Leadframe Package | <img src="../images/20191024141452xsCI5D.png" alt="" width="100"/>  |
 
 *Tableau 02*
 
@@ -185,13 +185,13 @@ De nombreuses entreprises fabriquent des microcontrôleurs proposant des fonctio
 
 Au niveau des microcontrôleurs grand public, s'adressant aux enthousiastes de l'informatique et de l'électronique, nommons les entreprises et les microcontrôleurs suivants:
 
-| Entreprise | Microcontrôleurs populaires | NB bits |
-|------------|----------------------------|---------|
-| **Atmel** * La série de MCU AVR *Achetée par Microchip en 2015 | ATtiny85<br>ATmega32U4<br>**ATmega328P** (Arduino Uno)<br>**ATmega2560** (Arduino Mega) | 8<br>8<br>8<br>8 |
-| **Microchip** La série de MCU PIC | PIC16F877A<br>PIC18F4550 | 8<br>8 |
-| **Espressif** La série de MCU ESP | ESP8266<br>ESP32 | 32<br>32 |
-| **STMicroelectronics** La série de MCU STM32 | STM32F103C8T6 | 32 |
-| **Raspberry Pi** | RP2040 | 32 |
+| Entreprise | Microcontrôleurs populaires | NB bits | Logo |
+|------------|----------------------------|---------|-------------|
+| **Atmel** * La série de MCU AVR *Achetée par Microchip en 2015 | ATtiny85<br>ATmega32U4<br>**ATmega328P** (Arduino Uno)<br>**ATmega2560** (Arduino Mega) | 8<br>8<br>8<br>8 | <img src="../images/atmel-01-logo.png" alt="" width="100"/> |  
+| **Microchip** La série de MCU PIC | PIC16F877A<br>PIC18F4550 | 8<br>8 | <img src="../images/PngItem_1851137.png" alt="" width="100"/> |
+| **Espressif** La série de MCU ESP | ESP8266<br>ESP32 | 32<br>32 | <img src="../images/espressig.png" alt="" width="100"/> |
+| **STMicroelectronics** La série de MCU STM32 | STM32F103C8T6 | 32 | <img src="../images/st.png" alt="" width="100"/> |
+| **Raspberry Pi** | RP2040 | 32 | <img src="../images/Raspi-PGB001.png" alt="" width="100"/> |
 
 *Tableau 03*
 
@@ -325,19 +325,19 @@ Il sert aussi à déboguer l'application en temps réel ou en pas à pas.
 
 Voici une liste de programmateurs/débogueurs populaires:
 
-| Fabricant | Programmateur | Description |
-|-----------|---------------|-------------|
-| **Microchip** | **PICkit 3** | Pour la programmation des séries PIC (16F, 18F, etc.)<br>[Environ **40$**] |
-| **Microchip** | **PICkit 4** | Pour la programmation des séries PIC (16F, etc.), AVR (ATmega328P, ATmega1280, etc.)<br>[Environ **125$**] |
-| **Atmel** | **Atmel AVRISP STK500** | Pour la programmation de la série AVR (ATmega328P, etc.)<br>[Environ **40$**] |
-| **STMicroelectronics** | **ST LINK V2** | Pour la programmation de la série STM32<br>[Environ **10$**] |
-| **Générique Chinois** | **XGecu TL866II Programmer PLUS** | Pour la programmation d'un vaste ensemble de MCU, FLASH, EEPROM, etc.<br>[Environ **75$**] |
+| Fabricant | Programmateur | Description | Image |
+|-----------|---------------|-------------|-------|
+| **Microchip** | **PICkit 3** | Pour la programmation des séries PIC (16F, 18F, etc.)<br>[Environ **40$**] | <img src="../images/PICKIT-3.jpg" alt="" width="100"/> |
+| **Microchip** | **PICkit 4** | Pour la programmation des séries PIC (16F, etc.), AVR (ATmega328P, ATmega1280, etc.)<br>[Environ **125$**] | <img src="../images/pickit4.jpg" alt="" width="100"/> |
+| **Atmel** | **Atmel AVRISP STK500** | Pour la programmation de la série AVR (ATmega328P, etc.)<br>[Environ **40$**] | <img src="../images/atmel_avrisp_stk500_usb_isp_programmer_1.jpg" alt="" width="100"/> |
+| **STMicroelectronics** | **ST LINK V2** | Pour la programmation de la série STM32<br>[Environ **10$**] | <img src="../images/stm32-prg.jpg" alt="" width="100"/> |
+| **Générique Chinois** | **XGecu TL866II Programmer PLUS** | Pour la programmation d'un vaste ensemble de MCU, FLASH, EEPROM, etc.<br>[Environ **75$**] | <img src="../images/tl866a-universal-usb-programmer-with-icsp-feature-28207-55-B.jpg" alt="" width="100"/> |
 
 *Tableau 06*
 
 👉 Voici un exemple d'une programmation '**en circuit**' d'un PIC 16F, en utilisant le programmateur PICkit 3, sur une plaquette de prototypage:
 
-<img src="../images/pickit-3-pinouts-connection-diagram-1.png" alt="PICkit 3 Connection Diagram" width="500" />
+<img src="../images/pickit-3-pinouts-connection-diagram-1.png" alt="PICkit 3 Connection Diagram" width="400" />
 
 ---
 
@@ -357,13 +357,14 @@ Il faudra aussi tenir compte des investissements en temps et en ressources humai
 
 Voici un aperçu de quelques IDEs disponibles:
 
-| Solution | Description |
-|----------|-------------|
-| **Microchip Studio for AVR*** *(Anciennement Atmel Studio)<br>Version Windows seulement<br>Pour MCU de type **AVR** (Atmega)<br>[Disponible ici](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices) | |
-| **MPLAB® X IDE**<br>Version Windows, MacOS et Linux<br>Pour MCU de type **PIC**<br>[Disponible ici](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide) | |
-| **STM32CubeIDE**<br>Version Windows, MacOS et Linux<br>Pour MCU de type **STM32**<br>[Disponible ici](https://www.st.com/en/development-tools/stm32cubeide.html) | |
-| **ESP-IDF**<br>Version Windows, MacOS et Linux<br>Pour MCU de type **ESP** (ESP32, ESP8266)<br>NOTE: S'utilise à partir de la ligne de commandes.<br>[Disponible ici](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#get-started-get-esp-idf) | |
-| **Arduino IDE**<br>Environnement de développement pour une **multitude de MCU**s et de plateformes de prototypage.<br>Version Windows, MacOS et Linux<br>[Disponible ici](https://www.arduino.cc/en/software) | |
+| Solution | Capture d’écran de l’IDE |
+|----------|--------------------------|
+| **Microchip Studio for AVR*** *(Anciennement Atmel Studio)<br>Version Windows seulement<br>Pour MCU de type **AVR** (Atmega)<br>[Disponible ici](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices) | <img src="../images/Capture-decran-le-2021-07-15-a-09.38.59.png" alt="" width="700"/> |
+| **MPLAB® X IDE**<br>Version Windows, MacOS et Linux<br>Pour MCU de type **PIC**<br>[Disponible ici](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide) | <img src="../images/Capture-decran-le-2021-07-15-a-09.56.09.png" alt="" width="700"/> |
+| **STM32CubeIDE**<br>Version Windows, MacOS et Linux<br>Pour MCU de type **STM32**<br>[Disponible ici](https://www.st.com/en/development-tools/stm32cubeide.html) | <img src="../images/Capture-decran-le-2021-07-15-a-10.52.05.png" alt="" width="700"/> |
+| **ESP-IDF**<br>Version Windows, MacOS et Linux<br>Pour MCU de type **ESP** (ESP32, ESP8266)<br>NOTE: S'utilise à partir de la ligne de commandes.<br>[Disponible ici](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#get-started-get-esp-idf) | <img src="../images/Capture-decran-le-2021-07-15-a-10.41.25.png" alt="" width="700"/> |
+| **Arduino IDE**<br>Environnement de développement pour une **multitude de MCU**s et de plateformes de prototypage.<br>Version Windows, MacOS et Linux<br>[Disponible ici](https://www.arduino.cc/en/software) | <img src="../images/capture-decran-le-2021-07-15-a-10.27.25.png" alt="" width=700"/> |
+| **PlatformIO**<br>Environnement de développement pour une **multitude de MCU**s et de plateformes de prototypage.<br>Sous VS Code<br> | <img src="../images/Capture-decran-le-2021-07-15-a-10.27.25.png" alt="" width=700"/> |
 
 *Tableau 07*
 
