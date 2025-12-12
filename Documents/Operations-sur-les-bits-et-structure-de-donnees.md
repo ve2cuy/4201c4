@@ -459,6 +459,11 @@ void loop() {
 
 ## 8 – LABORATOIRE – 45 minutes
 
+<img src="../images/labo02.png" alt="" width="700" />
+
+<br>
+
+
 **À partir des déclarations du code source précédent,**
 
 * Ajouter un champ pour l’humidité dans la structure ‘Appareil’ 

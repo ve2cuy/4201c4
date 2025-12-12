@@ -25,7 +25,7 @@
 - [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) 👍
 - [Structures de données]()
 - [L’instruction ‘enum’ du langage C (TP02)]()
-- [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)]()
+- [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 👍🧠
 - [Buzzer et NeoPixel]()
 - [Real Time Clock RTC (Utilisation de fonctions, notions de pointeurs)]()
 - [Détecteur de mouvements]()
