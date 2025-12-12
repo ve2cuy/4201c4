@@ -22,7 +22,7 @@
 - [Gestion du bruit sur un bouton – bounce2]()
 - [Arduino – Lecture/écriture d’une valeur analogique – analogRead()analogWrite() PWM](Documents/analogRead.md) 👍🧠
 - [Grove – Module LCD-RGB i2c (sprintf, switch, io stream, #ifdef, op ternaire, i % j)](Documents/LCD-enum-ifdef.md) 👍🧠
-- [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)]()
+- [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) 👍
 - [Structures de données]()
 - [L’instruction ‘enum’ du langage C (TP02)]()
 - [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)]()
