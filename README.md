@@ -26,8 +26,8 @@
 - [Structures de données]()
 - [L’instruction ‘enum’ du langage C (TP02)]()
 - [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 👍🧠
-- [Buzzer et NeoPixel]()
-- [Real Time Clock RTC (Utilisation de fonctions, notions de pointeurs)]()
+- [Buzzer et NeoPixel](Documents/NEOPixel.md) 👍🧠
+- [Real Time Clock RTC (Utilisation de fonctions, notions de pointeurs)](Documents/RTC-DS1307.md) 👍🧠
 - [Détecteur de mouvements]()
 - [Opérations non bloquantes – millis() et Interruptions (TP02)]()
 - [ESP-Wifi – accès réseau (TP02)]()
