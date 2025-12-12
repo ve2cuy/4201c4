@@ -546,12 +546,13 @@ void loop() {
 
 ## Références
 
-[Référence du langage Arduino](https://www.arduino.cc/reference/fr/)
+[Référence C++ de la librairie Arduino](https://www.arduino.cc/reference/fr/)
 
 ---
 
 ## Crédits
 
-*Version 2025.03.03.1 du document*
+*Document rédigé par Alain Boudreault © 2021-2026*  
+*Version 2025.03.03.1 - Révision 2025.12.11.1*  
 
 *Contenu par [VE2CUY](http://ve2cuy.com/blog)*

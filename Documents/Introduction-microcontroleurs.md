@@ -439,4 +439,5 @@ Le langage de programmation utilisé est le C++
 
 *Document rédigé par Alain Boudreault © 2021-2026*  
 *Version 2025.12.11.1*  
-*Site par ve2cuy*
+
+*Contenu par [VE2CUY](http://ve2cuy.com/blog)*
