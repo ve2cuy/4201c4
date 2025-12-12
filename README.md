@@ -18,9 +18,9 @@
 - [Les variables de type scalaire]()
 - [Compilation conditionnelle]()
 - [Électronique – concepts de base]()
-- [Arduino – Serial.println(val), digitalRead() et l’instruction while()pour la gestion du bouton](Documents/Serial-println-et-digitalread.md) 🧠
+- [Arduino – Serial.println(val), digitalRead() et l’instruction while()pour la gestion du bouton](Documents/Serial-println-et-digitalread.md) 👍🧠
 - [Gestion du bruit sur un bouton – bounce2]()
-- [Arduino – Lecture/écriture d’une valeur analogique – analogRead()analogWrite() PWM]()
+- [Arduino – Lecture/écriture d’une valeur analogique – analogRead()analogWrite() PWM](Documents/analogRead.md) 👍
 - [Grove – Module LCD-RGB i2c (sprintf, switch, io stream, #ifdef, op ternaire, i % j)]()
 - [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)]()
 - [Structures de données]()
