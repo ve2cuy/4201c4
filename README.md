@@ -7,7 +7,7 @@
 
 ## Documents
 
-- [Plan de cours]()
+- [Plan de cours](Documents/Plan-de-cours.md) 👍🧠
 - [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md) 👍
 - [Arduino Uno]()
 - [Émulateurs Arduino en ligne; Wokwi, TinkerCad]()
@@ -16,8 +16,8 @@
 - [Hello World – Arduino IDE et Wokwi](Documents/Hello-world.md) 👍
 - [Hello World – PlatformIO]()
 - [Les variables de type scalaire]()
-- [Compilation conditionnelle]()
-- [Électronique – concepts de base]()
+- [Compilation conditionnelle](Documents/Compilation-conditionnelle.md) 👍
+- [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md) 👍
 - [Arduino – Serial.println(val), digitalRead() et l’instruction while()pour la gestion du bouton](Documents/Serial-println-et-digitalread.md) 👍🧠
 - [Gestion du bruit sur un bouton – bounce2]()
 - [Arduino – Lecture/écriture d’une valeur analogique – analogRead()analogWrite() PWM](Documents/analogRead.md) 👍🧠
@@ -35,12 +35,10 @@
 - [Détecteur infrarouge – Contenu optionnel]()
 - [EEPROM – Contenu optionnel]()
 - [Capteur RFID – Contenu optionnel (DÉFI: TP02)]()
-- [TP01-2025, TP01-2022, TP01-2021]()
+- [TP01-2025](Documents/TP01-H25.md) 👍
 - [Formatif examen 01]()
 - [Défi de mi-session]()
-- [Énoncé du projet de l’épreuve synthèse du cours: AUT-2021]()
-- [Énoncé du projet de l’épreuve synthèse du cours: AUT 2022]()
-- [Formatif du volet B de l’épreuve synthèse AUT 2022 – Épreuve synthèse volet B 2022]()
+- [Énoncé du projet de l’épreuve synthèse du cours - Volet A: H25](Documents/ES-H25-Volet-A.md) 👍
 
 ---
 
