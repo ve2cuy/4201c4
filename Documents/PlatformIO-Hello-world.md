@@ -83,6 +83,70 @@ void setup() {
 void loop() {
 }
 ```
+---
+
+## 6 - Hello World avec une DEL (LED)
+
+## 6.1 – Exemple avec documentation
+
+```c
+// Projet: Introduction à Arduino
+// Auteur: Alain Boudreault
+// Date: 2021.07.17
+
+void setup() {
+  pinMode(13, 1); // OUTPUT
+}
+
+void loop() {
+  digitalWrite(13, 1); // ON
+  delay(500);
+  digitalWrite(13, 0); // OFF
+  delay(500);
+}
+```
+
+👉 Tester l'application
+
+---
+
+## 6.2 – Utilisation de MACROs
+
+```c
+#define DEL_ROUGE 13
+#define SORTIE 1
+#define ALLUMER 1
+#define ETEINDRE 0
+#define DELAI 500
+
+void setup() {
+  pinMode(DEL_ROUGE, SORTIE);
+}
+
+void loop() {
+  digitalWrite(DEL_ROUGE, ALLUMER);
+  delay(DELAI);
+  digitalWrite(DEL_ROUGE, ETEINDRE);
+  delay(DELAI);
+}
+```
+
+👉 Tester l'application
+
+---
+
+## 7 – Utilisation d'un fichier d'entête (.h)
+
+```c
+// Fichier lib/main.h 
+// Dans main.cpp, ajouter : #include "main.h"
+#define DEL_ROUGE 13
+#define SORTIE 1
+#define ALLUMER 1
+#define ETEINDRE 0
+#define DELAI 500
+```
+
 
 ---
 
