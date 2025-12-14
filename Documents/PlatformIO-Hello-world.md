@@ -1,3 +1,18 @@
+# Introduction à PlatformIO
+
+### Définition
+
+LOREM IPSUM ...
+
+---
+
+
+💡 **NOTE**: Il faut avoir installé l'extension PlatformIO IDE sous VS Code
+
+<img src="../images/pio-install.png" alt="platformIO" width="500" />
+
+---
+
 
 ## 1 - Créer un nouveau projet sous PlatformIO
 
