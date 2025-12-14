@@ -1,0 +1,94 @@
+
+## 1 - Créer un nouveau projet sous PlatformIO
+
+<img src="../images/pio-01.png" alt="platformIO" width="500" />
+
+### Nommer le projet et choisir la platforme
+
+<img src="../images/pio-02.png" alt="platformIO" width="500" />
+
+### 1.1 - Examiner la structure de départ
+
+<img src="../images/pio-02b.png" alt="platformIO" width="500" />
+
+### 1.2 - Le fichier main.cpp
+
+<img src="../images/pio-03.png" alt="platformIO" width="500" />
+
+<br>
+
+---
+
+### 1.3 - Remplacer le code source de main.cpp par:
+
+```c++
+#include <Arduino.h>
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Bonjour le Mode!\n");
+}
+
+void loop() {
+ 
+}
+```
+
+## 2 - Compiler le projet:
+<img src="../images/pio-build.png" alt="platformIO" width="500" />
+
+ou -> CTRL+ALT+B
+
+<img src="../images/pio-build-action.png" alt="platformIO" width="500" />
+
+
+## 3 - Téléverser l'application vers le micro-contrôleur
+<img src="../images/pio-upload.png" alt="platformIO" width="500" />
+<img src="../images/pio-build-action1.png" alt="platformIO" width="500" />
+<img src="../images/pio-build-action2.png" alt="platformIO" width="500" />
+
+ou -> CTRL+ALT+U
+
+
+## 4 - Afficher le moniteur série (Pour les traces du programme)
+<img src="../images/pio-serial-monitor.png" alt="platformIO" width="500" />
+<img src="../images/pio-upload-action.png" alt="platformIO" width="500" />
+
+ou -> CTRL+ALT+S
+
+---
+
+## 5 - Installer une librairie supplémentaire:
+
+<img src="../images/pio-librairie-01.png" alt="platformIO" width="500" />
+
+<img src="../images/pio-librairie-02.png" alt="platformIO" width="500" />
+
+<img src="../images/pio-librairie-03.png" alt="platformIO" width="500" />
+
+<img src="../images/pio-librairie-04.png" alt="platformIO" width="500" />
+
+
+### 5.1 - Remplacer le code source de main.cpp par et tester l'application:
+
+```c++
+#include <Arduino.h>
+#include <Streaming.h>
+
+void setup() {
+  Serial.begin(9600);
+  Serial << "Bonjour le Monde!" << endl;
+}
+
+void loop() {
+}
+```
+
+---
+
+## Crédits
+
+**Document rédigé par Alain Boudreault © 2021-2026**
+**Version 2025.12.14.01
+
+*Contenu par [VE2CUY](http://ve2cuy.com/blog)*

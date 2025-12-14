@@ -3,7 +3,7 @@ Toutes les images utilisent `<img src="../images/..." alt="" width="500" />` et 
 
 ---
 
-# Arduino – Hello world!
+# Arduino – Hello world
 17 juillet 2021
 
 <img src="../images/arduino-uno-00.jpg" alt="" width="500" />  
@@ -22,6 +22,7 @@ Toutes les images utilisent `<img src="../images/..." alt="" width="500" />` et 
 - Utilisation de MACROs (constantes)
 
 ---
+
 
 ## 1 – Allumer la DEL sur D13
 
