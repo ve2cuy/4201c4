@@ -9,7 +9,7 @@
 
 ### 1.1 - Examiner la structure de départ
 
-<img src="../images/pio-02b.png" alt="platformIO" width="500" />
+<img src="../images/pio-02b.png" alt="platformIO" width="300" />
 
 ### 1.2 - Le fichier main.cpp
 
@@ -37,24 +37,26 @@ void loop() {
 ## 2 - Compiler le projet:
 <img src="../images/pio-build.png" alt="platformIO" width="500" />
 
-ou -> CTRL+ALT+B
+> ou -> **CTRL+ALT+B**
 
 <img src="../images/pio-build-action.png" alt="platformIO" width="500" />
 
 
 ## 3 - Téléverser l'application vers le micro-contrôleur
+
+> ou -> **CTRL+ALT+U**
+
 <img src="../images/pio-upload.png" alt="platformIO" width="500" />
 <img src="../images/pio-build-action1.png" alt="platformIO" width="500" />
 <img src="../images/pio-build-action2.png" alt="platformIO" width="500" />
 
-ou -> CTRL+ALT+U
 
 
 ## 4 - Afficher le moniteur série (Pour les traces du programme)
 <img src="../images/pio-serial-monitor.png" alt="platformIO" width="500" />
 <img src="../images/pio-upload-action.png" alt="platformIO" width="500" />
 
-ou -> CTRL+ALT+S
+> ou -> **CTRL+ALT+S**
 
 ---
 
