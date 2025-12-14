@@ -138,7 +138,7 @@ void loop() {
 ## 7 – Utilisation d'un fichier d'entête (.h)
 
 ```c
-// Fichier lib/main.h 
+// Fichier include/main.h 
 // Dans main.cpp, ajouter : #include "main.h"
 #define DEL_ROUGE 13
 #define SORTIE 1
