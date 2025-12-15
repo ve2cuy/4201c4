@@ -1,9 +1,4 @@
-**Voici la conversion du contenu en Markdown GitHub avec la syntaxe demandée pour les images.**  
-Toutes les images utilisent `<img src="../images/..." alt="" width="500" />` et conservent leur nom original.
-
----
-
-# Arduino – Hello world
+# Arduino IDE – Hello world
 17 juillet 2021
 
 <img src="../images/arduino-uno-00.jpg" alt="" width="500" />  
