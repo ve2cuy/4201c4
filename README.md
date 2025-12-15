@@ -13,6 +13,7 @@
 - [Émulateurs Arduino en ligne; Wokwi, TinkerCad]()
 - [Hello World – PlatformIO](Documents/PlatformIO-Hello-world.md) 🧠
 - [Hello World – Arduino IDE et Wokwi](Documents/Hello-world.md) 👍
+- [Les librairies](Documents/Utilisation-de-librairies.md) 👉🧠
 - [Les variables de type scalaire]()
 - [Compilation conditionnelle](Documents/Compilation-conditionnelle.md) 👍
 - [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md) 👍
