@@ -165,46 +165,9 @@ Le moniteur série de PlatformIO offre plusieurs avantages:
 
 ---
 
-## 5 - Installer une librairie supplémentaire:
+## 5 - Hello World avec une DEL (LED)
 
-<img src="../images/pio-librairie-01.png" alt="Librairies 1" width="500" />
-
-<img src="../images/pio-librairie-02.png" alt="Librairies 2" width="500" />
-
-<img src="../images/pio-librairie-03.png" alt="Librairies 3" width="500" />
-
-<img src="../images/pio-librairie-04.png" alt="Librairies 4" width="500" />
-
-**Avantages du gestionnaire de librairies PlatformIO:**
-- Recherche rapide parmi des milliers de librairies
-- Informations détaillées (documentation, exemples, compatibilité)
-- Installation en un clic
-- Gestion automatique des versions et dépendances
-
-### 5.1 - Remplacer le code source de main.cpp par et tester l'application:
-
-```cpp
-#include <Arduino.h>
-#include <Streaming.h>
-
-void setup() {
-  Serial.begin(9600);
-  Serial << "Bonjour le Monde!" << endl;
-}
-
-void loop() {
-}
-```
-
-**Explication:**
-- La librairie **Streaming** permet d'utiliser l'opérateur `<<` pour afficher dans le port série, rendant le code plus lisible et proche du C++ standard
-- `endl` est équivalent à `\n` et force l'envoi immédiat du message
-
----
-
-## 6 - Hello World avec une DEL (LED)
-
-### 6.1 – Exemple avec documentation
+### 5.1 – Exemple avec documentation
 
 ```cpp
 // Projet: Introduction à Arduino
@@ -233,7 +196,7 @@ void loop() {
 
 ---
 
-### 6.2 – Utilisation de MACROs
+### 5.2 – Utilisation de MACROs
 
 ```cpp
 #define DEL_ROUGE 13
@@ -269,7 +232,7 @@ void loop() {
 
 ---
 
-## 7 – Utilisation d'un fichier d'entête (.h)
+## 6 – Utilisation d'un fichier d'entête (.h)
 
 ```cpp
 // Fichier include/main.h 
@@ -346,7 +309,7 @@ mon_projet/
 
 ---
 
-## 8 - Configuration avancée dans platformio.ini
+## 7 - Configuration avancée dans platformio.ini
 
 Le fichier `platformio.ini` permet de configurer finement votre projet:
 
@@ -383,7 +346,7 @@ upload_speed = 115200
 
 ---
 
-## 9 - Raccourcis clavier utiles
+## 8 - Raccourcis clavier utiles
 
 | Action | Raccourci |
 |--------|-----------|
@@ -396,7 +359,7 @@ upload_speed = 115200
 
 ---
 
-## 10 - Conseils pour bien débuter
+## 9 - Conseils pour bien débuter
 
 1. **Toujours inclure `<Arduino.h>`**: C'est obligatoire dans les fichiers .cpp (contrairement aux .ino)
 
