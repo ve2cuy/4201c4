@@ -47,6 +47,8 @@ Les librairies populaires sont:
 #### **5. Bénéficier de l'expertise**
 Les librairies sont souvent écrites par des experts qui connaissent parfaitement le matériel ou le protocole concerné. Vous bénéficiez de leur expertise sans avoir à tout apprendre.
 
+---
+
 ### 1.2 - Types de librairies
 
 #### **Librairies matérielles**
@@ -78,6 +80,8 @@ Déjà incluses avec Arduino:
 - `Serial`: Communication série
 - `EEPROM`: Lecture/écriture de la mémoire permanente
 
+---
+
 ### 1.3 - Structure d'une librairie
 
 Une librairie typique contient:
@@ -106,7 +110,9 @@ class MaLibrairie {
 
 **Le fichier .cpp** contient l'implémentation réelle du code.
 
-### 1.4 - Installer une librairie supplémentaire:
+---
+
+### 1.4 - Voici comment installer une librairie sous PlatformIO
 
 <img src="../images/pio-librairie-01.png" alt="Librairies 1" width="500" />
 
@@ -123,6 +129,8 @@ class MaLibrairie {
 - Gestion automatique des versions et dépendances
 - Pas besoin de télécharger et copier manuellement les fichiers
 - Les librairies sont automatiquement compilées avec votre projet
+
+---
 
 ### 1.5 - Comment choisir une bonne librairie?
 
@@ -159,6 +167,8 @@ Serial << "Temperature: " << temperature << " C, Humidite: " << humidite << " %"
 
 C'est plus **concis**, plus **lisible** et plus **proche du C++ standard**.
 
+---
+
 ### 1.7 - Remplacer le code source de main.cpp par et tester l'application:
 
 ```cpp
@@ -185,6 +195,8 @@ void loop() {
 - Moins d'erreurs de syntaxe (oubli de guillemets, virgules)
 - Style de programmation moderne
 - Facilite l'affichage de variables mixées avec du texte
+
+---
 
 ### 1.8 - Créer sa propre librairie locale
 
@@ -249,6 +261,8 @@ void loop() {
 }
 ```
 
+---
+
 ### 1.9 - Gestion des versions de librairies
 
 Dans PlatformIO, vous pouvez spécifier la version exacte d'une librairie dans `platformio.ini`:
@@ -271,6 +285,8 @@ lib_deps =
 - **Reproductibilité**: Le projet compile de la même façon dans le futur
 - **Stabilité**: Évite les bugs introduits par de nouvelles versions
 - **Compatibilité**: Certaines versions peuvent casser l'API
+
+---
 
 ### 1.10 - Dépendances entre librairies
 
@@ -297,6 +313,15 @@ PlatformIO détecte et installe automatiquement `Adafruit GFX Library` et `Adafr
 | **Évolution** | Tout réécrire pour chaque amélioration | Mises à jour automatiques |
 
 **En résumé**: Les librairies sont comme des outils dans une boîte à outils. Vous **pourriez** construire chaque outil à la main, mais c'est beaucoup plus efficace d'utiliser des outils existants et de vous concentrer sur votre projet principal!
+
+---
+
+## Laboratoire
+
+<img src="../images/labo02.png" alt="" width="700" />
+
+<br>
+TODO:
 
 ---
 
