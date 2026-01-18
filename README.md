@@ -40,7 +40,7 @@
 - [Énoncé du projet de l’épreuve synthèse du cours - Volet A: H25](Documents/ES-H25-Volet-A.md) 👍
 
 ---
-
+                                   
 ## Auteur
 
 <img src="images/moi.jpg" alt="Alain Boudreault" width="300" />
@@ -52,4 +52,4 @@
 - Téléphone: x6516
 - Local: D125e
 
-[Disponibilités pour la session H26](Documents/Disponibilites-enseignant-H26.md)
+[Disponibilités pour la session H26](images/Horaire-H26.png)
