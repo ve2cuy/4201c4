@@ -94,7 +94,6 @@ La structure d'un projet PlatformIO est organisée de manière professionnelle:
 
 <img src="../images/pio-03.png" alt="Fichier main.cpp" width="500" />
 
-Contrairement à l'IDE Arduino qui utilise des fichiers .ino, PlatformIO utilise des fichiers .cpp standard C++. Il faut donc inclure explicitement la librairie Arduino avec `#include <Arduino.h>`.
 
 ---
 
@@ -109,14 +108,17 @@ void setup() {
 }
 
 void loop() {
- 
-}
+  
+  }
 ```
+
 
 **Explication du code:**
 - `#include <Arduino.h>`: Inclusion obligatoire de la librairie Arduino
 - `Serial.begin(9600)`: Initialisation de la communication série à 9600 bauds
 - `Serial.println()`: Affichage d'un message dans le moniteur série
+
+💡Note: Contrairement à l'IDE Arduino qui utilise des fichiers .ino, PlatformIO utilise des fichiers .cpp standard C++. Il faut donc inclure explicitement la librairie Arduino avec `#include <Arduino.h>`.
 
 ---
 
@@ -205,7 +207,7 @@ void loop() {
 }
 ```
 
-👉 Tester l'application
+👉 Tester l'application et consulter le fichier 'log'
 
 **Explication du code:**
 - `pinMode(13, 1)`: Configure la broche 13 en sortie (OUTPUT = 1)

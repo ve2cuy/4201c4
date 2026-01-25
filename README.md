@@ -8,17 +8,17 @@
 ## Documents
 
 - [Plan de cours](Documents/420-1C4-JR_ab_pc_H26.pdf)
-- [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md) 👍
+- [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md)
 - [Arduino Uno]()
 - [Émulateurs Arduino en ligne; Wokwi, TinkerCad]()
-- [Hello World – PlatformIO](Documents/PlatformIO-Hello-world.md) 🧠
-- [Hello World – Arduino IDE et Wokwi](Documents/Hello-world.md) 👍
+- [Hello World – PlatformIO](Documents/PlatformIO-Hello-world.md) 
+- [Hello World – Arduino IDE](Documents/Hello-world.md)
 - [Les librairies](Documents/Utilisation-de-librairies.md) 👉🧠
 - [Les variables de type scalaire]()
-- [Compilation conditionnelle](Documents/Compilation-conditionnelle.md) 👍
-- [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md) 👍
-- [Arduino – Serial.println(val), digitalRead() et l’instruction while()pour la gestion du bouton](Documents/Serial-println-et-digitalread.md) 👍🧠
-- [Gestion du bruit sur un bouton – bounce2]()
+- [Compilation conditionnelle](Documents/Compilation-conditionnelle.md)
+- [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md)
+- [Arduino – Serial.println(val), digitalRead() et l’instruction while() pour la gestion du bouton](Documents/Serial-println-et-digitalread.md) 👍🧠
+- [Gestion du bruit sur un bouton – bounce2]() 🧠
 - [Arduino – Lecture/écriture d’une valeur analogique – analogRead()analogWrite() PWM](Documents/analogRead.md) 👍🧠
 - [Grove – Module LCD-RGB i2c (sprintf, switch, io stream, #ifdef, op ternaire, i % j)](Documents/LCD-enum-ifdef.md) 👍🧠
 - [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) 👍

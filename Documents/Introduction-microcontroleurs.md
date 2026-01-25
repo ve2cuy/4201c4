@@ -1,6 +1,6 @@
 # Introduction aux microcontrôleurs
 
-*Date: 13 juillet 2021 - Révision du 2025.12.10*
+*Révision du 2025.12.10*
 
 <img src="../images/favpng_arduino-computer-electronics-microcontroller-application-software.png" alt="Arduino Microcontroller" width="500" />
 
