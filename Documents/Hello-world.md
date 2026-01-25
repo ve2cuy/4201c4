@@ -1,5 +1,4 @@
 # Arduino IDE – Hello world
-17 juillet 2021
 
 <img src="../images/arduino-uno-00.jpg" alt="" width="500" />  
 

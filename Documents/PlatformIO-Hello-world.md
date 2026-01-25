@@ -1,5 +1,7 @@
 # Introduction à PlatformIO
 
+<img src="../images/arduino-uno-00.jpg" alt="" width="500" />  
+
 ## Définition
 
 **PlatformIO** est un écosystème complet pour le développement embarqué qui s'intègre dans Visual Studio Code. C'est une plateforme professionnelle de développement qui supporte plus de 1000 cartes de développement différentes et plus de 50 plateformes, incluant Arduino, ESP32, STM32, Raspberry Pi Pico, et bien d'autres.
@@ -175,9 +177,11 @@ Le moniteur série de PlatformIO offre plusieurs avantages:
 ### 5.1 – Exemple avec documentation et fichier de logs
 
 ```cpp
+// -----------------------------------------------
 // Projet: Introduction à Arduino
 // Auteur: Alain Boudreault
-// Date: 2021.07.17 - 2026
+// Date: 2026.01.25
+// -----------------------------------------------
 // Ajouter dans platformio.ini
 // monitor_filters =
 //  default   ; Retire les caractères de contrôle
@@ -208,6 +212,9 @@ void loop() {
 - `digitalWrite(13, 1)`: Allume la LED (HIGH = 1)
 - `delay(500)`: Attend 500 millisecondes
 - La LED clignote avec un cycle de 500ms allumée, 500ms éteinte
+
+<img src="../images/Enreg-26-7-2021.gif" alt="" width="500" />
+
 
 ---
 
