@@ -53,4 +53,5 @@
 - Local: D125e
 
 [Disponibilités pour la session H26](images/Horaire-H26.png)
-[Calendrier scolaire H25](/Documents/Calendriers_H26_CSTJ.pdf)
+
+[Calendrier scolaire H26](/Documents/Calendriers_H26_CSTJ.pdf)
