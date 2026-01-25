@@ -7,7 +7,7 @@
 
 ## Documents
 
-- [Plan de cours](Documents/420-1C4-JR_ab_pc_H26.pdfd)
+- [Plan de cours](Documents/420-1C4-JR_ab_pc_H26.pdf)
 - [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md) 👍
 - [Arduino Uno]()
 - [Émulateurs Arduino en ligne; Wokwi, TinkerCad]()
