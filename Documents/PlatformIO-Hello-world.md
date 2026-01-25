@@ -131,7 +131,7 @@ La compilation vérifie le code sans le téléverser sur la carte. C'est utile p
 **Avantages de la compilation PlatformIO:**
 - Plus rapide grâce à la compilation incrémentale
 - Messages d'erreur plus détaillés et clairs
-- Affichage de la taille mémoire utilisée (Flash et RAM)
+- Affichage de la taille mémoire utilisée (Flash et RAM) - Disponible aussi de Arduino IDE.
 
 ---
 
@@ -158,9 +158,14 @@ Le téléversement (upload) compile automatiquement le projet si nécessaire, pu
 > ou -> **CTRL+ALT+S**
 
 Le moniteur série de PlatformIO offre plusieurs avantages:
-- **Horodatage des messages**: Possibilité d'afficher l'heure de chaque message
-- **Filtrage**: Recherche dans les messages affichés
-- **Sauvegarde**: Enregistrement des logs dans un fichier
+- **Diagnostic**: Afficher des traces lors de l'éxécution
+- **Filtrage**: Recherche dans les messages affichés (CTRL+F)
+- **Sauvegarde**: Enregistrement des logs dans un fichier, avec horodatage des messages
+- - monitor_filters =
+  default  
+  time     
+  log2file 
+
 - **Reconnexion automatique**: Après un téléversement
 
 ---
@@ -173,13 +178,22 @@ Le moniteur série de PlatformIO offre plusieurs avantages:
 // Projet: Introduction à Arduino
 // Auteur: Alain Boudreault
 // Date: 2021.07.17 - 2026
+// Ajouter dans platformio.ini
+// monitor_filters =
+//  default   ; Retire les caractères de contrôle
+//  time      ; Horodatage des lignes
+//  log2file  ; Log les Serial.print dans le fichier “device-monitor-date-heure*.log” situé dans le dossier 'logs' du projet.
+
 #include <Arduino.h>
 
 void setup() {
+  Serial.begin(9600)
   pinMode(13, 1); // OUTPUT
 }
 
 void loop() {
+  static int i = 0;
+  Serial.println("Itération numéro: " + String(i++));  
   digitalWrite(13, 1); // ON
   delay(500);
   digitalWrite(13, 0); // OFF
