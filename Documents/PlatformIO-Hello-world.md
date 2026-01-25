@@ -103,7 +103,7 @@ Contrairement à l'IDE Arduino qui utilise des fichiers .ino, PlatformIO utilise
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Bonjour le Mode!\n");
+  Serial.println("Bonjour le Monde!\n");
 }
 
 void loop() {
@@ -172,7 +172,8 @@ Le moniteur série de PlatformIO offre plusieurs avantages:
 ```cpp
 // Projet: Introduction à Arduino
 // Auteur: Alain Boudreault
-// Date: 2021.07.17
+// Date: 2021.07.17 - 2026
+#include <Arduino.h>
 
 void setup() {
   pinMode(13, 1); // OUTPUT
@@ -199,6 +200,8 @@ void loop() {
 ### 5.2 – Utilisation de MACROs
 
 ```cpp
+#include <Arduino.h>
+
 #define DEL_ROUGE 13
 #define SORTIE 1
 #define ALLUMER 1
@@ -354,8 +357,7 @@ upload_speed = 115200
 | Téléverser | Ctrl + Alt + U |
 | Moniteur série | Ctrl + Alt + S |
 | Nettoyer | Ctrl + Alt + C |
-| Compiler et téléverser | Ctrl + Alt + T |
-| Recherche de librairies | Ctrl + Shift + P → "PlatformIO: Libraries" |
+| Recherche des commandes PIO | Ctrl + Shift + P → "PlatformIO" |
 
 ---
 
@@ -369,7 +371,7 @@ upload_speed = 115200
 
 4. **Lire les messages de compilation**: Ils contiennent des informations précieuses sur l'utilisation mémoire
 
-5. **Utiliser les constantes Arduino**: Préférer `OUTPUT`, `INPUT`, `HIGH`, `LOW` aux valeurs numériques
+5. **Utiliser les constantes (MACROs) Arduino**:  `OUTPUT`, `INPUT`, `HIGH`, `LOW` préférer aux valeurs numériques
 
 6. **Commenter son code**: Documenter les sections importantes et les choix techniques
 
@@ -381,9 +383,7 @@ upload_speed = 115200
 
 ## Conclusion
 
-PlatformIO représente une évolution majeure pour le développement Arduino et embarqué en général. En combinant la simplicité d'Arduino avec la puissance d'un IDE professionnel, il permet aux développeurs de tous niveaux de créer des projets plus robustes, maintenables et évolutifs.
-
-Que vous soyez débutant ou développeur expérimenté, PlatformIO vous offrira un environnement de travail moderne et efficace qui facilitera grandement votre développement de projets embarqués.
+PlatformIO représente une solution efficace pour le développement Arduino et embarqué en général. En combinant la simplicité d'Arduino avec la puissance d'un IDE professionnel, avec lequel vous êtes déjà familier (VSCode), il permet aux développeurs de créer des projets plus robustes, maintenables et évolutifs (git).
 
 ---
 
@@ -391,6 +391,6 @@ Que vous soyez débutant ou développeur expérimenté, PlatformIO vous offrira 
 
 **Document rédigé par Alain Boudreault © 2021-2026**
 
-**Version 2025.12.14.01**
+**Version 2026.01.25.01**
 
 *Contenu par [VE2CUY](http://ve2cuy.com/blog)*
