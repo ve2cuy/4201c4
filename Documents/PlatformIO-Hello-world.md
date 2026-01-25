@@ -172,7 +172,7 @@ Le moniteur série de PlatformIO offre plusieurs avantages:
 
 ## 5 - Hello World avec une DEL (LED)
 
-### 5.1 – Exemple avec documentation
+### 5.1 – Exemple avec documentation et fichier de logs
 
 ```cpp
 // Projet: Introduction à Arduino
@@ -193,7 +193,7 @@ void setup() {
 
 void loop() {
   static int i = 0;
-  Serial.println("Itération numéro: " + String(i++));  
+  Serial.print("\nItération numéro: " + String(i++));  
   digitalWrite(13, 1); // ON
   delay(500);
   digitalWrite(13, 0); // OFF
