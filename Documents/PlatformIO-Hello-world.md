@@ -66,9 +66,13 @@ PlatformIO présente plusieurs avantages significatifs par rapport à l'IDE Ardu
 
 ## Installation de l'extension PlatformIO IDE sous VS Code
 
+PlatformIO s'installe sous VS Code en y ajoutant l'extension 'PlatformIO IDE':
+
 <img src="../images/pio-install.png" alt="Installation PlatformIO" width="500" />
 
 ---
+
+## 👉 Premiers pas
 
 ## 1 - Créer un nouveau projet sous PlatformIO
 
