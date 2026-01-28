@@ -1,7 +1,8 @@
 # Compilation conditionnelle
 
-<img src="../images/antique-clock-face-.png" alt="Horloge" width="500" />
-
+<p align="center">
+  <img src="../images/antique-clock-face-.png" alt="Horloge" width="350" />
+</p>
 ---
 
 Les directives `#ifdef`, `#ifndef`, `#else`, et `#endif` sont utilisées pour la **compilation conditionnelle** dans le langage C. Elles permettent d'inclure ou d'exclure certaines parties du code en fonction de conditions spécifiques. Cela peut être utile pour activer ou désactiver des sections de code selon des plateformes, des configurations de compilation, ou des environnements différents.
@@ -16,7 +17,7 @@ La directive `#ifdef` permet de vérifier si une macro a été définie. Si la m
   #define DEBUG  // Définir la macro DEBUG
 
   #ifdef DEBUG
-      printf("Mode débogage activé\n");
+      Serial.println("Mode débogage activé\n");
   #endif
 ```
 
@@ -50,9 +51,9 @@ La directive `#else` permet de spécifier un bloc de code à exécuter si la con
 
 ```c
   #ifdef DEBUG
-      printf("Mode débogage activé\n");
+      Serial.println("Mode débogage activé\n");
   #else
-      printf("Mode normal activé\n");
+      Serial.println("Mode normal activé\n");
   #endif
 ```
 
@@ -69,9 +70,9 @@ Ces directives sont souvent utilisées ensemble pour gérer plusieurs configurat
 
 ```c
   #ifdef DEBUG
-      printf("Mode débogage activé\n");
+      Serial.println("Mode débogage activé\n");
   #else
-      printf("Mode normal activé\n");
+      Serial.println("Mode normal activé\n");
   #endif
 
   #ifndef VERSION

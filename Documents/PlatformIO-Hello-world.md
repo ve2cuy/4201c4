@@ -84,6 +84,8 @@ PlatformIO s'installe sous VS Code en y ajoutant l'extension 'PlatformIO IDE':
 
 <img src="../images/pio-02.png" alt="Configuration projet" width="500" />
 
+---
+
 ### 1.1 - Examiner la structure de départ
 
 <img src="../images/pio-02b.png" alt="Structure projet" width="500" />

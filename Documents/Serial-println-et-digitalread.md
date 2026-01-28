@@ -71,6 +71,37 @@ void setup() {
 
 ---
 
+### 1.3.1 - Modification de la vitesse de transmission sous PlatformIO
+
+Par défaut, la transmission série (UART/COM) entre la plaquette Arduino et le poste de travail est fixé à 9600 bauds.
+
+À 9600 bauds, on transmet 9600 symboles par seconde. Dans les communications série simples (comme RS-232), un **symbole correspond généralement à un bit**, donc 9600 bauds ≈ 9600 bits par seconde (bps). En réalité, avec les bits de start, stop et parité, le débit effectif de données utiles est un peu inférieur.  En divisant par 10, on obtient une approximation du nombre de caractères (octets) transmis par seconde.
+
+Donc à 9600 bauds, environ **960** caractères transmis par seconde.
+
+Sous PlatformIO, il est possible de modifier la vitesse de transmission en la renseignant dans le fichier 'platformIO.ini':
+
+```
+# À inscrire dans le fichier 'platformIO.ini'
+monitor_speed = 115200
+```
+
+Puis, ouvrir la communication dans l'application avec :
+
+```
+Serial.begin(115200);
+```
+
+À l'ouverture du terminal série, le message suivant sera affiché:
+
+```
+--- Terminal on COM7 | 115200 8-N-1
+```
+
+💡La transmission est maintenant d'environ 11520 octets à la seconde.
+
+---
+
 ## 1.4 – Laboratoire
 
 <img src="../images/labo02.png" alt="" width="700" />
