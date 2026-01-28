@@ -1,6 +1,5 @@
 # Arduino – AnalogRead
 
-*Date: 13 septembre 2021*
 
 ## 1 – Lecture d'une valeur analogique, analogRead()
 

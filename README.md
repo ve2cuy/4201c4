@@ -7,20 +7,20 @@
 
 ## Documents
 
-- [Plan de cours](Documents/420-1C4-JR_ab_pc_H26.pdf)
-- [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md)
+- 1 - [Plan de cours](Documents/420-1C4-JR_ab_pc_H26.pdf)
+- 2 - [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md)
 - [Arduino Uno]()
 - Émulateurs Arduino en ligne; [Wokwi](https://wokwi.com/), [TinkerCad](https://www.tinkercad.com/circuits)
-- [Hello World – PlatformIO](Documents/PlatformIO-Hello-world.md) 
+- 3 - [Hello World – PlatformIO](Documents/PlatformIO-Hello-world.md) 
 - [Hello World – Arduino IDE](Documents/Hello-world.md)
+- 4 - [Arduino – Serial.println(val), digitalRead() et l’instruction while() pour la gestion du bouton](Documents/Serial-println-et-digitalread.md)
+- 5 - [Arduino – Lecture/écriture d’une valeur analogique – analogRead()analogWrite() PWM](Documents/analogRead.md) 🧠
+- 6 - [Grove – Module LCD-RGB i2c (sprintf, switch, io stream, #ifdef, op ternaire, i % j)](Documents/LCD-enum-ifdef.md) 🧠
+- 7 - [Compilation conditionnelle](Documents/Compilation-conditionnelle.md)
 - [Les librairies](Documents/Utilisation-de-librairies.md) 👉🧠
-- [Les variables de type scalaire]()
-- [Compilation conditionnelle](Documents/Compilation-conditionnelle.md)
+- [Les variables de type scalaire]() 🧠
 - [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md)
-- [Arduino – Serial.println(val), digitalRead() et l’instruction while() pour la gestion du bouton](Documents/Serial-println-et-digitalread.md) 👍🧠
 - [Gestion du bruit sur un bouton – bounce2]() 🧠
-- [Arduino – Lecture/écriture d’une valeur analogique – analogRead()analogWrite() PWM](Documents/analogRead.md) 👍🧠
-- [Grove – Module LCD-RGB i2c (sprintf, switch, io stream, #ifdef, op ternaire, i % j)](Documents/LCD-enum-ifdef.md) 👍🧠
 - [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) 👍
 - [Structures de données](Documents/Structures-de-donnees.md) 👍🧠
 - [L’instruction ‘enum’ du langage C (TP02)]()
