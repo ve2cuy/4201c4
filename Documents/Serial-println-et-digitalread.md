@@ -73,11 +73,11 @@ void setup() {
 
 ### 1.3.1 - Modification de la vitesse de transmission sous PlatformIO
 
-Par défaut, la transmission série (UART/COM) entre la plaquette Arduino et le poste de travail est fixé à 9600 bauds.
+Par défaut, la transmission série (UART/COM) entre la plaquette Arduino et le poste de travail est fixée à 9600 bauds.
 
 À 9600 bauds, on transmet 9600 symboles par seconde. Dans les communications série simples (comme RS-232), un **symbole correspond généralement à un bit**, donc 9600 bauds ≈ 9600 bits par seconde (bps). En réalité, avec les bits de start, stop et parité, le débit effectif de données utiles est un peu inférieur.  En divisant par 10, on obtient une approximation du nombre de caractères (octets) transmis par seconde.
 
-Donc à 9600 bauds, environ **960** caractères transmis par seconde.
+Donc à 9600 bauds, c'est environ **960** caractères transmis par seconde.
 
 Sous PlatformIO, il est possible de modifier la vitesse de transmission en la renseignant dans le fichier 'platformIO.ini':
 
@@ -108,9 +108,11 @@ Serial.begin(115200);
 
 <br>
 
-Programmer un projet qui affiche, dans la console série, le message suivant en boucle:
+Programmer un projet qui affiche, dans la console série à 19200 bauds, le message suivant en boucle:
 
 <img src="../images/Capture-decran-le-2021-09-07-a-12.38.33-1024x538.png" alt="Laboratoire console" width="500" />
+
+---
 
 ## 1.5 – Afficher le contenu d'une variable
 
@@ -142,7 +144,9 @@ Incrémenter et afficher la valeur de la variable 'compteur' en boucle.
 
 ---
 
-## 1.6.2 – Utilisation d'une Macro vide
+## 1.6.2 – Utilisation d'une Macro vide 
+
+NOTE: 🛑 Cet exemple sera couvert plus tard, dans le document 'compilation conditionnelle'.
 
 Utilisation d'une Macro vide pour activer/désactiver les messages de la console.
 
@@ -224,6 +228,12 @@ void loop() {
 
 ---
 
+
+## 🤚 NOTE: Avant de continuer, voir le document [Les Librairies](https://ve2cuy.github.io/4201c4/Documents/Utilisation-de-librairies.html)
+
+
+---
+
 ## 1.9 – Laboratoire
 
 <img src="../images/labo03.png" alt="" width="700" />
@@ -261,9 +271,13 @@ Voici un exemple d'utilisation de la librairie <Streaming.h> de Mikal Hart pour 
 #define VITESSE_SERIAL  9600
 
 void setup() {
+    byte unByte = 99;
     Serial.begin(VITESSE_SERIAL);
     Serial << F("Début du programme ...\n");
     Serial << F("PI vaut : ") << PI << endl;
+    Serial << "Fréquence CPU (Hz): " << F_CPU << '\n';
+    Serial << "Utilisation d'un modificateur:" << endl;
+    Serial << unByte << " est " << _BIN(unByte) << " en binaite et " << _HEX(unByte) << " en hex. " << endl;        
 } // setup()
 
 void loop() {
