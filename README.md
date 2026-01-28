@@ -1,7 +1,7 @@
 # 420-1C4 - Objets connectés
 
 <p align="center">
-    <img src="images/arduino.png" alt="Arduino" width="300" />
+    <img src="images/platformio-logo-png-transparent.png" alt="Arduino" width="300" />
 </p>
 
 
