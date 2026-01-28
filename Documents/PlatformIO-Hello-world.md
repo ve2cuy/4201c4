@@ -1,6 +1,8 @@
 # Introduction à PlatformIO
 
-<img src="../images/platformio-logo-png-transparent.png" alt="" width="500" />  
+<p align="center">
+  <img src="../images/platformio-logo-png-transparent.png" alt="" width="350" />  
+</p>
 
 ## Définition
 
