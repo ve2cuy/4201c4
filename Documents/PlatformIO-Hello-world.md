@@ -1,6 +1,6 @@
 # Introduction à PlatformIO
 
-<img src="../images/arduino-uno-00.jpg" alt="" width="500" />  
+<img src="../images/platformio-logo-png-transparent.png" alt="" width="500" />  
 
 ## Définition
 
