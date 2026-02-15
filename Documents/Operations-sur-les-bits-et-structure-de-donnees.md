@@ -20,14 +20,16 @@ Cet opérateur effectue une opération « **ET** » bit à bit entre deux entier
 
 ```cpp
 #include <arduino.h>
+#include <Streaming.h>
 #define VITESSE_SERIAL 9600
 void setup() {
     Serial.begin(VITESSE_SERIAL);
     int a = 5;   // 0101 en binaire
     int b = 3;   // 0011 en binaire
     int result = a & b;  // 0001 en binaire
-    Serial.println(result);  // Affiche 1
+    Serial << "a & b = BIN: " << _BIN(result) << " DEC: " << result << endl; // Affiche 1
 }
+ 
 void loop(){}
 ```
 
@@ -47,7 +49,7 @@ void setup() {
     int a = 5;   // 0101 en binaire
     int b = 3;   // 0011 en binaire
     int result = a | b;  // 0111 en binaire
-    Serial.println(result);  // Affiche 7
+    Serial << "a | b = BIN: " << _BIN(result) << " DEC: " << result << endl;   // Affiche 7
 }
 void loop(){}
 ```
@@ -68,7 +70,7 @@ void setup() {
     int a = 5;   // 0101 en binaire
     int b = 3;   // 0011 en binaire
     int result = a ^ b;  // 0110 en binaire
-    Serial.println(result);  // Affiche 6
+    Serial << "a ^ b = BIN: " << _BIN(result) << " DEC: " << result << endl;  // Affiche 6
 }
 void loop(){}
 ```
@@ -89,7 +91,7 @@ void setup() {
     int a = 5;   // 0101 en binaire
     int result = ~a;  // 1010 en binaire (en représentation complément à deux)
     // Tester avec unsigned int result
-    Serial.println(result);  // Affiche -6 (en complément à deux)
+    Serial << "~a = BIN: " << _BIN(result) << " DEC: " << result << endl; // Affiche -6 (en complément à deux)
 }
 void loop(){}
 ```
@@ -134,7 +136,7 @@ void loop(){}
 #define BIT7 1 << 7 // Équivalent à #define BIT7 0b10000000
 void setup() {
     Serial.begin(VITESSE_SERIAL);
-    unsigned int a = 0b10010011;   // 0101 en binaire
+    byte a = 0b10010011;   // 0101 en binaire
     // a <<= 1;  // Équivalent à a = a << 1;
     Serial.println(BIT7); 
 
@@ -487,6 +489,7 @@ void loop() {
 
 **NOTE** : Il est possible de réaliser ce labo sans l’enum ‘Appareil’
 
+👉 Voici les deux symboles: 🔴 🟢
 
 ---
 
