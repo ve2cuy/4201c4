@@ -19,9 +19,9 @@
 - 7 - [Compilation conditionnelle](Documents/Compilation-conditionnelle.md)
 - [Les librairies](Documents/Utilisation-de-librairies.md) 👉🧠
 - [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md)
-- [L’instruction ‘enum’ du langage C (TP02)](Documents/Instruction-enum.md)
-- [Structures de données](Documents/Structures-de-donnees.md)
-- [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) 👍
+- 8 - [L’instruction ‘enum’ du langage C (TP02)](Documents/Instruction-enum.md)
+- 9 - [Structures de données](Documents/Structures-de-donnees.md)
+- 10- [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) 👍
 - [Les variables de type scalaire]() 🧠
 - [Gestion du bruit sur un bouton – bounce2]() 🧠
 - [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 👍🧠
@@ -38,6 +38,7 @@
 - [Formatif examen 01]()
 - [Défi de mi-session]()
 - [Énoncé du projet de l’épreuve synthèse du cours - Volet A: H25](Documents/ES-H25-Volet-A.md) 👍
+- 99- [Les copier/coller](Documents/copier-coller.md)
 
 ---
                                    
