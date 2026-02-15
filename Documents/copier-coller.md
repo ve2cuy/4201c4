@@ -186,7 +186,7 @@ void setup() {
   ansi.clearScreen();
   Serial << CURSEUR_OFF << ANSI_BLANC;
   Serial << (F("╔══════════════════════════════════════════════════════╗\n"));
-  Serial << (F("║      Exemple d'affiche avec séquences ANSI.          ║\n"));
+  Serial << (F("║      Exemple d'affichage avec séquences ANSI.        ║\n"));
   Serial << (F("╟──────────────────────────────────────────────────────╢\n"));
   Serial << (F("║                                                      ║\n"));
   Serial << (F("║                                                      ║\n"));
@@ -918,7 +918,7 @@ void loop() {
 
 2 – [Clignoter une DEL (broche 13)](https://wokwi.com/projects/342633299140674132)
 
-[![](../images/Capture-decran-le-2022-09-12-a-17.50.50-1024x461.png)](https://wokwi.com/projects/342633299140674132)
+[![](../images/Capture-decran-le-2022-09-12-a-17.50.50.png)](https://wokwi.com/projects/342633299140674132)
 
 ---
 
@@ -930,19 +930,19 @@ void loop() {
 
 4 – [Conversion de base (10,2,8,16) sur un écran LCD](https://wokwi.com/projects/340722670823801427)
 
-[![](../images/Capture-decran-le-2022-09-12-a-18.11.44-1024x735.png)](https://wokwi.com/projects/340722670823801427)
+[![](../images/Capture-decran-le-2022-09-12-a-18.11.44.png)](https://wokwi.com/projects/340722670823801427)
 
 ---
 
 5 – [Lecture de l'état d'un pushButton](https://wokwi.com/projects/341337322410738258)
 
-[![](../images/Capture-decran-le-2022-09-12-a-18.21.31-1024x526.png)](https://wokwi.com/projects/341337322410738258)
+[![](../images/Capture-decran-le-2022-09-12-a-18.21.31.png)](https://wokwi.com/projects/341337322410738258)
 
 ---
 
 6 – [Attendre qu'un pushButton soit relâché avant que le programme reprenne](https://wokwi.com/projects/342965838174749267)
 
-[![](../images/Capture-decran-le-2022-09-12-a-18.39.33-1024x581.png)](https://wokwi.com/projects/342965838174749267)
+[![](../images/Capture-decran-le-2022-09-12-a-18.39.33.png)](https://wokwi.com/projects/342965838174749267)
 
 ---
 
