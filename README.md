@@ -21,9 +21,9 @@
 - [Les variables de type scalaire]() 🧠
 - [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md)
 - [Gestion du bruit sur un bouton – bounce2]() 🧠
+- [L’instruction ‘enum’ du langage C (TP02)]()
 - [Structures de données](Documents/Structures-de-donnees.md) 👍🧠
 - [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) 👍
-- [L’instruction ‘enum’ du langage C (TP02)]()
 - [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 👍🧠
 - [Buzzer et NeoPixel](Documents/NEOPixel.md) 👍🧠
 - [Real Time Clock RTC (Utilisation de fonctions, notions de pointeurs)](Documents/RTC-DS1307.md) 👍🧠
