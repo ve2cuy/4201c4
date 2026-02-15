@@ -22,6 +22,7 @@
 - 8 - [L’instruction ‘enum’ du langage C (TP02)](Documents/Instruction-enum.md)
 - 9 - [Structures de données](Documents/Structures-de-donnees.md)
 - 10- [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) 👍
+- 11 - 👉 [Voir les copier/coller pour ANSI et boite](Documents/copier-coller.md)
 - [Les variables de type scalaire]() 🧠
 - [Gestion du bruit sur un bouton – bounce2]() 🧠
 - [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 👍🧠
