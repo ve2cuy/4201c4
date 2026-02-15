@@ -20,20 +20,37 @@ Voici des exemples d'utilisation de l'instruction '***enum***':
 
 ```c
 // Exemple 01
+#include <Arduino.h> 
+#include <Streaming.h>
 enum  Etat {VRAI = 1, FAUX = 0}; 
 // Convention de noms: LeType, les membres (VRAI|FAUX ou vrai|faux)
 
-
 // Exemple 02
 enum JourDeLaSemaine { 
-       dimanche, 
-       lundi, 
+       dimanche,    // 0
+       lundi,       // 1 ...
        mardi, 
        mercredi, 
        jeudi, 
        vendredi, 
        samedi
 };
+
+
+// Explication de la syntaxe en classe ...
+char *jours[] = {"dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"};  
+
+void setup() {
+    // Initialisation du moniteur série
+    Serial.begin(9600);
+    
+    Serial << "État VRAI : " << VRAI << endl; // Affiche "État VRAI : 1"
+
+    JourDeLaSemaine jour = lundi; // Exemple d'utilisation de l'énumération
+    Serial << "Jour de la semaine : " << jours[jour] << endl; // Affiche "lundi"
+}
+
+void loop(){}
 ```
 
 **Note**: Si nous n'attribuons pas explicitement de valeurs aux membres du ***enum***, le compilateur affecte par défaut des valeurs à partir de 0. Par exemple, dans l'exemple 02 précédent, dimanche obtient la valeur 0, lundi vaut 1, etc.
@@ -43,7 +60,7 @@ enum JourDeLaSemaine {
 ## 1.1 – Exemple d'utilisation d'une variable de type *enum*
 
 ```c
-#include "Streaming.h"
+
 
 enum Menu {
   option1,   // vaut 0
@@ -59,9 +76,9 @@ void setup(){
 
   switch (unMenu) {
 
-    case option2: Serial << "Option 2"; break;
+    case option2: Serial << "Option 2\n"; break;
 
-    default: Serial << "Choix invalide!";
+    default: Serial << "Choix invalide!\n";
   } // switch
 
 } // setup()
@@ -90,11 +107,11 @@ void setup(){
 
   switch (unMenu) {
 
-    case option1: Serial << "Option 1"; break;
-    case option2: Serial << "Option 2"; break;
-    case option3: Serial << "Option 3"; break;
+    case option1: Serial << "Option 1\n"; break;
+    case option2: Serial << "Option 2\n"; break;
+    case option3: Serial << "Option 3\n"; break;
 
-    default: Serial << "Choix invalide!";
+    default: Serial << "Choix invalide!\n";
   } // switch
 
 } // setup()
