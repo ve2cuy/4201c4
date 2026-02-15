@@ -479,9 +479,9 @@ void loop() {
 * evenement_detection_mouvement,
 * evenement_bouton_panique,
 * Afficher à l’écran,
-* Grace à une boucle, les instructions & et <<, un(des) tableau(x) de chaines (« LED1 », …), un minimum d’instructions;
-* Et la déclaration suivante: * *Systeme unSysteme = { evenement_detection_mouvement, 10, 10, 59, { 0b01010101, 20.2, 45.25} };*
-* L’état de tous les appareils sous la forme suivante:
+* * Grace à une boucle, les instructions & et <<, un(des) tableau(x) de chaines (« LED1 », …), un minimum d’instructions;
+* * Et la déclaration suivante: * *Systeme unSysteme = { evenement_detection_mouvement, 10, 10, 59, { 0b01010101, 20.2, 45.25} };*
+* * L’état de tous les appareils sous la forme suivante:
 
 
 ![alt text](../images/bits-labo-08.png)
