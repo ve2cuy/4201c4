@@ -146,6 +146,9 @@ Voici un exemple d'utilisation:
 
 monitor_filters = direct 
 
+lib_deps =
+  robtillaart/ANSI @ ^0.3.5
+
 // ---------------------------------------------------------------------------------------
 // Exemple sans librairie
    Serial.print("\033[91m");  // Séquence ANSI pour afficher du texte en rouge.
