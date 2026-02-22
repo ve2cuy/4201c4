@@ -1,4 +1,4 @@
-# 2025.ES
+# 2026.ES
 
 # Épreuve synthèse Volet A
 
@@ -6,7 +6,7 @@
 
 ---
 
-## Énoncé du projet ESH25 – Version 1.1.5
+## Énoncé du projet ESH26 – Version 1.1.5
 
 ### Pondération: 30% Remise: Partie 1 – semaine 13 – 27 avril, 16h00
 

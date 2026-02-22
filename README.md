@@ -27,8 +27,9 @@
 - [Gestion du bruit sur un bouton – bounce2]() 🧠
 - 12- [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 
 - TP01 -[Partie `A` du projet de session H26](Documents/TP01-H26.md)
+---
 - [Buzzer et NeoPixel](Documents/NEOPixel.md) 👍🧠
-- [Real Time Clock RTC (Utilisation de fonctions, notions de pointeurs)](Documents/RTC-DS1307.md) 👍🧠
+- [Real Time Clock RTC](Documents/RTC-DS1307.md) 👍🧠
 - [Détecteur de mouvements]()
 - [Opérations non bloquantes – millis() et Interruptions (TP02)](Documents/Operations-non-bloquantes.md) 👍🧠
 - [ESP-Wifi – accès réseau (TP02)](Documents/ESP-Wifi.md) 👍🧠
@@ -39,7 +40,7 @@
 - [TP01-2025] 👍
 - [Formatif examen 01]()
 - [Défi de mi-session]()
-- [Énoncé du projet de l’épreuve synthèse du cours - Volet A: H25](Documents/ES-H25-Volet-A.md) 👍
+- TP02 - [Énoncé du projet de l’épreuve synthèse du cours - Volet A: H26](Documents/ES-H26-Volet-A.md) 👍
 - 99- [Les copier/coller](Documents/copier-coller.md)
 
 ---
