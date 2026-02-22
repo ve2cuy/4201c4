@@ -22,10 +22,11 @@
 - 8 - [L’instruction ‘enum’ du langage C (TP02)](Documents/Instruction-enum.md)
 - 9 - [Structures de données](Documents/Structures-de-donnees.md)
 - 10- [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) 👍
-- 11 - 👉 [Voir les copier/coller pour ANSI et boite](Documents/copier-coller.md)
+- 11- 👉 [Voir les copier/coller pour ANSI et boite](Documents/copier-coller.md)
 - [Les variables de type scalaire]() 🧠
 - [Gestion du bruit sur un bouton – bounce2]() 🧠
-- [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 👍🧠
+- 12- [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 
+- TP01 -[Partie `A` du projet de session H26](Documents/TP01-H26.md)
 - [Buzzer et NeoPixel](Documents/NEOPixel.md) 👍🧠
 - [Real Time Clock RTC (Utilisation de fonctions, notions de pointeurs)](Documents/RTC-DS1307.md) 👍🧠
 - [Détecteur de mouvements]()
@@ -35,7 +36,7 @@
 - [Détecteur infrarouge – Contenu optionnel]()
 - [EEPROM – Contenu optionnel]()
 - [Capteur RFID – Contenu optionnel (DÉFI: TP02)]()
-- [TP01-2025](Documents/TP01-H25.md) 👍
+- [TP01-2025] 👍
 - [Formatif examen 01]()
 - [Défi de mi-session]()
 - [Énoncé du projet de l’épreuve synthèse du cours - Volet A: H25](Documents/ES-H25-Volet-A.md) 👍
