@@ -41,7 +41,8 @@
 - [Formatif examen 01]()
 - [Défi de mi-session]()
 - TP02 - [Énoncé du projet de l’épreuve synthèse du cours - Volet A: H26](Documents/ES-H26-Volet-A.md) 👍
-- 99- [Les copier/coller](Documents/copier-coller.md)
+- 98- [Les copier/coller](Documents/copier-coller.md)
+- 99- [Solutions aux laboratoires](Documents/Solutions.md)
 
 ---
                                    
