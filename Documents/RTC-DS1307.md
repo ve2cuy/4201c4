@@ -219,13 +219,14 @@ void AfficherLeTemps()
 #include <Wire.h>
 #include "DS1307.h"
 #include "Streaming.h"
+char* AfficherLeTemps();
 
 DS1307 clock; // Définir un objet de type DS1307
 
 // Variable utilisée par sprintf()
 char chaine[80];
 
-char* NomDesJours[] = {"", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
+const char* NomDesJours[] = {"", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
 
 void setup()
 {
