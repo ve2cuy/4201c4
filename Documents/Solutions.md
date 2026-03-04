@@ -1,4 +1,4 @@
-## Laboratoire NeoPixel
+## Laboratoires NeoPixel
 
 ### 2.3.3 – Laboratoire
 
