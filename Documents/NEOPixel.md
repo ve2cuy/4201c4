@@ -127,6 +127,8 @@ void loop() {
 } // loop
 ```
 
+---
+
 ### 2.3.3 – Laboratoire
 
 <img src="../images/labo03.png" alt="" width="700" />
@@ -181,12 +183,11 @@ Par exemple, pour 24C + 4\*0,75, les 6 premiers pixels sont bleus et les 4 derni
 **Note**: Utiliser un doigt sur le capteur pour faire augmenter la température.
 
 
-
 ---
 
 ## Crédits
 
 **Document rédigé par Alain Boudreault © 2021-2026**
-**Version 2025.02.26.01 - Révision 2025.12.12.1**
+**Version 2026.03.04.01**
 
 *Contenu par [VE2CUY](http://ve2cuy.com/blog)*
