@@ -14,30 +14,35 @@
 - 3 - [Hello World – PlatformIO](Documents/PlatformIO-Hello-world.md) 
 - [Hello World – Arduino IDE](Documents/Hello-world.md)
 - 4 - [Arduino – Serial.println(val), digitalRead() et l’instruction while() pour la gestion du bouton](Documents/Serial-println-et-digitalread.md)
-- 5 - [Arduino – Lecture/écriture d’une valeur analogique – analogRead()analogWrite() PWM](Documents/analogRead.md) 🧠
-- 6 - [Grove – Module LCD-RGB i2c (sprintf, switch, io stream, #ifdef, op ternaire, i % j)](Documents/LCD-enum-ifdef.md) 🧠
+- 5 - [Arduino – Lecture/écriture d’une valeur analogique – analogRead()analogWrite() PWM](Documents/analogRead.md)
+- 6 - [Grove – Module LCD-RGB i2c (sprintf, switch, io stream, #ifdef, op ternaire, i % j)](Documents/LCD-enum-ifdef.md)
 - 7 - [Compilation conditionnelle](Documents/Compilation-conditionnelle.md)
 - [Les librairies](Documents/Utilisation-de-librairies.md) 👉🧠
-- [Les variables de type scalaire]() 🧠
 - [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md)
+- 8 - [L’instruction ‘enum’ du langage C (TP02)](Documents/Instruction-enum.md)
+- 9 - [Structures de données](Documents/Structures-de-donnees.md)
+- 10- [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) 👍
+- 11- 👉 [Voir les copier/coller pour ANSI et boite](Documents/copier-coller.md)
+- [Les variables de type scalaire]() 🧠
 - [Gestion du bruit sur un bouton – bounce2]() 🧠
-- [Structures de données](Documents/Structures-de-donnees.md) 👍🧠
-- [Opérations sur les bits (bitwise op) et structures de données (struct) (TP02)](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) 👍
-- [L’instruction ‘enum’ du langage C (TP02)]()
-- [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 👍🧠
+- 12- [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 
+- TP01 -[Partie `A` du projet de session H26](Documents/TP01-H26.md)
+---
 - [Buzzer et NeoPixel](Documents/NEOPixel.md) 👍🧠
-- [Real Time Clock RTC (Utilisation de fonctions, notions de pointeurs)](Documents/RTC-DS1307.md) 👍🧠
-- [Détecteur de mouvements](https://ve2cuy.com/420-1c4/index.php/detecteur-de-mouvements/)
+- [Real Time Clock RTC](Documents/RTC-DS1307.md) 👍🧠
+- [Détecteur de mouvements]()
 - [Opérations non bloquantes – millis() et Interruptions (TP02)](Documents/Operations-non-bloquantes.md) 👍🧠
 - [ESP-Wifi – accès réseau (TP02)](Documents/ESP-Wifi.md) 👍🧠
 - [Communication UART entre deux Arduino (TP02)](Documents/Communication-UART-entre-2-arduino.md) 🛑👍
 - [Détecteur infrarouge – Contenu optionnel]()
 - [EEPROM – Contenu optionnel]()
 - [Capteur RFID – Contenu optionnel (DÉFI: TP02)]()
-- [TP01-2025](Documents/TP01-H25.md) 👍
+- [TP01-2025] 👍
 - [Formatif examen 01]()
 - [Défi de mi-session]()
-- [Énoncé du projet de l’épreuve synthèse du cours - Volet A: H25](Documents/ES-H25-Volet-A.md) 👍
+- TP02 - [Énoncé du projet de l’épreuve synthèse du cours - Volet A: H26](Documents/ES-H26-Volet-A.md) 👍
+- 98- [Les copier/coller](Documents/copier-coller.md)
+- 99- [Solutions aux laboratoires](Documents/Solutions.md)
 
 ---
                                    
