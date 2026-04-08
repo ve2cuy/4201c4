@@ -396,7 +396,7 @@ void sendInfoTOWebAPI(){
 
     snprintf(buffer, sizeof(buffer), 
       "GET /apijesuis.php?jesuis=%s HTTP/1.1", 
-      urlEncode(messages[0]).c_str());
+      urlEncode(messages[0]).c_str());              // NOTE: urlEncode retourne une STRING, conversion avec c_str().
 
     Serial.println(buffer);                         // Afficher la requête sur le terminal
     client.println(buffer);                         // Transmettre la requête,
