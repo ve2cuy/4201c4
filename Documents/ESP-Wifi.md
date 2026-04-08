@@ -412,7 +412,7 @@ void sendInfoTOWebAPI(){
     //  Serial.write(c);
     //}        
   
-    client.stop();                                 // Fermer le socket de connexion
+    client.stop();                                 // IMPORTANT: Fermer le socket de connexion
   }
 
 } // sendInfoTOWebAPI()
