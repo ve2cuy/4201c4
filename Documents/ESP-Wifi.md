@@ -364,11 +364,14 @@ void setup()
 
 void loop()
 {
+  // ---------------------------------------------------
   // Au besoin, afficher la réponse à la requête GET:
+  // Utile lors d'une transmission en boucle vers l'API
   while (client.available()) {
     char c = client.read();
     Serial.write(c);
-  }
+  } // while
+  // ---------------------------------------------------
 
   if (!client.connected()) {
     Serial.println();
