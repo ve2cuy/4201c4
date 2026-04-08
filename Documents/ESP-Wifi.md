@@ -402,6 +402,13 @@ void sendInfoTOWebAPI(){
     client.println(buffer);                         // Transmettre la requête,
     client.println("Host: esh25.ve2cuy.com");       // vers le serveur web
     client.println();
+
+    // Au besoin, afficher la réponse à la requête GET:
+    //while (client.available()) {
+    //  char c = client.read();
+    //  Serial.write(c);
+    //}        
+  
     client.stop();                                 // Fermer le socket de connexion
   }
 
