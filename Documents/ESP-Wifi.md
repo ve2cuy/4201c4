@@ -322,8 +322,8 @@ lib_deps =
 
 #include "main.h"
 
-char ssid[] = "Le nom du routeur WIFI";      
-char pass[] = "Le mot de passe";     
+char ssid[] = SID;      
+char pass[] = PWS;     
 int status = WL_IDLE_STATUS;     // the Wifi radio's status
 char buffer[200];
 char server[] = "esh25.ve2cuy.com";
@@ -453,8 +453,8 @@ void printWifiStatus();
 
 ```
 # Placer ici le nom du réseau et le mot de passe ...
-SID = CSTJ-UBI-D136
-PWS = ##12345678 // ## + 1
+#define SID = "CSTJ-UBI-D136"
+#define PWS = "##12345678"    // ## + 1
 ```
 
 **Le résultat**
