@@ -778,7 +778,7 @@ GET /tp2-api.php?nomSys=!VE2CUY!&ipAdr=192.168.1.191&note=exemple&statut=4&app=2
 | REMISE | Un fichier .zip incluant les deux projets et le fichier workspace de vscode | 1 |  |
 |  |  | 30 |  |
 |  |  |  |  |
-|  | Total | 30/30 | 4 |
+|  | Total | 30/30 | 3.5 |
 
 ---
 
