@@ -67,8 +67,6 @@ Remise: Partie 2 – semaine 15 – 14 mai, 23h59
   + Optimisé (mémoire, ressource),
 * [L'utilisation de méthodes non bloquantes](https://ve2cuy.com/420-1c4/index.php/operations-non-bloquantes/),
   + millis(),
-  + Interruptions (bouton de panique) en défi,
-    - Dans ce cas, il faut utiliser la broche D2 pour le bouton et déplacer la DEL sur D7 et m'indiquer dans l'entête du UNO que vous avez relevé le défi.
 * Le respect du devis.
 
 ---
@@ -758,7 +756,6 @@ GET /tp2-api.php?nomSys=!VE2CUY!&ipAdr=192.168.1.191&note=exemple&statut=4&app=2
 | **UNO** | Ajout des éléments de la section 2.5 | 3 |  |
 |  | Transmission des données vers la centrale. | 2 |  |
 | Défi optionnel | Remplacer le capteur de température par [bmp280](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/) et ajouter pression et altitude aux données transmises. **Important**, voir 8.12 |  | 1.5 |
-| Défi optionnel | Interruption matériel pour le bouton de panique Dans ce cas, il faut utiliser la broche D2 pour le bouton et déplacer la DEL sur D7. |  | 0.5 |
 | **Présentation** | Présentation de votre partie 1 – Pénalité de 20% en cas d'absence |  |  |
 | **MEGA – P1** | Fonctionnalité, optimisation du code source et documentation | 4 |  |
 |  | Aucun message de type 'Warning' à la compilation | 2 |  |
