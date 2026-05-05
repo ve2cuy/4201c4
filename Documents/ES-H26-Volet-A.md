@@ -12,17 +12,20 @@
 
 ---
 
-### ES-Volet B – Examen (20%), 15 mai NOTE: Il faut rendre les kits Arduino pour obtenir une copie d'examen.
+### ES-Volet B – Examen (20%), mercredi le 20 mai. NOTE: Il faut rendre les kits Arduino pour obtenir une copie d'examen.
 
 ---
 
-**Le mardi 8 mai**, présentation de votre partie 1 à l'enseignant – **présence obligatoire**
+**👉 Le mercredi 6 mai**, présentation de votre partie 1 - transmission des données vers le MEGA à l'enseignant – **🛑 présence obligatoire**
+
+**👉 Le lundi 11 mai**, présentation de votre partie 2 - transmission des données vers l'API web – **🛑 présence obligatoire**
+
 
 ---
 
 **NOTE**: Il faut remettre la partie 1 à temps sinon les défis ne seront pas corrigés.  
   
-Remise: Partie 2 – semaine 15 – 14 mai, 23h59
+‼️Remise: Partie 2 – semaine 15 – lundi, le 18 mai, 23h59
 
 ---
 
