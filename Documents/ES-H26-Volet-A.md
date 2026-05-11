@@ -709,7 +709,7 @@ Pour relever ce défi, il faut emprunter un capteur et une carte.
 
 <img src="../images/MIKROE-1475.jpg" alt="RFID carte" width="500" />
 
-Le système doit reconnaitre, comme valide, la clé que vous avez et la mienne qui possède le numéro suivant: **6A001BD067C6**.
+Le système doit reconnaitre, comme valide, la clé que vous avez et la mienne qui possède le numéro suivant: **2E008BA5AEAE**.
 
 Il faut ajouter la ligne suivante à l'interface utilisateur de la station MEGA:
 
