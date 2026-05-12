@@ -25,7 +25,7 @@
 - 11- 👉 [Voir les copier/coller pour ANSI et boite](Documents/copier-coller.md)
 - [Les variables de type scalaire]()
 - [Gestion du bruit sur un bouton – bounce2]()
-- 12- [Température, humidité et affichage sur 7 segments (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 
+- 12- [Température, humidité et affichage sur 7 segments - 4Digit - (installer manuellement une librairie)](Documents/Capteur-temperature-humidite.md) 
 - TP01 -[Partie `A` du projet de session H26](Documents/TP01-H26.md)
 ---
 - 20 - [Buzzer et NeoPixel](Documents/NEOPixel.md)
