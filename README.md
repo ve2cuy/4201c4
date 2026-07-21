@@ -42,7 +42,13 @@
 - 99- [Solutions aux laboratoires](Documents/Solutions.md)
 
 ---
-                                   
+## Section i86
+
+- 100 - [Projet i86.P1](Documents/i86/Projet-i86-etape01.md)
+
+---
+
+
 ## Auteur
 
 <img src="images/moi.jpg" alt="Alain Boudreault" width="300" />
