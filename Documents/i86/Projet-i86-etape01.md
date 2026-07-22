@@ -1,3 +1,14 @@
+# Projet i86
+
+Tool chain:
+
+* JWasm
+* DOSBox-x
+* Bochs
+
+---
+
+
 ## 1. Comprendre l'adressage physique
 
 Au reset, le CPU x86 démarre toujours à l'adresse physique **`0xFFFFF0`** (en mode réel 16 bits, ça correspond à `CS:IP = F000:FFF0`). Le BIOS doit donc se trouver mappé de façon à ce que cette adresse contienne un saut valide vers votre code d'initialisation.
@@ -61,7 +72,7 @@ ORG 3FFFh
     DB      0FFh                    ; dernier octet, force la taille totale
 
 END
-\\\
+```
 
 ### Points clés
 
@@ -72,38 +83,38 @@ END
 
 ## 3. Compilation
 
-\\\powershell
+```powershell
 ..\JWasm.exe -bin bios.asm
 ren bios.BIN bios.com
-\\\
+```
 
 ## 4. Vérifiez la taille exacte
 
-\\\powershell
+```powershell
 (Get-Item bios.com).Length
-\\\
+```
 
 Vous devez obtenir **16384**. Si ce n'est pas le cas (souvent parce que JWasm tronque les zéros finaux malgré le `ORG`), forcez la taille avec PowerShell :
 
-\\\powershell
+```powershell
 $stream = [System.IO.File]::Open("bios.com", 'Open', 'Write')
 $stream.SetLength(16384)
 $stream.Close()
-\\\
+```
 
 ## 5. Tester dans un émulateur
 
 DOSBox **ne convient pas** pour tester un BIOS (il émule DOS, pas le firmware système). Il vous faut un émulateur PC complet avec ROM personnalisable, comme **Bochs** ou **QEMU**.
 
 **Avec Bochs**, dans votre `bochsrc.txt` :
-\\\
+```
 romimage: file="bios.com", address=0xfc000
-\\\
+```
 
 **Avec QEMU** :
-\\\powershell
+```powershell
 qemu-system-i386 -bios bios.com
-\\\
+```
 ⚠️ QEMU exige souvent une taille de BIOS parmi certaines valeurs standard (128 Ko, 256 Ko...) selon la version — 16 Ko peut être refusé. Bochs est généralement plus permissif pour ce genre d'expérimentation.
 
 ---
@@ -270,6 +281,8 @@ Puisque chaque ligne fait 80 colonnes, et chaque caractère prend 2 octets.
 Voici un exemple intégré à la structure de votre BIOS, qui affiche "Hello BIOS!" en haut à gauche de l'écran :
 
 ```asm
+; https://github.com/Baron-von-Riedesel/JWasm/releases#release-v2.20
+; ..\JWasm.exe -bin bios1.asm -Fo bios1.bin
 .MODEL TINY
 .CODE
 ORG 0
@@ -304,16 +317,16 @@ POST:
 ;==========================================
 PrintString:
     PUSH    AX
-.next_char:
+next_char:
     MOV     AL, [SI]                ; charge le caractère
     CMP     AL, 0                   ; fin de chaîne ?
-    JE      .done
+    JE      done_print
     MOV     [ES:DI], AL             ; écrit le caractère
     MOV     BYTE PTR [ES:DI+1], ATTR_NORM  ; écrit l'attribut
     ADD     DI, 2                   ; avance de 2 octets (1 caractère)
     INC     SI
-    JMP     .next_char
-.done:
+    JMP     next_char
+done_print:
     POP     AX
     RET
 
@@ -325,10 +338,15 @@ MSG     DB      'Hello BIOS!', 0
 ;==========================================
 ORG 3FF0h
 Reset:
-    JMP     FAR PTR POST
+    DB      0EAh                ; opcode JMP FAR ptr16:16
+    DW      0C000h              ; offset cible = F000:C000 (valeur littérale, PAS "OFFSET POST")
+    DW      0F000h              ; segment cible
 
-ORG 3FF5h
-    DB      '01/01/26', 0
+
+ORG 3FB0h
+    DB      'Par Alain Boudreault - VE2CUY (c) 2026', 0
+    DB      '21/07/26', 0
+
 
 ORG 3FFFh
     DB      0FFh
