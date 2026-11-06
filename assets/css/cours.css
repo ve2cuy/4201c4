@@ -174,3 +174,14 @@ html { scroll-behavior: smooth; }
 .hero-image { flex: none; display: block; width: 170px; height: 170px; object-fit: contain; }
 .hero-intro .lede { margin: 0; font-size: 17.5px; line-height: 1.55; }
 @media (max-width: 640px) { .hero-image { width: 110px; height: 110px; } }
+
+/* Dessins posés par accueil.js : fichiers de dessins/ utilisés comme masques, colorés par le thème */
+.masque { display: block; background: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
+.doc .vignette.dessin .masque { width: 140px; height: 70px; }
+.docs.grande .doc .vignette.dessin .masque { width: 220px; height: 110px; }
+.prose.cours .illus { overflow: hidden; }
+.prose.cours .illus .masque { flex: none; width: 114px; height: 57px; }
+.enseignant > div { flex: 1 1 300px; min-width: 0; }
+.enseignant > div p { margin: 0; }
+.tile .art .masque { width: 180px; height: 90px; }
+.prose.accueil .hero-image { border-radius: 0; }

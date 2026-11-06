@@ -2,7 +2,7 @@
 
 > **Site du cours :** <https://ve2cuy.github.io/4201c4/>. Pour modifier ou ajouter des documents,
 > et pour voir le site en local avant de publier, voir le **[guide d'entretien](GUIDE.md)**.
-> L'accueil du site est `index.md` et la liste de ses documents `_data/documents.yml` : ce README
+> L'accueil du site est `index.md`, en Markdown : ce README
 > n'est que la page du dépôt.
 
 <p align="center">

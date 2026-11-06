@@ -1,85 +1,91 @@
 ---
-title: "420-1C4 · Objets connectés"
+layout: accueil
+bandeau: "420-1C4-JR · techniques de l'informatique · cégep de saint-jérôme"
+titre: "Objets connectés."
+accroche: "Capteurs, afficheurs et électronique de base autour d'un microcontrôleur Arduino, programmé en C avec PlatformIO et Wokwi."
+image: images/arduino-robot.webp
 ---
 
-<nav class="tiles" aria-label="Sections du cours">
-  <a class="tile" href="#plan">
-    <div class="art c-cyan"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Plan de cours"><rect x="72" y="14" width="56" height="74" rx="5"/><rect x="88" y="8" width="24" height="12" rx="3"/><path d="M84 36h32M84 48h32M84 60h20M84 72h26"/></svg></div>
-    <div class="body"><span class="letter c-cyan">A</span><span class="heading">Plan de cours</span><span class="desc">Le plan officiel de la session</span></div>
-  </a>
-  <a class="tile" href="#bases">
-    <div class="art c-violet"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Microcontrôleur"><rect x="62" y="28" width="64" height="48" rx="6"/><rect x="80" y="42" width="28" height="20" rx="3"/><path d="M72 28v-8M84 28v-8M96 28v-8M108 28v-8M120 28v-8M72 76v8M84 76v8M96 76v8M108 76v8M120 76v8"/><circle cx="148" cy="52" r="5"/><path d="M148 57v14"/></svg></div>
-    <div class="body"><span class="letter c-violet">B</span><span class="heading">Documents 1 à 12</span><span class="desc">Arduino, PlatformIO, C, affichage</span></div>
-  </a>
-  <a class="tile" href="#capteurs">
-    <div class="art c-green"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Capteur sans fil"><rect x="68" y="34" width="44" height="44" rx="6"/><circle cx="90" cy="56" r="8"/><path d="M124 40a16 16 0 0 1 0 32M134 30a30 30 0 0 1 0 52"/></svg></div>
-    <div class="body"><span class="letter c-green">C</span><span class="heading">Documents 20 à 28</span><span class="desc">Capteurs, horloge, UART, Wi-Fi</span></div>
-  </a>
-  <a class="tile" href="#projet">
-    <div class="art c-amber"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Projet de session"><path d="M78 88V14M78 18h46l-8 12 8 12H78"/><path d="M66 88h28"/></svg></div>
-    <div class="body"><span class="letter c-amber">D</span><span class="heading">Projet de session</span><span class="desc">Partie A et partie B</span></div>
-  </a>
-  <a class="tile" href="#ressources">
-    <div class="art c-red"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Ressources"><rect x="76" y="24" width="44" height="56" rx="5"/><path d="M68 70V20a6 6 0 0 1 6-6h36"/><path d="M86 42h24M86 54h24M86 66h14"/></svg></div>
-    <div class="body"><span class="letter c-red">E</span><span class="heading">98 et 99</span><span class="desc">Copier/coller et solutions</span></div>
-  </a>
-</nav>
+## Présentation sommaire du cours
 
-<section class="bloc" id="presentation">
-  <h2><span class="illus c-cyan"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="64" y="16" width="72" height="68" rx="6"/><path d="M78 34h44M78 46h44M78 58h30"/><circle cx="118" cy="66" r="10"/><path d="M118 61v1M118 65v6"/></svg></span>Présentation sommaire du cours</h2>
-  <p>Le cours <strong>Objets connectés</strong> initie l'étudiant aux capteurs d'environnement, aux différentes technologies d'affichage (écran ACL, diode lumineuse, etc.) et aux notions de base en électronique pour réaliser des objets connectés. À l'aide d'un microcontrôleur (Arduino Uno), il met en pratique des notions de base en programmation pour développer des applications simples. Finalement, l'étudiant est sensibilisé aux données générées par les objets connectés et aux manières de les sauvegarder et de les échanger de manière sécuritaire.</p>
-  <dl class="faits">
-    <div><dt>Programme</dt><dd>420.B0 · Techniques de l'informatique</dd></div>
-    <div><dt>Famille</dt><dd>Mobiles et objets connectés</dd></div>
-    <div><dt>Pondération</dt><dd>1-3-2</dd></div>
-    <div><dt>Préalable</dt><dd>Aucun</dd></div>
-  </dl>
-  <p class="outils">Outils : <a href="https://wokwi.com/">Wokwi</a> et <a href="https://www.tinkercad.com/circuits">TinkerCad</a> (émulateurs Arduino en ligne), PlatformIO et l'Arduino IDE.</p>
-</section>
+![](dessins/fiche-info.svg)
 
-<section class="bloc" id="enseignant">
-  <h2><span class="illus c-green"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="78" cy="38" r="12"/><path d="M56 80a22 22 0 0 1 44 0"/><rect x="108" y="30" width="40" height="40" rx="5"/><path d="M108 42h40M118 26v8M138 26v8M118 54h6M132 54h6M118 62h6"/></svg></span>Horaire et disponibilités de l'enseignant</h2>
-  <div class="enseignant">
-    <img src="images/moi.jpg" width="120" height="120" alt="Alain Boudreault">
-    <div>
-      <p class="nom">Alain Boudreault</p>
-      <p>Enseignant au département de Techniques de l'informatique, Cégep de Saint-Jérôme</p>
-      <ul class="contact">
-        <li><span>Courriel</span> <a href="mailto:Aboudrea@cstj.qc.ca">Aboudrea@cstj.qc.ca</a></li>
-        <li><span>Téléphone</span> poste 6516</li>
-        <li><span>Local</span> D125e</li>
-      </ul>
-    </div>
-  </div>
-  <div class="liens-horaire">
-    <a class="btn-lien" href="images/Horaire-H26.png">Disponibilités pour la session H26</a>
-    <a class="btn-lien" href="Documents/Calendriers_H26_CSTJ.pdf">Calendrier scolaire H26 (PDF)</a>
-  </div>
-</section>
+Le cours **Objets connectés** initie l'étudiant aux capteurs d'environnement, aux différentes technologies d'affichage (écran ACL, diode lumineuse, etc.) et aux notions de base en électronique pour réaliser des objets connectés. À l'aide d'un microcontrôleur (Arduino Uno), il met en pratique des notions de base en programmation pour développer des applications simples. Finalement, l'étudiant est sensibilisé aux données générées par les objets connectés et aux manières de les sauvegarder et de les échanger de manière sécuritaire.
 
-<div id="documents"></div>
+- **Programme** : 420.B0 · Techniques de l'informatique
+- **Famille** : Mobiles et objets connectés
+- **Pondération** : 1-3-2
+- **Préalable** : Aucun
 
-<section class="bloc" id="plan">
-  <h2><span class="illus c-cyan"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="72" y="14" width="56" height="74" rx="5"/><rect x="88" y="8" width="24" height="12" rx="3"/><path d="M84 36h32M84 48h32M84 60h20M84 72h26"/></svg></span><span class="lettre-txt c-cyan">A</span>Plan de cours</h2>
-  {% include documents.html section="plan" couleur="c-cyan" %}
-</section>
+Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/circuits) (émulateurs Arduino en ligne), PlatformIO et l'Arduino IDE.
 
-<section class="bloc" id="bases">
-  <h2><span class="illus c-violet"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="62" y="28" width="64" height="48" rx="6"/><rect x="80" y="42" width="28" height="20" rx="3"/><path d="M72 28v-8M84 28v-8M96 28v-8M108 28v-8M120 28v-8M72 76v8M84 76v8M96 76v8M108 76v8M120 76v8"/><circle cx="148" cy="52" r="5"/><path d="M148 57v14"/></svg></span><span class="lettre-txt c-violet">B</span>Documents 1 à 12</h2>
-  {% include documents.html section="bases" couleur="c-violet" %}
-</section>
+## Horaire et disponibilités de l'enseignant
 
-<section class="bloc" id="capteurs">
-  <h2><span class="illus c-green"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="68" y="34" width="44" height="44" rx="6"/><circle cx="90" cy="56" r="8"/><path d="M124 40a16 16 0 0 1 0 32M134 30a30 30 0 0 1 0 52"/></svg></span><span class="lettre-txt c-green">C</span>Documents 20 à 28</h2>
-  {% include documents.html section="capteurs" couleur="c-green" %}
-</section>
+![](dessins/enseignant.svg)
 
-<section class="bloc" id="projet">
-  <h2><span class="illus c-amber"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M78 88V14M78 18h46l-8 12 8 12H78"/><path d="M66 88h28"/></svg></span><span class="lettre-txt c-amber">D</span>Projet de session</h2>
-  {% include documents.html section="projet" couleur="c-amber" grande=true %}
-</section>
+![Alain Boudreault](images/moi.jpg)
 
-<section class="bloc" id="ressources">
-  <h2><span class="illus c-red"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="76" y="24" width="44" height="56" rx="5"/><path d="M68 70V20a6 6 0 0 1 6-6h36"/><path d="M86 42h24M86 54h24M86 66h14"/></svg></span><span class="lettre-txt c-red">E</span>98 et 99</h2>
-  {% include documents.html section="ressources" couleur="c-red" %}
-</section>
+**Alain Boudreault**, enseignant au département de Techniques de l'informatique, Cégep de Saint-Jérôme
+
+- **Courriel** : [Aboudrea@cstj.qc.ca](mailto:Aboudrea@cstj.qc.ca)
+- **Téléphone** : poste 6516
+- **Local** : D125e
+
+[Disponibilités pour la session H26](images/Horaire-H26.png) · [Calendrier scolaire H26 (PDF)](Documents/Calendriers_H26_CSTJ.pdf)
+
+## A) Plan de cours
+
+![](dessins/porte-documents.svg) *Le plan officiel de la session*
+
+- ![](dessins/document.svg) 01 · [Plan de cours H26 (PDF)](Documents/420-1C4-JR_ab_pc_H26.pdf)
+- ![](dessins/document.svg) + · [Plan de cours, version texte](Documents/Plan-de-cours.md)
+
+## B) Documents 1 à 12
+
+![](dessins/puce-del.svg) *Arduino, PlatformIO, C, affichage*
+
+- ![](dessins/microcontroleur.svg) 02 · [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md)
+  - Arduino Uno · émulateurs en ligne : Wokwi, TinkerCad
+- ![](dessins/terminal.svg) 03 · [Hello World – PlatformIO](Documents/PlatformIO-Hello-world.md)
+- ![](dessins/carte-arduino.svg) + · [Hello World – Arduino IDE](Documents/Hello-world.md)
+- ![](dessins/bouton.svg) 04 · [Serial.println(val), digitalRead() et while() pour la gestion du bouton](Documents/Serial-println-et-digitalread.md)
+- ![](dessins/potentiometre.svg) 05 · [Lecture/écriture d'une valeur analogique – analogRead(), analogWrite(), PWM](Documents/analogRead.md)
+- ![](dessins/lcd.svg) 06 · [Grove – Module LCD-RGB i2c (sprintf, switch, #ifdef, op ternaire, i % j)](Documents/LCD-enum-ifdef.md)
+- ![](dessins/accolades.svg) 07 · [Compilation conditionnelle](Documents/Compilation-conditionnelle.md)
+- ![](dessins/livres.svg) + · [Les librairies](Documents/Utilisation-de-librairies.md)
+- ![](dessins/resistance-del.svg) + · [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md)
+- ![](dessins/liste.svg) 08 · [L'instruction « enum » du langage C](Documents/Instruction-enum.md) · TP02
+- ![](dessins/structure.svg) 09 · [Structures de données](Documents/Structures-de-donnees.md)
+- ![](dessins/bits.svg) 10 · [Opérations sur les bits et structures de données](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) · TP02
+- ![](dessins/copier-coller.svg) 11 · [Copier/coller pour ANSI et boîte](Documents/copier-coller.md)
+  - Les variables de type scalaire · gestion du bruit sur un bouton – bounce2
+- ![](dessins/thermometre.svg) 12 · [Température, humidité et affichage sur 7 segments – 4Digit](Documents/Capteur-temperature-humidite.md)
+  - Installer une librairie à la main
+
+## C) Documents 20 à 28
+
+![](dessins/capteur-sans-fil.svg) *Capteurs, horloge, UART, Wi-Fi*
+
+- ![](dessins/bande-del.svg) 20 · [Buzzer et NeoPixel](Documents/NEOPixel.md)
+- ![](dessins/horloge.svg) 21 · [Real Time Clock (RTC)](Documents/RTC-DS1307.md)
+- ![](dessins/mouvement.svg) 22 · [Détecteur de mouvements](https://ve2cuy.com/420-1c4/index.php/detecteur-de-mouvements/)
+- ![](dessins/minuterie.svg) 23 · [Opérations non bloquantes – millis() et interruptions](Documents/Operations-non-bloquantes.md) · TP02
+- ![](dessins/uart.svg) 24 · [Communication UART entre deux Arduino](Documents/Communication-UART-entre-2-arduino.md) · TP02
+- ![](dessins/wifi.svg) 25 · [ESP-Wifi – accès réseau](Documents/ESP-Wifi.md) · TP02
+- ![](dessins/infrarouge.svg) 26 · Détecteur infrarouge · optionnel
+- ![](dessins/eeprom.svg) 27 · EEPROM · optionnel
+- ![](dessins/rfid.svg) 28 · [Capteur RFID](Documents/capteur-rfid.md) · optionnel · défi TP02
+
+## D) Projet de session
+
+![](dessins/drapeau.svg) *Partie A et partie B*
+
+- ![](dessins/oeil.svg) A · [Partie A · TP01 – Le système de surveillance H26](Documents/TP01-H26.md)
+- ![](dessins/coupe.svg) B · [Partie B · TP02 – Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md)
+
+## E) 98 et 99
+
+![](dessins/feuilles.svg) *Copier/coller et solutions*
+
+- ![](dessins/copier-coller.svg) 98 · [Les copier/coller](Documents/copier-coller.md)
+- ![](dessins/solutions.svg) 99 · [Solutions aux laboratoires](Documents/Solutions.md)

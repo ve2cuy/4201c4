@@ -1,23 +1,24 @@
 # Guide d'entretien du site 420-1C4
 
 Le site <https://ve2cuy.github.io/4201c4/> est construit par GitHub Pages (Jekyll) à chaque
-poussée sur `main`. Il n'y a rien à installer : on modifie des fichiers, on pousse, et le site se
-met à jour en une ou deux minutes.
+poussée sur `main`. Il n'y a rien à installer : on modifie des fichiers Markdown, on pousse, et le
+site se met à jour en une ou deux minutes.
+
+**Tout le contenu de l'accueil est dans `index.md`, en Markdown ordinaire.** Le fichier se lit tel
+quel sur github.com; sur le site, un petit script (`assets/js/accueil.js`) en fait la mise en page
+(vignettes, cartes, encadrés) en suivant quelques règles simples, décrites plus bas.
 
 ## Où se trouve quoi
 
 | Fichier ou dossier | Rôle |
 |---|---|
-| `index.md` | L'accueil : présentation du cours, enseignant, titres des sections A à E |
-| `_data/documents.yml` | **La liste des documents de l'accueil** (une carte par document) |
-| `_includes/dessins/*.svg` | Les dessins des cartes, un fichier par dessin |
-| `_includes/documents.html` | Le gabarit qui fabrique les cartes (normalement, on n'y touche pas) |
+| `index.md` | **L'accueil** : en-tête, présentation, enseignant, sections A à E et leurs documents |
 | `Documents/*.md` | Le contenu des documents, en Markdown |
-| `images/` | Les images utilisées dans les documents |
-| `_layouts/default.html` | L'en-tête, la bannière, le tableau de bord et le pied de page |
-| `assets/css/ve2cuy.css`, `assets/css/cours.css` | Le thème (couleurs, mode clair et sombre, mise en page) |
+| `dessins/*.svg` | Les dessins des cartes et des sections |
+| `images/` | Les images des documents et de l'accueil |
+| `_layouts/`, `assets/` | Le thème, la mise en page de l'accueil et le tableau de bord (normalement, on n'y touche pas) |
 | `assets/data/sessions.json` | Le calendrier de la session, pour le tableau de bord |
-| `README.md` | La page du dépôt sur github.com; **elle n'apparaît plus sur le site** |
+| `README.md` | La page du dépôt sur github.com; **elle n'apparaît pas sur le site** |
 | `outils/` | L'aperçu local (`outils/apercu.sh`), non publié |
 
 ## Modifier le contenu d'un document
@@ -28,18 +29,73 @@ Markdown, puis pousser. La page garde le thème toute seule.
 Pour une image, la déposer dans `images/` et y faire référence depuis le document :
 
 ```markdown
-<img src="../images/mon-montage.jpg" alt="Le montage du laboratoire" width="400" />
-```
-
-ou
-
-```markdown
 ![Le montage du laboratoire](../images/mon-montage.jpg)
 ```
 
 Le `../` est nécessaire parce que les documents sont dans `Documents/` et les images à côté.
 
-## Ajouter un document
+## L'accueil : `index.md`
+
+### L'en-tête
+
+Les quatre lignes du haut du fichier, entre les deux `---`, remplissent l'en-tête :
+
+```yaml
+---
+layout: accueil
+bandeau: "420-1C4-JR · techniques de l'informatique · cégep de saint-jérôme"
+titre: "Objets connectés."
+accroche: "Capteurs, afficheurs et électronique de base autour d'un microcontrôleur Arduino…"
+image: images/arduino-robot.webp
+---
+```
+
+`layout: accueil` doit rester tel quel. Les initiales des mots du titre (de quatre lettres et
+plus) sont mises en couleur automatiquement. Le tableau de bord de la session s'ajoute à droite.
+
+### Les règles de mise en page
+
+| Ce qu'on écrit en Markdown | Ce que le site affiche |
+|---|---|
+| `## Titre` | Une section, séparée des autres par un trait |
+| `## C) Titre` (une lettre majuscule et une parenthèse) | Une section lettrée, avec sa vignette dans la rangée du haut |
+| Juste sous le titre : `![](dessins/nom.svg) *Description*` | Le dessin de la section, à côté du titre; la description sert à la vignette du haut |
+| Une liste dont chaque élément commence par un dessin | Des cartes de documents, cinq par rangée |
+| Une liste dont chaque élément commence par `**Libellé**` | Des encadrés « libellé / valeur » (programme, pondération, courriel…) |
+| Un paragraphe qui ne contient qu'une photo | La photo ronde, avec le paragraphe suivant à côté |
+| Un paragraphe qui ne contient que des liens, séparés par `·` | Des boutons |
+| Tout le reste (paragraphes, listes ordinaires, **gras**, liens) | Du texte normal |
+
+### Une carte de document
+
+Une carte, c'est **une ligne de liste** :
+
+```markdown
+- ![](dessins/horloge.svg) 21 · [Real Time Clock (RTC)](Documents/RTC-DS1307.md) · TP02
+```
+
+| Partie | Effet |
+|---|---|
+| `![](dessins/horloge.svg)` | Le dessin (obligatoire, en premier); liste des dessins plus bas |
+| `21` | Le numéro, suivi de ` · `; `+` pour un document d'appoint sans numéro |
+| `[Titre](lien)` | Le titre et le lien : un document `Documents/Nom.md`, un PDF ou une adresse `https://…` |
+| ` · TP02` | Facultatif : une petite étiquette (`TP02`, `optionnel`, `optionnel · défi TP02`…) |
+
+Sans lien (seulement du texte à la place de `[Titre](lien)`), la carte est grisée avec la mention
+« sans page ». Une **sous-liste** (deux espaces puis `-`) ajoute une ligne de détails en petit :
+
+```markdown
+- ![](dessins/microcontroleur.svg) 02 · [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md)
+  - Arduino Uno · émulateurs en ligne : Wokwi, TinkerCad
+```
+
+Les couleurs des dessins alternent d'elles-mêmes d'une carte à l'autre. Une liste dont toutes les
+cartes sont numérotées par une seule lettre (`A`, `B`) s'affiche en grandes cartes, comme le
+projet de session.
+
+## Exemples
+
+### Ajouter un document
 
 1. Créer la page, par exemple `Documents/Capteur-ultrasons.md`, qui commence par son titre :
 
@@ -49,116 +105,89 @@ Le `../` est nécessaire parce que les documents sont dans `Documents/` et les i
    Le texte du document…
    ```
 
-2. Ajouter sa carte dans `_data/documents.yml`, **à l'endroit où elle doit paraître** (les cartes
-   s'affichent dans l'ordre du fichier) :
+2. Dans `index.md`, ajouter sa ligne dans la liste de sa section, **à l'endroit où la carte doit
+   paraître** :
 
-   ```yaml
-   - section: "capteurs"
-     numero: "29"
-     titre: "Capteur d'ultrasons"
-     fichier: "Documents/Capteur-ultrasons.md"
-     dessin: "mouvement"
-     option: "TP02"
+   ```markdown
+   - ![](dessins/mouvement.svg) 29 · [Capteur d'ultrasons](Documents/Capteur-ultrasons.md) · TP02
    ```
 
-3. Pousser. La carte apparaît dans la section C, avec le dessin `mouvement` et l'étiquette « TP02 ».
+3. Pousser.
 
-### Les champs d'une carte
-
-| Champ | Obligatoire | Effet |
-|---|---|---|
-| `section` | oui | `plan` (A), `bases` (B), `capteurs` (C), `projet` (D) ou `ressources` (E) |
-| `titre` | oui | Le texte de la carte |
-| `dessin` | non | Un nom de fichier de `_includes/dessins/`, sans `.svg` (sinon : `document`) |
-| `numero` | non | Le numéro affiché; sans numéro, la carte affiche « + » (document d'appoint) |
-| `fichier` | non | `Documents/Nom.md`, un PDF (`Documents/plan.pdf`) ou une adresse `https://…`; sans fichier, la carte est grisée avec la mention « sans page » |
-| `option` | non | Petite étiquette : `TP02`, `optionnel`, `optionnel · défi TP02`… |
-| `notes` | non | Une ligne de détails en petit sous le titre |
-
-Toujours mettre les valeurs entre guillemets doubles. Une apostrophe à l'intérieur ne pose pas de
-problème (`"Capteur d'ultrasons"`); un guillemet double s'écrit `\"`.
-
-### Exemples
+### Autres cas
 
 Un document d'appoint sans numéro, placé juste après le document 03 :
 
-```yaml
-- section: "bases"
-  titre: "Installer les pilotes USB"
-  fichier: "Documents/Pilotes-USB.md"
-  dessin: "carte-arduino"
+```markdown
+- ![](dessins/carte-arduino.svg) + · [Installer les pilotes USB](Documents/Pilotes-USB.md)
 ```
 
 Un document prévu, sans page pour l'instant :
 
-```yaml
-- section: "capteurs"
-  numero: "30"
-  titre: "Écran OLED"
-  dessin: "lcd"
-  option: "à venir"
+```markdown
+- ![](dessins/lcd.svg) 30 · Écran OLED · à venir
 ```
 
 Un lien vers une page extérieure :
 
-```yaml
-- section: "capteurs"
-  numero: "22"
-  titre: "Détecteur de mouvements"
-  fichier: "https://ve2cuy.com/420-1c4/index.php/detecteur-de-mouvements/"
-  dessin: "mouvement"
+```markdown
+- ![](dessins/mouvement.svg) 22 · [Détecteur de mouvements](https://ve2cuy.com/420-1c4/index.php/detecteur-de-mouvements/)
 ```
 
-## Modifier, déplacer ou retirer une carte
+### Modifier, déplacer ou retirer une carte
 
-- **Changer un titre, un numéro ou une étiquette :** modifier le bloc dans `_data/documents.yml`.
-- **Changer l'ordre :** déplacer le bloc entier plus haut ou plus bas dans le fichier.
-- **Changer de section :** modifier `section:`, puis déplacer le bloc parmi ceux de sa nouvelle section.
-- **Retirer une carte :** supprimer son bloc. La page `Documents/…md` reste en ligne tant que le
+- **Changer un titre, un numéro ou une étiquette :** modifier la ligne.
+- **Changer l'ordre ou la section :** couper la ligne et la coller à sa nouvelle place.
+- **Retirer une carte :** supprimer la ligne. La page `Documents/…md` reste en ligne tant que le
   fichier existe; la supprimer aussi si elle ne doit plus être accessible.
-- **Le projet de session (section D)** s'affiche en deux grandes cartes; ses blocs se modifient de
-  la même façon (`numero: "A"`, `numero: "B"`).
+
+### Ajouter une section (par exemple F, i86)
+
+À la fin d'`index.md` :
+
+```markdown
+## F) Projet i86
+
+![](dessins/microcontroleur.svg) *Un ordinateur 8086 sur plaques d'essai*
+
+- ![](dessins/terminal.svg) 100 · [Projet i86.P1](Documents/i86/Projet-i86-etape01.md)
+```
+
+La vignette F apparaît dans la rangée du haut, avec sa couleur et sa description.
+
+### Modifier la présentation ou l'enseignant
+
+Ce sont des paragraphes et des listes ordinaires sous leur titre `##` : les modifier comme du
+texte. Les encadrés sont des lignes `- **Libellé** : valeur`; les boutons, une ligne de liens
+séparés par ` · `.
 
 ## Les dessins
 
-Dessins disponibles (`_includes/dessins/`) :
+Dessins disponibles (`dessins/`) :
 
-`accolades`, `bande-del`, `bits`, `bouton`, `carte-arduino`, `copier-coller`, `coupe`, `document`,
-`eeprom`, `horloge`, `infrarouge`, `lcd`, `liste`, `livres`, `microcontroleur`, `minuterie`,
-`mouvement`, `oeil`, `potentiometre`, `resistance-del`, `rfid`, `solutions`, `structure`,
-`terminal`, `thermometre`, `uart`, `wifi`.
+`accolades`, `bande-del`, `bits`, `bouton`, `capteur-sans-fil`, `carte-arduino`, `copier-coller`,
+`coupe`, `document`, `drapeau`, `eeprom`, `enseignant`, `feuilles`, `fiche-info`, `horloge`,
+`infrarouge`, `lcd`, `liste`, `livres`, `microcontroleur`, `minuterie`, `mouvement`, `oeil`,
+`porte-documents`, `potentiometre`, `puce-del`, `resistance-del`, `rfid`, `solutions`,
+`structure`, `terminal`, `thermometre`, `uart`, `wifi`.
 
-Les couleurs alternent d'elles-mêmes d'une carte à l'autre (cyan, mauve, ambre, vert, rouge).
+Sur github.com, ils s'affichent en bleu; sur le site, ils prennent les couleurs du thème clair ou
+sombre.
 
 ### Ajouter un dessin
 
-Créer `_includes/dessins/mon-dessin.svg` contenant **seulement les formes**, sans la balise
-`<svg>` (le gabarit l'ajoute). Le dessin occupe une surface de 200 × 100, trait de 2,5, sans
-remplissage, et prend la couleur de la carte :
+Copier un fichier de `dessins/` sous un nouveau nom, par exemple `dessins/ultrasons.svg`, et
+remplacer les formes. Le dessin occupe une surface de 200 × 100, en traits sans remplissage :
 
 ```html
-<rect x="70" y="26" width="60" height="48" rx="6"/><path d="M80 26v-9M120 26v-9"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100" fill="none"
+     stroke="#4a8fd0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="70" y="26" width="60" height="48" rx="6"/><path d="M80 26v-9M120 26v-9"/>
+</svg>
 ```
 
-Puis l'utiliser avec `dessin: "mon-dessin"`. Les formes simples (`rect`, `circle`, `path`) en
-lignes rendent le mieux; s'inspirer des dessins existants.
-
-## Les sections de l'accueil
-
-Les titres et les textes de présentation et de l'enseignant sont dans `index.md`. Chaque section
-de documents y appelle le gabarit, par exemple :
-
-```liquid
-{% raw %}{% include documents.html section="capteurs" couleur="c-green" %}{% endraw %}
-```
-
-Pour ajouter une section F (par exemple i86) :
-
-1. Dans `index.md`, copier une section (`<section class="bloc" id="…">` jusqu'à `</section>`),
-   lui donner un nouvel `id` (par exemple `i86`), un titre, la lettre `F`, et
-   `section="i86"` dans l'appel du gabarit.
-2. Dans `_data/documents.yml`, ajouter les cartes avec `section: "i86"`.
-3. Facultatif : ajouter une vignette dans la rangée du haut d'`index.md` (bloc `<a class="tile">`).
+Puis l'utiliser avec `![](dessins/ultrasons.svg)`. Les formes simples (`rect`, `circle`, `path`)
+rendent le mieux; s'inspirer des dessins existants.
 
 ## Le tableau de bord de la session
 
@@ -194,7 +223,7 @@ outils/apercu.sh
 ```
 
 puis ouvrir <http://127.0.0.1:4000/4201c4/>. Le `/4201c4/` est nécessaire, comme sur GitHub
-Pages. À chaque fichier enregistré (un document, `_data/documents.yml`, un dessin…), le site se
+Pages. À chaque fichier enregistré (un document, `index.md`, un dessin…), le site se
 reconstruit en moins d'une seconde et la page ouverte se recharge seule. **Ctrl+C** arrête
 l'aperçu.
 
@@ -219,8 +248,8 @@ Le tableau de bord se teste aussi en local : <http://127.0.0.1:4000/4201c4/?date
 ### Ce qu'il faut savoir
 
 - `_site/` (le site construit) et `.jekyll-cache/` ne vont pas dans Git (`.gitignore`).
-- Une erreur dans `_data/documents.yml` ou dans un document s'affiche dans le terminal, avec le
-  nom du fichier : la corriger, enregistrer, et l'aperçu repart.
+- Une erreur dans un fichier s'affiche dans le terminal, avec son nom : la corriger,
+  enregistrer, et l'aperçu repart.
 - Le dossier `outils/` (le script, sa configuration et son `Gemfile`) n'est pas publié sur le site.
 - Ce Jekyll est plus ancien que le Ruby de Homebrew : `outils/ruby4-compat.rb` et les gemmes
   supplémentaires du `Gemfile` comblent l'écart, pour l'aperçu seulement. GitHub, lui, construit
@@ -243,5 +272,8 @@ Si GitHub envoie un courriel « deploy failed » alors que l'étape **build** a 
 presque toujours un délai dépassé de son côté : dans **Actions**, ouvrir l'exécution et cliquer
 **Re-run failed jobs**, ou simplement pousser le commit suivant.
 
-Si l'étape **build** échoue, c'est en général une erreur de syntaxe dans `_data/documents.yml`
-(guillemet ou indentation) : le message de l'onglet **Actions** donne la ligne fautive.
+Si l'étape **build** échoue, c'est en général une erreur dans l'en-tête d'`index.md` (entre les
+`---`, un guillemet oublié) : le message de l'onglet **Actions** donne le fichier et la ligne.
+
+Si une carte ne s'affiche pas comme prévu, vérifier sa ligne : le dessin doit venir en premier,
+suivi du numéro et de ` · `.
