@@ -207,6 +207,15 @@ Autres usages :
 
 Le tableau de bord se teste aussi en local : <http://127.0.0.1:4000/4201c4/?date=2027-03-31>.
 
+### Le contenu d'`outils/`
+
+| Fichier | Rôle |
+|---|---|
+| `apercu.sh` | Le script : prépare Ruby, installe les gemmes au besoin, construit et sert le site |
+| `Gemfile` | Les gemmes : `github-pages` (la même version de Jekyll que GitHub) et quelques bibliothèques retirées du Ruby récent |
+| `apercu.yml` | Les extensions que GitHub Pages active d'office (pages Markdown sans en-tête, liens `.md` convertis en `.html`, titres tirés du premier titre) |
+| `ruby4-compat.rb` | Comble l'écart entre ce Jekyll et le Ruby récent (méthodes `tainted?` et `untaint` retirées) |
+
 ### Ce qu'il faut savoir
 
 - `_site/` (le site construit) et `.jekyll-cache/` ne vont pas dans Git (`.gitignore`).
