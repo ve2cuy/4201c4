@@ -430,7 +430,9 @@ Dans la partie 2 du projet, il faut envoyer les informations reçus par la stati
 
 Ce qui devrait afficher ceci:
 
-<img src="../images/TP02-LISTE-SEV-1024x834.png" alt="Liste événements" width="500" />
+<img src="../images/esh-liste.png" alt="Liste des événements" width="700" />
+
+La liste se met à jour seule aux 10 secondes. Les **filtres** du haut permettent de n'afficher que votre système (liste « Système ») ou que certains types d'événements (pastilles à cocher). Les puces de la colonne « Appareils » montrent les bits de '**etatAppareils**' : une puce allumée indique un bit à 1 (L1, L2 : DEL; R : relais; M : mouvement détecté; A : détecteur armé; P : bouton de panique; LCD : rétroéclairage; °C : affichage en Celsius).
 
 ---
 
@@ -531,11 +533,11 @@ GET /tp2-api.php?nomSys=E000001&ipAdr=192.168.10.127&note=VE2CUY&statut=4&app=20
 
 👉 **NOTE IMPORTANTE**: Si le nom du système ne correspond pas à un numéro de matricule valide, précédé de 'E', la requête sera rejetée par l'API.
 
-<img src="../images/refusee-1024x176.png" alt="Requête refusée" width="500" />
+<img src="../images/esh-refusee.png" alt="Requête refusée" width="500" />
 
 De plus, l'API ignore les requêtes qui excèdes un maximum de **20 requêtes en 5 minutes**. Donc, attention de ne pas envoyer des messages inutilement vers l'API.
 
-<img src="../images/depassement-1024x90.png" alt="Dépassement requêtes" width="500" />
+<img src="../images/esh-depassement.png" alt="Dépassement des requêtes" width="700" />
 
 Exemple de validation du nom du système en php:
 
@@ -567,13 +569,180 @@ esh25.ve2cuy.com/tp2-api.php?nomSys=VE2CUY&ipAdr=254.192.250.127&note=Syst%C3%A8
 
 ---
 
+## 7.3 – Tester sur votre ordinateur avec Docker
+
+Pendant le développement, vous pouvez faire rouler **votre propre copie** de l'API et de la page de consultation sur votre ordinateur. C'est la même application que celle du serveur, mais :
+
+* seuls **vos** événements y apparaissent;
+* pas besoin d'Internet : le MEGA et l'ordinateur doivent seulement être sur le même réseau Wifi;
+* vous pouvez tout effacer et recommencer, aussi souvent que nécessaire.
+
+Cette copie est livrée sous la forme d'un **conteneur Docker**. Pas besoin de connaître Docker : il suffit de taper les commandes ci-dessous. Deux mots de vocabulaire :
+
+* une **image** : le logiciel à télécharger (une seule fois), un peu comme un fichier d'installation;
+* un **conteneur** : une copie de l'image **en marche** sur votre ordinateur. Il contient tout le nécessaire : serveur Web, PHP et base de données.
+
+---
+
+### Étape 1 – Installer Docker Desktop (une seule fois)
+
+1. Télécharger Docker Desktop : <https://www.docker.com/products/docker-desktop/>
+   * Windows : « Download for Windows – AMD64 »;
+   * Mac : choisir « Apple Silicon » (M1, M2…) ou « Intel ».
+2. Lancer l'installation et garder les options par défaut. Redémarrer l'ordinateur si l'installateur le demande. Sous Windows, accepter l'installation de **WSL 2** si elle est proposée.
+3. Ouvrir **Docker Desktop**. Un compte n'est pas nécessaire : choisir « Continue without signing in » (ou « Skip »).
+4. Attendre que Docker Desktop indique **Engine running** (en bas, à gauche). Docker Desktop doit rester ouvert pendant vos tests.
+5. Ouvrir un terminal :
+   * Windows : menu Démarrer, taper **PowerShell**, Entrée;
+   * Mac : application **Terminal**.
+6. Vérifier que Docker répond :
+
+```
+docker --version
+```
+
+Une réponse comme `Docker version 28.x.x` indique que tout est prêt.
+
+---
+
+### Étape 2 – Démarrer l'API sur votre ordinateur
+
+Dans le terminal, taper (en une seule ligne) :
+
+```
+docker run -d --name esh25 -p 80:80 alainboudreault/esh25-api
+```
+
+| Partie de la commande | Signification |
+|---|---|
+| `docker run` | Créer et démarrer un conteneur |
+| `-d` | Le faire rouler en arrière-plan (le terminal reste disponible) |
+| `--name esh25` | Lui donner un nom, pour les commandes suivantes |
+| `-p 80:80` | Rendre son serveur Web accessible sur le port 80 de votre ordinateur |
+| `alainboudreault/esh25-api` | L'image à utiliser (téléchargée automatiquement la première fois) |
+
+La première fois, le téléchargement prend une minute ou deux. Ensuite, ouvrir la page de consultation dans un fureteur :
+
+<http://localhost/>
+
+La page est vide : aucun événement n'a encore été reçu.
+
+**Si un message indique que le port est déjà utilisé** (`port is already allocated`), un autre logiciel utilise le port 80. Supprimer le conteneur et utiliser le port 8080 :
+
+```
+docker rm -f esh25
+docker run -d --name esh25 -p 8080:80 alainboudreault/esh25-api
+```
+
+La page est alors à <http://localhost:8080/>, et il faudra utiliser le port **8080** à l'étape 4.
+
+---
+
+### Étape 3 – Essayer l'API avec le fureteur (ou Postman)
+
+Coller cette adresse dans le fureteur, en remplaçant `E0000001` par **votre matricule** (E suivi de 7 chiffres) :
+
+```
+http://localhost/tp2-api.php?nomSys=E0000001&ipAdr=192.168.10.127&note=Essai&statut=4&app=209&tmp=20&hum=45&dur=6&hr=18:36:23
+```
+
+La réponse doit se terminer par `Données insérées avec succès!`. Revenir à <http://localhost/> : l'événement « Système en ligne » apparaît.
+
+**NOTE** : sur votre ordinateur, l'API accepte tous les noms formés d'un E suivi de 7 chiffres. Les autres règles sont les mêmes que sur le serveur, dont la limite de **20 requêtes en 5 minutes**.
+
+---
+
+### Étape 4 – Diriger le MEGA vers votre ordinateur
+
+1. Trouver l'adresse IP de votre ordinateur sur le réseau Wifi :
+   * Windows, dans PowerShell :
+
+     ```
+     ipconfig
+     ```
+
+     Repérer la section « Carte réseau sans fil Wi-Fi » et noter l'**Adresse IPv4**, par exemple `192.168.1.42`.
+   * Mac, dans Terminal :
+
+     ```
+     ipconfig getifaddr en0
+     ```
+
+2. Dans le code du MEGA, remplacer le nom du serveur par cette adresse :
+
+   ```cpp
+   // char server[] = "esh25.ve2cuy.com";   // Le serveur du cours
+   char server[] = "192.168.1.42";          // Mon ordinateur (Docker), pendant les tests
+   ```
+
+   Si vous avez dû utiliser le port 8080 à l'étape 2, remplacer aussi `client.connect(server, 80)` par `client.connect(server, 8080)`.
+
+3. Le module Wifi et l'ordinateur doivent être connectés **au même réseau Wifi**.
+4. Sous Windows, la première fois, une fenêtre du **pare-feu** peut demander d'autoriser Docker : cliquer sur **Autoriser**.
+5. Téléverser le programme et vérifier que les événements apparaissent sur <http://localhost/>.
+
+**Si les requêtes n'arrivent pas** :
+
+* vérifier l'adresse IP (elle peut changer d'un jour à l'autre : refaire `ipconfig`);
+* vérifier que la page <http://localhost/> s'affiche (le conteneur roule-t-il? voir les commandes utiles plus bas);
+* certains réseaux Wifi empêchent les appareils de communiquer entre eux. Essayer alors à la maison, ou avec le partage de connexion d'un téléphone (ordinateur et module Wifi branchés sur ce partage).
+
+👉 **Avant la remise**, remettre `char server[] = "esh25.ve2cuy.com";` (et le port 80) : c'est le serveur du cours qui sera utilisé pour la correction.
+
+---
+
+### Étape 5 (facultative) – Simuler d'autres systèmes
+
+Pour voir la page se remplir avec des événements d'autres systèmes (pour essayer les filtres, par exemple), démarrer un second conteneur qui simule des systèmes connectés :
+
+```
+docker run -d --name simulateur -e ESH_API=http://host.docker.internal/tp2-api.php alainboudreault/esh25-simulateur
+```
+
+* `-e ESH_API=…` indique au simulateur l'adresse de l'API; `host.docker.internal` veut dire « votre ordinateur », vu de l'intérieur d'un conteneur. Avec le port 8080 : `http://host.docker.internal:8080/tp2-api.php`.
+* Six systèmes envoient chacun un événement aux 20 secondes environ.
+
+Pour l'arrêter et le supprimer :
+
+```
+docker rm -f simulateur
+```
+
+---
+
+### Commandes utiles
+
+| Commande | Effet |
+|---|---|
+| `docker ps` | Liste des conteneurs en marche (`esh25` doit y paraître) |
+| `docker logs esh25` | Journal du serveur Web : une ligne par requête reçue, très utile pour vérifier que le MEGA envoie bien ses requêtes |
+| `docker stop esh25` | Arrêter l'API (les événements sont gardés) |
+| `docker start esh25` | Redémarrer l'API, avec ses événements |
+| `docker rm -fv esh25` | Supprimer le conteneur **et ses événements** |
+
+Pour **repartir avec une base vide**, supprimer le conteneur, puis refaire la commande de l'étape 2 :
+
+```
+docker rm -fv esh25
+docker run -d --name esh25 -p 80:80 alainboudreault/esh25-api
+```
+
+À la fin de la session, pour libérer l'espace disque, supprimer aussi les images :
+
+```
+docker rm -fv esh25 simulateur
+docker rmi alainboudreault/esh25-api alainboudreault/esh25-simulateur
+```
+
+---
+
 ## 8 – Ce qui doit être réalisé dans cette partie
 
 ### 8.1 – evenement\_systeme\_enligne
 
 Lorsque le MEGA reçoit le **premier message** du UNO, il doit envoyer une requête de type '***evenement\_systeme\_enligne***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
-<img src="../images/enligne-1024x57.png" alt="Système en ligne" width="500" />
+<img src="../images/esh-enligne.png" alt="Système en ligne" width="700" />
 
 **NOTE**: Les événements sont renseignés par le paramètre 'Evenements codeEvent' de la fonction 'preparerRequetePourAPI'.
 
@@ -583,11 +752,11 @@ Lorsque le MEGA reçoit le **premier message** du UNO, il doit envoyer une requ�
 
 À chaque minute, **mais pas plus**, le MEGA doit envoyer une requête de type '***evenement\_statut\_appareils***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
-<img src="../images/sys-info-1024x41.png" alt="Statut appareils" width="500" />
+<img src="../images/esh-info.png" alt="Statut des appareils" width="700" />
 
 Un clic sur la ligne affichera plus de détails sur le système:
 
-<img src="../images/api-details-1024x325.png" alt="Détails système" width="500" />
+<img src="../images/esh-details.png" alt="Détails de l'événement" width="400" />
 
 ---
 
@@ -595,9 +764,9 @@ Un clic sur la ligne affichera plus de détails sur le système:
 
 À la réception des informations du UNO, il faut vérifier s'il y a eu un changement sur un des bits de la propriété '**etatAppareils**' par rapport à la réception précédente. Si c'est le cas, le MEGA doit envoyer une requête de type '***evenement\_changement\_etat***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
-<img src="../images/changement-etat-1024x42.png" alt="Changement état" width="500" />
+<img src="../images/esh-changement.png" alt="Changement d'état" width="700" />
 
-Dans cet exemple, LED1 était à OFF à la lecture précédente. Il est passé à ON (via le menu 1 du UNO) donc la requête '***evenement\_changement\_etat***' a été envoyée.
+Dans cet exemple, LED2 était à OFF à la lecture précédente. Elle est passée à ON (via le menu du UNO) donc la requête '***evenement\_changement\_etat***' a été envoyée.
 
 ```cpp
 // Par exemple,
@@ -610,7 +779,7 @@ sendInfoTOWebAPI(evenement_changement_etat);
 
 Si le détecteur de mouvement a été déclenché, le MEGA doit envoyer, **immédiatement**, une requête de type '***evenement\_detection\_mouvement***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
-<img src="../images/mouvement-1024x45.png" alt="Détection mouvement" width="500" />
+<img src="../images/esh-mouvement.png" alt="Détection de mouvement" width="700" />
 
 **ATTENTION**, il est **IMPORTANT** de ne pas renvoyer ce message avant que le détecteur de mouvements soit retourné à l'état OFF au moins une fois. Si votre logique ne fait que vérifier si le bit de l'appareil mouvement est ON, alors la requête risque d'être envoyée à chaque réception des données du UNO (aux secondes) ce qui aura comme conséquence de voir vos requêtes bloquées par l'API pendant un certain temps.
 
@@ -641,7 +810,7 @@ Idem que 8.4.
 
 Si la valeur de la température est >= à 24c, le MEGA doit envoyer, **immédiatement**, une requête de type '***evenement\_temperature\_depassee***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
-<img src="../images/Capture-decran-le-2025-04-02-a-13.48.14.png" alt="Température dépassée" width="500" />
+<img src="../images/esh-temperature.png" alt="Température dépassée" width="700" />
 
 **ATTENTION**, il est **IMPORTANT** de ne pas renvoyer ce message avant que la température soit retournée à < 24. Si votre logique ne fait que vérifier si la température est >= 24, alors la requête risque d'être envoyée à chaque réception des données du UNO (aux secondes) ce qui aura comme conséquence de voir vos requêtes bloquées par l'API pendant un certain temps.
 
@@ -661,7 +830,7 @@ if (unSysteme.appareils.temperature > TEMPERATURE_MAXIMUM && temperaturtePreceda
 
 Si le MEGA ne reçoit aucun message du UNO pendant **5 minutes**, il faut envoyer une requête de type '***evenement\_UNO\_non\_connecte***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
-<img src="../images/Capture-decran-le-2025-04-02-a-14.28.40.png" alt="UNO non connecté" width="500" />
+<img src="../images/esh-uno.png" alt="UNO non connecté" width="700" />
 
 La requête sera transmisse à chaque période de 5 minutes, tant que le UNO sera hors ligne.
 
@@ -746,7 +915,7 @@ Voici une URL valide:
 GET /tp2-api.php?nomSys=!VE2CUY!&ipAdr=192.168.1.191&note=exemple&statut=4&app=23&tmp=22&hum=42&dur=7&hr=17:10:43&pre=99=&alt=175 HTTP/1.1
 ```
 
-<img src="../images/Capture-decran-le-2025-04-03-a-17.28.28.png" alt="Pression altitude" width="500" />
+<img src="../images/esh-pression.png" alt="Pression et altitude" width="400" />
 
 ---
 
