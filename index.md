@@ -26,7 +26,7 @@ title: "420-1C4 · Objets connectés"
 </nav>
 
 <section class="bloc" id="presentation">
-  <h2>Présentation sommaire du cours</h2>
+  <h2><span class="illus c-cyan"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="64" y="16" width="72" height="68" rx="6"/><path d="M78 34h44M78 46h44M78 58h30"/><circle cx="118" cy="66" r="10"/><path d="M118 61v1M118 65v6"/></svg></span>Présentation sommaire du cours</h2>
   <p>Le cours <strong>Objets connectés</strong> initie l'étudiant aux capteurs d'environnement, aux différentes technologies d'affichage (écran ACL, diode lumineuse, etc.) et aux notions de base en électronique pour réaliser des objets connectés. À l'aide d'un microcontrôleur (Arduino Uno), il met en pratique des notions de base en programmation pour développer des applications simples. Finalement, l'étudiant est sensibilisé aux données générées par les objets connectés et aux manières de les sauvegarder et de les échanger de manière sécuritaire.</p>
   <dl class="faits">
     <div><dt>Programme</dt><dd>420.B0 · Techniques de l'informatique</dd></div>
@@ -38,7 +38,7 @@ title: "420-1C4 · Objets connectés"
 </section>
 
 <section class="bloc" id="enseignant">
-  <h2>Horaire et disponibilités de l'enseignant</h2>
+  <h2><span class="illus c-green"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="78" cy="38" r="12"/><path d="M56 80a22 22 0 0 1 44 0"/><rect x="108" y="30" width="40" height="40" rx="5"/><path d="M108 42h40M118 26v8M138 26v8M118 54h6M132 54h6M118 62h6"/></svg></span>Horaire et disponibilités de l'enseignant</h2>
   <div class="enseignant">
     <img src="images/moi.jpg" width="120" height="120" alt="Alain Boudreault">
     <div>
@@ -60,7 +60,7 @@ title: "420-1C4 · Objets connectés"
 <div id="documents"></div>
 
 <section class="bloc" id="plan">
-  <h2><span class="lettre c-cyan">A</span> Plan de cours</h2>
+  <h2><span class="illus c-cyan"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="72" y="14" width="56" height="74" rx="5"/><rect x="88" y="8" width="24" height="12" rx="3"/><path d="M84 36h32M84 48h32M84 60h20M84 72h26"/></svg></span><span class="lettre-txt c-cyan">A</span>Plan de cours</h2>
   <div class="docs c-cyan">
     <a class="doc" href="Documents/420-1C4-JR_ab_pc_H26.pdf"><span class="vignette dessin c-cyan"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M72 14h56a5 5 0 0 1 5 5v64a5 5 0 0 1-5 5H72a5 5 0 0 1-5-5V19a5 5 0 0 1 5-5z"/><rect x="88" y="8" width="24" height="12" rx="3"/><path d="M80 36h40M80 48h40M80 60h26M80 72h32"/></svg></span><span class="info"><span class="n">01</span><span class="titre">Plan de cours H26 (PDF)</span></span></a>
     <a class="doc" href="Documents/Plan-de-cours.html"><span class="vignette dessin c-cyan"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M72 14h56a5 5 0 0 1 5 5v64a5 5 0 0 1-5 5H72a5 5 0 0 1-5-5V19a5 5 0 0 1 5-5z"/><rect x="88" y="8" width="24" height="12" rx="3"/><path d="M80 36h40M80 48h40M80 60h26M80 72h32"/></svg></span><span class="info"><span class="n">+</span><span class="titre">Plan de cours, version texte</span></span></a>
@@ -68,7 +68,7 @@ title: "420-1C4 · Objets connectés"
 </section>
 
 <section class="bloc" id="bases">
-  <h2><span class="lettre c-violet">B</span> Documents 1 à 12</h2>
+  <h2><span class="illus c-violet"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="62" y="28" width="64" height="48" rx="6"/><rect x="80" y="42" width="28" height="20" rx="3"/><path d="M72 28v-8M84 28v-8M96 28v-8M108 28v-8M120 28v-8M72 76v8M84 76v8M96 76v8M108 76v8M120 76v8"/><circle cx="148" cy="52" r="5"/><path d="M148 57v14"/></svg></span><span class="lettre-txt c-violet">B</span>Documents 1 à 12</h2>
   <div class="docs c-violet">
     <a class="doc" href="Documents/Introduction-microcontroleurs.html"><span class="vignette dessin"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="70" y="26" width="60" height="48" rx="6"/><rect x="86" y="40" width="28" height="20" rx="3"/><path d="M80 26v-9M92 26v-9M104 26v-9M116 26v-9M80 74v9M92 74v9M104 74v9M116 74v9"/></svg></span><span class="info"><span class="n">02</span><span class="titre">Introduction aux microcontrôleurs</span><span class="notes">Arduino Uno · émulateurs en ligne : Wokwi, TinkerCad</span></span></a>
     <a class="doc" href="Documents/PlatformIO-Hello-world.html"><span class="vignette dessin"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="54" y="18" width="92" height="64" rx="6"/><path d="M54 32h92"/><circle cx="63" cy="25" r="2"/><circle cx="71" cy="25" r="2"/><path d="M68 50l10 8-10 8M86 66h22"/></svg></span><span class="info"><span class="n">03</span><span class="titre">Hello World – PlatformIO</span></span></a>
@@ -88,7 +88,7 @@ title: "420-1C4 · Objets connectés"
 </section>
 
 <section class="bloc" id="capteurs">
-  <h2><span class="lettre c-green">C</span> Documents 20 à 28</h2>
+  <h2><span class="illus c-green"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="68" y="34" width="44" height="44" rx="6"/><circle cx="90" cy="56" r="8"/><path d="M124 40a16 16 0 0 1 0 32M134 30a30 30 0 0 1 0 52"/></svg></span><span class="lettre-txt c-green">C</span>Documents 20 à 28</h2>
   <div class="docs c-green">
     <a class="doc" href="Documents/NEOPixel.html"><span class="vignette dessin"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="44" y="44" width="112" height="16" rx="8"/><circle cx="60" cy="52" r="3"/><circle cx="80" cy="52" r="3"/><circle cx="100" cy="52" r="3"/><circle cx="120" cy="52" r="3"/><circle cx="140" cy="52" r="3"/><path d="M66 34l-4-8M100 32v-10M134 34l4-8"/></svg></span><span class="info"><span class="n">20</span><span class="titre">Buzzer et NeoPixel</span></span></a>
     <a class="doc" href="Documents/RTC-DS1307.html"><span class="vignette dessin"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="92" cy="52" r="30"/><path d="M92 52V32M92 52l14 8"/><rect x="132" y="36" width="16" height="32" rx="3"/><path d="M136 32h8"/></svg></span><span class="info"><span class="n">21</span><span class="titre">Real Time Clock (RTC)</span></span></a>
@@ -103,7 +103,7 @@ title: "420-1C4 · Objets connectés"
 </section>
 
 <section class="bloc" id="projet">
-  <h2><span class="lettre c-amber">D</span> Projet de session</h2>
+  <h2><span class="illus c-amber"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M78 88V14M78 18h46l-8 12 8 12H78"/><path d="M66 88h28"/></svg></span><span class="lettre-txt c-amber">D</span>Projet de session</h2>
   <div class="docs grande c-amber">
     <a class="doc" href="Documents/TP01-H26.html"><span class="vignette dessin"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 50c14-20 34-30 52-30s38 10 52 30c-14 20-34 30-52 30S62 70 48 50z"/><circle cx="100" cy="50" r="14"/><circle cx="100" cy="50" r="5"/></svg></span><span class="info"><span class="n">A</span><span class="titre">Partie A · TP01 – Le système de surveillance H26</span></span></a>
     <a class="doc" href="Documents/ES-H26-Volet-A.html"><span class="vignette dessin"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M76 20h48v18a24 24 0 0 1-48 0z"/><path d="M76 26H62a12 12 0 0 0 14 18M124 26h14a12 12 0 0 1-14 18M100 62v12M84 82h32M90 74h20"/></svg></span><span class="info"><span class="n">B</span><span class="titre">Partie B · TP02 – Épreuve synthèse, volet A</span></span></a>
@@ -111,7 +111,7 @@ title: "420-1C4 · Objets connectés"
 </section>
 
 <section class="bloc" id="ressources">
-  <h2><span class="lettre c-red">E</span> 98 et 99</h2>
+  <h2><span class="illus c-red"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="76" y="24" width="44" height="56" rx="5"/><path d="M68 70V20a6 6 0 0 1 6-6h36"/><path d="M86 42h24M86 54h24M86 66h14"/></svg></span><span class="lettre-txt c-red">E</span>98 et 99</h2>
   <div class="docs c-red">
     <a class="doc" href="Documents/copier-coller.html"><span class="vignette dessin"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="70" y="16" width="46" height="58" rx="4"/><rect x="86" y="30" width="46" height="58" rx="4"/><path d="M96 46h26M96 58h26M96 70h16"/></svg></span><span class="info"><span class="n">98</span><span class="titre">Les copier/coller</span></span></a>
     <a class="doc" href="Documents/Solutions.html"><span class="vignette dessin c-red"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="52" r="32"/><path d="M84 52l11 11 21-22"/></svg></span><span class="info"><span class="n">99</span><span class="titre">Solutions aux laboratoires</span></span></a>

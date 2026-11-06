@@ -152,3 +152,19 @@ html { scroll-behavior: smooth; }
 .docs.c-green .vignette.dessin { color: var(--green); } .docs.c-amber .vignette.dessin { color: var(--amber); }
 .docs.c-red .vignette.dessin { color: var(--red); }
 .docs.grande .doc .vignette.dessin svg { width: 220px; height: 110px; }
+
+/* Dessin de chaque section, à côté de son titre */
+.prose.cours .bloc h2 { gap: 18px; }
+.prose.cours .illus {
+  flex: none; width: 84px; height: 68px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--panel-2); box-shadow: inset 0 0 0 1px var(--line);
+}
+.prose.cours .illus svg { width: 76px; height: 38px; transform: scale(1.5); }
+.prose.cours .lettre-txt { font-family: var(--mono); font-size: .62em; font-weight: 500; margin-right: -6px; }
+
+/* Couleurs des dessins variées à l'intérieur d'une section (cinq couleurs en alternance) */
+.docs .doc:nth-child(5n+1) .vignette.dessin { color: var(--cyan); }
+.docs .doc:nth-child(5n+2) .vignette.dessin { color: var(--violet); }
+.docs .doc:nth-child(5n+3) .vignette.dessin { color: var(--amber); }
+.docs .doc:nth-child(5n+4) .vignette.dessin { color: var(--green); }
+.docs .doc:nth-child(5n+5) .vignette.dessin { color: var(--red); }
