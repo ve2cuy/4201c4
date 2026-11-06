@@ -18,6 +18,7 @@ met à jour en une ou deux minutes.
 | `assets/css/ve2cuy.css`, `assets/css/cours.css` | Le thème (couleurs, mode clair et sombre, mise en page) |
 | `assets/data/sessions.json` | Le calendrier de la session, pour le tableau de bord |
 | `README.md` | La page du dépôt sur github.com; **elle n'apparaît plus sur le site** |
+| `outils/` | L'aperçu local (`outils/apercu.sh`), non publié |
 
 ## Modifier le contenu d'un document
 
@@ -167,6 +168,56 @@ chaque nouvelle session, refaire ce fichier avec l'outil du site ve2cuy.com
 copier le même `sessions.json` ici.
 
 Pour vérifier une date précise : <https://ve2cuy.github.io/4201c4/?date=2027-03-31>.
+
+## Aperçu local (valider avant de publier)
+
+Le script `outils/apercu.sh` construit et sert le site sur le Mac avec la **même version de
+Jekyll que GitHub Pages**, pour voir le résultat avant de pousser.
+
+### Une seule fois
+
+Installer Ruby par Homebrew (le Ruby fourni avec macOS est trop ancien) :
+
+```bash
+brew install ruby
+```
+
+Au premier lancement, le script installe lui-même les gemmes de GitHub Pages dans
+`~/.gem/pages` (quelques minutes; rien n'est installé dans le système).
+
+### À chaque séance
+
+Depuis le dossier du dépôt :
+
+```bash
+outils/apercu.sh
+```
+
+puis ouvrir <http://127.0.0.1:4000/4201c4/>. Le `/4201c4/` est nécessaire, comme sur GitHub
+Pages. À chaque fichier enregistré (un document, `_data/documents.yml`, un dessin…), le site se
+reconstruit en moins d'une seconde et la page ouverte se recharge seule. **Ctrl+C** arrête
+l'aperçu.
+
+Autres usages :
+
+| Commande | Effet |
+|---|---|
+| `outils/apercu.sh 4001` | Aperçu sur un autre port (si 4000 est déjà pris) |
+| `outils/apercu.sh --build` | Construit seulement le site dans `_site/` et s'arrête : pratique pour vérifier qu'il n'y a pas d'erreur avant de pousser |
+
+Le tableau de bord se teste aussi en local : <http://127.0.0.1:4000/4201c4/?date=2027-03-31>.
+
+### Ce qu'il faut savoir
+
+- `_site/` (le site construit) et `.jekyll-cache/` ne vont pas dans Git (`.gitignore`).
+- Une erreur dans `_data/documents.yml` ou dans un document s'affiche dans le terminal, avec le
+  nom du fichier : la corriger, enregistrer, et l'aperçu repart.
+- Le dossier `outils/` (le script, sa configuration et son `Gemfile`) n'est pas publié sur le site.
+- Ce Jekyll est plus ancien que le Ruby de Homebrew : `outils/ruby4-compat.rb` et les gemmes
+  supplémentaires du `Gemfile` comblent l'écart, pour l'aperçu seulement. GitHub, lui, construit
+  le site dans son propre environnement.
+- Dans de rares cas, une différence peut apparaître entre l'aperçu et le site publié : vérifier le
+  site en ligne après chaque publication importante.
 
 ## Publier
 
