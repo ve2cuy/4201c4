@@ -168,3 +168,7 @@ html { scroll-behavior: smooth; }
 .docs .doc:nth-child(5n+3) .vignette.dessin { color: var(--amber); }
 .docs .doc:nth-child(5n+4) .vignette.dessin { color: var(--green); }
 .docs .doc:nth-child(5n+5) .vignette.dessin { color: var(--red); }
+
+/* Illustration de l'en-tête */
+.hero-image { display: block; width: 160px; height: 160px; object-fit: contain; }
+@media (max-width: 640px) { .hero-image { width: 110px; height: 110px; } }
