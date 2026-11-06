@@ -6,6 +6,8 @@ cours_code: "420-1C4"
 cours_nom: "Objets connectés"
 depot: "ve2cuy/4201c4"
 baseurl: "/4201c4"
+# Le cours se donne à l'hiver : le tableau de bord ne montre que ces sessions.
+saison: hiver
 # Gabarit et feuilles de style (_layouts/default.html, assets/css/ve2cuy.css et cours.css)
 # repris de ve2cuy.com et du blogue. L'accueil du site est index.md; README.md reste celui du dépôt.
 exclude:
