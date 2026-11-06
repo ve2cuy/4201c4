@@ -12,7 +12,10 @@
   const el = (tag, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; return e; };
 
   // Le dessin devient un masque coloré par la couleur du texte (thème clair ou sombre).
+  // Fureteur sans masques CSS : on garde l'image telle quelle (dessin bleu).
+  const avecMasques = CSS.supports("mask-image", "url(x.svg)") || CSS.supports("-webkit-mask-image", "url(x.svg)");
   function masque(img) {
+    if (!avecMasques) { const i = el("img", "masque-img"); i.src = img.src; i.alt = ""; return i; }
     const m = el("span", "masque");
     m.style.setProperty("--icon", 'url("' + img.src + '")');
     m.setAttribute("aria-hidden", "true");
@@ -90,11 +93,12 @@
     for (const d of docs) {
       const carte = d.href ? el("a", "doc") : el("div", "doc sans-lien");
       if (d.href) carte.href = d.href;
-      const v = el("span", "vignette dessin"); v.append(masque(d.img));
-      const info = el("span", "info");
+      const v = el("span", "vignette dessin");
       const n = el("span", "n"); n.textContent = d.numero || "+";
+      v.append(masque(d.img), n);
+      const info = el("span", "info");
       const t = el("span", "titre"); t.textContent = d.titre;
-      info.append(n, t);
+      info.append(t);
       if (d.option) { const o = el("span", "option"); o.textContent = d.option; info.append(o); }
       if (d.notes) { const no = el("span", "notes"); no.textContent = d.notes; info.append(no); }
       carte.append(v, info);
@@ -177,10 +181,11 @@
       const a = el("a", "tile"); a.href = "#" + t.id;
       const art = el("div", "art " + t.couleur);
       if (t.dessin) art.append(masque(t.dessin));
-      const body = el("div", "body");
       const l = el("span", "letter " + t.couleur); l.textContent = t.lettre;
+      art.append(l);
+      const body = el("div", "body");
       const h = el("span", "heading"); h.textContent = t.titre;
-      body.append(l, h);
+      body.append(h);
       if (t.description) { const d = el("span", "desc"); d.textContent = t.description; body.append(d); }
       a.append(art, body);
       nav.append(a);

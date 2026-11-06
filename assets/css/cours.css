@@ -185,3 +185,15 @@ html { scroll-behavior: smooth; }
 .enseignant > div p { margin: 0; }
 .tile .art .masque { width: 180px; height: 90px; }
 .prose.accueil .hero-image { border-radius: 0; }
+
+/* Numéro de la carte et lettre de la vignette : en haut à gauche du dessin */
+.doc .vignette, .tile .art { position: relative; }
+.doc .vignette .n, .tile .art .letter {
+  position: absolute; top: 8px; left: 11px; font-family: var(--mono); font-size: 17px; font-weight: 500; letter-spacing: .04em; line-height: 1;
+}
+.docs:not(.grande) .doc .vignette .n { font-size: 16px; }
+.doc .info { padding-top: 12px; }
+/* Dessin sans masque CSS (vieux fureteurs) : l'image telle quelle */
+.masque-img { display: block; width: 140px; height: 70px; object-fit: contain; }
+.tile .art .masque-img { width: 180px; height: 90px; }
+.prose.cours .illus .masque-img { width: 114px; height: 57px; }
