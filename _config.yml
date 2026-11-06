@@ -1,0 +1,7 @@
+title: "420-1C4 · Objets connectés"
+description: "Documents et laboratoires du cours 420-1C4 Objets connectés (Arduino, PlatformIO, Wokwi)"
+lang: fr
+# Gabarit et feuilles de style (_layouts/default.html, assets/css/ve2cuy.css et cours.css)
+# repris de ve2cuy.com et du blogue. L'accueil du site est index.md; README.md reste celui du dépôt.
+exclude:
+  - README.md
