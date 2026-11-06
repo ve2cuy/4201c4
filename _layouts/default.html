@@ -18,6 +18,7 @@
   try { var t = localStorage.getItem("ve2cuy-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
 <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
+{% if page.path == 'index.md' %}<script src="{{ '/assets/js/session.js' | relative_url }}" defer></script>{% endif %}
 </head>
 <body>
 <header class="site-head">
@@ -42,9 +43,39 @@
 {% if page.path == 'index.md' %}
 <section class="hero">
   <div class="wrap">
-    <span class="kicker">420-1C4-JR · <span class="c-green">hiver 2026</span> · cégep de saint-jérôme</span>
-    <h1><span class="c-cyan">O</span>bjets <span class="c-amber">c</span>onnectés.</h1>
-    <p class="lede">Capteurs, afficheurs et électronique de base autour d'un microcontrôleur Arduino, programmé en C avec PlatformIO et Wokwi.</p>
+    <span class="kicker">420-1C4-JR · <span class="c-green">techniques de l'informatique</span> · cégep de saint-jérôme</span>
+    <div class="hero-row">
+      <div class="hero-text">
+        <h1><span class="c-cyan">O</span>bjets <span class="c-amber">c</span>onnectés.</h1>
+        <p class="lede">Capteurs, afficheurs et électronique de base autour d'un microcontrôleur Arduino, programmé en C avec PlatformIO et Wokwi.</p>
+      </div>
+      <div class="meter" data-sessions="{{ '/assets/data/sessions.json' | relative_url }}" role="group" aria-labelledby="meter-title">
+            <div class="meter-head">
+              <span class="title" id="meter-title">tableau de bord · <span id="cal-state" class="c-green">session</span></span>
+              <span id="cal-today"></span>
+            </div>
+            <div class="readouts">
+              <div class="readout">
+                <span class="label">Semaine courante</span>
+                <span class="value c-amber" id="cal-week">—</span>
+              </div>
+              <div class="readout">
+                <span class="label">Semaines avant les examens finaux</span>
+                <span class="value c-cyan" id="cal-left">—</span>
+              </div>
+              <div class="readout">
+                <span class="label">Année scolaire</span>
+                <span class="value year c-green" id="cal-year">2026–2027</span>
+                <span class="sub" id="cal-session">session d'hiver 2027</span>
+              </div>
+            </div>
+            <div>
+              <div class="bar" id="cal-bar" role="img" aria-label="Avancement de la session"></div>
+              <div class="bar-legend" id="cal-legend"></div>
+            </div>
+            <p class="meter-note" id="cal-note">Le calendrier de la session s'affiche quand JavaScript est activé.</p>
+          </div>
+    </div>
   </div>
 </section>
 {% endif %}
