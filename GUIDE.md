@@ -77,7 +77,7 @@ Une carte, c'est **une ligne de liste** :
 | Partie | Effet |
 |---|---|
 | `![](dessins/horloge.svg)` | Le dessin (obligatoire, en premier); liste des dessins plus bas |
-| `21` | Le numéro, suivi de ` · `; `+` pour un document d'appoint sans numéro |
+| `21` | Le numéro (1 à 4 lettres ou chiffres : `21`, `08b`, `F1`), suivi de ` · `; `+` pour un document d'appoint sans numéro |
 | `[Titre](lien)` | Le titre et le lien : un document `Documents/Nom.md`, un PDF ou une adresse `https://…` |
 | ` · TP02` | Facultatif : une petite étiquette (`TP02`, `optionnel`, `optionnel · défi TP02`…) |
 

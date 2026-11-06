@@ -1,6 +1,11 @@
 title: "420-1C4 · Objets connectés"
 description: "Documents et laboratoires du cours 420-1C4 Objets connectés (Arduino, PlatformIO, Wokwi)"
 lang: fr
+# Propres au cours : en-tête, pied de page, aperçu local (outils/apercu.sh).
+cours_code: "420-1C4"
+cours_nom: "Objets connectés"
+depot: "ve2cuy/4201c4"
+baseurl: "/4201c4"
 # Gabarit et feuilles de style (_layouts/default.html, assets/css/ve2cuy.css et cours.css)
 # repris de ve2cuy.com et du blogue. L'accueil du site est index.md; README.md reste celui du dépôt.
 exclude:

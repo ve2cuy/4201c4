@@ -117,7 +117,8 @@
     if (copie.querySelector(":scope > ul")) copie.querySelector(":scope > ul").remove();
     const parts = copie.textContent.split("·").map((s) => s.trim()).filter(Boolean);
     let numero = "";
-    if (parts.length > 1 && /^([0-9]{1,3}|[A-Z]|\+)$/.test(parts[0])) numero = parts.shift();
+    // Numéro : 1 à 4 lettres ou chiffres (21, 08b, 13a, F1, A) ou « + »
+    if (parts.length > 1 && /^([0-9A-Za-z]{1,4}|\+)$/.test(parts[0])) numero = parts.shift();
     let titre = parts.shift() || "";
     if (lien) {
       // Un titre de lien peut lui-même contenir « · » : on le reprend en entier.
