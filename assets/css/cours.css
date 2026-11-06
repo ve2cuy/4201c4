@@ -146,3 +146,9 @@ html { scroll-behavior: smooth; }
 .meter { --glow: rgba(242, 169, 59, .16); }
 .hero .meter { flex: 6 1 480px; }
 .hero .readout .value.year { font-size: clamp(18px, 1.7vw, 22px); }
+
+/* Dessins des documents, dans la couleur de leur section */
+.docs.c-cyan .vignette.dessin { color: var(--cyan); } .docs.c-violet .vignette.dessin { color: var(--violet); }
+.docs.c-green .vignette.dessin { color: var(--green); } .docs.c-amber .vignette.dessin { color: var(--amber); }
+.docs.c-red .vignette.dessin { color: var(--red); }
+.docs.grande .doc .vignette.dessin svg { width: 220px; height: 110px; }
