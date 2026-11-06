@@ -1,0 +1,23 @@
+{%- comment -%}
+  Cartes des documents d'une section, tirées de _data/documents.yml.
+  Paramètres : section (plan, bases, capteurs, projet, ressources), couleur (c-cyan…), grande (true : deux grandes cartes).
+{%- endcomment -%}
+{%- assign docs = site.data.documents | where: "section", include.section -%}
+<div class="docs{% if include.grande %} grande{% endif %} {{ include.couleur }}">
+{%- for d in docs %}
+  {%- capture dessin -%}dessins/{{ d.dessin | default: "document" }}.svg{%- endcapture -%}
+  {%- capture corps -%}
+<span class="vignette dessin"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% include {{ dessin }} %}</svg></span><span class="info"><span class="n">{{ d.numero | default: "+" }}</span><span class="titre">{{ d.titre }}</span>{% if d.option %}<span class="option">{{ d.option }}</span>{% endif %}{% if d.notes %}<span class="notes">{{ d.notes }}</span>{% endif %}</span>
+  {%- endcapture -%}
+  {%- if d.fichier -%}
+    {%- if d.fichier contains "://" -%}
+      {%- assign lien = d.fichier -%}
+    {%- else -%}
+      {%- assign lien = d.fichier | replace: ".md", ".html" | relative_url -%}
+    {%- endif %}
+  <a class="doc" href="{{ lien }}">{{ corps }}</a>
+  {%- else %}
+  <div class="doc sans-lien">{{ corps }}</div>
+  {%- endif -%}
+{%- endfor %}
+</div>

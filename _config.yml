@@ -5,3 +5,4 @@ lang: fr
 # repris de ve2cuy.com et du blogue. L'accueil du site est index.md; README.md reste celui du dépôt.
 exclude:
   - README.md
+  - GUIDE.md
