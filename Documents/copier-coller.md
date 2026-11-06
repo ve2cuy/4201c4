@@ -209,7 +209,7 @@ void loop(){
 
 Ce qui va produire ceci:
 
-<img src="../images/Capture-decran-le-2025-02-10-a-19.01.31-1024x254.png" alt="" width="500" />
+<img src="../images/Capture-decran-le-2025-02-10-a-19.01.31.png" alt="" width="500" />
 
 [Référence complète (en anglais)](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797)
 

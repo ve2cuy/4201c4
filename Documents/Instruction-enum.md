@@ -1,7 +1,7 @@
 # L'instruction 'enum' du langage 'C'
 
 <p align="center">
-    <img src="../images/number_enumeration_calculation_reckoning_digit_count_numeration-512.webp.crdownload" alt="" width="400" />
+    <img src="../images/number_enumeration_calculation_reckoning_digit_count_numeration-512.webp" alt="" width="400" />
 </p>
 
 ---

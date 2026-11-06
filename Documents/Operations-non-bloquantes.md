@@ -176,7 +176,7 @@ ISR(TIMER1_COMPA_vect) {
 }
 ```
 
-<img src="../images/timer0-1024x528.png" alt="" width="500" />
+<img src="../images/timer0.png" alt="" width="500" />
 
 **NOTE**: ISR() est une syntaxe universelle AVR. Sous Arduino, il est possible d'utiliser la fonction d'abstraction, attachInterrupt() pour les interruptions matériels. Par exemple, lorsqu'un bouton poussoir est appuyé.
 

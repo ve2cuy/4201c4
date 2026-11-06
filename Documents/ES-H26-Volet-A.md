@@ -104,7 +104,7 @@ Le Mega reçoit les données, les valide, les affiche dans le terminal et finale
 
 ## 2.1 Voici une représentation du système
 
-<img src="../images/ESH25.png" alt="Schéma système" width="500" />
+<img src="../images/ESH25-1024x335.png" alt="Schéma système" width="500" />
 
 ---
 

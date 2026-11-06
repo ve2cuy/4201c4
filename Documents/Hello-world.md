@@ -26,10 +26,10 @@ En utilisant un module *Arduino Uno*, l’*IDE Arduino* et quelques *instruction
 <img src="../images/Capture-decran-le-2021-07-17-a-16.51.04.png" alt="" width="500" />
 
 **Action 1.2** – Analyser le code de départ  
-<img src="../images/Capture-decran-le-2021-07-17-a-16.50.15.png" alt="" width="500" />
+<img src="../images/Capture-decran-le-2021-07-17-a-16.50.15-1024x371.png" alt="" width="500" />
 
 **Action 1.3** – Insérer les lignes avec *pinMode()* et *digitalWrite()*  
-<img src="../images/Capture-decran-le-2021-07-17-a-16.49.21.png" alt="" width="500" />
+<img src="../images/Capture-decran-le-2021-07-17-a-16.49.21-1024x738.png" alt="" width="500" />
 
 ```c
 void setup() {
@@ -44,7 +44,7 @@ void loop() {
 <img src="../images/Arduino-upload.png" alt="" width="500" />
 
 **Action 1.7** – Observer le résultat  
-<img src="../images/Arduino-LED-ON.png" alt="" width="500" />
+<img src="../images/Arduino-LED-ON-1024x566.png" alt="" width="500" />
 
 ---
 
@@ -121,7 +121,7 @@ void loop() {
 ## 5 – Laboratoire
 
 **5.1 – Laboratoire 01**  
-<img src="../images/module-expansion.png" alt="" width="500" />
+<img src="../images/module-expansion-1024x586.png" alt="" width="500" />
 
 **5.2 – Laboratoire 02**  
 <img src="../images/labo-01.gif" alt="" width="500" />
