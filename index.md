@@ -61,63 +61,59 @@ title: "420-1C4 · Objets connectés"
 
 <section class="bloc" id="plan">
   <h2><span class="lettre c-cyan">A</span> Plan de cours</h2>
-  <ol class="toc">
-    <li><span class="n">01</span><a href="Documents/420-1C4-JR_ab_pc_H26.pdf">Plan de cours H26 (PDF)</a></li>
-    <li><span class="n"></span><a href="Documents/Plan-de-cours.html">Plan de cours, version texte</a></li>
-  </ol>
+  <div class="docs c-cyan">
+    <a class="doc" href="Documents/420-1C4-JR_ab_pc_H26.pdf"><span class="vignette dessin c-cyan"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M72 14h56a5 5 0 0 1 5 5v64a5 5 0 0 1-5 5H72a5 5 0 0 1-5-5V19a5 5 0 0 1 5-5z"/><rect x="88" y="8" width="24" height="12" rx="3"/><path d="M80 36h40M80 48h40M80 60h26M80 72h32"/></svg></span><span class="info"><span class="n">01</span><span class="titre">Plan de cours H26 (PDF)</span></span></a>
+    <a class="doc" href="Documents/Plan-de-cours.html"><span class="vignette dessin c-cyan"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M72 14h56a5 5 0 0 1 5 5v64a5 5 0 0 1-5 5H72a5 5 0 0 1-5-5V19a5 5 0 0 1 5-5z"/><rect x="88" y="8" width="24" height="12" rx="3"/><path d="M80 36h40M80 48h40M80 60h26M80 72h32"/></svg></span><span class="info"><span class="n">+</span><span class="titre">Plan de cours, version texte</span></span></a>
+  </div>
 </section>
 
 <section class="bloc" id="bases">
   <h2><span class="lettre c-violet">B</span> Documents 1 à 12</h2>
-  <ol class="toc">
-    <li><span class="n">02</span><a href="Documents/Introduction-microcontroleurs.html">Introduction aux microcontrôleurs</a></li>
-    <li class="sous"><span class="n"></span>Arduino Uno</li>
-    <li class="sous"><span class="n"></span><span>Émulateurs Arduino en ligne : <a href="https://wokwi.com/">Wokwi</a>, <a href="https://www.tinkercad.com/circuits">TinkerCad</a></span></li>
-    <li><span class="n">03</span><a href="Documents/PlatformIO-Hello-world.html">Hello World – PlatformIO</a></li>
-    <li class="sous"><span class="n"></span><a href="Documents/Hello-world.html">Hello World – Arduino IDE</a></li>
-    <li><span class="n">04</span><a href="Documents/Serial-println-et-digitalread.html">Serial.println(val), digitalRead() et l'instruction while() pour la gestion du bouton</a></li>
-    <li><span class="n">05</span><a href="Documents/analogRead.html">Lecture/écriture d'une valeur analogique – analogRead(), analogWrite(), PWM</a></li>
-    <li><span class="n">06</span><a href="Documents/LCD-enum-ifdef.html">Grove – Module LCD-RGB i2c (sprintf, switch, io stream, #ifdef, op ternaire, i % j)</a></li>
-    <li><span class="n">07</span><a href="Documents/Compilation-conditionnelle.html">Compilation conditionnelle</a></li>
-    <li class="sous"><span class="n"></span><a href="Documents/Utilisation-de-librairies.html">Les librairies</a></li>
-    <li class="sous"><span class="n"></span><a href="Documents/Electronique-concepts-de-base.html">Électronique – concepts de base</a></li>
-    <li><span class="n">08</span><a href="Documents/Instruction-enum.html">L'instruction « enum » du langage C (TP02)</a></li>
-    <li><span class="n">09</span><a href="Documents/Structures-de-donnees.html">Structures de données</a></li>
-    <li><span class="n">10</span><a href="Documents/Operations-sur-les-bits-et-structure-de-donnees.html">Opérations sur les bits et structures de données (TP02)</a></li>
-    <li><span class="n">11</span><a href="Documents/copier-coller.html">Copier/coller pour ANSI et boîte</a></li>
-    <li class="sous"><span class="n"></span>Les variables de type scalaire</li>
-    <li class="sous"><span class="n"></span>Gestion du bruit sur un bouton – bounce2</li>
-    <li><span class="n">12</span><a href="Documents/Capteur-temperature-humidite.html">Température, humidité et affichage sur 7 segments – 4Digit (installer une librairie à la main)</a></li>
-  </ol>
+  <div class="docs c-violet">
+    <a class="doc" href="Documents/Introduction-microcontroleurs.html"><span class="vignette entier"><img src="images/vignettes/intro.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">02</span><span class="titre">Introduction aux microcontrôleurs</span><span class="notes">Arduino Uno · émulateurs en ligne : Wokwi, TinkerCad</span></span></a>
+    <a class="doc" href="Documents/PlatformIO-Hello-world.html"><span class="vignette entier"><img src="images/vignettes/platformio.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">03</span><span class="titre">Hello World – PlatformIO</span></span></a>
+    <a class="doc" href="Documents/Hello-world.html"><span class="vignette"><img src="images/vignettes/hello-ide.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">+</span><span class="titre">Hello World – Arduino IDE</span></span></a>
+    <a class="doc" href="Documents/Serial-println-et-digitalread.html"><span class="vignette"><img src="images/vignettes/serial.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">04</span><span class="titre">Serial.println(val), digitalRead() et while() pour la gestion du bouton</span></span></a>
+    <a class="doc" href="Documents/analogRead.html"><span class="vignette"><img src="images/vignettes/analog.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">05</span><span class="titre">Lecture/écriture d'une valeur analogique – analogRead(), analogWrite(), PWM</span></span></a>
+    <a class="doc" href="Documents/LCD-enum-ifdef.html"><span class="vignette"><img src="images/vignettes/lcd.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">06</span><span class="titre">Grove – Module LCD-RGB i2c (sprintf, switch, #ifdef, op ternaire, i % j)</span></span></a>
+    <a class="doc" href="Documents/Compilation-conditionnelle.html"><span class="vignette"><img src="images/vignettes/compilation.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">07</span><span class="titre">Compilation conditionnelle</span></span></a>
+    <a class="doc" href="Documents/Utilisation-de-librairies.html"><span class="vignette"><img src="images/vignettes/librairies.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">+</span><span class="titre">Les librairies</span></span></a>
+    <a class="doc" href="Documents/Electronique-concepts-de-base.html"><span class="vignette entier"><img src="images/vignettes/electronique.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">+</span><span class="titre">Électronique – concepts de base</span></span></a>
+    <a class="doc" href="Documents/Instruction-enum.html"><span class="vignette"><img src="images/vignettes/enum.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">08</span><span class="titre">L'instruction « enum » du langage C</span><span class="option">TP02</span></span></a>
+    <a class="doc" href="Documents/Structures-de-donnees.html"><span class="vignette"><img src="images/vignettes/structures.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">09</span><span class="titre">Structures de données</span></span></a>
+    <a class="doc" href="Documents/Operations-sur-les-bits-et-structure-de-donnees.html"><span class="vignette"><img src="images/vignettes/bits.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">10</span><span class="titre">Opérations sur les bits et structures de données</span><span class="option">TP02</span></span></a>
+    <a class="doc" href="Documents/copier-coller.html"><span class="vignette"><img src="images/vignettes/copier-coller.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">11</span><span class="titre">Copier/coller pour ANSI et boîte</span><span class="notes">Les variables de type scalaire · gestion du bruit sur un bouton – bounce2</span></span></a>
+    <a class="doc" href="Documents/Capteur-temperature-humidite.html"><span class="vignette"><img src="images/vignettes/temperature.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">12</span><span class="titre">Température, humidité et affichage sur 7 segments – 4Digit</span><span class="notes">Installer une librairie à la main</span></span></a>
+  </div>
 </section>
 
 <section class="bloc" id="capteurs">
   <h2><span class="lettre c-green">C</span> Documents 20 à 28</h2>
-  <ol class="toc">
-    <li><span class="n">20</span><a href="Documents/NEOPixel.html">Buzzer et NeoPixel</a></li>
-    <li><span class="n">21</span><a href="Documents/RTC-DS1307.html">Real Time Clock (RTC)</a></li>
-    <li><span class="n">22</span><a href="https://ve2cuy.com/420-1c4/index.php/detecteur-de-mouvements/">Détecteur de mouvements</a></li>
-    <li><span class="n">23</span><a href="Documents/Operations-non-bloquantes.html">Opérations non bloquantes – millis() et interruptions (TP02)</a></li>
-    <li><span class="n">24</span><a href="Documents/Communication-UART-entre-2-arduino.html">Communication UART entre deux Arduino (TP02)</a></li>
-    <li><span class="n">25</span><a href="Documents/ESP-Wifi.html">ESP-Wifi – accès réseau (TP02)</a></li>
-    <li><span class="n">26</span>Détecteur infrarouge <em>– contenu optionnel</em></li>
-    <li><span class="n">27</span>EEPROM <em>– contenu optionnel</em></li>
-    <li><span class="n">28</span><a href="Documents/capteur-rfid.html">Capteur RFID <em>– contenu optionnel (défi : TP02)</em></a></li>
-  </ol>
+  <div class="docs c-green">
+    <a class="doc" href="Documents/NEOPixel.html"><span class="vignette"><img src="images/vignettes/neopixel.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">20</span><span class="titre">Buzzer et NeoPixel</span></span></a>
+    <a class="doc" href="Documents/RTC-DS1307.html"><span class="vignette"><img src="images/vignettes/rtc.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">21</span><span class="titre">Real Time Clock (RTC)</span></span></a>
+    <a class="doc" href="https://ve2cuy.com/420-1c4/index.php/detecteur-de-mouvements/"><span class="vignette dessin c-green"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="54" r="10"/><path d="M82 36a26 26 0 0 0 0 36M118 36a26 26 0 0 1 0 36M70 26a42 42 0 0 0 0 56M130 26a42 42 0 0 1 0 56"/></svg></span><span class="info"><span class="n">22</span><span class="titre">Détecteur de mouvements</span></span></a>
+    <a class="doc" href="Documents/Operations-non-bloquantes.html"><span class="vignette dessin c-green"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="54" r="30"/><path d="M100 54V36M100 54l12 8M92 14h16M100 14v10"/></svg></span><span class="info"><span class="n">23</span><span class="titre">Opérations non bloquantes – millis() et interruptions</span><span class="option">TP02</span></span></a>
+    <a class="doc" href="Documents/Communication-UART-entre-2-arduino.html"><span class="vignette"><img src="images/vignettes/uart.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">24</span><span class="titre">Communication UART entre deux Arduino</span><span class="option">TP02</span></span></a>
+    <a class="doc" href="Documents/ESP-Wifi.html"><span class="vignette"><img src="images/vignettes/wifi.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">25</span><span class="titre">ESP-Wifi – accès réseau</span><span class="option">TP02</span></span></a>
+    <div class="doc sans-lien"><span class="vignette dessin c-green"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="70" y="30" width="44" height="48" rx="6"/><circle cx="92" cy="54" r="10"/><path d="M124 44l14-6M124 54h16M124 64l14 6"/></svg></span><span class="info"><span class="n">26</span><span class="titre">Détecteur infrarouge</span><span class="option">optionnel</span></span></div>
+    <div class="doc sans-lien"><span class="vignette dessin c-green"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="68" y="24" width="64" height="52" rx="5"/><path d="M80 24v-10M92 24v-10M104 24v-10M116 24v-10M80 76v10M92 76v10M104 76v10M116 76v10M84 44h32M84 56h20"/></svg></span><span class="info"><span class="n">27</span><span class="titre">EEPROM</span><span class="option">optionnel</span></span></div>
+    <a class="doc" href="Documents/capteur-rfid.html"><span class="vignette"><img src="images/vignettes/rfid.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">28</span><span class="titre">Capteur RFID</span><span class="option">optionnel · défi TP02</span></span></a>
+  </div>
 </section>
 
 <section class="bloc" id="projet">
   <h2><span class="lettre c-amber">D</span> Projet de session</h2>
-  <div class="parties">
-    <a class="partie" href="Documents/TP01-H26.html"><span class="tag c-amber">partie A · TP01</span><span class="heading">Le système de surveillance H26</span><span class="desc">Partie A du projet de session</span></a>
-    <a class="partie" href="Documents/ES-H26-Volet-A.html"><span class="tag c-amber">partie B · TP02</span><span class="heading">Épreuve synthèse – volet A</span><span class="desc">Énoncé du projet de l'épreuve synthèse du cours</span></a>
+  <div class="docs grande c-amber">
+    <a class="doc" href="Documents/TP01-H26.html"><span class="vignette"><img src="images/vignettes/tp01.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">A</span><span class="titre">Partie A · TP01 – Le système de surveillance H26</span></span></a>
+    <a class="doc" href="Documents/ES-H26-Volet-A.html"><span class="vignette"><img src="images/vignettes/es-volet-a.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">B</span><span class="titre">Partie B · TP02 – Épreuve synthèse, volet A</span></span></a>
   </div>
 </section>
 
 <section class="bloc" id="ressources">
   <h2><span class="lettre c-red">E</span> 98 et 99</h2>
-  <ol class="toc">
-    <li><span class="n">98</span><a href="Documents/copier-coller.html">Les copier/coller</a></li>
-    <li><span class="n">99</span><a href="Documents/Solutions.html">Solutions aux laboratoires</a></li>
-  </ol>
+  <div class="docs c-red">
+    <a class="doc" href="Documents/copier-coller.html"><span class="vignette"><img src="images/vignettes/copier-coller.webp" alt="" loading="lazy" width="480"></span><span class="info"><span class="n">98</span><span class="titre">Les copier/coller</span></span></a>
+    <a class="doc" href="Documents/Solutions.html"><span class="vignette dessin c-red"><svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="52" r="32"/><path d="M84 52l11 11 21-22"/></svg></span><span class="info"><span class="n">99</span><span class="titre">Solutions aux laboratoires</span></span></a>
+  </div>
 </section>
