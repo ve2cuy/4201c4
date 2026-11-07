@@ -1,6 +1,6 @@
 # 11 - Structures et énumération sous C
 
-4 mars 2025
+*Révision du 2026.11.07*
 
 <img src="../images/649cd53b-1c3c-473c-a55f-d1b44bafb9d3.webp" alt="" width="500" />
 

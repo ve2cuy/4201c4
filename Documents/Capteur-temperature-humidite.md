@@ -1,6 +1,6 @@
 # 13 - SHT31 et TM1637
 
-19 février 2025 - R/vision du 2025.12.12
+*Révision du 2026.11.07*
 
 ## Contenu
 

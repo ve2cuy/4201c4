@@ -1,5 +1,7 @@
 # 5 - Arduino – AnalogRead
 
+*Révision du 2026.11.07*
+
 
 ## Contenu
 

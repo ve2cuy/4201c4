@@ -1,6 +1,6 @@
 # 14 - Buzzer et RGB LED Stick
 
-14 octobre 2021
+*Révision du 2026.11.07*
 
 ## Contenu
 

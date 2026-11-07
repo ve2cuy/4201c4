@@ -1,5 +1,7 @@
 # 7 - Compilation conditionnelle
 
+*Révision du 2026.11.07*
+
 <p align="center">
   <img src="../images/antique-clock-face-.png" alt="Horloge" width="350" />
 </p>

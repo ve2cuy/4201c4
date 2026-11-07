@@ -1,5 +1,7 @@
 # 27 - Solutions aux laboratoires
 
+*Révision du 2026.11.07*
+
 ## Contenu
 
 - [**Laboratoires NeoPixel**](#section-laboratoires-neopixel)

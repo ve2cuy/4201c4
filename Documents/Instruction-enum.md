@@ -1,5 +1,7 @@
 # 10 - L'instruction 'enum' du langage 'C'
 
+*Révision du 2026.11.07*
+
 <p align="center">
     <img src="../images/number_enumeration_calculation_reckoning_digit_count_numeration-512.webp" alt="" width="400" />
 </p>

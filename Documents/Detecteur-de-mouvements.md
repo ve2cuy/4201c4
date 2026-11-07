@@ -1,5 +1,7 @@
 # 16 - Détecteur de mouvements
 
+*Révision du 2026.11.07*
+
 ## Contenu
 
 - [**1 – Grove Adjustable PIR Motion Sensor**](#section-1)

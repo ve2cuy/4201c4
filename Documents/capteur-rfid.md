@@ -1,6 +1,6 @@
 # 22 - Capteur RFID de Grove
 
-25 mars 2025
+*Révision du 2026.11.07*
 
 <img src="../images/Grove-125KHz_RFID_Reader-1024x740.jpg" alt="" width="450" />
 

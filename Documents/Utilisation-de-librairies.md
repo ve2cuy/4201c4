@@ -1,5 +1,7 @@
 # 8 - Utilisation de librairies
 
+*Révision du 2026.11.07*
+
 ## Contenu
 
 - [**1 – Les librairies : Qu'est-ce que c'est et pourquoi les utiliser?**](#section-1)

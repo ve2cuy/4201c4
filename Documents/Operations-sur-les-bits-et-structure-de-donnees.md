@@ -1,6 +1,6 @@
 # 12 - Opérations sur les bits
 
-Version du 27 janvier 2025 - Révision 2026.11.07
+*Révision du 2026.11.07*
 
 <img src="../images/bitewise-operators-1024x684.png" alt="Table de vérité des opérateurs" width="500" />
 

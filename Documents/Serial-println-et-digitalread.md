@@ -1,6 +1,6 @@
 # 4 - Arduino – Serial.println() et digitalRead()
 
-*Date: 19 janvier 2025*
+*Révision du 2026.11.07*
 
 
 <img src="../images/digital-age-696x464-1.jpg" alt="Digital Age" width="500" />

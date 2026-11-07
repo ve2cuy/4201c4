@@ -1,6 +1,6 @@
 # 15 - Grove – RTC_DS1307
 
-26 octobre 2021
+*Révision du 2026.11.07*
 
 # Real Time Clock – [DS1307](https://wiki.seeedstudio.com/Grove-RTC/) ou l'art de tenir le temps
 

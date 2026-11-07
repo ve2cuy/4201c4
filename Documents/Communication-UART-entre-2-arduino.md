@@ -1,6 +1,6 @@
 # 18 - Écoute-moi, j'aimerais te parler
 
-24 mars 2025
+*Révision du 2026.11.07*
 
 ## Communication entre deux Arduino
 

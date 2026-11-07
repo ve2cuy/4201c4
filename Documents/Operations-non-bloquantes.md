@@ -1,6 +1,6 @@
 # 17 - Opérations non bloquantes
 
-19 février 2025
+*Révision du 2026.11.07*
 
 ## Contenu
 

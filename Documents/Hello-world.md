@@ -1,5 +1,7 @@
 # 3 - Arduino IDE – Hello world
 
+*Révision du 2026.11.07*
+
 <img src="../images/arduino-uno-00.jpg" alt="" width="500" />  
 
 ## Notions abordées

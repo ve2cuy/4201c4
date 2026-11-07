@@ -1,6 +1,6 @@
 # 19 - Grove – UART Wifi V2
 
-20 février 2025
+*Révision du 2026.11.07*
 
 ## Contenu
 

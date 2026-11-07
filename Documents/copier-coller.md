@@ -1,5 +1,7 @@
 # 26 - Copier/Coller et projets Wokwi
 
+*Révision du 2026.11.07*
+
 ---
 
 ## Contenu

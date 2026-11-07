@@ -1,5 +1,7 @@
 # 24 - 2026.ES
 
+*Révision du 2026.11.07*
+
 # Épreuve synthèse Volet A
 
 <img src="../images/equipe.jpeg" alt="Équipe" width="500" />

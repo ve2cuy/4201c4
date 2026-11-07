@@ -1,5 +1,7 @@
 # 2 - Introduction à PlatformIO
 
+*Révision du 2026.11.07*
+
 <p align="center">
   <img src="../images/platformio-logo-png-transparent.png" alt="" width="350" />  
 </p>
