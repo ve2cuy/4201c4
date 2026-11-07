@@ -37,55 +37,55 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
 
 ![](dessins/porte-documents.svg) *Le plan officiel de la session*
 
-- ![](dessins/document.svg) 01 · [Plan de cours H26 (PDF)](Documents/420-1C4-JR_ab_pc_H26.pdf)
-- ![](dessins/document.svg) + · [Plan de cours, version texte](Documents/Plan-de-cours.md)
+- ![](dessins/document.svg) - · [Plan de cours H26 (PDF)](Documents/420-1C4-JR_ab_pc_H26.pdf)
+- ![](dessins/document.svg) - · [Plan de cours, version texte](Documents/Plan-de-cours.md)
 
-## B) Documents 1 à 12
+## B) Documents 1 à 14
 
 ![](dessins/puce-del.svg) *Arduino, PlatformIO, C, affichage*
 
-- ![](dessins/microcontroleur.svg) 02 · [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md)
+- ![](dessins/microcontroleur.svg) 01 · [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md)
   - Arduino Uno · émulateurs en ligne : Wokwi, TinkerCad
-- ![](dessins/terminal.svg) 03 · [Hello World – PlatformIO](Documents/PlatformIO-Hello-world.md)
-- ![](dessins/carte-arduino.svg) + · [Hello World – Arduino IDE](Documents/Hello-world.md)
+- ![](dessins/terminal.svg) 02 · [Hello World – PlatformIO](Documents/PlatformIO-Hello-world.md)
+- ![](dessins/carte-arduino.svg) 03 · [Hello World – Arduino IDE](Documents/Hello-world.md)
 - ![](dessins/bouton.svg) 04 · [Serial.println(val), digitalRead() et while() pour la gestion du bouton](Documents/Serial-println-et-digitalread.md)
 - ![](dessins/potentiometre.svg) 05 · [Lecture/écriture d'une valeur analogique – analogRead(), analogWrite(), PWM](Documents/analogRead.md)
 - ![](dessins/lcd.svg) 06 · [Grove – Module LCD-RGB i2c (sprintf, switch, #ifdef, op ternaire, i % j)](Documents/LCD-enum-ifdef.md)
 - ![](dessins/accolades.svg) 07 · [Compilation conditionnelle](Documents/Compilation-conditionnelle.md)
-- ![](dessins/livres.svg) + · [Les librairies](Documents/Utilisation-de-librairies.md)
-- ![](dessins/resistance-del.svg) + · [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md)
-- ![](dessins/liste.svg) 08 · [L'instruction « enum » du langage C](Documents/Instruction-enum.md) · TP02
-- ![](dessins/structure.svg) 09 · [Structures de données](Documents/Structures-de-donnees.md)
-- ![](dessins/bits.svg) 10 · [Opérations sur les bits et structures de données](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) · TP02
-- ![](dessins/copier-coller.svg) 11 · [Copier/coller pour ANSI et boîte](Documents/copier-coller.md)
+- ![](dessins/livres.svg) 08 · [Les librairies](Documents/Utilisation-de-librairies.md)
+- ![](dessins/resistance-del.svg) 09 · [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md)
+- ![](dessins/liste.svg) 10 · [L'instruction « enum » du langage C](Documents/Instruction-enum.md) · TP02
+- ![](dessins/structure.svg) 11 · [Structures de données](Documents/Structures-de-donnees.md)
+- ![](dessins/bits.svg) 12 · [Opérations sur les bits et structures de données](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) · TP02
+- ![](dessins/copier-coller.svg) 13 · [Copier/coller pour ANSI et boîte](Documents/copier-coller.md)
   - Les variables de type scalaire · gestion du bruit sur un bouton – bounce2
-- ![](dessins/thermometre.svg) 12 · [Température, humidité et affichage sur 7 segments – 4Digit](Documents/Capteur-temperature-humidite.md)
+- ![](dessins/thermometre.svg) 14 · [Température, humidité et affichage sur 7 segments – 4Digit](Documents/Capteur-temperature-humidite.md)
   - Installer une librairie à la main
 
-## C) Documents 20 à 28
+## C) Documents 15 à 23
 
 ![](dessins/capteur-sans-fil.svg) *Capteurs, horloge, UART, Wi-Fi*
 
-- ![](dessins/bande-del.svg) 20 · [Buzzer et NeoPixel](Documents/NEOPixel.md)
-- ![](dessins/horloge.svg) 21 · [Real Time Clock (RTC)](Documents/RTC-DS1307.md)
-- ![](dessins/mouvement.svg) 22 · [Détecteur de mouvements](Documents/Detecteur-de-mouvements.md)
-- ![](dessins/minuterie.svg) 23 · [Opérations non bloquantes – millis() et interruptions](Documents/Operations-non-bloquantes.md) · TP02
-- ![](dessins/uart.svg) 24 · [Communication UART entre deux Arduino](Documents/Communication-UART-entre-2-arduino.md) · TP02
-- ![](dessins/wifi.svg) 25 · [ESP-Wifi – accès réseau](Documents/ESP-Wifi.md) · TP02
-- ![](dessins/infrarouge.svg) 26 · Détecteur infrarouge · optionnel
-- ![](dessins/eeprom.svg) 27 · EEPROM · optionnel
-- ![](dessins/rfid.svg) 28 · [Capteur RFID](Documents/capteur-rfid.md) · optionnel · défi TP02
+- ![](dessins/bande-del.svg) 15 · [Buzzer et NeoPixel](Documents/NEOPixel.md)
+- ![](dessins/horloge.svg) 16 · [Real Time Clock (RTC)](Documents/RTC-DS1307.md)
+- ![](dessins/mouvement.svg) 17 · [Détecteur de mouvements](Documents/Detecteur-de-mouvements.md)
+- ![](dessins/minuterie.svg) 18 · [Opérations non bloquantes – millis() et interruptions](Documents/Operations-non-bloquantes.md) · TP02
+- ![](dessins/uart.svg) 19 · [Communication UART entre deux Arduino](Documents/Communication-UART-entre-2-arduino.md) · TP02
+- ![](dessins/wifi.svg) 20 · [ESP-Wifi – accès réseau](Documents/ESP-Wifi.md) · TP02
+- ![](dessins/infrarouge.svg) 21 · Détecteur infrarouge · optionnel
+- ![](dessins/eeprom.svg) 22 · EEPROM · optionnel
+- ![](dessins/rfid.svg) 23 · [Capteur RFID](Documents/capteur-rfid.md) · optionnel · défi TP02
 
 ## D) Projet de session
 
 ![](dessins/drapeau.svg) *Partie A et partie B*
 
-- ![](dessins/oeil.svg) A · [Partie A · TP01 – Le système de surveillance H26](Documents/TP01-H26.md)
-- ![](dessins/coupe.svg) B · [Partie B · TP02 – Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md)
+- ![](dessins/oeil.svg) 24 · [Partie A · TP01 – Le système de surveillance H26](Documents/TP01-H26.md)
+- ![](dessins/coupe.svg) 25 · [Partie B · TP02 – Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md)
 
-## E) 98 et 99
+## E) Documents 26 et 27
 
 ![](dessins/feuilles.svg) *Copier/coller et solutions*
 
-- ![](dessins/copier-coller.svg) 98 · [Les copier/coller](Documents/copier-coller.md)
-- ![](dessins/solutions.svg) 99 · [Solutions aux laboratoires](Documents/Solutions.md)
+- ![](dessins/copier-coller.svg) 26 · [Les copier/coller](Documents/copier-coller.md)
+- ![](dessins/solutions.svg) 27 · [Solutions aux laboratoires](Documents/Solutions.md)

@@ -1,4 +1,4 @@
-# Grove – Module LCD-RGB i2c
+# 6 - Grove – Module LCD-RGB i2c
 
 29 septembre 2022
 

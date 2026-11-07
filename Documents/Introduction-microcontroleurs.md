@@ -1,4 +1,4 @@
-# Introduction aux microcontrôleurs
+# 1 - Introduction aux microcontrôleurs
 
 *Révision du 2025.12.10*
 

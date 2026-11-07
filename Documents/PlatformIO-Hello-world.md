@@ -1,4 +1,4 @@
-# Introduction à PlatformIO
+# 2 - Introduction à PlatformIO
 
 <p align="center">
   <img src="../images/platformio-logo-png-transparent.png" alt="" width="350" />  

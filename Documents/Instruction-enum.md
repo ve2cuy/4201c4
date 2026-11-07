@@ -1,4 +1,4 @@
-# L'instruction 'enum' du langage 'C'
+# 10 - L'instruction 'enum' du langage 'C'
 
 <p align="center">
     <img src="../images/number_enumeration_calculation_reckoning_digit_count_numeration-512.webp" alt="" width="400" />
