@@ -80,11 +80,13 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
 
 - ![](dessins/oeil.svg) 29 · [Partie A · TP01 – Le système de surveillance H26](Documents/TP01-H26.md)
 - ![](dessins/coupe.svg) 30 · [Partie B · TP02 – Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md#partie-2)
+- ![](dessins/surveillance.svg) 31 · [Centrale de surveillance · événements reçus par l'API](http://esh25.ve2cuy.com/index.php)
+  - Les événements envoyés par les systèmes de la classe (ES, partie 2)
 
-## E) Documents 31 et 32
+## E) Documents 32 et 33
 
 ![](dessins/feuilles.svg) *Copier/coller et solutions*
 
-- ![](dessins/copier-coller.svg) 31 · [Les copier/coller](Documents/copier-coller.md)
+- ![](dessins/copier-coller.svg) 32 · [Les copier/coller](Documents/copier-coller.md)
   - Les variables de type scalaire · gestion du bruit sur un bouton – bounce2
-- ![](dessins/solutions.svg) 32 · [Solutions aux laboratoires](Documents/Solutions.md)
+- ![](dessins/solutions.svg) 33 · [Solutions aux laboratoires](Documents/Solutions.md)

@@ -1,4 +1,4 @@
-# 31 - Copier/Coller et projets Wokwi
+# 32 - Copier/Coller et projets Wokwi
 
 ### A – Les copier/coller
 
