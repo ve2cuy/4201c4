@@ -1,97 +1,123 @@
-// Quiz de compréhension à la fin d'un document (questions de _data/quiz/<document>.yml,
-// placées dans la page par _layouts/default.html). Vrai ou faux et choix multiple; le résultat
-// et les bonnes réponses s'affichent à la fin. Le résultat est gardé dans le navigateur du poste
-// (localStorage, clé « ve2cuy-quiz:<chemin de la page> ») : la page d'accueil le lit pour
-// marquer la vignette du document.
+// Quiz de compréhension à la fin d'un document (banque de questions de _data/quiz/<document>.yml,
+// placée dans la page par _layouts/default.html). À chaque essai, « nombre » questions (10 par
+// défaut) sont tirées au hasard dans la banque, d'abord parmi celles que le poste n'a pas encore
+// vues; l'ordre des choix multiples est aussi mélangé. Le résultat et les bonnes réponses
+// s'affichent à la fin. Le résultat est gardé dans le navigateur du poste (localStorage, clé
+// « ve2cuy-quiz:<chemin de la page> ») : la page d'accueil le lit pour marquer la vignette.
 (() => {
   const donnees = document.getElementById("quiz-donnees");
   const zone = document.getElementById("quiz");
   if (!donnees || !zone) return;
   let quiz;
   try { quiz = JSON.parse(donnees.textContent); } catch (e) { return; }
-  const questions = (quiz.questions || []).filter((q) => q && q.question);
-  if (!questions.length) return;
+  const banque = (quiz.questions || []).filter((q) => q && q.question);
+  if (!banque.length) return;
+  const nombre = Math.min(banque.length, Math.max(1, Number(quiz.nombre) || 10));
 
-  const cle = "ve2cuy-quiz:" + location.pathname.replace(/\.html$/, "").replace(/\/$/, "/index");
-  const lire = () => { try { return JSON.parse(localStorage.getItem(cle)) || null; } catch (e) { return null; } };
-  const ecrire = (v) => { try { localStorage.setItem(cle, JSON.stringify(v)); } catch (e) {} };
+  const chemin = location.pathname.replace(/\.html$/, "").replace(/\/$/, "/index");
+  const cle = "ve2cuy-quiz:" + chemin;
+  const cleVues = "ve2cuy-quiz-vues:" + chemin;
+  const lire = (k) => { try { return JSON.parse(localStorage.getItem(k)) || null; } catch (e) { return null; } };
+  const ecrire = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
 
   const el = (tag, cls, texte) => { const e = document.createElement(tag); if (cls) e.className = cls; if (texte != null) e.textContent = texte; return e; };
   const dateCourte = (iso) => { try { return new Date(iso).toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric" }); } catch (e) { return iso; } };
+  const melanger = (t) => { const a = [...t]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const estVf = (q) => q.type === "vf" || !q.choix;
 
-  // Choix d'une question : « vf » (vrai ou faux) ou une liste « choix »; « reponse » est
-  // « vrai »/« faux » ou le numéro du bon choix (à partir de 1).
-  const choixDe = (q) => q.type === "vf" || !q.choix ? ["Vrai", "Faux"] : q.choix.map(String);
-  const bonIndex = (q) => {
-    if (q.type === "vf" || !q.choix) return String(q.reponse).toLowerCase().startsWith("v") || q.reponse === true ? 0 : 1;
-    return Number(q.reponse) - 1;
-  };
+  // Tirage : questions jamais vues sur ce poste d'abord (par leur texte, pour survivre aux
+  // modifications de la banque); quand toutes ont été vues, on recommence le cycle.
+  function tirer() {
+    let vues = new Set((lire(cleVues) || []).filter((t) => banque.some((q) => q.question === t)));
+    let neuves = banque.filter((q) => !vues.has(q.question));
+    let choisies = melanger(neuves).slice(0, nombre);
+    if (choisies.length < nombre) {
+      const pris = new Set(choisies.map((q) => q.question));
+      choisies = choisies.concat(melanger(banque.filter((q) => !pris.has(q.question))).slice(0, nombre - choisies.length));
+      vues = new Set();
+    }
+    choisies.forEach((q) => vues.add(q.question));
+    ecrire(cleVues, [...vues]);
+    // Choix : « vrai »/« faux », ou la liste « choix » (mélangée) dont « reponse » est le numéro du bon (à partir de 1)
+    return choisies.map((q) => {
+      if (estVf(q)) return { q, choix: ["Vrai", "Faux"], bon: String(q.reponse).toLowerCase().startsWith("v") || q.reponse === true ? 0 : 1, vf: true };
+      const ordre = melanger(q.choix.map((c, i) => i));
+      return { q, choix: ordre.map((i) => String(q.choix[i])), bon: ordre.indexOf(Number(q.reponse) - 1), vf: false };
+    });
+  }
 
   const titre = el("h2", null, quiz.titre || "Quiz de compréhension");
   const intro = el("p", "quiz-intro");
-  const nbVf = questions.filter((q) => q.type === "vf" || !q.choix).length;
-  intro.textContent = `${questions.length} questions` +
-    (nbVf && nbVf < questions.length ? " · vrai ou faux et choix multiple" : nbVf ? " · vrai ou faux" : " · choix multiple") +
-    ". Répondez à toutes les questions : votre résultat et les bonnes réponses s'affichent à la fin.";
+  intro.textContent = `${nombre} questions tirées au hasard dans une banque de ${banque.length}` +
+    " (vrai ou faux et choix multiple). Répondez à toutes les questions : votre résultat et les bonnes réponses s'affichent à la fin." +
+    (banque.length > nombre ? " Recommencez le quiz pour avoir d'autres questions." : "");
   const deja = el("p", "quiz-deja");
-  const form = el("form", "quiz-form");
-  form.noValidate = true;
   const resultat = el("div", "quiz-resultat");
   resultat.setAttribute("role", "status");
   resultat.tabIndex = -1;
   resultat.hidden = true;
-
-  const blocs = questions.map((q, i) => {
-    const fs = el("fieldset", "quiz-q");
-    const lg = el("legend");
-    lg.append(el("span", "quiz-num", `Question ${i + 1} / ${questions.length}`), el("span", "quiz-texte", q.question));
-    fs.append(lg);
-    const opts = el("div", "quiz-choix" + (q.type === "vf" || !q.choix ? " vf" : ""));
-    choixDe(q).forEach((c, j) => {
-      const lab = el("label", "quiz-option");
-      const inp = el("input");
-      inp.type = "radio"; inp.name = "q" + i; inp.value = String(j);
-      lab.append(inp, el("span", null, c));
-      opts.append(lab);
-    });
-    const corr = el("p", "quiz-correction");
-    corr.hidden = true;
-    fs.append(opts, corr);
-    form.append(fs);
-    return { q, fs, corr };
-  });
-
+  const form = el("form", "quiz-form");
+  form.noValidate = true;
+  const questionsZone = el("div", "quiz-questions");
   const pied = el("div", "quiz-pied");
   const compte = el("span", "quiz-compte");
   const envoyer = el("button", "quiz-bouton", "Voir mon résultat");
   envoyer.type = "submit";
-  const recommencer = el("button", "quiz-bouton secondaire", "Recommencer le quiz");
+  const recommencer = el("button", "quiz-bouton secondaire", "Recommencer avec d'autres questions");
   recommencer.type = "button";
-  recommencer.hidden = true;
   pied.append(compte, envoyer, recommencer);
-  form.append(pied);
+  form.append(questionsZone, pied);
+
+  let blocs = [];
+  function nouvelEssai() {
+    blocs = tirer().map((t, i) => {
+      const fs = el("fieldset", "quiz-q");
+      const lg = el("legend");
+      lg.append(el("span", "quiz-num", `Question ${i + 1} / ${nombre}`), el("span", "quiz-texte", t.q.question));
+      fs.append(lg);
+      const opts = el("div", "quiz-choix" + (t.vf ? " vf" : ""));
+      t.choix.forEach((c, j) => {
+        const lab = el("label", "quiz-option");
+        const inp = el("input");
+        inp.type = "radio"; inp.name = "q" + i; inp.value = String(j);
+        lab.append(inp, el("span", null, c));
+        opts.append(lab);
+      });
+      const corr = el("p", "quiz-correction");
+      corr.hidden = true;
+      fs.append(opts, corr);
+      return { ...t, fs, corr };
+    });
+    questionsZone.replaceChildren(...blocs.map((b) => b.fs));
+    resultat.hidden = true;
+    envoyer.hidden = false;
+    compte.hidden = false;
+    recommencer.hidden = true;
+    majCompte();
+    majDeja();
+  }
 
   const repondues = () => blocs.filter((b, i) => form.querySelector(`input[name="q${i}"]:checked`)).length;
-  const majCompte = () => {
+  function majCompte() {
     const n = repondues();
-    compte.textContent = `${n} / ${questions.length} répondues`;
-    envoyer.disabled = n < questions.length;
-  };
-  const majDeja = () => {
-    const r = lire();
+    compte.textContent = `${n} / ${nombre} répondues`;
+    envoyer.disabled = n < nombre;
+  }
+  function majDeja() {
+    const r = lire(cle);
     deja.hidden = !r;
     if (r) deja.textContent = `Quiz déjà fait sur ce poste le ${dateCourte(r.date)} : ${r.score} / ${r.total}` +
-      (r.meilleur != null && r.meilleur !== r.score ? ` (meilleur résultat : ${r.meilleur} / ${r.total})` : "") + ".";
-  };
+      (r.meilleur != null && r.meilleur !== r.score ? ` (meilleur résultat : ${r.meilleur} / ${r.total})` : "") +
+      (r.essais > 1 ? ` · ${r.essais} essais` : "") + ".";
+  }
 
   form.addEventListener("change", majCompte);
   form.addEventListener("submit", (ev) => {
     ev.preventDefault();
-    if (repondues() < questions.length) return;
+    if (repondues() < nombre) return;
     let score = 0;
-    blocs.forEach(({ q, fs, corr }, i) => {
+    blocs.forEach(({ q, choix, bon, fs, corr }, i) => {
       const choisi = Number(form.querySelector(`input[name="q${i}"]:checked`).value);
-      const bon = bonIndex(q);
       const juste = choisi === bon;
       if (juste) score++;
       fs.classList.add(juste ? "juste" : "faux");
@@ -101,18 +127,23 @@
       });
       fs.querySelectorAll("input").forEach((inp) => { inp.disabled = true; });
       corr.replaceChildren(
-        el("strong", null, juste ? "Bonne réponse." : `Réponse attendue : ${choixDe(q)[bon]}.`),
+        el("strong", null, juste ? "Bonne réponse." : `Réponse attendue : ${choix[bon]}.`),
         ...(q.explication ? [" ", q.explication] : []),
       );
       corr.hidden = false;
     });
-    const total = questions.length;
-    const avant = lire();
-    ecrire({ score, total, meilleur: Math.max(score, avant && avant.total === total ? avant.meilleur ?? avant.score : 0), date: new Date().toISOString() });
-    const pc = Math.round((100 * score) / total);
+    const avant = lire(cle);
+    const memeTotal = avant && avant.total === nombre;
+    ecrire(cle, {
+      score, total: nombre,
+      meilleur: Math.max(score, memeTotal ? avant.meilleur ?? avant.score : 0),
+      essais: (memeTotal ? avant.essais || 1 : 0) + 1,
+      date: new Date().toISOString(),
+    });
+    const pc = Math.round((100 * score) / nombre);
     resultat.className = "quiz-resultat " + (pc >= 80 ? "fort" : pc >= 60 ? "moyen" : "faible");
     resultat.replaceChildren(
-      el("span", "quiz-score", `${score} / ${total}`),
+      el("span", "quiz-score", `${score} / ${nombre}`),
       el("span", "quiz-message", pc === 100 ? "Parfait! Toutes les réponses sont bonnes." :
         pc >= 80 ? "Très bien! Revoyez les questions en rouge ci-dessous." :
         pc >= 60 ? "Pas mal. Relisez les sections liées aux questions en rouge." :
@@ -122,29 +153,15 @@
     envoyer.hidden = true;
     compte.hidden = true;
     recommencer.hidden = false;
-    majDeja();
     deja.hidden = true;
     resultat.scrollIntoView({ behavior: "smooth", block: "center" });
     resultat.focus({ preventScroll: true });
   });
   recommencer.addEventListener("click", () => {
-    form.reset();
-    blocs.forEach(({ fs, corr }) => {
-      fs.classList.remove("juste", "faux");
-      fs.querySelectorAll(".quiz-option").forEach((lab) => lab.classList.remove("bonne", "mauvaise"));
-      fs.querySelectorAll("input").forEach((inp) => { inp.disabled = false; });
-      corr.hidden = true;
-    });
-    resultat.hidden = true;
-    envoyer.hidden = false;
-    compte.hidden = false;
-    recommencer.hidden = true;
-    majCompte();
-    majDeja();
+    nouvelEssai();
     titre.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
   zone.replaceChildren(titre, intro, deja, resultat, form);
-  majCompte();
-  majDeja();
+  nouvelEssai();
 })();

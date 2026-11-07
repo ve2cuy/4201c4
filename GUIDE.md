@@ -221,13 +221,15 @@ Pour vérifier une date précise : <https://ve2cuy.github.io/4201c4/?date=2027-0
 
 ## Quiz de compréhension
 
-Un document peut finir par un quiz (vrai ou faux et choix multiple). Il suffit d'ajouter un
+Un document peut finir par un quiz (vrai ou faux et choix multiple), tiré d'une banque de
+questions (30 pour le document 1). Il suffit d'ajouter un
 fichier `_data/quiz/<nom du document>.yml`, du même nom que le `.md` sans l'extension
 (exemple : `_data/quiz/Introduction-microcontroleurs.yml` pour
 `Documents/Introduction-microcontroleurs.md`). Le gabarit place le quiz à la fin du document.
 
 ```yaml
 titre: Quiz de compréhension
+nombre: 10                   # questions tirées au hasard à chaque essai (10 par défaut)
 questions:
   - question: "Un microcontrôleur intègre le processeur, la mémoire et les entrées/sorties."
     type: vf
@@ -239,10 +241,13 @@ questions:
     explication: "L'ATmega2560 est celui de l'Arduino Mega."
 ```
 
+- À chaque essai, `nombre` questions sont tirées au hasard, d'abord parmi celles que le poste
+  n'a pas encore vues (avec 30 questions : trois essais sans répétition); l'ordre des choix
+  multiples est mélangé, `reponse` reste le numéro du bon choix dans le fichier.
 - Le bouton « Voir mon résultat » s'active quand toutes les questions ont une réponse; le
   résultat, les bonnes réponses et les explications s'affichent alors.
 - Le résultat est gardé dans le navigateur du poste (`localStorage`, clé
-  `ve2cuy-quiz:<chemin de la page>`). La vignette du document affiche alors « ✓ quiz 8/10 »
+  `ve2cuy-quiz:<chemin de la page>`; questions déjà vues : `ve2cuy-quiz-vues:…`). La vignette du document affiche alors « ✓ quiz 8/10 »
   (meilleur résultat). Il disparaît si les données du navigateur sont effacées.
 - Les réponses sont dans la page : c'est un outil d'autoévaluation, pas un examen.
 - Mettre les guillemets autour des textes qui contiennent « : » ou « # ».

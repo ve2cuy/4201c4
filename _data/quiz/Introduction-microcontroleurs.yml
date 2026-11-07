@@ -1,6 +1,7 @@
 # Quiz du document 1 - Introduction aux microcontrôleurs (Documents/Introduction-microcontroleurs.md).
 # Le nom du fichier est celui du document, sans .md. Voir GUIDE.md, « Quiz de compréhension ».
 titre: Quiz de compréhension
+nombre: 10   # questions tirées au hasard dans la banque à chaque essai
 questions:
   - question: "Un microcontrôleur intègre, dans une seule puce, le processeur, la mémoire et les entrées/sorties."
     type: vf
@@ -59,3 +60,119 @@ questions:
     type: vf
     reponse: vrai
     explication: "Le bootloader ne peut pas se réécrire lui-même : on passe par le connecteur ICSP (sections 6 et 8)."
+
+  - question: "Les microcontrôleurs sont aussi parfois appelés « System on a Chip » (SoC)."
+    type: vf
+    reponse: vrai
+    explication: "Ils réunissent dans un même boîtier le processeur, les mémoires et les périphériques (section 1)."
+
+  - question: "Que signifie l'acronyme du boîtier DIP?"
+    choix: ["Dual Inline Package", "Digital Input Port", "Direct Integrated Processor", "Dual Interface Protocol"]
+    reponse: 1
+    explication: "Le boîtier à deux rangées de broches, comme l'ATmega328P de l'Arduino Uno (section 4)."
+
+  - question: "Quelle entreprise fabrique la série de microcontrôleurs ESP (ESP8266, ESP32)?"
+    choix: ["Microchip", "Espressif", "STMicroelectronics", "Raspberry Pi"]
+    reponse: 2
+    explication: "Microchip fait les PIC (et les AVR depuis l'achat d'Atmel), STMicroelectronics les STM32 (section 5)."
+
+  - question: "L'ESP32 est un microcontrôleur 8 bits."
+    type: vf
+    reponse: faux
+    explication: "L'ESP8266 et l'ESP32 sont des microcontrôleurs 32 bits; l'ATmega328P et l'ATmega2560 sont des 8 bits (section 5)."
+
+  - question: "Quelle est la taille de la mémoire programme (Flash) de l'ATmega328P?"
+    choix: ["2 Ko", "32 Ko", "1 Ko", "256 Ko"]
+    reponse: 2
+    explication: "32 Ko, soit 32768 octets (section 6.1)."
+
+  - question: "À quoi sert un convertisseur ADC?"
+    choix:
+      - "À convertir une valeur numérique en signal analogique"
+      - "À synchroniser les échanges I2C"
+      - "À convertir un signal analogique en valeur numérique"
+      - "À détecter une chute de tension"
+    reponse: 3
+    explication: "Analog to Digital Converter. Le DAC fait l'inverse (section 6)."
+
+  - question: "Quelle fonction d'un microcontrôleur détecte un blocage du code?"
+    choix: ["Le WatchDog", "Le Brown-out (BOD)", "Le comparateur analogique", "Le PWM"]
+    reponse: 1
+    explication: "Le Brown-out détecte plutôt une chute de tension de l'alimentation (section 1)."
+
+  - question: "Le Brown-out (BOD) d'un microcontrôleur détecte une chute de tension de l'alimentation électrique."
+    type: vf
+    reponse: vrai
+    explication: "C'est une des fonctionnalités qu'un MCU peut intégrer (section 1)."
+
+  - question: "En informatique, 1 Ko vaut 1024 octets."
+    type: vf
+    reponse: vrai
+    explication: "Les processeurs calculent en base 2 : 2¹⁰ = 1024 (section 6)."
+
+  - question: "Sous Windows, comment est identifiée une interface UART (port série)?"
+    choix: ["/dev/tty*", "COMn (COM1, COM2…)", "USBn", "LPTn"]
+    reponse: 2
+    explication: "Sous macOS et Linux, c'est /dev/tty* (section 6)."
+
+  - question: "Lequel de ces signaux n'appartient pas au protocole SPI?"
+    choix: ["SCK", "MOSI", "MISO", "SDA"]
+    reponse: 4
+    explication: "SDA est une ligne de l'I2C. SPI utilise SCK, CS, MOSI et MISO (section 6)."
+
+  - question: "Le protocole CAN est utilisé principalement dans l'industrie automobile."
+    type: vf
+    reponse: vrai
+    explication: "Controller Area Network (section 6)."
+
+  - question: "Que permet le connecteur ICSP?"
+    choix:
+      - "Brancher un écran LCD"
+      - "Reprogrammer le microcontrôleur alors qu'il est en place dans le circuit"
+      - "Alimenter la carte en 12 volts"
+      - "Relier la carte à un réseau Wi-Fi"
+    reponse: 2
+    explication: "In-Circuit Serial Programming : il expose les signaux SPI; sur l'Arduino, il sert à programmer le bootloader (section 6)."
+
+  - question: "Une interruption (INT) d'un microcontrôleur et le type « int » du langage C désignent la même chose."
+    type: vf
+    reponse: faux
+    explication: "Une interruption permet de réagir de façon asynchrone à un événement; « int » est un type d'entier (section 6)."
+
+  - question: "Quel langage utiliserons-nous dans ce cours pour programmer les microcontrôleurs?"
+    choix: ["Java", "MicroPython", "C(++)", "Assembleur"]
+    reponse: 3
+    explication: "Le C et le C++ sont les langages les plus utilisés pour les MCU (section 7.4)."
+
+  - question: "Où est enregistré le bootloader de l'ATmega328P?"
+    choix:
+      - "Dans l'EEPROM"
+      - "Dans la SRAM"
+      - "Sur une carte SD"
+      - "Dans les premiers 2 Ko de la mémoire programme"
+    reponse: 4
+    explication: "Il occupe au plus 2 Ko de la mémoire Flash (section 8)."
+
+  - question: "La plupart des microcontrôleurs proposent une interface USB pour leur programmation."
+    type: vf
+    reponse: faux
+    explication: "L'USB est coûteux à implémenter et demande une horloge de 48 MHz; presque tous proposent plutôt un USART (section 8)."
+
+  - question: "Quel est le léger désavantage du bootloader?"
+    choix:
+      - "Il occupe toute la mémoire vive"
+      - "Il ajoute un délai au démarrage avant le programme principal"
+      - "Il empêche d'utiliser le UART dans le programme"
+      - "Il exige un programmateur matériel à chaque téléversement"
+    reponse: 2
+    explication: "Au démarrage, il attend quelques instants une éventuelle séquence de programmation (section 8)."
+
+  - question: "Les schémas des cartes électroniques Arduino sont publiés sous licence libre."
+    type: vf
+    reponse: vrai
+    explication: "Certaines composantes, comme le microcontrôleur, ne sont toutefois pas sous licence libre (section 9)."
+
+  - question: "Combien de broches d'entrée/sortie à usage général (GPIO) l'ATmega328P possède-t-il?"
+    choix: ["6", "14", "23", "32"]
+    reponse: 3
+    explication: "23 GPIO (PB0..PB7, PC0..PC6, PD0..PD7) sur un boîtier de 32 broches; l'Arduino Uno ne les expose pas toutes (section 6.1)."
