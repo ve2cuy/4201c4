@@ -301,7 +301,7 @@ Le projet Wokwi est disponible [ici](https://wokwi.com/projects/3463304844264085
 
 ## Crédits
 
-*Document rédigé par Alain Boudreault © 2021-2026*  
+*Document rédigé par Alain Boudreault © 2021-2027*  
 *Révision 2026.11.07.1*  
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

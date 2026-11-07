@@ -445,7 +445,7 @@ PlatformIO représente une solution efficace pour le développement Arduino et e
 
 ## Crédits
 
-**Document rédigé par Alain Boudreault © 2021-2026**
+**Document rédigé par Alain Boudreault © 2021-2027**
 
 **Version 2026.01.25.01 - Révision 2026.11.07.1**
 
