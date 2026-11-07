@@ -42,7 +42,7 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
 - ![](dessins/document.svg) - · [Plan de cours, version texte](Documents/Plan-de-cours.md)
   - Le même plan, lisible dans le fureteur
 
-## B) Documents 1 à 13
+## B) Documents - Première étape du cours
 
 ![](dessins/puce-del.svg) *Arduino, PlatformIO, C, affichage*
 
@@ -73,45 +73,45 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
 - ![](dessins/thermometre.svg) 13 · [Température et humidité](Documents/Capteur-temperature-humidite.md)
   - Capteur SHT31 · afficheur 7 segments 4-Digit (TM1637) · installer une librairie à la main
 
-## C) Documents 20 à 28
+## C) Documents - Deuxième étape du cours
 
 ![](dessins/capteur-sans-fil.svg) *Capteurs, horloge, UART, Wi-Fi*
 
-- ![](dessins/bande-del.svg) 20 · [Buzzer et NeoPixel](Documents/NEOPixel.md)
+- ![](dessins/bande-del.svg) 14 · [Buzzer et NeoPixel](Documents/NEOPixel.md)
   - Buzzer · barre de DEL RGB WS2813
-- ![](dessins/horloge.svg) 21 · [Horloge temps réel](Documents/RTC-DS1307.md)
+- ![](dessins/horloge.svg) 15 · [Horloge temps réel](Documents/RTC-DS1307.md)
   - Real Time Clock (RTC) DS1307 · I2C · heure et date
-- ![](dessins/mouvement.svg) 22 · [Détecteur de mouvements](Documents/Detecteur-de-mouvements.md)
+- ![](dessins/mouvement.svg) 16 · [Détecteur de mouvements](Documents/Detecteur-de-mouvements.md)
   - Capteur PIR ajustable · connexion digitale
-- ![](dessins/minuterie.svg) 23 · [Opérations non bloquantes](Documents/Operations-non-bloquantes.md) · TP02
+- ![](dessins/minuterie.svg) 17 · [Opérations non bloquantes](Documents/Operations-non-bloquantes.md) · TP02
   - millis() · interruptions matérielles · interruption Timer
-- ![](dessins/uart.svg) 24 · [Communication UART](Documents/Communication-UART-entre-2-arduino.md) · TP02
+- ![](dessins/uart.svg) 18 · [Communication UART](Documents/Communication-UART-entre-2-arduino.md) · TP02
   - Entre deux Arduino · UART physique · SoftwareSerial
-- ![](dessins/wifi.svg) 25 · [Accès Wi-Fi](Documents/ESP-Wifi.md) · TP02
+- ![](dessins/wifi.svg) 19 · [Accès Wi-Fi](Documents/ESP-Wifi.md) · TP02
   - Module UART Wifi V2 (ESP8285) · commandes AT · requêtes vers une API Web
-- ![](dessins/infrarouge.svg) 26 · [Infrarouge](Documents/Infrarouge.md) · optionnel
+- ![](dessins/infrarouge.svg) 20 · [Infrarouge](Documents/Infrarouge.md) · optionnel
   - Récepteur et émetteur Grove · télécommande · protocoles NEC et Sony
-- ![](dessins/eeprom.svg) 27 · [La mémoire EEPROM](Documents/EEPROM.md) · optionnel
+- ![](dessins/eeprom.svg) 21 · [La mémoire EEPROM](Documents/EEPROM.md) · optionnel
   - Conserver des données sans alimentation · read, update, put et get
-- ![](dessins/rfid.svg) 28 · [Capteur RFID](Documents/capteur-rfid.md) · optionnel · défi TP02
+- ![](dessins/rfid.svg) 22 · [Capteur RFID](Documents/capteur-rfid.md) · optionnel · défi TP02
   - Module RFID de Grove
 
 ## D) Projet de session
 
 ![](dessins/drapeau.svg) *Partie A et partie B*
 
-- ![](dessins/oeil.svg) 29 · [Système de surveillance H26](Documents/TP01-H26.md)
+- ![](dessins/oeil.svg) 23 · [Système de surveillance H26](Documents/TP01-H26.md)
   - Partie A · énoncé du TP01
-- ![](dessins/coupe.svg) 30 · [Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md#partie-2)
+- ![](dessins/coupe.svg) 24 · [Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md#partie-2)
   - Partie B · TP02 · transmission des données vers le Web
-- ![](dessins/surveillance.svg) 31 · [Centrale de surveillance](http://esh25.ve2cuy.com/index.php)
+- ![](dessins/surveillance.svg) 25 · [Centrale de surveillance](http://esh25.ve2cuy.com/index.php)
   - Les événements envoyés à l'API par les systèmes de la classe (ES, partie 2)
 
-## E) Documents 32 et 33
+## E) Documents - Aide-mémoire et solutions
 
 ![](dessins/feuilles.svg) *Copier/coller et solutions*
 
-- ![](dessins/copier-coller.svg) 32 · [Les copier/coller](Documents/copier-coller.md)
+- ![](dessins/copier-coller.svg) 26 · [Les copier/coller](Documents/copier-coller.md)
   - Code de départ · séquences ANSI et boîtes · variables de type scalaire · bruit d'un bouton (bounce2)
-- ![](dessins/solutions.svg) 33 · [Solutions aux laboratoires](Documents/Solutions.md)
+- ![](dessins/solutions.svg) 27 · [Solutions aux laboratoires](Documents/Solutions.md)
   - NeoPixel · Real Time Clock DS1307

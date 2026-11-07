@@ -1,4 +1,4 @@
-# 27 - La mémoire EEPROM
+# 21 - La mémoire EEPROM
 
 *Révision du 2026.11.07*
 

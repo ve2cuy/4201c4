@@ -1,4 +1,4 @@
-# 33 - Solutions aux laboratoires
+# 27 - Solutions aux laboratoires
 
 ## Contenu
 

@@ -1,4 +1,4 @@
-# 26 - Infrarouge : récepteur et émetteur
+# 20 - Infrarouge : récepteur et émetteur
 
 *Révision du 2026.11.07*
 
