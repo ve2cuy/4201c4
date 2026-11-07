@@ -1,4 +1,4 @@
-# 27 - Solutions aux laboratoires
+# 32 - Solutions aux laboratoires
 
 ## Laboratoires NeoPixel
 

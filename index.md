@@ -40,7 +40,7 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
 - ![](dessins/document.svg) - · [Plan de cours H26 (PDF)](Documents/420-1C4-JR_ab_pc_H26.pdf)
 - ![](dessins/document.svg) - · [Plan de cours, version texte](Documents/Plan-de-cours.md)
 
-## B) Documents 1 à 14
+## B) Documents 1 à 13
 
 ![](dessins/puce-del.svg) *Arduino, PlatformIO, C, affichage*
 
@@ -57,35 +57,33 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
 - ![](dessins/liste.svg) 10 · [L'instruction « enum » du langage C](Documents/Instruction-enum.md) · TP02
 - ![](dessins/structure.svg) 11 · [Structures de données](Documents/Structures-de-donnees.md)
 - ![](dessins/bits.svg) 12 · [Opérations sur les bits et structures de données](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) · TP02
-- ![](dessins/copier-coller.svg) 13 · [Copier/coller pour ANSI et boîte](Documents/copier-coller.md)
-  - Les variables de type scalaire · gestion du bruit sur un bouton – bounce2
-- ![](dessins/thermometre.svg) 14 · [Température, humidité et affichage sur 7 segments – 4Digit](Documents/Capteur-temperature-humidite.md)
+- ![](dessins/thermometre.svg) 13 · [Température, humidité et affichage sur 7 segments – 4Digit](Documents/Capteur-temperature-humidite.md)
   - Installer une librairie à la main
 
-## C) Documents 15 à 23
+## C) Documents 20 à 28
 
 ![](dessins/capteur-sans-fil.svg) *Capteurs, horloge, UART, Wi-Fi*
 
-- ![](dessins/bande-del.svg) 15 · [Buzzer et NeoPixel](Documents/NEOPixel.md)
-- ![](dessins/horloge.svg) 16 · [Real Time Clock (RTC)](Documents/RTC-DS1307.md)
-- ![](dessins/mouvement.svg) 17 · [Détecteur de mouvements](Documents/Detecteur-de-mouvements.md)
-- ![](dessins/minuterie.svg) 18 · [Opérations non bloquantes – millis() et interruptions](Documents/Operations-non-bloquantes.md) · TP02
-- ![](dessins/uart.svg) 19 · [Communication UART entre deux Arduino](Documents/Communication-UART-entre-2-arduino.md) · TP02
-- ![](dessins/wifi.svg) 20 · [ESP-Wifi – accès réseau](Documents/ESP-Wifi.md) · TP02
-- ![](dessins/infrarouge.svg) 21 · Détecteur infrarouge · optionnel
-- ![](dessins/eeprom.svg) 22 · EEPROM · optionnel
-- ![](dessins/rfid.svg) 23 · [Capteur RFID](Documents/capteur-rfid.md) · optionnel · défi TP02
+- ![](dessins/bande-del.svg) 20 · [Buzzer et NeoPixel](Documents/NEOPixel.md)
+- ![](dessins/horloge.svg) 21 · [Real Time Clock (RTC)](Documents/RTC-DS1307.md)
+- ![](dessins/mouvement.svg) 22 · [Détecteur de mouvements](Documents/Detecteur-de-mouvements.md)
+- ![](dessins/minuterie.svg) 23 · [Opérations non bloquantes – millis() et interruptions](Documents/Operations-non-bloquantes.md) · TP02
+- ![](dessins/uart.svg) 24 · [Communication UART entre deux Arduino](Documents/Communication-UART-entre-2-arduino.md) · TP02
+- ![](dessins/wifi.svg) 25 · [ESP-Wifi – accès réseau](Documents/ESP-Wifi.md) · TP02
+- ![](dessins/infrarouge.svg) 26 · Détecteur infrarouge · optionnel
+- ![](dessins/eeprom.svg) 27 · EEPROM · optionnel
+- ![](dessins/rfid.svg) 28 · [Capteur RFID](Documents/capteur-rfid.md) · optionnel · défi TP02
 
 ## D) Projet de session
 
 ![](dessins/drapeau.svg) *Partie A et partie B*
 
-- ![](dessins/oeil.svg) 24 · [Partie A · TP01 – Le système de surveillance H26](Documents/TP01-H26.md)
-- ![](dessins/coupe.svg) 25 · [Partie B · TP02 – Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md)
+- ![](dessins/oeil.svg) 29 · [Partie A · TP01 – Le système de surveillance H26](Documents/TP01-H26.md)
+- ![](dessins/coupe.svg) 30 · [Partie B · TP02 – Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md)
 
-## E) Documents 26 et 27
+## E) Documents 31 et 32
 
 ![](dessins/feuilles.svg) *Copier/coller et solutions*
 
-- ![](dessins/copier-coller.svg) 26 · [Les copier/coller](Documents/copier-coller.md)
-- ![](dessins/solutions.svg) 27 · [Solutions aux laboratoires](Documents/Solutions.md)
+- ![](dessins/copier-coller.svg) 31 · [Les copier/coller](Documents/copier-coller.md)
+- ![](dessins/solutions.svg) 32 · [Solutions aux laboratoires](Documents/Solutions.md)

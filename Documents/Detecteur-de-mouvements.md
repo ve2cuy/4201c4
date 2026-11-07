@@ -1,4 +1,4 @@
-# 17 - Détecteur de mouvements
+# 22 - Détecteur de mouvements
 
 ## Grove Adjustable [PIR Motion Sensor](https://wiki.seeedstudio.com/Grove-Adjustable_PIR_Motion_Sensor/)
 
