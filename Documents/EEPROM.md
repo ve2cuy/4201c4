@@ -401,6 +401,8 @@ void loop() {}
 
 ### 8.1 – Laboratoire (durée 20 minutes)
 
+<img src="../images/labo02.png" alt="" width="700" />
+
 <br>
 
 Modifier le compteur de démarrages (section 4) pour que le compteur soit de type `unsigned int` (2 octets), en utilisant `EEPROM.put()` et `EEPROM.get()`.
@@ -412,6 +414,8 @@ Combien de démarrages est-il maintenant possible de compter?
 ---
 
 ### 8.2 – Laboratoire (durée 30 minutes)
+
+<img src="../images/labo03.png" alt="" width="700" />
 
 <br>
 
@@ -426,6 +430,8 @@ Sachant qu'une case supporte 100 000 écritures, combien d'appuis le système po
 ---
 
 ### 8.3 – Laboratoire (durée 30 minutes)
+
+<img src="../images/labo02.png" alt="" width="700" />
 
 <br>
 

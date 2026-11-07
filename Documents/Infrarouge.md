@@ -327,6 +327,8 @@ void loop() {
 
 ### 8.1 – Laboratoire (durée 20 minutes)
 
+<img src="../images/labo02.png" alt="" width="700" />
+
 <br>
 
 Avec le programme de la section 4, relever le protocole et les codes des touches **0** à **9**, **+** et **–** d'une télécommande.
@@ -336,6 +338,8 @@ Inscrire ces codes dans un fichier d'entête `include/telecommande.h`, sous form
 ---
 
 ### 8.2 – Laboratoire (durée 30 minutes)
+
+<img src="../images/labo03.png" alt="" width="700" />
 
 <br>
 
@@ -350,6 +354,8 @@ Inscrire ces codes dans un fichier d'entête `include/telecommande.h`, sous form
 ---
 
 ### 8.3 – Laboratoire en équipe (durée 30 minutes)
+
+<img src="../images/labo02.png" alt="" width="700" />
 
 <br>
 
