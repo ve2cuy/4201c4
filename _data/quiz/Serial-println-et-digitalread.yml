@@ -1,0 +1,182 @@
+# Quiz du document 4 - Arduino – Serial.println() et digitalRead() (Documents/Serial-println-et-digitalread.md).
+# Le nom du fichier est celui du document, sans .md. Voir GUIDE.md, « Quiz de compréhension ».
+titre: Quiz de compréhension
+nombre: 10   # questions tirées au hasard dans la banque à chaque essai
+questions:
+  - question: "Serial.print() n'ajoute pas de changement de ligne, contrairement à Serial.println()."
+    type: vf
+    reponse: vrai
+    explication: "On peut donc afficher un texte puis une valeur sur la même ligne (section 1.5)."
+
+  - question: "À 9600 bauds, environ combien de caractères sont transmis par seconde?"
+    choix: ["96", "960", "9600", "1200"]
+    reponse: 2
+    explication: "Avec les bits de départ et d'arrêt, on divise par 10 : environ 960 caractères par seconde (section 1.3)."
+
+  - question: "À 115200 bauds, environ combien d'octets sont transmis par seconde?"
+    choix: ["1152", "11520", "115200", "960"]
+    reponse: 2
+    explication: "115200 / 10 ≈ 11520 octets par seconde (section 1.3)."
+
+  - question: "Qu'affiche Serial.println(88, BIN)?"
+    choix: ["88", "130", "58", "1011000"]
+    reponse: 4
+    explication: "88 en binaire; 130 est sa valeur en octal et 58 en hexadécimal (section 1.7)."
+
+  - question: "Quel deuxième paramètre de Serial.print() affiche un nombre en octal?"
+    choix: ["HEX", "DEC", "OCT", "BIN"]
+    reponse: 3
+    explication: "DEC (base 10), HEX (base 16), OCT (base 8) et BIN (base 2) (section 1.8)."
+
+  - question: "La vitesse passée à Serial.begin() doit être la même que celle du moniteur série."
+    type: vf
+    reponse: vrai
+    explication: "Sinon, les caractères reçus sont illisibles (sections 1.2 et 2.6)."
+
+  - question: "Sous PlatformIO, quel paramètre de platformio.ini change la vitesse du moniteur série?"
+    choix: ["upload_speed", "monitor_speed", "serial_speed", "baud_rate"]
+    reponse: 2
+    explication: "Par exemple monitor_speed = 115200, avec Serial.begin(115200) dans le programme (section 1.3)."
+
+  - question: "Quelle librairie permet d'écrire : Serial << \"i = \" << i << endl; ?"
+    choix: ["rgb_lcd.h", "Wire.h", "Streaming.h", "stdio.h"]
+    reponse: 3
+    explication: "La librairie Streaming de Mikal Hart; elle fonctionne aussi pour les écrans LCD (section 1.10)."
+
+  - question: "Le moniteur série n'est disponible que si la carte Arduino est branchée au port USB."
+    type: vf
+    reponse: vrai
+    explication: "Les messages passent par le UART, relié au PC par le câble USB (section 1.1)."
+
+  - question: "Que fait l'instruction i += 5; ?"
+    choix: ["Elle donne la valeur 5 à i", "Elle augmente i de 5", "Elle compare i à 5", "Elle diminue i de 5"]
+    reponse: 2
+    explication: "C'est l'équivalent de i = i + 5; (Rappel – incrémenter une variable)."
+
+  - question: "Avec i qui vaut 2, la condition if (i++ == 2) est vraie."
+    type: vf
+    reponse: vrai
+    explication: "i++ compare d'abord la valeur actuelle (2), puis augmente i. Avec ++i, i serait augmenté avant la comparaison."
+
+  - question: "L'instruction if (i = 2) compare la variable i à la valeur 2."
+    type: vf
+    reponse: faux
+    explication: "Un seul = affecte 2 à i. Pour comparer, il faut le double == (section 2.4.5)."
+
+  - question: "En C, quelle valeur est considérée comme fausse dans une condition?"
+    choix: ["1", "-1", "0", "Toute valeur négative"]
+    reponse: 3
+    explication: "0 est faux, toute autre valeur est vraie : if (1) est toujours vrai (sections 2.4.5 et 3.1.1)."
+
+  - question: "Comment configure-t-on une broche en mode lecture (entrée)?"
+    choix: ["digitalRead(broche, INPUT)", "pinMode(broche, INPUT)", "pinMode(broche, OUTPUT)", "Serial.begin(broche)"]
+    reponse: 2
+    explication: "pinMode(SWITCH, INPUT) dans setup(), puis digitalRead(SWITCH) pour lire (section 2.1)."
+
+  - question: "Avec le bouton du kit (sans pull-up), que retourne digitalRead() quand le bouton est appuyé?"
+    choix: ["0", "1", "1023", "255"]
+    reponse: 2
+    explication: "Il retourne 1 (HIGH) si le bouton est appuyé, sinon 0 (section 2.1)."
+
+  - question: "OUTPUT, INPUT, HIGH et LOW sont des macros fournies par l'environnement Arduino."
+    type: vf
+    reponse: vrai
+    explication: "Il est préférable de les utiliser plutôt que des valeurs numériques (section 2.1)."
+
+  - question: "Que fait l'instruction while (digitalRead(BOUTON)); ?"
+    choix:
+      - "Elle lit le bouton une seule fois"
+      - "Elle bloque le programme tant que le bouton est appuyé, donc jusqu'à son relâchement"
+      - "Elle compte le nombre de fois que le bouton est appuyé"
+      - "Elle élimine le bruit du bouton"
+    reponse: 2
+    explication: "La boucle vide se répète tant que digitalRead() retourne 1 (section 3.2)."
+
+  - question: "La boucle while (1) { … } s'exécute à l'infini."
+    type: vf
+    reponse: vrai
+    explication: "La condition 1 est toujours vraie, comme while (1 == 1) (section 3.1.1)."
+
+  - question: "Pourquoi le bouton du kit utilise-t-il une résistance?"
+    choix:
+      - "Pour protéger la DEL"
+      - "Pour forcer un état stable (0) quand le bouton n'est pas appuyé"
+      - "Pour augmenter la tension à 12 volts"
+      - "Pour accélérer la lecture du bouton"
+    reponse: 2
+    explication: "En mode INPUT, une broche ouverte n'a pas d'état garanti : la résistance la tire vers 0 (section 4)."
+
+  - question: "Que fait pinMode(2, INPUT_PULLUP)?"
+    choix:
+      - "Elle met la broche 2 en sortie"
+      - "Elle active la résistance interne qui tire l'entrée vers 1 (HIGH)"
+      - "Elle tire l'entrée vers 0 (LOW)"
+      - "Elle lit la broche 2 en mode analogique"
+    reponse: 2
+    explication: "Une broche où rien n'est connecté retourne alors 1 (section 4)."
+
+  - question: "Avec INPUT_PULLUP, digitalRead() retourne LOW lorsque le bouton est appuyé."
+    type: vf
+    reponse: vrai
+    explication: "Les états sont inversés : HIGH si ouvert, LOW si appuyé (section 4.1)."
+
+  - question: "L'ATmega328P offre aussi une résistance interne de type pull-down."
+    type: vf
+    reponse: faux
+    explication: "Il n'y a pas de fonction pulldown : il faut une résistance externe, comme sur le bouton du kit (section 4)."
+
+  - question: "Sur l'Arduino Uno, à quelle tension correspond l'état 1 d'une broche digitale?"
+    choix: ["0 volt", "1 volt", "3.3 volts", "5 volts"]
+    reponse: 4
+    explication: "Les états 0 et 1 correspondent à 0 et 5 volts (section 4)."
+
+  - question: "Qu'est-ce que le rebond (bounce) d'un interrupteur?"
+    choix:
+      - "Le bouton qui reste coincé"
+      - "Plusieurs changements d'état rapides et parasites au moment de l'appui"
+      - "Une tension trop élevée sur la broche"
+      - "Un bouton branché à l'envers"
+    reponse: 2
+    explication: "On l'élimine avec un court délai (delay(50)) ou en mesurant le temps avec millis() (sections 3.2 et 6)."
+
+  - question: "Dans l'exemple Debounce, quelle fonction sert à mesurer le temps écoulé depuis le dernier changement?"
+    choix: ["delay()", "millis()", "digitalRead()", "Serial.begin()"]
+    reponse: 2
+    explication: "lastDebounceTime = millis(); puis on compare millis() - lastDebounceTime au délai (section 6)."
+
+  - question: "Pourquoi lastDebounceTime est-elle de type unsigned long?"
+    choix:
+      - "Pour économiser de la mémoire"
+      - "Parce que le temps en millisecondes devient vite trop grand pour un int"
+      - "Parce que millis() retourne un nombre négatif"
+      - "Parce que digitalRead() l'exige"
+    reponse: 2
+    explication: "Voir le commentaire de l'exemple Debounce (section 6)."
+
+  - question: "Que fait l'instruction etatDeLaDEL = !etatDeLaDEL; ?"
+    choix: ["Elle éteint toujours la DEL", "Elle allume toujours la DEL", "Elle inverse l'état de la DEL", "Elle lit l'état de la DEL"]
+    reponse: 3
+    explication: "L'opérateur ! inverse la valeur : ON devient OFF et OFF devient ON (section 5.1)."
+
+  - question: "Une variable déclarée static dans loop() n'est initialisée qu'une seule fois."
+    type: vf
+    reponse: vrai
+    explication: "Elle garde sa valeur d'un tour de loop() à l'autre, comme static int nbFois = 0; (section 3.2)."
+
+  - question: "Dans int compteur = ::compteur++; à quoi sert l'opérateur :: ?"
+    choix:
+      - "À désigner la variable globale compteur"
+      - "À créer une nouvelle variable"
+      - "À comparer deux variables"
+      - "À afficher la variable dans la console"
+    reponse: 1
+    explication: "L'opérateur de résolution de portée distingue la variable globale de la variable locale du même nom (section 1.8)."
+
+  - question: "Avec #define afficher(x) (une macro vide), que deviennent les appels afficher(\"…\")?"
+    choix:
+      - "Ils provoquent une erreur de compilation"
+      - "Ils affichent dans la console"
+      - "Ils sont retirés : les messages sont désactivés sans toucher au reste du code"
+      - "Ils affichent sur l'écran LCD"
+    reponse: 3
+    explication: "Une macro vide permet d'activer ou de désactiver les messages de la console (section 1.6.2)."

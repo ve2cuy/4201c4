@@ -1,0 +1,174 @@
+# Quiz du document 6 - Grove – Module LCD-RGB i2c (Documents/LCD-enum-ifdef.md).
+# Le nom du fichier est celui du document, sans .md. Voir GUIDE.md, « Quiz de compréhension ».
+titre: Quiz de compréhension
+nombre: 10   # questions tirées au hasard dans la banque à chaque essai
+questions:
+  - question: "Quel type de connexion utilise le module LCD-RGB de Grove?"
+    choix: ["UART", "SPI", "I2C", "PWM"]
+    reponse: 3
+    explication: "Une connexion I2C (début du document)."
+
+  - question: "Sur l'Arduino Uno, quelle broche correspond à la ligne SDA de l'I2C?"
+    choix: ["A0", "A4", "A5", "D2"]
+    reponse: 2
+    explication: "SDA = A4 et SCL = A5."
+
+  - question: "Sur l'Arduino Uno, quelle broche correspond à la ligne SCL de l'I2C?"
+    choix: ["A4", "A5", "D13", "A1"]
+    reponse: 2
+    explication: "SCL = A5 et SDA = A4."
+
+  - question: "Que signifie lcd.begin(16, 2)?"
+    choix: ["16 lignes et 2 colonnes", "16 colonnes et 2 lignes", "Adresse 16, vitesse 2", "Luminosité 16, contraste 2"]
+    reponse: 2
+    explication: "begin(colonnes, lignes) (section 3)."
+
+  - question: "Où lcd.setCursor(0, 1) place-t-il le curseur?"
+    choix:
+      - "Première colonne de la première ligne"
+      - "Première colonne de la deuxième ligne"
+      - "Deuxième colonne de la première ligne"
+      - "À la fin de l'écran"
+    reponse: 2
+    explication: "setCursor(colonne, ligne); la numérotation commence à 0 (section 3.1)."
+
+  - question: "Quelle méthode change la couleur de fond de l'écran LCD-RGB?"
+    choix: ["lcd.color()", "lcd.setRGB(r, g, b)", "lcd.background()", "lcd.print(r, g, b)"]
+    reponse: 2
+    explication: "Par exemple setRGB(255, 255, 255) pour un fond blanc (section 3.1)."
+
+  - question: "Que fait lcd.clear()?"
+    choix: ["Elle éteint le rétroéclairage", "Elle efface l'écran", "Elle remet le fond en blanc", "Elle désactive l'I2C"]
+    reponse: 2
+    explication: "Elle efface tout le texte affiché (section 4)."
+
+  - question: "Que retourne la fonction millis()?"
+    choix:
+      - "Le nombre de secondes depuis le 1er janvier 1970"
+      - "Le nombre de millisecondes depuis le démarrage de l'Arduino"
+      - "L'heure courante"
+      - "La durée de la dernière instruction"
+    reponse: 2
+    explication: "millis()/1000 donne le nombre de secondes depuis le démarrage (section 3.1)."
+
+  - question: "Une variable de type int convient pour garder la valeur de millis() pendant des heures."
+    type: vf
+    reponse: faux
+    explication: "Sur l'Uno, un int (16 bits) dépasse 32 767 après environ 33 secondes; il faut un unsigned long (DOC11.3.4)."
+
+  - question: "Quelle est la plus grande valeur d'un int sur 16 bits (Arduino Uno)?"
+    choix: ["255", "1023", "32 767", "65 535"]
+    reponse: 3
+    explication: "Un int signé sur 16 bits va de -32 768 à 32 767; 65 535 est le maximum d'un unsigned int (DOC11.3.4)."
+
+  - question: "Quel type de variable faut-il pour garder la valeur de millis()?"
+    choix: ["int", "byte", "unsigned long", "char"]
+    reponse: 3
+    explication: "D'où le format %lu (entier long non signé) utilisé avec sprintf() (section 5.2)."
+
+  - question: "Qu'affiche sprintf(texte, \"%05d\", 42) ?"
+    choix: ["42", "   42", "00042", "42000"]
+    reponse: 3
+    explication: "%05d : au moins 5 caractères, complétés par des zéros à gauche (sections 4.4.2 et 5.2)."
+
+  - question: "Qu'affiche sprintf(texte, \"%5d\", 42) ?"
+    choix: ["00042", "   42 (trois espaces, puis 42)", "42   (42, puis trois espaces)", "42"]
+    reponse: 2
+    explication: "%5d force des espaces à gauche pour occuper 5 caractères : utile pour aligner à droite (section 4.4.2)."
+
+  - question: "Dans sprintf(), que désigne le format %u?"
+    choix: ["Un entier non signé", "Une chaîne de caractères", "Un nombre réel", "Un caractère"]
+    reponse: 1
+    explication: "Unsigned decimal integer (section 4.4.1)."
+
+  - question: "Dans sprintf(), quel format insère une chaîne de caractères?"
+    choix: ["%c", "%d", "%s", "%x"]
+    reponse: 3
+    explication: "%s pour String of characters; %c pour un seul caractère (section 4.4.1)."
+
+  - question: "Dans sprintf(), que produit le format %x?"
+    choix: ["Un entier en hexadécimal (minuscules)", "Un entier en octal", "Une notation scientifique", "Un pointeur"]
+    reponse: 1
+    explication: "%X produit l'hexadécimal en majuscules; %o l'octal (section 4.4.1)."
+
+  - question: "Il est recommandé d'utiliser snprintf() plutôt que sprintf() pour éviter un débordement de la mémoire."
+    type: vf
+    reponse: vrai
+    explication: "snprintf() reçoit la taille maximum de la chaîne (section 4.4)."
+
+  - question: "Le sprintf() d'Arduino ne sait pas afficher un float : quelle fonction permet de le convertir en texte?"
+    choix: ["dtostrf()", "atoi()", "map()", "String.toUpperCase()"]
+    reponse: 1
+    explication: "dtostrf(valeur, longueur, décimales, chaîne), puis %s dans sprintf() (section 4.4.2)."
+
+  - question: "Pourquoi déclare-t-on char ligne[17] pour une ligne de 16 caractères?"
+    choix:
+      - "Pour avoir une colonne de réserve"
+      - "Pour le caractère de fin de chaîne '\\0'"
+      - "Parce que le LCD a 17 colonnes"
+      - "C'est une erreur : 16 suffit"
+    reponse: 2
+    explication: "Une chaîne de C se termine par le caractère nul; d'où LONGUEUR_MSG = LCD_NB_COLONNE + 1 (section 4.4.2)."
+
+  - question: "Dans le projet universel, à quoi sert #ifdef WOKWI … #else … #endif ?"
+    choix:
+      - "À choisir, à la compilation, la librairie LCD selon l'environnement (Wokwi ou kit Grove)"
+      - "À tester la connexion Wi-Fi"
+      - "À exécuter le code deux fois"
+      - "À afficher un message d'erreur sur le LCD"
+    reponse: 1
+    explication: "Avec #define WOKWI : LiquidCrystal_I2C; sinon rgb_lcd (section 4.2)."
+
+  - question: "#ifndef MACRO inclut le code qui suit seulement si MACRO n'est pas définie."
+    type: vf
+    reponse: vrai
+    explication: "#ifdef fait l'inverse : il inclut le code seulement si la macro est définie (section 5.0.5)."
+
+  - question: "Sur Wokwi, quelle librairie utilise-t-on pour l'écran LCD I2C?"
+    choix: ["rgb_lcd.h", "LiquidCrystal_I2C.h", "Streaming.h", "Wire.h seulement"]
+    reponse: 2
+    explication: "rgb_lcd.h est celle du module Grove du kit (section 4)."
+
+  - question: "Dans l'exemple Wokwi, quelle est l'adresse I2C de l'écran LCD?"
+    choix: ["0x26", "0x27", "0xA4", "0x16"]
+    reponse: 2
+    explication: "LCD_ADRESSE_I2C 0x27; un deuxième écran peut prendre l'adresse 0x26 (sections 4 et 4.1.2)."
+
+  - question: "Combien vaut 7 % 3 ?"
+    choix: ["0", "1", "2", "2.33"]
+    reponse: 2
+    explication: "7 = 2 × 3 + 1 : le reste de la division est 1 (section 7.1)."
+
+  - question: "Si unNombre % 2 vaut 1, le nombre est impair."
+    type: vf
+    reponse: vrai
+    explication: "Un nombre pair a un reste de 0 quand on le divise par 2 (section 7.1)."
+
+  - question: "Avec a = 3 et b = 8, que vaut max = a < b ? b : a; ?"
+    choix: ["3", "8", "11", "1"]
+    reponse: 2
+    explication: "La condition a < b est vraie, donc l'expression vaut b (section 7.2)."
+
+  - question: "Une variable de type String occupe plus de mémoire qu'un tableau de char de même longueur."
+    type: vf
+    reponse: vrai
+    explication: "Le programme avec String chaine = \"abc\" passe de 444 à 1806 octets de mémoire programme (section 7.2.1)."
+
+  - question: "Dans une instruction switch, à quoi sert break?"
+    choix:
+      - "À sortir du switch, sans exécuter les cas suivants"
+      - "À arrêter le programme"
+      - "À recommencer le switch"
+      - "À définir le cas par défaut"
+    reponse: 1
+    explication: "Sans break, l'exécution continue dans le case suivant; default traite les autres valeurs (section 7.3)."
+
+  - question: "Avec enum Menu { option1, option2, option3 }; que vaut option3?"
+    choix: ["0", "1", "2", "3"]
+    reponse: 3
+    explication: "Les éléments valent 0, 1 et 2 par défaut (section 7.4)."
+
+  - question: "Il est possible de donner une valeur précise à un élément d'un enum, comme fraise = 99."
+    type: vf
+    reponse: vrai
+    explication: "Par exemple option1 = 1, option2 = 2, option3 = 0 (section 7.4.1)."

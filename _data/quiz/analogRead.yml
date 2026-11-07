@@ -1,0 +1,182 @@
+# Quiz du document 5 - Arduino – AnalogRead (Documents/analogRead.md).
+# Le nom du fichier est celui du document, sans .md. Voir GUIDE.md, « Quiz de compréhension ».
+titre: Quiz de compréhension
+nombre: 10   # questions tirées au hasard dans la banque à chaque essai
+questions:
+  - question: "Sur quelles broches l'Arduino Uno peut-il lire une valeur analogique?"
+    choix: ["D0 à D13", "A0 à A5", "3, 5, 6, 9, 10 et 11", "SDA et SCL"]
+    reponse: 2
+    explication: "Les broches A0..A5; par exemple le potentiomètre sur A0 (section 1)."
+
+  - question: "Quelle est la résolution des entrées analogiques de l'ATmega328P?"
+    choix: ["8 bits", "10 bits", "12 bits", "16 bits"]
+    reponse: 2
+    explication: "10 bits, soit 1024 valeurs possibles (section 1)."
+
+  - question: "Quelle est la plage des valeurs retournées par analogRead()?"
+    choix: ["0 à 255", "0 à 1023", "0 à 5", "-512 à 511"]
+    reponse: 2
+    explication: "Une résolution de 10 bits donne des valeurs de 0 à 1023 (section 1)."
+
+  - question: "Il faut configurer une broche analogique avec pinMode() avant d'utiliser analogRead()."
+    type: vf
+    reponse: faux
+    explication: "Les broches analogiques n'ont pas à être initialisées (section 1.1)."
+
+  - question: "Si l'interrupteur de tension du Grove-Hat est à 3.3 volts, quelle sera environ la valeur maximum lue?"
+    choix: ["1023", "710", "255", "330"]
+    reponse: 2
+    explication: "L'ATmega328P compare à sa tension de 5 volts : à 3.3 volts, le maximum est autour de 710 (section 1.2)."
+
+  - question: "Quel module branche-t-on sur A0 pour lire une valeur analogique dans le premier exemple?"
+    choix: ["Un bouton poussoir", "Un potentiomètre", "Une DEL", "Un écran LCD"]
+    reponse: 2
+    explication: "Le potentiomètre, comme le gradateur d'une lumière (section 1)."
+
+  - question: "analogRead() peut lire un potentiomètre branché sur la broche digitale D3."
+    type: vf
+    reponse: faux
+    explication: "La lecture analogique se fait sur A0..A5; D3 sert ici à la DEL (section 1.1)."
+
+  - question: "Dans la solution du laboratoire 1.3, si le potentiomètre vaut 500, que fait la DEL?"
+    choix:
+      - "Elle reste allumée"
+      - "Elle est allumée 500 ms, puis éteinte 500 ms"
+      - "Elle clignote 500 fois"
+      - "Elle s'allume à 50 % d'intensité"
+    reponse: 2
+    explication: "La valeur lue sert de délai : delay(valeurDuPotentiometre) (section 1.3S)."
+
+  - question: "Pourquoi ajoute-t-on un délai après l'affichage de la valeur du potentiomètre?"
+    choix:
+      - "Pour ne pas saturer le moniteur série"
+      - "Parce que analogRead() l'exige"
+      - "Pour protéger le potentiomètre"
+      - "Pour économiser la mémoire"
+    reponse: 1
+    explication: "Sans délai, des centaines de lignes par seconde arrivent dans le moniteur (section 1.1)."
+
+  - question: "Dans le laboratoire 2, comment faut-il définir les limites 200 et 800?"
+    choix: ["Les écrire directement dans le if", "Avec des constantes (const int)", "Avec Serial.read()", "Avec analogWrite()"]
+    reponse: 2
+    explication: "Il ne faut pas coder 200 et 800 en dur dans le code (section 2)."
+
+  - question: "Pourquoi le laboratoire 3 demande-t-il une solution non bloquante pour le clignotement?"
+    choix:
+      - "Pour que la DEL soit plus brillante"
+      - "Pour ne pas perdre les événements du bouton"
+      - "Parce que delay() ne fonctionne pas avec analogRead()"
+      - "Pour réduire la consommation électrique"
+    reponse: 2
+    explication: "Pendant un delay(), le programme ne lit pas le bouton (section 3)."
+
+  - question: "Quelle fonction produit un signal PWM?"
+    choix: ["analogRead()", "digitalWrite()", "analogWrite()", "map()"]
+    reponse: 3
+    explication: "analogWrite(broche, 0..255) (section 4)."
+
+  - question: "Quelle est la plage des valeurs acceptées par analogWrite()?"
+    choix: ["0 à 1023", "0 à 255", "0 à 100", "0 ou 1"]
+    reponse: 2
+    explication: "0 à 255 : 0 éteint, 255 au maximum (section 4)."
+
+  - question: "Sur l'Arduino Uno, sur quelles broches le PWM est-il disponible?"
+    choix: ["Toutes les broches digitales", "A0 à A5", "3, 5, 6, 9, 10 et 11", "0 et 1"]
+    reponse: 3
+    explication: "Seulement les broches 3, 5, 6, 9, 10 et 11 (section 4)."
+
+  - question: "Une DEL branchée sur D7 peut varier d'intensité avec analogWrite()."
+    type: vf
+    reponse: faux
+    explication: "La broche 7 n'offre pas de PWM; il faut utiliser 3, 5, 6, 9, 10 ou 11 (section 4)."
+
+  - question: "Le PWM produit une véritable tension analogique continue à la sortie."
+    type: vf
+    reponse: faux
+    explication: "Il simule un signal analogique en variant la durée des états allumé et éteint (section 4)."
+
+  - question: "Que fait varier le PWM pour simuler une gradation?"
+    choix:
+      - "La tension d'alimentation de la carte"
+      - "La durée de l'état allumé par rapport à l'état éteint"
+      - "La fréquence de l'horloge du microcontrôleur"
+      - "La résolution de l'ADC"
+    reponse: 2
+    explication: "Plus l'état allumé dure longtemps, plus la DEL paraît brillante (section 4)."
+
+  - question: "analogWrite(3, 0) éteint la DEL branchée sur la broche 3."
+    type: vf
+    reponse: vrai
+    explication: "0 est l'intensité minimum; 255 l'intensité maximum (section 4.1)."
+
+  - question: "Dans la version optimisée de l'exemple PWM, la condition if (!intensiteDEL) est vraie lorsque intensiteDEL vaut 0."
+    type: vf
+    reponse: vrai
+    explication: "!0 vaut vrai : on remet alors l'intensité à 255 (section 4.1, version 02)."
+
+  - question: "À quoi sert la fonction map()?"
+    choix:
+      - "À afficher une carte des broches"
+      - "À ramener une valeur d'une plage vers une autre plage"
+      - "À lire une broche analogique"
+      - "À trier un tableau"
+    reponse: 2
+    explication: "Par exemple de [0..1023] (potentiomètre) vers [0..255] (PWM) (section 4.2)."
+
+  - question: "Que retourne environ map(512, 0, 1023, 0, 255)?"
+    choix: ["512", "255", "127", "64"]
+    reponse: 3
+    explication: "512 est à peu près au milieu de 0..1023, donc le résultat est à peu près au milieu de 0..255 (section 4.4)."
+
+  - question: "Dans map(value, fromLow, fromHigh, toLow, toHigh), quel paramètre est la valeur maximum de l'étendue désirée?"
+    choix: ["fromLow", "fromHigh", "toLow", "toHigh"]
+    reponse: 4
+    explication: "from… décrit l'étendue de départ, to… l'étendue désirée (section 4.3)."
+
+  - question: "Pour varier l'intensité d'une DEL avec un potentiomètre, quelle combinaison de fonctions utilise-t-on?"
+    choix:
+      - "digitalRead() puis digitalWrite()"
+      - "analogRead(), map(), puis analogWrite()"
+      - "analogWrite() puis analogRead()"
+      - "Serial.print() puis delay()"
+    reponse: 2
+    explication: "On lit 0..1023, on ramène à 0..255, puis on écrit en PWM (sections 4.2 et 4.5)."
+
+  - question: "Le sprintf() d'Arduino ne supporte pas les nombres réels (float)."
+    type: vf
+    reponse: vrai
+    explication: "Pour des raisons de performance et de mémoire (section 4.4.c)."
+
+  - question: "À quoi sert while (abs(valeurDuPotentiometre - analogRead(brocheDuSenseur)) < 2); ?"
+    choix:
+      - "À attendre que la valeur du potentiomètre change"
+      - "À calibrer le potentiomètre"
+      - "À afficher la valeur en boucle"
+      - "À convertir la valeur en PWM"
+    reponse: 1
+    explication: "Le programme attend un changement d'au moins 2 avant d'afficher de nouveau (section 4.4.a)."
+
+  - question: "Combien d'itérations fait la boucle for (int i = 0; i < 10; i++) ?"
+    choix: ["9", "10", "11", "Une infinité"]
+    reponse: 2
+    explication: "i prend les valeurs 0 à 9 (section 5)."
+
+  - question: "Quelles valeurs affiche la boucle for (int i = 10; i > 0; i--) ?"
+    choix: ["De 10 à 0", "De 10 à 1", "De 9 à 0", "De 0 à 10"]
+    reponse: 2
+    explication: "La boucle s'arrête quand i n'est plus plus grand que 0 (section 5.1)."
+
+  - question: "Dans l'exemple 5.2, de combien l'intensité augmente-t-elle à chaque tour de la boucle for?"
+    choix: ["1", "5", "30", "255"]
+    reponse: 2
+    explication: "intensite += 5 : la DEL s'allume graduellement en pas de 5 (section 5.2)."
+
+  - question: "Dans l'exemple 5.2, le delay(30) de la boucle for détermine la vitesse de la variation d'intensité."
+    type: vf
+    reponse: vrai
+    explication: "Sans ce délai, la variation serait trop rapide pour être visible (section 5.2)."
+
+  - question: "Dans le laboratoire 4.5, entre quelles valeurs faut-il ramener la lecture du potentiomètre?"
+    choix: ["0 et 1023", "0 et 255", "0 et 10", "200 et 800"]
+    reponse: 2
+    explication: "Les valeurs acceptées par analogWrite() (section 4.5)."
