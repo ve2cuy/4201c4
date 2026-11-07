@@ -101,6 +101,8 @@
       if (d.photo) { const i = el("img"); i.src = d.img.src; i.alt = d.img.alt || ""; i.loading = "lazy"; v.append(i); }
       else v.append(masque(d.img));
       if (d.numero !== "-") { const n = el("span", "n"); n.textContent = d.numero || "+"; if (n.textContent.length > 4) n.classList.add("long"); v.append(n); }
+      const qf = d.href && quizFait(d.href);
+      if (qf) { const m = el("span", "quiz-fait"); m.textContent = "✓ quiz " + qf.meilleur + "/" + qf.total; m.title = "Quiz fait sur ce poste : meilleur résultat " + qf.meilleur + " / " + qf.total; v.append(m); }
       const info = el("span", "info");
       let t;
       if (bloc) { t = el("a", "titre principal"); t.href = d.href; } else t = el("span", "titre");
@@ -117,6 +119,15 @@
       grille.append(carte);
     }
     return grille;
+  }
+
+  // Quiz du document fait sur ce poste (assets/js/quiz.js) : { score, meilleur, total, date } ou null
+  function quizFait(href) {
+    try {
+      const chemin = new URL(href, location.href).pathname.replace(/\.html$/, "").replace(/\/$/, "/index");
+      const r = JSON.parse(localStorage.getItem("ve2cuy-quiz:" + chemin));
+      return r && r.total ? { ...r, meilleur: r.meilleur ?? r.score } : null;
+    } catch (e) { return null; }
   }
 
   // « ![](dessins/x.svg) 21 · [Titre](lien) · étiquette · [Autre lien](…) », avec une sous-liste

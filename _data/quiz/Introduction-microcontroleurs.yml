@@ -1,0 +1,61 @@
+# Quiz du document 1 - Introduction aux microcontrôleurs (Documents/Introduction-microcontroleurs.md).
+# Le nom du fichier est celui du document, sans .md. Voir GUIDE.md, « Quiz de compréhension ».
+titre: Quiz de compréhension
+questions:
+  - question: "Un microcontrôleur intègre, dans une seule puce, le processeur, la mémoire et les entrées/sorties."
+    type: vf
+    reponse: vrai
+    explication: "C'est ce qui le distingue d'un ordinateur classique, qui utilise des composants séparés (section 1)."
+
+  - question: "Quel microcontrôleur se trouve sur l'Arduino Uno?"
+    choix: ["ATmega2560", "ATmega328P", "ESP32", "RP2040"]
+    reponse: 2
+    explication: "L'ATmega2560 est celui de l'Arduino Mega (section 5)."
+
+  - question: "Que désigne l'acronyme GPIO?"
+    choix:
+      - "Une entrée/sortie à usage général"
+      - "Un processeur graphique intégré"
+      - "Un port réservé à la programmation"
+      - "Un générateur d'impulsions"
+    reponse: 1
+    explication: "General Purpose Input/Output : une broche qui peut adopter plusieurs fonctions (lecture digitale, PWM, interruption…) (section 6)."
+
+  - question: "Un signal digital peut prendre une multitude d'états, comme la valeur lue d'un potentiomètre."
+    type: vf
+    reponse: faux
+    explication: "Un signal digital n'a que deux états (0/1). C'est un signal analogique qui peut en prendre une multitude (section 6)."
+
+  - question: "Quel protocole de communication ne demande que deux lignes, SDA et SCL?"
+    choix: ["SPI", "UART", "I2C", "CAN"]
+    reponse: 3
+    explication: "I2C (Inter-Integrated Circuit). SPI en demande quatre : SCK, CS, MOSI et MISO (section 6)."
+
+  - question: "Sur l'Arduino Uno, l'horloge de l'ATmega328P tourne à 20 MHz."
+    type: vf
+    reponse: faux
+    explication: "L'ATmega328P peut aller jusqu'à 20 MHz, mais l'horloge de l'Arduino Uno est de 16 MHz, soit environ 16 MIPS (section 6.1)."
+
+  - question: "Combien de mémoire vive (SRAM) l'ATmega328P possède-t-il?"
+    choix: ["1024 octets", "2048 octets", "32 Ko", "64 Ko"]
+    reponse: 2
+    explication: "2048 octets de SRAM; 32 Ko est la taille de la mémoire programme (Flash) et 1024 octets celle de l'EEPROM (section 6.1)."
+
+  - question: "Quelle technique simule la gradation d'un signal sur une sortie digitale en variant la durée des états ON et OFF?"
+    choix: ["ADC", "PWM", "DAC", "ICSP"]
+    reponse: 2
+    explication: "La modulation de largeur d'impulsion (PWM), par exemple pour varier l'intensité d'une DEL (section 6)."
+
+  - question: "À quoi sert le programme d'amorçage (bootloader) d'un Arduino?"
+    choix:
+      - "À accélérer l'horloge du processeur au démarrage"
+      - "À effacer l'EEPROM à chaque démarrage"
+      - "À programmer le microcontrôleur par le UART, sans programmateur matériel"
+      - "À convertir les signaux analogiques en valeurs numériques"
+    reponse: 3
+    explication: "Au démarrage, il attend une séquence de programmation sur le UART; sinon, il passe la main au programme de l'utilisateur (section 8)."
+
+  - question: "Il faut un programmateur matériel, ou un autre microcontrôleur, pour écrire dans la zone mémoire du bootloader."
+    type: vf
+    reponse: vrai
+    explication: "Le bootloader ne peut pas se réécrire lui-même : on passe par le connecteur ICSP (sections 6 et 8)."

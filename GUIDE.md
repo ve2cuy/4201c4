@@ -219,6 +219,34 @@ copier le même `sessions.json` ici.
 
 Pour vérifier une date précise : <https://ve2cuy.github.io/4201c4/?date=2027-03-31>.
 
+## Quiz de compréhension
+
+Un document peut finir par un quiz (vrai ou faux et choix multiple). Il suffit d'ajouter un
+fichier `_data/quiz/<nom du document>.yml`, du même nom que le `.md` sans l'extension
+(exemple : `_data/quiz/Introduction-microcontroleurs.yml` pour
+`Documents/Introduction-microcontroleurs.md`). Le gabarit place le quiz à la fin du document.
+
+```yaml
+titre: Quiz de compréhension
+questions:
+  - question: "Un microcontrôleur intègre le processeur, la mémoire et les entrées/sorties."
+    type: vf
+    reponse: vrai            # vrai ou faux
+    explication: "Affichée avec la correction (section 1)."
+  - question: "Quel microcontrôleur se trouve sur l'Arduino Uno?"
+    choix: ["ATmega2560", "ATmega328P", "ESP32", "RP2040"]
+    reponse: 2               # numéro du bon choix, à partir de 1
+    explication: "L'ATmega2560 est celui de l'Arduino Mega."
+```
+
+- Le bouton « Voir mon résultat » s'active quand toutes les questions ont une réponse; le
+  résultat, les bonnes réponses et les explications s'affichent alors.
+- Le résultat est gardé dans le navigateur du poste (`localStorage`, clé
+  `ve2cuy-quiz:<chemin de la page>`). La vignette du document affiche alors « ✓ quiz 8/10 »
+  (meilleur résultat). Il disparaît si les données du navigateur sont effacées.
+- Les réponses sont dans la page : c'est un outil d'autoévaluation, pas un examen.
+- Mettre les guillemets autour des textes qui contiennent « : » ou « # ».
+
 ## Aperçu local (valider avant de publier)
 
 Le script `outils/apercu.sh` construit et sert le site sur le Mac avec la **même version de

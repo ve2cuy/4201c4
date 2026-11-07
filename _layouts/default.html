@@ -93,6 +93,12 @@
 <main class="wrap">
   <article class="prose{% if page.titre %} cours accueil{% endif %}"{% if page.grandes_cartes == false %} data-grandes-cartes="non"{% endif %}>
 {{ content }}
+{%- assign quiz_nom = page.name | remove: '.md' %}{% assign quiz = site.data.quiz[quiz_nom] %}
+{%- if quiz and quiz.questions %}
+    <section class="quiz" id="quiz" aria-label="Quiz de compréhension"><h2>Quiz de compréhension</h2><p>Le quiz s'affiche quand JavaScript est activé.</p></section>
+    <script type="application/json" id="quiz-donnees">{{ quiz | jsonify }}</script>
+    <script src="{{ '/assets/js/quiz.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+{%- endif %}
   </article>
 </main>
 
