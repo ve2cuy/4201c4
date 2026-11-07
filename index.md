@@ -79,7 +79,7 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
 ![](dessins/drapeau.svg) *Partie A et partie B*
 
 - ![](dessins/oeil.svg) 29 · [Partie A · TP01 – Le système de surveillance H26](Documents/TP01-H26.md)
-- ![](dessins/coupe.svg) 30 · [Partie B · TP02 – Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md)
+- ![](dessins/coupe.svg) 30 · [Partie B · TP02 – Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md#partie-2)
 
 ## E) Documents 31 et 32
 

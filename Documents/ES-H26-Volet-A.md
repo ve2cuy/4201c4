@@ -408,7 +408,7 @@ Par exemple, l'image suivante indique que le MEGA a reçu 4076 transmissions de 
 
 ---
 
-## Partie 2 – Transmission des données vers le Web Date de remise: Semaine 15
+## Partie 2 – Transmission des données vers le Web Date de remise: Semaine 15 {#partie-2}
 
 ---
 
