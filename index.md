@@ -89,8 +89,10 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
   - Entre deux Arduino · UART physique · SoftwareSerial
 - ![](dessins/wifi.svg) 25 · [Accès Wi-Fi](Documents/ESP-Wifi.md) · TP02
   - Module UART Wifi V2 (ESP8285) · commandes AT · requêtes vers une API Web
-- ![](dessins/infrarouge.svg) 26 · Détecteur infrarouge · optionnel
-- ![](dessins/eeprom.svg) 27 · EEPROM · optionnel
+- ![](dessins/infrarouge.svg) 26 · [Infrarouge](Documents/Infrarouge.md) · optionnel
+  - Récepteur et émetteur Grove · télécommande · protocoles NEC et Sony
+- ![](dessins/eeprom.svg) 27 · [La mémoire EEPROM](Documents/EEPROM.md) · optionnel
+  - Conserver des données sans alimentation · read, update, put et get
 - ![](dessins/rfid.svg) 28 · [Capteur RFID](Documents/capteur-rfid.md) · optionnel · défi TP02
   - Module RFID de Grove
 
