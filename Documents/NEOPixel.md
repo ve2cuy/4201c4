@@ -190,4 +190,4 @@ Par exemple, pour 24C + 4\*0,75, les 6 premiers pixels sont bleus et les 4 derni
 **Document rédigé par Alain Boudreault © 2021-2026**
 **Version 2026.03.04.01**
 
-*Contenu par [VE2CUY](http://ve2cuy.com/blog)*
+*Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

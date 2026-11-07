@@ -144,7 +144,7 @@ La vitesse de clignotement est renseignée par la valeur du potentiomètre.
 
 👉 Il ne faut pas que la **DEL** reste allumée si elle ne clignote pas.
 
-**INDICE**: Voir [permutation bouton](http://ve2cuy.com/420-1c4/index.php/arduino-serial-printlnval-et-digitalread/#permutationbouton)
+**INDICE**: Voir [permutation bouton](Serial-println-et-digitalread.md#51--exemple-dune-permutation-bouton)
 
 ---
 
@@ -554,4 +554,4 @@ void loop() {
 *Document rédigé par Alain Boudreault © 2021-2026*  
 *Version 2025.03.03.1 - Révision 2025.12.11.1*  
 
-*Contenu par [VE2CUY](http://ve2cuy.com/blog)*
+*Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

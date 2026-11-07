@@ -288,7 +288,7 @@ Fort de nos nouveaux acronymes, examinons maintenant les spécifications techniq
 
 <img src="../images/atmega328-PIN.png" alt="ATmega328P Pinout" width="500" />
 
-[Atmel-ATmega328P_Datasheet](http://ve2cuy.com/420-1c4/wp-content/uploads/2021/07/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)
+[Atmel-ATmega328P_Datasheet](Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)
 
 ---
 
@@ -440,4 +440,4 @@ Le langage de programmation utilisé est le C++
 *Document rédigé par Alain Boudreault © 2021-2026*  
 *Version 2025.12.11.1*  
 
-*Contenu par [VE2CUY](http://ve2cuy.com/blog)*
+*Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

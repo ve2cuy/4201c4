@@ -278,4 +278,4 @@ SQR(10\*2000) = 141,42 Volts
 **Document rédigé par Alain Boudreault © 2021-2026**
 **Version 2025.03.15.01 - Révision 2025.12.12.1**
 
-*Contenu par [VE2CUY](http://ve2cuy.com/blog)*
+*Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

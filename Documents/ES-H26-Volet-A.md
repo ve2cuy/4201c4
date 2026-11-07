@@ -47,28 +47,28 @@
 ### Considérant,
 
 * Du temps en laboratoire à partir de la semaine 10,
-* Un Arduino Uno ([projet 01 – complété](https://ve2cuy.com/420-1c4/index.php/2025-tp-01/)),
+* Un Arduino Uno ([projet 01 – complété](TP01-H26.md)),
 * Un Arduino Mega,
 * De la compilation conditionnelle pour des messages diagnostiques,
   + #ifdef …
-* [Des structures de données](https://ve2cuy.com/420-1c4/index.php/structures-et-enumeration/),
+* [Des structures de données](Structures-de-donnees.md),
   + Pour la représentation d'un système,
   + Pour l'envoi et la réception de données entre les systèmes,
 * Des énumérations sous C/C++,
   + Gestion des messages,
-* [L'envois de messages entre un UNO et un MEGA](https://ve2cuy.com/420-1c4/index.php/ecoute-moi-jaimerais-te-parler/),
+* [L'envois de messages entre un UNO et un MEGA](Communication-UART-entre-2-arduino.md),
   + Via UART,
   + En utilisant une validation simple sur la longueur des messages,
-* [Un module Grove Wifi](https://ve2cuy.com/420-1c4/index.php/grove-uart-wifi-v2/), la librairie WiFiEsp et une API WEB,
+* [Un module Grove Wifi](ESP-Wifi.md), la librairie WiFiEsp et une API WEB,
   + [Faire le suivi des systèmes en](http://esh25.ve2cuy.com),
     - Envoyant l'état du système, périodiquement, sur un serveur Web,
-* [Des opérations sur les bits](https://ve2cuy.com/420-1c4/index.php/operations-sur-les-bits/),
+* [Des opérations sur les bits](Operations-sur-les-bits-et-structure-de-donnees.md),
   + Pour la gestion de l'état des appareils,
 * Un code source:
   + Normalisé,
   + Documenté,
   + Optimisé (mémoire, ressource),
-* [L'utilisation de méthodes non bloquantes](https://ve2cuy.com/420-1c4/index.php/operations-non-bloquantes/),
+* [L'utilisation de méthodes non bloquantes](Operations-non-bloquantes.md),
   + millis(),
 * Le respect du devis.
 
@@ -110,7 +110,7 @@ Le Mega reçoit les données, les valide, les affiche dans le terminal et finale
 
 ## 2.2 Démonstration vidéo du projet
 
-[Vidéo de démonstration](https://ve2cuy.com/420-1c4/wp-content/uploads/2025/04/Enregistrement-decran-le-2025-04-02-a-11.45.35.mov)
+[Vidéo de démonstration](../videos/Enregistrement-decran-le-2025-04-02-a-11.45.35.mov)
 
 **NOTE**: Les événements n'apparaissent pas automatiquement sur la page Web car elle est rechargée aux 10 secondes.
 
@@ -130,7 +130,7 @@ De plus, **il faut changer la fonctionnalité de lecture du potentiomètre** (va
 
 * un **compteur** pour le nombre de messages envoyés vers le MEGA, incluant la valeur binaire de l'état des appareils (capteurs) – voir l'image ci-dessus,
 * en option (boni 0.5 point), **implémenter une interruption matériel pour le bouton de panique**.
-  + Voir le document [suivant](https://ve2cuy.com/420-1c4/index.php/operations-non-bloquantes/)
+  + Voir le document [suivant](Operations-non-bloquantes.md)
 * en option (boni 1.5 point), utilisation du capteur « **BME280** » au lieu de « **SHT31** »
   + Ce capteur retourne, en plus de la température et l'humidité, la pression atmosphérique et l'altitude.
   + IMPORTANT, voir 8.12
@@ -150,7 +150,7 @@ Voici l'écran du UNO, version TP02:
 
 ---
 
-**RAPPEL**: 👉 Le **UNO** ne possède qu'un seul port UART. Solution: la librairie '[SoftwareSerial](https://ve2cuy.com/420-1c4/index.php/ecoute-moi-jaimerais-te-parler/)' pour la liaison avec le MEGA . **IMPORTANT**, IL FAUT UTILISER LES BROCHES **8 ET 9 du UNO** pour la connexion série, reliées au port **UART2 du MEGA**.
+**RAPPEL**: 👉 Le **UNO** ne possède qu'un seul port UART. Solution: la librairie '[SoftwareSerial](Communication-UART-entre-2-arduino.md)' pour la liaison avec le MEGA . **IMPORTANT**, IL FAUT UTILISER LES BROCHES **8 ET 9 du UNO** pour la connexion série, reliées au port **UART2 du MEGA**.
 
 ```cpp
 SoftwareSerial lienAvecRecepteur(9, 8); // RX, TX
@@ -247,7 +247,7 @@ struct Systeme {
   };
 ```
 
-👉 La communication entre les deux microcontrôleurs sera réalisée en utilisant les apprentissages du document suivant : [Communication entre deux Arduino](https://ve2cuy.com/420-1c4/index.php/ecoute-moi-jaimerais-te-parler/)
+👉 La communication entre les deux microcontrôleurs sera réalisée en utilisant les apprentissages du document suivant : [Communication entre deux Arduino](Communication-UART-entre-2-arduino.md)
 
 ---
 
@@ -365,7 +365,7 @@ const char * etatSysteme[] =         {"🥵", "ℹ️", "😡","💀", "🆘", "
 
 Animer les lignes 'Bouton de panique' et 'Mouvement détecté' en cas d'activité.
 
-[Vidéo animation](https://ve2cuy.com/420-1c4/wp-content/uploads/2025/04/Enregistrement-decran-le-2025-04-02-a-11.24.04.mov)
+[Vidéo animation](../videos/Enregistrement-decran-le-2025-04-02-a-11.24.04.mov)
 
 ---
 
@@ -416,7 +416,7 @@ Par exemple, l'image suivante indique que le MEGA a reçu 4076 transmissions de 
 
 Dans la partie 2 du projet, il faut envoyer les informations reçus par la station de surveillance (le MEGA) vers une base de données accessible via le module Grove WiFi et le réseau Internet.
 
-**NOTE**: Nous avons pratiqué cette fonctionnalité dans le laboratoire '[Le module Wifi](https://ve2cuy.com/420-1c4/index.php/grove-uart-wifi-v2/)'.
+**NOTE**: Nous avons pratiqué cette fonctionnalité dans le laboratoire '[Le module Wifi](ESP-Wifi.md)'.
 
 ---
 
@@ -868,7 +868,7 @@ Connecté sur D4 et D5 du Mega, le NEOPixel affiche une animation différente se
 
 ### 8.10\* – RFID (BONI)
 
-Un capteur RFID, connecté sur UART1 du MEGA, permet d'activer/désactiver l'envoi de messages vers l'API Web. Il y a un document de référence –> [ici](https://ve2cuy.com/420-1c4/index.php/capteur-rfid/).
+Un capteur RFID, connecté sur UART1 du MEGA, permet d'activer/désactiver l'envoi de messages vers l'API Web. Il y a un document de référence –> [ici](capteur-rfid.md).
 
 Pour relever ce défi, il faut emprunter un capteur et une carte.
 
@@ -959,4 +959,4 @@ GET /tp2-api.php?nomSys=!VE2CUY!&ipAdr=192.168.1.191&note=exemple&statut=4&app=2
 **Document rédigé par Alain Boudreault © 2021-2026**
 **Version 2025.03.15.01 - Révision 2026.04.27.1**
 
-*Contenu par [VE2CUY](http://ve2cuy.com/blog)*
+*Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

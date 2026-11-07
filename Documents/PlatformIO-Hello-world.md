@@ -424,4 +424,4 @@ PlatformIO représente une solution efficace pour le développement Arduino et e
 
 **Version 2026.01.25.01**
 
-*Contenu par [VE2CUY](http://ve2cuy.com/blog)*
+*Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

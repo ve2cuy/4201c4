@@ -166,7 +166,7 @@ Communications individuelles Teams
 Communications de groupe Teams
 ```
 ```
-Notes de cours, exercices, documentation Teams et https://ve2cuy.com/420-1c
+Notes de cours, exercices, documentation Teams et https://ve2cuy.github.io/4201c4/
 ```
 ## DÉMARCHE D’ÉVALUATION
 
@@ -454,7 +454,7 @@ laboratoire.
 
 ```
 Les périodes de disponibilités de l'enseignant sont affichées à la porte de son bureau et à l’adresse suivante :
-https://ve2cuy.com/420-1c4/index.php/horaire-h24/
+https://ve2cuy.github.io/4201c4/Documents/Disponibilites-enseignant-H26.html
 ```
 ```
 Vous pouvez communiquer avec vos enseignants par courriel ou par MIO (https://cstj.omnivox.ca).

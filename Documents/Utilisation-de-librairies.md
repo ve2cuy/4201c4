@@ -331,4 +331,4 @@ TODO:
 
 **Version 2025.12.14.01**
 
-*Contenu par [VE2CUY](http://ve2cuy.com/blog)*
+*Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*
