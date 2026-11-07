@@ -26,14 +26,14 @@
 
 Une **librairie** (ou bibliothèque logicielle) est un ensemble de code pré-écrit et testé qui fournit des fonctionnalités réutilisables. Dans le contexte Arduino et PlatformIO, les librairies permettent de:
 
-#### **1. Réutiliser du code existant**
+#### 1.1.1 – **Réutiliser du code existant**
 Plutôt que de tout programmer à partir de zéro, les librairies fournissent des solutions éprouvées pour des tâches courantes. Par exemple:
 - Communiquer avec un capteur de température
 - Afficher du texte sur un écran LCD
 - Se connecter à un réseau WiFi
 - Contrôler des servomoteurs
 
-#### **2. Simplifier le développement**
+#### 1.1.2 – **Simplifier le développement**
 Les librairies cachent la complexité technique et offrent une interface simple. Par exemple, pour lire un capteur DHT22:
 
 **Sans librairie** (complexe):
@@ -54,17 +54,17 @@ float temperature = capteur.readTemperature();
 float humidite = capteur.readHumidity();
 ```
 
-#### **3. Gagner du temps**
+#### 1.1.3 – **Gagner du temps**
 Au lieu de passer des heures (voire des jours) à comprendre un protocole de communication ou un composant électronique, vous pouvez utiliser une librairie et vous concentrer sur la logique de votre application.
 
-#### **4. Éviter les erreurs**
+#### 1.1.4 – **Éviter les erreurs**
 Les librairies populaires sont:
 - **Testées** par des milliers d'utilisateurs
 - **Debuggées** au fil du temps
 - **Documentées** avec des exemples
 - **Maintenues** par la communauté
 
-#### **5. Bénéficier de l'expertise**
+#### 1.1.5 – **Bénéficier de l'expertise**
 Les librairies sont souvent écrites par des experts qui connaissent parfaitement le matériel ou le protocole concerné. Vous bénéficiez de leur expertise sans avoir à tout apprendre.
 
 ---

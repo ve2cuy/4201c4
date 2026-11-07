@@ -39,52 +39,52 @@ PlatformIO offre un environnement de développement moderne et puissant qui remp
 
 PlatformIO présente plusieurs avantages significatifs par rapport à l'IDE Arduino traditionnel:
 
-#### 1. **Éditeur de code avancé**
+#### **Éditeur de code avancé**
 - **Auto-complétion intelligente**: Suggestions de code en temps réel basées sur le contexte
 - **Vérification syntaxique en temps réel**: Détection des erreurs pendant la frappe
 - **Navigation dans le code**: Aller à la définition, trouver toutes les références
 - **Refactoring**: Renommer des variables/fonctions dans tout le projet automatiquement
 - **Multi-curseurs et édition avancée**: Fonctionnalités modernes d'édition de code
 
-#### 2. **Gestion de projet professionnelle**
+#### **Gestion de projet professionnelle**
 - **Structure de projet organisée**: Séparation claire entre le code source (src/), les en-têtes (include/), les librairies (lib/) et les tests (test/)
 - **Fichier de configuration centralisé** (platformio.ini): Toutes les configurations du projet dans un seul fichier
 - **Support multi-plateformes**: Un même projet peut cibler plusieurs cartes différentes
 - **Gestion des dépendances**: Installation automatique des librairies et de leurs dépendances
 
-#### 3. **Gestion des librairies améliorée**
+#### **Gestion des librairies améliorée**
 - **Gestionnaire de librairies intégré**: Recherche et installation simplifiées
 - **Résolution automatique des dépendances**: Les librairies requises sont installées automatiquement
 - **Versions spécifiques**: Possibilité de fixer une version précise d'une librairie
 - **Librairies locales**: Support des librairies personnalisées dans le dossier lib/
 
-#### 4. **Outils de débogage**
+#### **Outils de débogage**
 - **Débogage matériel**: Support du débogage avec points d'arrêt (selon la carte)
 - **Moniteur série avancé**: Filtrage, capture, horodatage des messages
 - **Analyseur logique intégré**: Pour certaines plateformes
 
-#### 5. **Compilation et téléversement optimisés**
+#### **Compilation et téléversement optimisés**
 - **Compilation incrémentale**: Seuls les fichiers modifiés sont recompilés
 - **Compilation parallèle**: Utilisation de plusieurs cœurs du processeur
 - **Cache de compilation**: Accélération significative des builds successifs
 - **Messages d'erreur clairs**: Meilleure identification des problèmes
 
-#### 6. **Tests unitaires**
+#### **Tests unitaires**
 - **Framework de tests intégré**: Possibilité d'écrire des tests unitaires pour le code embarqué
 - **Tests sur PC et sur cible**: Exécution des tests sans matériel ou sur la carte
 
-#### 7. **Intégration continue**
+#### **Intégration continue**
 - **Support CI/CD**: Compatible avec GitHub Actions, GitLab CI, Travis CI, etc.
 - **Builds automatisés**: Compilation automatique à chaque commit
 - **Tests automatisés**: Exécution des tests dans le pipeline CI/CD
 
-#### 8. **Environnement professionnel**
+#### **Environnement professionnel**
 - **Contrôle de version intégré**: Git directement dans VS Code
 - **Extensions VS Code**: Accès à l'écosystème complet d'extensions
 - **Thèmes et personnalisation**: Interface personnalisable selon les préférences
 - **Terminal intégré**: Accès direct à la ligne de commande
 
-#### 9. **Documentation et communauté**
+#### **Documentation et communauté**
 - **Documentation complète**: Guides détaillés et exemples nombreux
 - **Communauté active**: Forum d'entraide et support réactif
 - **Mises à jour régulières**: Nouvelles fonctionnalités et corrections fréquentes

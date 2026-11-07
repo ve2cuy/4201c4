@@ -94,7 +94,7 @@ questions:
       - "Le numéro de version augmente à chaque compilation"
       - "La compilation utilise un seul cœur du processeur"
     reponse: 2
-    explication: "C'est ce qui rend la compilation de PlatformIO plus rapide (Pourquoi PlatformIO, point 5)."
+    explication: "C'est ce qui rend la compilation de PlatformIO plus rapide (Pourquoi PlatformIO : « Compilation et téléversement optimisés »)."
 
   - question: "Quel filtre de monitor_filters enregistre les messages du moniteur série dans un fichier?"
     choix: ["default", "time", "colorize", "log2file"]
