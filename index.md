@@ -37,8 +37,10 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
 
 ![](dessins/porte-documents.svg) *Le plan officiel de la session*
 
-- ![](dessins/document.svg) - · [Plan de cours H26 (PDF)](Documents/420-1C4-JR_ab_pc_H26.pdf)
+- ![](dessins/document.svg) - · [Plan de cours](Documents/420-1C4-JR_ab_pc_H26.pdf)
+  - Session H26 · PDF officiel
 - ![](dessins/document.svg) - · [Plan de cours, version texte](Documents/Plan-de-cours.md)
+  - Le même plan, lisible dans le fureteur
 
 ## B) Documents 1 à 13
 
@@ -46,47 +48,68 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
 
 - ![](dessins/microcontroleur.svg) 01 · [Introduction aux microcontrôleurs](Documents/Introduction-microcontroleurs.md)
   - Arduino Uno · émulateurs en ligne : Wokwi, TinkerCad
-- ![](dessins/terminal.svg) 02 · [Hello World – PlatformIO](Documents/PlatformIO-Hello-world.md)
-- ![](dessins/carte-arduino.svg) 03 · [Hello World – Arduino IDE](Documents/Hello-world.md)
-- ![](dessins/bouton.svg) 04 · [Serial.println(val), digitalRead() et while() pour la gestion du bouton](Documents/Serial-println-et-digitalread.md)
-- ![](dessins/potentiometre.svg) 05 · [Lecture/écriture d'une valeur analogique – analogRead(), analogWrite(), PWM](Documents/analogRead.md)
-- ![](dessins/lcd.svg) 06 · [Grove – Module LCD-RGB i2c (sprintf, switch, #ifdef, op ternaire, i % j)](Documents/LCD-enum-ifdef.md)
+- ![](dessins/terminal.svg) 02 · [Introduction à PlatformIO](Documents/PlatformIO-Hello-world.md)
+  - VS Code · structure d'un projet · platformio.ini · Hello World
+- ![](dessins/carte-arduino.svg) 03 · [Arduino IDE](Documents/Hello-world.md)
+  - Hello World · DEL sur D13 · delay() · macros
+- ![](dessins/bouton.svg) 04 · [Console série et bouton](Documents/Serial-println-et-digitalread.md)
+  - Serial.println(val) · digitalRead() · while() · pull-up · rebond
+- ![](dessins/potentiometre.svg) 05 · [Signaux analogiques](Documents/analogRead.md)
+  - analogRead() · analogWrite() · PWM · map()
+- ![](dessins/lcd.svg) 06 · [Écran LCD-RGB I2C](Documents/LCD-enum-ifdef.md)
+  - sprintf · switch · #ifdef · opérateur ternaire · i % j
 - ![](dessins/accolades.svg) 07 · [Compilation conditionnelle](Documents/Compilation-conditionnelle.md)
+  - #ifdef · #ifndef · #else · macro de garde des fichiers .h
 - ![](dessins/livres.svg) 08 · [Les librairies](Documents/Utilisation-de-librairies.md)
-- ![](dessins/resistance-del.svg) 09 · [Électronique – concepts de base](Documents/Electronique-concepts-de-base.md)
-- ![](dessins/liste.svg) 10 · [L'instruction « enum » du langage C](Documents/Instruction-enum.md) · TP02
+  - Installer sous PlatformIO · Streaming · librairie locale · versions
+- ![](dessins/resistance-del.svg) 09 · [Électronique](Documents/Electronique-concepts-de-base.md)
+  - Concepts de base · tension, intensité, puissance, résistance
+- ![](dessins/liste.svg) 10 · [L'instruction enum](Documents/Instruction-enum.md) · TP02
+  - Énumérations du langage C · gestion d'un menu
 - ![](dessins/structure.svg) 11 · [Structures de données](Documents/Structures-de-donnees.md)
-- ![](dessins/bits.svg) 12 · [Opérations sur les bits et structures de données](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) · TP02
-- ![](dessins/thermometre.svg) 13 · [Température, humidité et affichage sur 7 segments – 4Digit](Documents/Capteur-temperature-humidite.md)
-  - Installer une librairie à la main
+  - struct · enum · tableau de structures
+- ![](dessins/bits.svg) 12 · [Opérations sur les bits](Documents/Operations-sur-les-bits-et-structure-de-donnees.md) · TP02
+  - Opérateurs ET, OU, OU exclusif et NON · décalages · structures de données
+- ![](dessins/thermometre.svg) 13 · [Température et humidité](Documents/Capteur-temperature-humidite.md)
+  - Capteur SHT31 · afficheur 7 segments 4-Digit (TM1637) · installer une librairie à la main
 
 ## C) Documents 20 à 28
 
 ![](dessins/capteur-sans-fil.svg) *Capteurs, horloge, UART, Wi-Fi*
 
 - ![](dessins/bande-del.svg) 20 · [Buzzer et NeoPixel](Documents/NEOPixel.md)
-- ![](dessins/horloge.svg) 21 · [Real Time Clock (RTC)](Documents/RTC-DS1307.md)
+  - Buzzer · barre de DEL RGB WS2813
+- ![](dessins/horloge.svg) 21 · [Horloge temps réel](Documents/RTC-DS1307.md)
+  - Real Time Clock (RTC) DS1307 · I2C · heure et date
 - ![](dessins/mouvement.svg) 22 · [Détecteur de mouvements](Documents/Detecteur-de-mouvements.md)
-- ![](dessins/minuterie.svg) 23 · [Opérations non bloquantes – millis() et interruptions](Documents/Operations-non-bloquantes.md) · TP02
-- ![](dessins/uart.svg) 24 · [Communication UART entre deux Arduino](Documents/Communication-UART-entre-2-arduino.md) · TP02
-- ![](dessins/wifi.svg) 25 · [ESP-Wifi – accès réseau](Documents/ESP-Wifi.md) · TP02
+  - Capteur PIR ajustable · connexion digitale
+- ![](dessins/minuterie.svg) 23 · [Opérations non bloquantes](Documents/Operations-non-bloquantes.md) · TP02
+  - millis() · interruptions matérielles · interruption Timer
+- ![](dessins/uart.svg) 24 · [Communication UART](Documents/Communication-UART-entre-2-arduino.md) · TP02
+  - Entre deux Arduino · UART physique · SoftwareSerial
+- ![](dessins/wifi.svg) 25 · [Accès Wi-Fi](Documents/ESP-Wifi.md) · TP02
+  - Module UART Wifi V2 (ESP8285) · commandes AT · requêtes vers une API Web
 - ![](dessins/infrarouge.svg) 26 · Détecteur infrarouge · optionnel
 - ![](dessins/eeprom.svg) 27 · EEPROM · optionnel
 - ![](dessins/rfid.svg) 28 · [Capteur RFID](Documents/capteur-rfid.md) · optionnel · défi TP02
+  - Module RFID de Grove
 
 ## D) Projet de session
 
 ![](dessins/drapeau.svg) *Partie A et partie B*
 
-- ![](dessins/oeil.svg) 29 · [Partie A · TP01 – Le système de surveillance H26](Documents/TP01-H26.md)
-- ![](dessins/coupe.svg) 30 · [Partie B · TP02 – Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md#partie-2)
-- ![](dessins/surveillance.svg) 31 · [Centrale de surveillance · événements reçus par l'API](http://esh25.ve2cuy.com/index.php)
-  - Les événements envoyés par les systèmes de la classe (ES, partie 2)
+- ![](dessins/oeil.svg) 29 · [Système de surveillance H26](Documents/TP01-H26.md)
+  - Partie A · énoncé du TP01
+- ![](dessins/coupe.svg) 30 · [Épreuve synthèse, volet A](Documents/ES-H26-Volet-A.md#partie-2)
+  - Partie B · TP02 · transmission des données vers le Web
+- ![](dessins/surveillance.svg) 31 · [Centrale de surveillance](http://esh25.ve2cuy.com/index.php)
+  - Les événements envoyés à l'API par les systèmes de la classe (ES, partie 2)
 
 ## E) Documents 32 et 33
 
 ![](dessins/feuilles.svg) *Copier/coller et solutions*
 
 - ![](dessins/copier-coller.svg) 32 · [Les copier/coller](Documents/copier-coller.md)
-  - Les variables de type scalaire · gestion du bruit sur un bouton – bounce2
+  - Code de départ · séquences ANSI et boîtes · variables de type scalaire · bruit d'un bouton (bounce2)
 - ![](dessins/solutions.svg) 33 · [Solutions aux laboratoires](Documents/Solutions.md)
+  - NeoPixel · Real Time Clock DS1307
