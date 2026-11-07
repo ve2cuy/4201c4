@@ -102,7 +102,16 @@
       else v.append(masque(d.img));
       if (d.numero !== "-") { const n = el("span", "n"); n.textContent = d.numero || "+"; if (n.textContent.length > 4) n.classList.add("long"); v.append(n); }
       const qf = d.href && quizFait(d.href);
-      if (qf) { const m = el("span", "quiz-fait"); m.textContent = "✓ quiz " + qf.meilleur + "/" + qf.total; m.title = "Quiz fait sur ce poste : meilleur résultat " + qf.meilleur + " / " + qf.total; v.append(m); }
+      if (qf) {
+        // Couleur du meilleur résultat : rouge à 50 % et moins, ambre sous 80 %, vert sinon
+        const pc = (100 * qf.meilleur) / qf.total;
+        const m = el("span", "quiz-fait " + (pc <= 50 ? "faible" : pc < 80 ? "moyen" : "fort"));
+        m.textContent = "✓ quiz " + qf.meilleur + "/" + qf.total;
+        m.title = "Quiz fait sur ce poste : meilleur résultat " + qf.meilleur + " / " + qf.total;
+        v.append(m);
+      } else if (d.href && aUnQuiz(d.href)) {
+        const m = el("span", "quiz-fait offert"); m.textContent = "quiz"; m.title = "Ce document propose un quiz de compréhension"; v.append(m);
+      }
       const info = el("span", "info");
       let t;
       if (bloc) { t = el("a", "titre principal"); t.href = d.href; } else t = el("span", "titre");
@@ -119,6 +128,16 @@
       grille.append(carte);
     }
     return grille;
+  }
+
+  // Documents qui ont un quiz (_data/quiz/<document>.yml, liste écrite par _layouts/default.html)
+  // (lue au premier appel : les cartes sont faites plus haut, avant cette ligne)
+  function aUnQuiz(href) {
+    try {
+      if (!aUnQuiz.liste) aUnQuiz.liste = JSON.parse((document.getElementById("quiz-liste") || {}).textContent || "[]");
+      const u = new URL(href, location.href);
+      return u.origin === location.origin && aUnQuiz.liste.includes(decodeURIComponent(u.pathname.split("/").pop().replace(/\.html$/, "")));
+    } catch (e) { return false; }
   }
 
   // Quiz du document fait sur ce poste (assets/js/quiz.js) : { score, meilleur, total, date } ou null

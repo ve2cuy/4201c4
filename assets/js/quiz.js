@@ -141,12 +141,13 @@
       date: new Date().toISOString(),
     });
     const pc = Math.round((100 * score) / nombre);
-    resultat.className = "quiz-resultat " + (pc >= 80 ? "fort" : pc >= 60 ? "moyen" : "faible");
+    // Rouge à 50 % et moins, ambre sous 80 %, vert à 80 % et plus
+    resultat.className = "quiz-resultat " + (pc <= 50 ? "faible" : pc < 80 ? "moyen" : "fort");
     resultat.replaceChildren(
       el("span", "quiz-score", `${score} / ${nombre}`),
       el("span", "quiz-message", pc === 100 ? "Parfait! Toutes les réponses sont bonnes." :
         pc >= 80 ? "Très bien! Revoyez les questions en rouge ci-dessous." :
-        pc >= 60 ? "Pas mal. Relisez les sections liées aux questions en rouge." :
+        pc > 50 ? "Pas mal. Relisez les sections liées aux questions en rouge." :
         "Relisez le document, puis recommencez le quiz."),
     );
     resultat.hidden = false;

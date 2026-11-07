@@ -248,7 +248,7 @@ questions:
   résultat, les bonnes réponses et les explications s'affichent alors.
 - Le résultat est gardé dans le navigateur du poste (`localStorage`, clé
   `ve2cuy-quiz:<chemin de la page>`; questions déjà vues : `ve2cuy-quiz-vues:…`). La vignette du document affiche alors « ✓ quiz 8/10 »
-  (meilleur résultat). Il disparaît si les données du navigateur sont effacées.
+  (meilleur résultat : vert à 80 % et plus, ambre sous 80 %, rouge à 50 % et moins; même couleur pour le résultat du quiz). Un document qui a un quiz pas encore fait affiche « quiz ». Le résultat disparaît si les données du navigateur sont effacées.
 - Les réponses sont dans la page : c'est un outil d'autoévaluation, pas un examen.
 - Mettre les guillemets autour des textes qui contiennent « : » ou « # ».
 

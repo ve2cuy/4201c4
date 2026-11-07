@@ -19,7 +19,8 @@
 </script>
 <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 {% if page.titre %}<script src="{{ '/assets/js/session.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
-<script src="{{ '/assets/js/accueil.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
+<script src="{{ '/assets/js/accueil.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+<script type="application/json" id="quiz-liste">[{% for q in site.data.quiz %}{{ q[0] | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]</script>{% endif %}
 </head>
 <body>
 <header class="site-head">
