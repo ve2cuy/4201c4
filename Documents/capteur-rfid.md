@@ -6,6 +6,15 @@
 
 ---
 
+## Contenu
+
+- [**1 – Exemple de code**](#section-1)
+- [**2 – Validation du RFID**](#section-2)
+
+---
+
+## 1 – Exemple de code {#section-1}
+
 Voici un exemple de code qui affiche, dans la console moniteur, le numéro d'identification d'une clé RFDI (à droite sur les photos) déposée sur un capteur (à gauche sur les photos).
 
 ```cpp
@@ -79,12 +88,14 @@ Serial.write(buffer+1, count-2);
 
 ---
 
+## 2 – Validation du RFID {#section-2}
+
 Dans le cadre d'une validation du RFID:
 
 <img src="../images/Capture-decran-le-2025-03-25-a-20.08.57.png" alt="" width="450" />
 
 ---
 
-###### Document rédigé par Alain Boudreault (aka: VE2CUY) – 2025.03.25
+###### Document rédigé par Alain Boudreault (aka: VE2CUY) – 2025.03.25 – Révision 2026.11.07
 
 Contenu par VE2CUY

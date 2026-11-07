@@ -1,6 +1,6 @@
 # 12 - Opérations sur les bits
 
-Version du 27 janvier 2025 - Révision 2025.12.12
+Version du 27 janvier 2025 - Révision 2026.11.07
 
 <img src="../images/bitewise-operators-1024x684.png" alt="Table de vérité des opérateurs" width="500" />
 
@@ -10,9 +10,28 @@ Version du 27 janvier 2025 - Révision 2025.12.12
 
 ---
 
+## Contenu
+
+- [**1 – L’opérateur AND binaire ( `&` )**](#section-1)
+- [**2 – L’opérateur OR binaire ( `|` )**](#section-2)
+- [**3 – L’opérateur XOR binaire ( `^` )**](#section-3)
+- [**4 – L’opérateur NOT binaire ( `~` )**](#section-4)
+- [**5 – Table de vérité des opérateurs**](#section-5)
+- [**6 – Les opérateurs de décalage ( `<<` et `>>` )**](#section-6)
+  - [6.1 – Décalage et opération sur bits](#section-6-1)
+- [**7 – Rappel – Décimal à binaire à décimal**](#section-7)
+  - [7.1 – Prenons la valeur binaire 0b10011011](#section-7-1)
+  - [7.2 – Conversion vers la base 10 (décimal)](#section-7-2)
+  - [7.3 – Démonstration avec la calculatrice](#section-7-3)
+- [**8 – Exemple d’implémentation des opérateurs binaires**](#section-8)
+- [**9 – Structures et opérations sur bits**](#section-9)
+- [**10 – Laboratoire (durée 45 minutes)**](#section-10)
+
+---
+
 ## Voici les principaux opérateurs binaires:
 
-### 1. **L’opérateur AND binaire ( & )**
+## 1 – L’opérateur AND binaire ( `&` ) {#section-1}
 
 Cet opérateur effectue une opération « **ET** » bit à bit entre deux entiers. Le résultat est 1 si les deux bits correspondants sont 1, sinon il est 0.
 
@@ -35,7 +54,7 @@ void loop(){}
 
 ---
 
-### 2. **L’opérateur OR binaire ( | )**
+## 2 – L’opérateur OR binaire ( `|` ) {#section-2}
 
 Cet opérateur effectue une opération « **OU** » bit à bit entre deux entiers. Le résultat est 1 si au moins un des deux bits correspondants est 1, sinon il est 0.
 
@@ -56,7 +75,7 @@ void loop(){}
 
 ---
 
-### 3. **L’opérateur XOR binaire ( ^ )**
+## 3 – L’opérateur XOR binaire ( `^` ) {#section-3}
 
 L’opérateur « **OU exclusif** » effectue une opération bit à bit entre deux entiers. Le résultat est 1 si un seul des deux bits correspondants est 1, mais pas les deux.
 
@@ -77,7 +96,7 @@ void loop(){}
 
 ---
 
-### 4. **L’opérateur NOT binaire ( ~ )**
+## 4 – L’opérateur NOT binaire ( `~` ) {#section-4}
 
 Cet opérateur effectue une **inversion** de tous les bits de l’entier. Tous les 1 deviennent des 0 et tous les 0 deviennent des 1.
 
@@ -98,13 +117,13 @@ void loop(){}
 
 ---
 
-## Table de vérité des opérateurs
+## 5 – Table de vérité des opérateurs {#section-5}
 
 <img src="../images/table-de-verite-1.jpg" alt="Table de vérité des opérateurs" width="500" />
 
 ---
 
-### 5. **Les opérateurs de décalage ( << et >> )**
+## 6 – Les opérateurs de décalage ( `<<` et `>>` ) {#section-6}
 
 - **<< (décalage à gauche)** : Décale les bits d’un nombre vers la gauche, en ajoutant des zéros à droite.
 - **>> (décalage à droite)** : Décale les bits d’un nombre vers la droite, en fonction du signe du nombre (pour les entiers signés).
@@ -128,7 +147,7 @@ void loop(){}
 
 ---
 
-## 5.1 – Décalage et opération sur bits
+## 6.1 – Décalage et opération sur bits {#section-6-1}
 
 ```cpp
 #include <arduino.h>
@@ -180,11 +199,11 @@ En résumé, ces opérateurs sont puissants pour manipuler directement les bits 
 
 ---
 
-## Rappel – Décimal à binaire à décimal
+## 7 – Rappel – Décimal à binaire à décimal {#section-7}
 
-## Prenons la valeur binaire 0b10011011:
+### 7.1 – Prenons la valeur binaire 0b10011011 {#section-7-1}
 
-## Conversion vers la base 10 (décimal)
+### 7.2 – Conversion vers la base 10 (décimal) {#section-7-2}
 
 <img src="../images/v4-460px-Convert-from-Binary-to-Decimal-Step-1-Version-5.jpg" alt="Conversion vers la base 10 (décimal)" width="500" />
 
@@ -193,13 +212,13 @@ En résumé, ces opérateurs sont puissants pour manipuler directement les bits 
 <img src="../images/v4-460px-Convert-from-Binary-to-Decimal-Step-5-Version-5.jpg" alt="Démonstration avec la calculatrice" width="500" />
 ---
 
-## Démonstration avec la calculatrice:
+### 7.3 – Démonstration avec la calculatrice {#section-7-3}
 
 <img src="../images/calculatrice-1024x985.png" alt="Démonstration avec la calculatrice" width="500" />
 
 ---
 
-## 6 – Exemple d’implémentation des opérateurs binaires
+## 8 – Exemple d’implémentation des opérateurs binaires {#section-8}
 
 ```cpp
 /*
@@ -395,7 +414,7 @@ void exempleCompterBinaire();
 
 ---
 
-## 7 – Structures et opérations sur bits
+## 9 – Structures et opérations sur bits {#section-9}
 
 **NOTE pour H25** : Cet exemple est utile pour la réalisation du **TP02**
 
@@ -459,7 +478,7 @@ void loop() {
 
 ---
 
-## 8 – LABORATOIRE – 45 minutes
+## 10 – Laboratoire (durée 45 minutes) {#section-10}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -496,6 +515,6 @@ void loop() {
 ## Crédits
 
 *Document rédigé par Alain Boudreault © 2021-2026*  
-*Version 2026.02.151.1*  
+*Version 2026.02.151.1 - Révision 2026.11.07.1*  
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

@@ -12,14 +12,20 @@
 
 ## Contenu
 
-1. [**Qu'est-ce que l'EEPROM?**](#section-1)
-2. [**Les limites de l'EEPROM**](#section-2)
-3. [**La librairie EEPROM.h**](#section-3)
-4. [**Lire et écrire un octet – le compteur de démarrages**](#section-4)
-5. [**EEPROM.update() – ménager l'EEPROM**](#section-5)
-6. [**EEPROM.put() et EEPROM.get() – conserver une variable ou une structure**](#section-6)
-7. [**Parcourir et effacer l'EEPROM**](#section-7)
-8. [**Laboratoires**](#section-8)
+- [**1 – Qu'est-ce que l'EEPROM?**](#section-1)
+- [**2 – Les limites de l'EEPROM**](#section-2)
+- [**3 – La librairie EEPROM.h**](#section-3)
+- [**4 – Lire et écrire un octet – le compteur de démarrages**](#section-4)
+- [**5 – EEPROM.update() – ménager l'EEPROM**](#section-5)
+- [**6 – EEPROM.put() et EEPROM.get() – conserver une variable ou une structure**](#section-6)
+- [**7 – Parcourir et effacer l'EEPROM**](#section-7)
+  - [7.1 – Afficher le contenu de l'EEPROM](#section-7-1)
+  - [7.2 – Effacer l'EEPROM](#section-7-2)
+- [**8 – Laboratoires**](#section-8)
+  - [8.1 – Laboratoire (durée 20 minutes)](#section-8-1)
+  - [8.2 – Laboratoire (durée 30 minutes)](#section-8-2)
+  - [8.3 – Laboratoire (durée 30 minutes)](#section-8-3)
+- [**Défi informatique**](#section-defi-informatique)
 
 ---
 
@@ -332,7 +338,7 @@ void loop() {
 
 L'objet `EEPROM` s'utilise comme un tableau d'octets, de `EEPROM[0]` à `EEPROM[EEPROM.length() - 1]`.
 
-### 7.1 – Afficher le contenu de l'EEPROM
+### 7.1 – Afficher le contenu de l'EEPROM {#section-7-1}
 
 ```cpp
 /*
@@ -375,7 +381,7 @@ void loop() {}
 
 > 💡Les octets de la signature sont rangés à l'envers: l'ATmega328P range l'octet de poids faible en premier (*little-endian*).
 
-### 7.2 – Effacer l'EEPROM
+### 7.2 – Effacer l'EEPROM {#section-7-2}
 
 ```cpp
 #include <Arduino.h>
@@ -399,7 +405,7 @@ void loop() {}
 
 ## 8 – Laboratoires {#section-8}
 
-### 8.1 – Laboratoire (durée 20 minutes)
+### 8.1 – Laboratoire (durée 20 minutes) {#section-8-1}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -413,7 +419,7 @@ Combien de démarrages est-il maintenant possible de compter?
 
 ---
 
-### 8.2 – Laboratoire (durée 30 minutes)
+### 8.2 – Laboratoire (durée 30 minutes) {#section-8-2}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -429,7 +435,7 @@ Sachant qu'une case supporte 100 000 écritures, combien d'appuis le système po
 
 ---
 
-### 8.3 – Laboratoire (durée 30 minutes)
+### 8.3 – Laboratoire (durée 30 minutes) {#section-8-3}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -441,7 +447,7 @@ Utiliser une structure, une signature et `EEPROM.put()`/`EEPROM.get()`.
 
 ---
 
-## Défi informatique
+## Défi informatique {#section-defi-informatique}
 
 Un journal des 10 dernières alarmes (heure du RTC et type d'alarme) conservé dans l'EEPROM. Lorsque le journal est plein, la plus vieille alarme est remplacée par la nouvelle (tableau circulaire).
 

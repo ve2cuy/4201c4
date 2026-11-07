@@ -6,19 +6,28 @@
 
 ## Contenu
 
-1. Qu'est ce que l'électricité
-2. La couche de valence et l'électron libre
-3. Conducteurs et isolants
-4. Courant continu et alternatif
-5. Tension, Courant, Puissance et Résistance
-6. La loi d'Ohm
-7. Les composants électroniques de base
-8. Étude de la fiche technique d'une Diode émettrice de lumière (DEL)
-9. Calcule d'une résistance de limitation de courant pour une DEL
+- [**1 – Qu'est ce que l'électricité**](#section-1)
+- [**2 – La couche de valence et l'électron libre**](#section-2)
+- [**3 – Conducteurs/Isolants**](#section-3)
+  - [3.1 – Les conducteurs](#section-3-1)
+  - [3.2 – Les isolants](#section-3-2)
+- [**4 – Type de courant – Continu/alternatif**](#section-4)
+- [**5 – Tension (Volt), Intensité (Ampère), Puissance (Watt) et Résistance**](#section-5)
+  - [5.1 – Le volt, ou la tension électrique](#section-5-1)
+  - [5.2 – L'ampère, ou l'intensité électrique](#section-5-2)
+  - [5.3 – Le watt, ou la puissance électrique](#section-5-3)
+  - [5.4 – La résistance électrique](#section-5-4)
+  - [5.5 – Résumé des termes électriques et de leur symbole](#section-5-5)
+- [**6 – La loi d'Ohm**](#section-6)
+  - [6.1 – Quelques exemples de calcules à partir de la loi d'Ohm](#section-6-1)
+  - [6.2 – Laboratoire: Application de la loi d'ohm](#section-6-2)
+- [**7 – Les composants électroniques de base**](#section-7)
+- [**8 – Étude de la fiche technique d'une Diode émettrice de lumière (DEL)**](#section-8)
+- [**9 – Calcule d'une résistance de limitation de courant pour une DEL**](#section-9)
 
 ---
 
-## 1 – Qu'est ce que l'électricité
+## 1 – Qu'est ce que l'électricité {#section-1}
 
 Nous vivons dans un univers où toute la matière est constituée d'atomes.
 
@@ -42,7 +51,7 @@ D'ailleurs, le nombre de protons détermine la place qu'occupe un atome dans le 
 
 ---
 
-## 2 – La couche de valence et l'électron libre
+## 2 – La couche de valence et l'électron libre {#section-2}
 
 La couche de valence d'un atome est sa dernière couche électronique qui sera, selon le type d'atome, partiellement ou totalement remplie d'électrons.
 
@@ -70,9 +79,9 @@ Donc, par exemple, les électrons qui alimenteront la lumière du plafond sont c
 
 ---
 
-## 3 – Conducteurs/Isolants
+## 3 – Conducteurs/Isolants {#section-3}
 
-### 3.1 – Les conducteurs
+### 3.1 – Les conducteurs {#section-3-1}
 
 Certain atomes sont constitués d'une couche de valence où les **électrons sont FAIBLEMENT liés au noyau**, comme par exemple les métaux; **or, argent, aluminium, cuivre**.
 
@@ -80,7 +89,7 @@ Les électrons auront une propension aux déplacements entre atomes.
 
 Les matériaux constitués de ces atomes feront de **bons conducteurs d'électricité**.
 
-### 3.2 – Les isolants
+### 3.2 – Les isolants {#section-3-2}
 
 Certains matériaux sont formés d'atomes qui n'ont que des **électrons qui sont FORTEMENT liés au noy**au, comme par exemple; **céramique, mica, verre, air**.
 
@@ -90,7 +99,7 @@ Les matériaux constitués de ces atomes feront de **bons isolants au courant é
 
 ---
 
-## 4 – Type de courant – Continu/alternatif
+## 4 – Type de courant – Continu/alternatif {#section-4}
 
 Il est possible de produire de l'électricité de deux façons,
 
@@ -116,11 +125,11 @@ Le courant électrique va varier comme les vagues sur l'océan.
 
 ---
 
-## 5 – Tension (Volt), Intensité (Ampère), Puissance (Watt) et Résistance
+## 5 – Tension (Volt), Intensité (Ampère), Puissance (Watt) et Résistance {#section-5}
 
 En électricité, nous décrivons les systèmes en termes de tension, intensité, puissance et résistance.
 
-### 5.1 – Le volt, ou la tension électrique
+### 5.1 – Le volt, ou la tension électrique {#section-5-1}
 
 « Le **volt (E)** est l'unité de mesure de la tension électrique dans un circuit entre un point A et un point B, obtenue avec un appareil appelé voltmètre. C'est à **Alessandro Volta**, physicien italien et inventeur de la pile électrique, que l'on doit ce nom.
 
@@ -128,13 +137,13 @@ Le volt traduit la force électromotrice et la différence de potentiel (tension
 
 En clair ? Le courant électrique est un déplacement d'électrons. Pour les faire se déplacer, il faut un générateur de courant qui va créer un déséquilibre de charge (différence de potentiel) afin d'attirer et de repousser les électrons. Ce déséquilibre de charge est appelé « tension électrique ».  » ref. edf.fr
 
-### 5.2 – L'ampère, ou l'intensité électrique
+### 5.2 – L'ampère, ou l'intensité électrique {#section-5-2}
 
 « L'**ampère (I ou A)** est l'unité de mesure de l'intensité d'un courant électrique, c'est-à-dire le flux d'électrons dans un conducteur. C'est **André-Marie Ampère**, l'inventeur de l'électro-aimant, qui a donné son nom à cette unité.
 
 On peut comparer le déplacement des électrons dans un circuit à celui de l'eau dans un tuyau : l'intensité, exprimée en ampères, c'est le débit d'eau. Sur le tableau électrique de notre installation à la maison, les fusibles ou disjoncteurs différentiels indiquent l'intensité : 10, 20 ou 32 ampères. Si la puissance électrique demandée est supérieure au flux d'électrons disponible, l'installation disjoncte. » ref. edf.fr
 
-### 5.3 – Le watt, ou la puissance électrique
+### 5.3 – Le watt, ou la puissance électrique {#section-5-3}
 
 « Le **watt (W)** est l'unité de mesure de la puissance électrique. Soit la quantité d'énergie pendant un temps donné, En général 1 seconde. Le terme vient du nom de l'ingénieur écossais **James Watt** à l'origine du développement de la machine à vapeur.
 
@@ -146,7 +155,7 @@ Le **mégawatt (MW)**, soit un million de watts, désigne des unités de product
 
 Quand il s'agit de mesurer la consommation d'électricité des habitations, on parle dans ce cas de watts-heure ou plus couramment de kWh (kilowatts-heure). » ref. edf.fr
 
-### 5.4 – La résistance électrique
+### 5.4 – La résistance électrique {#section-5-4}
 
 « La résistance (R) électrique traduit la propriété d'un composant à s'opposer au passage d'un courant électrique (l'une des causes de perte en ligne d'électricité). Elle est souvent désignée par la lettre **R** et son unité de mesure est l'ohm(symbole : **Ω**). Elle est liée aux notions de résistivité et de conductivité électrique.
 
@@ -156,7 +165,7 @@ En laboratoire, nous utiliserons les résistances pour LIMITER l'intensité du c
 
 ---
 
-## 5.5 – Résumé des termes électriques et de leur symbole
+## 5.5 – Résumé des termes électriques et de leur symbole {#section-5-5}
 
 | Nom | Description | Unité | Symbole |
 | --- | --- | --- | --- |
@@ -167,7 +176,7 @@ En laboratoire, nous utiliserons les résistances pour LIMITER l'intensité du c
 
 ---
 
-## 6 – La loi d'Ohm
+## 6 – La loi d'Ohm {#section-6}
 
 La loi d'Ohm (du physicien [Georg Ohm](https://en.wikipedia.org/wiki/Georg_Ohm)) postule qu'un courant passant dans un conducteur est directement proportionnel au voltage entre deux points.
 
@@ -187,7 +196,7 @@ By Per Mejdal Rasmussen – Own work, inspired by Teaching Ohm's Law to Techs by
 
 ---
 
-## 6.1 – Quelques exemples de calcules à partir de la loi d'Ohm
+## 6.1 – Quelques exemples de calcules à partir de la loi d'Ohm {#section-6-1}
 
 6.1.1 – Un grille pain, fonctionnant sur 120 Volts et consommant 10 Ampères produira 1200 Watts d'énergie (puissance).
 
@@ -219,7 +228,7 @@ SQR(10\*2000) = 141,42 Volts
 
 ---
 
-## 6.2 – Laboratoire: Application de la loi d'ohm
+## 6.2 – Laboratoire: Application de la loi d'ohm {#section-6-2}
 
 ### Solutionnez les systèmes suivants:
 
@@ -229,7 +238,7 @@ SQR(10\*2000) = 141,42 Volts
 
 ---
 
-## 7 – Les composants électroniques de base
+## 7 – Les composants électroniques de base {#section-7}
 
 ---
 
@@ -257,7 +266,7 @@ SQR(10\*2000) = 141,42 Volts
 
 ---
 
-## 8 – Étude de la fiche technique d'une Diode émettrice de lumière (DEL)
+## 8 – Étude de la fiche technique d'une Diode émettrice de lumière (DEL) {#section-8}
 
 <img src="../images/LED.jpg" alt="LED" width="500" />
 
@@ -265,7 +274,7 @@ SQR(10\*2000) = 141,42 Volts
 
 ---
 
-## 9 – Calcule d'une résistance de limitation de courant pour une DEL
+## 9 – Calcule d'une résistance de limitation de courant pour une DEL {#section-9}
 
 ---
 
@@ -276,6 +285,6 @@ SQR(10\*2000) = 141,42 Volts
 ## Crédits
 
 **Document rédigé par Alain Boudreault © 2021-2026**
-**Version 2025.03.15.01 - Révision 2025.12.12.1**
+**Version 2025.03.15.01 - Révision 2026.11.07.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

@@ -1,6 +1,13 @@
 # 33 - Solutions aux laboratoires
 
-## Laboratoires NeoPixel
+## Contenu
+
+- [**Laboratoires NeoPixel**](#section-laboratoires-neopixel)
+- [**Laboratoire - Real Time Clock – DS1307**](#section-laboratoire-real-time-clock-ds1307)
+
+---
+
+## Laboratoires NeoPixel {#section-laboratoires-neopixel}
 
 ### 2.3.3 – Laboratoire
 
@@ -152,7 +159,7 @@ void loop() {
 
 ---
 
-## Laboratoire - Real Time Clock – DS1307
+## Laboratoire - Real Time Clock – DS1307 {#section-laboratoire-real-time-clock-ds1307}
 
 ### Labo 5.1 
 
@@ -216,3 +223,12 @@ void loop() {
 
 } // loop
 ```
+
+---
+
+## Crédits
+
+*Document rédigé par Alain Boudreault © 2021-2026*  
+*Révision 2026.11.07.1*  
+
+*Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

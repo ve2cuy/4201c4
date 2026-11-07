@@ -8,7 +8,33 @@
 
 ---
 
-## 1 – Mise en situation
+## Contenu
+
+- [**1 – Mise en situation**](#section-1)
+  - [1.1 – Simulation d'un port série via la librairie SotfwareSerial](#section-1-1)
+  - [1.2 – Connexion de deux appareils pour la communication via UART](#section-1-2)
+- [**2a – Communication entre deux Arduino via UART physique**](#section-2a)
+  - [2a.1 – Le code du transmetteur (UNO)](#section-2a-1)
+  - [2a.2 – Le code du récepteur (MEGA)](#section-2a-2)
+  - [2a.3 – Laboratoire](#section-2a-3)
+- [**2b – Connexion via SoftwareSerial**](#section-2b)
+  - [2b.1 – Code source du transmetteur – le UNO](#section-2b-1)
+  - [2b.2 – Code source du récepteur – Le Mega](#section-2b-2)
+  - [2.5 – Laboratoire](#section-2-5)
+  - [2.6 – Laboratoire](#section-2-6)
+- [**3 – Transmission d'une chaine de caractères**](#section-3)
+  - [3.1 – Code source du transmetteur (UNO)](#section-3-1)
+  - [3.2 – Code source du récepteur (MEGA)](#section-3-2)
+  - [3.5 – 💡 Transmission d'une structure de données](#section-3-5)
+  - [3.6 – Laboratoire important 😉 (40 minutes)](#section-3-6)
+  - [3.7 – Laboratoire (30 minutes)](#section-3-7)
+- [**4 – Exemple d'un système d'alarme à 2 Arduino**](#section-4)
+  - [4.1 – Fichier d'entête](#section-4-1)
+  - [4.2 – Code source du transmetteur](#section-4-2)
+
+---
+
+## 1 – Mise en situation {#section-1}
 
 Dans les exemples suivants, nous verrons comment transmettre des informations d'un ***Arduino*** vers un autre en utilisant le protocole série (**UART** / **RS-232** / **COM PORT**).
 
@@ -29,13 +55,13 @@ Par exemple, l'**Arduino Mega** propose 4 ports séries (UART0-UART3).
 
 ---
 
-### 1.1 – Simulation d'un port série via la librairie SotfwareSerial
+### 1.1 – Simulation d'un port série via la librairie SotfwareSerial {#section-1-1}
 
 Il est possible d'utiliser des broches digitales standards pour reproduire le comportement et les fonctions d'un port UART en utilisant la librairie ***SotfwareSerial***. Cette librairie est disponible par défaut dans l'environnement de ***Arduino IDE***, c-a-d, qu'il n'est pas nécessaire de l'installer.
 
 ---
 
-### 1.2 – Connexion de deux appareils pour la communication via UART
+### 1.2 – Connexion de deux appareils pour la communication via UART {#section-1-2}
 
 Si nous désirons relier deux appareils ensemble qui utiliseront leur port UART pour la communication, il faut relier la broche RX du premier sur la broche TX du deuxième. Puis la broche TX du premier sur la broche RX du deuxième.
 
@@ -52,7 +78,7 @@ SoftwareSerial portSerieRecepteur(5, 4);    // RX, TX
 
 ---
 
-## 2a – Communication entre deux Arduino via UART physique
+## 2a – Communication entre deux Arduino via UART physique {#section-2a}
 
 **NOTE**: Pour l'exemple suivant, il est important d'utiliser le câble avec les fils blanc et jaune inversés.
 
@@ -61,7 +87,7 @@ Il faut relier le Mega et le Uno de la façon suivante:
 * Le port UART0 du Uno branché sur
 * le port UART2 du Mega
 
-### 2a.1 – Le code du transmetteur (UNO)
+### 2a.1 – Le code du transmetteur (UNO) {#section-2a-1}
 
 ```
 /*
@@ -120,7 +146,7 @@ lib_deps =
 
 ---
 
-### 2a.2 – Le code du récepteur (MEGA)
+### 2a.2 – Le code du récepteur (MEGA) {#section-2a-2}
 
 ```
 #include <Arduino.h>
@@ -155,7 +181,7 @@ void loop() {
 
 ---
 
-## 2a.3 – Laboratoire
+## 2a.3 – Laboratoire {#section-2a-3}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -169,7 +195,7 @@ B – Et pour une vitesse de 256000 bauds?
 
 ---
 
-## 2b – Connexion via SoftwareSerial
+## 2b – Connexion via SoftwareSerial {#section-2b}
 
 Pour le prochain laboratoire, il faut relier un **Arduino Mega** et un **Arduino UNO** en plaçant un câble entre les les connecteurs **D6 (UNO) et D10 (MEGA)**. Nous utiliserons une connexion UART simulée par logiciel en utilisant la librairie '***SoftwareSerial***'.
 
@@ -180,7 +206,7 @@ SoftwareSerial portSerieTransmetteur(6, 7); // RX, TX
 SoftwareSerial portSerieRecepteur(11, 10);  // RX, TX
 ```
 
-### 2b.1 – Code source du transmetteur – le UNO
+### 2b.1 – Code source du transmetteur – le UNO {#section-2b-1}
 
 ```
 /*
@@ -229,7 +255,7 @@ void loop() {
 } // loop()
 ```
 
-### 2b.2 – Code source du récepteur – Le Mega
+### 2b.2 – Code source du récepteur – Le Mega {#section-2b-2}
 
 ```
 /*
@@ -296,7 +322,7 @@ Documentation de la classe **::** [SoftwareSerial](https://docs.arduino.cc/learn
 
 ---
 
-## 2.5 – Laboratoire
+## 2.5 – Laboratoire {#section-2-5}
 
 <img src="../images/DependentAccomplishedEskimodog-size_restricted.gif" alt="" width="500" />
 
@@ -308,7 +334,7 @@ Et pour **57600**?
 
 ---
 
-## 2.6 – Laboratoire
+## 2.6 – Laboratoire {#section-2-6}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -327,13 +353,13 @@ Serial3.begin(9600);
 
 ---
 
-## 3 – Transmission d'une chaine de caractères
+## 3 – Transmission d'une chaine de caractères {#section-3}
 
 La méthode Serial.print() est utilisée pour envoyer une chaine de caractères, de la même façon que nous affichons dans le terminal série.
 
 Pour la réception, nous utiliserons le méthode [Serial.readString()](https://www.arduino.cc/reference/fr/language/functions/communication/serial/readstring/).
 
-### 3.1 – Code source du transmetteur (UNO)
+### 3.1 – Code source du transmetteur (UNO) {#section-3-1}
 
 ```
 /*
@@ -408,7 +434,7 @@ Envoi du message suivant: Boit-sans-soif
 ...
 ```
 
-### 3.2 – Code source du récepteur (MEGA)
+### 3.2 – Code source du récepteur (MEGA) {#section-3-2}
 
 ```
 /*
@@ -475,7 +501,7 @@ Message recu = Calembredaine
 
 ---
 
-## 3.5 – 💡 Transmission d'une structure de données
+## 3.5 – 💡 Transmission d'une structure de données {#section-3-5}
 
 Étant donné la structure suivante:
 
@@ -633,7 +659,7 @@ Données incomplètes ou erronées.
 
 ---
 
-## 3.6 – Laboratoire important 😉 (40 minutes)
+## 3.6 – Laboratoire important 😉 (40 minutes) {#section-3-6}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -690,7 +716,7 @@ Heure 22:25:03
 
 ---
 
-## 3.7 – Laboratoire (30 minutes)
+## 3.7 – Laboratoire (30 minutes) {#section-3-7}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -767,7 +793,7 @@ Au niveau du transmetteur UNO, générer un valeur aléatoire pour 'Appareils et
 
 ---
 
-## 4 – Exemple d'un système d'alarme à 2 Arduino
+## 4 – Exemple d'un système d'alarme à 2 Arduino {#section-4}
 
 <img src="../images/10minutes.jpg" alt="" width="500" />
 
@@ -775,7 +801,7 @@ Au niveau du transmetteur UNO, générer un valeur aléatoire pour 'Appareils et
 
 ---
 
-### 4.1 – Fichier d'entête
+### 4.1 – Fichier d'entête {#section-4-1}
 
 ```
 /*
@@ -819,7 +845,7 @@ enum codesAlarme {
 
 ---
 
-### 4.2 – Code source du transmetteur
+### 4.2 – Code source du transmetteur {#section-4-2}
 
 ```
 /*

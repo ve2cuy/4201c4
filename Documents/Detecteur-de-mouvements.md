@@ -1,6 +1,14 @@
 # 22 - Détecteur de mouvements
 
-## Grove Adjustable [PIR Motion Sensor](https://wiki.seeedstudio.com/Grove-Adjustable_PIR_Motion_Sensor/)
+## Contenu
+
+- [**1 – Grove Adjustable PIR Motion Sensor**](#section-1)
+- [**2 – Exemple d'utilisation**](#section-2)
+- [**3 – Défi informatique**](#section-3)
+
+---
+
+## 1 – Grove Adjustable [PIR Motion Sensor](https://wiki.seeedstudio.com/Grove-Adjustable_PIR_Motion_Sensor/) {#section-1}
 
 <img src="../images/detecteur-mouvements.jpg" alt="Grove Adjustable PIR Motion Sensor" width="450" />
 
@@ -8,7 +16,7 @@
 
 ---
 
-## Exemple d'utilisation
+## 2 – Exemple d'utilisation {#section-2}
 
 ```cpp
 /*
@@ -84,12 +92,12 @@ boolean iYatiKekun()
 
 ---
 
-## Défi informatique
+## 3 – Défi informatique {#section-3}
 
 Optimiser la fonction ***iYaTiKekun***() pour utiliser le moins de code possible.
 
 ---
 
-###### Document rédigé par Alain Boudreault (aka: VE2CUY) – 2021.10.26
+###### Document rédigé par Alain Boudreault (aka: VE2CUY) – 2021.10.26 – Révision 2026.11.07
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

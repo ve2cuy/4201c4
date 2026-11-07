@@ -6,7 +6,23 @@
 
 <img src="../images/45d-1024x768.jpg" alt="" width="500" />
 
-## 1 – Description
+## Contenu
+
+- [**1 – Description**](#section-1)
+- [**2 – Type de connexion: I2C**](#section-2)
+- [**3 – Librairie à installer**](#section-3)
+- [**4 – Exemples d'utilisation**](#section-4)
+  - [4.1 – Renseigner le temps, puis le lire – version de départ](#section-4-1)
+  - [4.2 – Afficher le temps courant – version 1 (Inutilement longue)](#section-4-2)
+  - [4.3 – Afficher le temps courant – version 2 (Beaucoup mieux)](#section-4-3)
+  - [4.4 – Afficher le temps courant – version optimisée (Qui dit mieux?)](#section-4-4)
+- [**5 – Laboratoire (30 minutes) – Afficher l'heure et la date**](#section-5)
+  - [5.1 – Laboratoire (30 minutes) – Afficher l'heure sur 4-Digit](#section-5-1)
+  - [5.2 – Laboratoire (60 minutes)](#section-5-2)
+
+---
+
+## 1 – Description {#section-1}
 
 Ce module permet de préserver, en temps réel, le passage du temps (année, mois, jour, heure, minute, seconde), grâce à une pile, entre les mises sous tension de l'Arduino.
 
@@ -22,11 +38,11 @@ Il est piloté par une puce [DS1307](https://www.maximintegrated.com/en/products
 
 ---
 
-## 2 – Type de connexion: I2C
+## 2 – Type de connexion: I2C {#section-2}
 
 ---
 
-## 3 – Librairie à installer
+## 3 – Librairie à installer {#section-3}
 
 <img src="../images/Capture-decran-le-2021-10-26-a-12.35.55.png" alt="" width="500" />
 
@@ -41,9 +57,9 @@ lib_deps = seeed-studio/Grove - RTC DS1307@^1.0.0
 
 ---
 
-## 4 – Exemples d'utilisation
+## 4 – Exemples d'utilisation {#section-4}
 
-### 4.1 – Renseigner le temps, puis le lire – version de départ
+### 4.1 – Renseigner le temps, puis le lire – version de départ {#section-4-1}
 
 ```
 #include <Wire.h>
@@ -82,7 +98,7 @@ void loop() {} // loop
 
 ---
 
-### 4.2 – Afficher le temps courant – version 1 (Inutilement longue)
+### 4.2 – Afficher le temps courant – version 1 (Inutilement longue) {#section-4-2}
 
 ```
 #include <Wire.h>
@@ -161,7 +177,7 @@ void AfficherLeTemps()
 
 ---
 
-### 4.3 – Afficher le temps courant – version 2 (Beaucoup mieux)
+### 4.3 – Afficher le temps courant – version 2 (Beaucoup mieux) {#section-4-3}
 
 ```
 #include <Wire.h>
@@ -213,7 +229,7 @@ void AfficherLeTemps()
 
 ---
 
-### 4.4 – Afficher le temps courant – version optimisée (Qui dit mieux?)
+### 4.4 – Afficher le temps courant – version optimisée (Qui dit mieux?) {#section-4-4}
 
 ```
 #include <Wire.h>
@@ -269,7 +285,7 @@ char* AfficherLeTemps()
 
 ---
 
-## 5 – Laboratoire (30 minutes) – Afficher l'heure et la date
+## 5 – Laboratoire (30 minutes) – Afficher l'heure et la date {#section-5}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -306,7 +322,7 @@ const char* tableau[] = {...}
 
 ---
 
-## 5.1 – Laboratoire (30 minutes) – Afficher l'heure sur 4-Digit
+## 5.1 – Laboratoire (30 minutes) – Afficher l'heure sur 4-Digit {#section-5-1}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -359,7 +375,7 @@ Utilisation des méthodes ***display()*** et ***point()*** de la classe TM1637
 
 ---
 
-## 5.2 – Laboratoire (60 minutes)
+## 5.2 – Laboratoire (60 minutes) {#section-5-2}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -391,6 +407,6 @@ sur l'écran LCD.
 ## Crédits
 
 **Document rédigé par Alain Boudreault © 2021-2026**
-**Version 2025.02.26.01 - Révision 2025.12.12.1**
+**Version 2025.02.26.01 - Révision 2026.11.07.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

@@ -29,7 +29,48 @@
 
 ---
 
-## Résumé
+## Contenu
+
+- [**Résumé**](#section-resume)
+- [**1 – Contexte de réalisation**](#section-1)
+- [**2 – Description du système**](#section-2)
+  - [2.1 – Voici une représentation du système](#section-2-1)
+  - [2.2 – Démonstration vidéo du projet](#section-2-2)
+  - [2.3 – Travail préliminaire – Actualiser le code UNO](#section-2-3)
+- [**3 – Partie 1 – Station de contrôle (MEGA)**](#section-3)
+- [**4 – Les structures de données**](#section-4)
+- [**5 – Explication des éléments d'interface de l'écran du MEGA**](#section-5)
+  - [5.1 – La fonction afficherTexteAvecRemplissage()](#section-5-1)
+  - [5.2 – Affichage de la durée de l'alarme](#section-5-2)
+  - [5.3 – Affichages des valeurs et états](#section-5-3)
+  - [5.4 – Voici quelques définitions utiles](#section-5-4)
+  - [5.5 – Défi optionnel (1 point boni)](#section-5-5)
+  - [5.6 – Validation des données reçues du UNO](#section-5-6)
+  - [5.7 – Ligne de statut de réception](#section-5-7)
+- [**Partie 2 – Transmission des données vers le Web**](#partie-2)
+- [**6 – Description**](#section-6)
+- [**7 – Utilisation de l'API**](#section-7)
+  - [7.1 – Fonction pour préparer et encoder l'URL de la requête GET](#section-7-1)
+  - [7.2 – Rappel – Postman pour tester les requêtes](#section-7-2)
+  - [7.3 – Tester sur votre ordinateur avec Docker](#section-7-3)
+- [**8 – Ce qui doit être réalisé dans cette partie**](#section-8)
+  - [8.1 – evenement\_systeme\_enligne](#section-8-1)
+  - [8.2 – evenement\_statut\_appareils](#section-8-2)
+  - [8.3 – evenement\_changement\_etat](#section-8-3)
+  - [8.4 – evenement\_dectection\_mouvement](#section-8-4)
+  - [8.5 – evenement\_bouton\_panique](#section-8-5)
+  - [8.6 – evenement\_temperature\_depassee](#section-8-6)
+  - [8.7 – evenement\_UNO\_non\_connecte](#section-8-7)
+  - [8.8 – 4Digit display](#section-8-8)
+  - [8.9 – NEOPixel](#section-8-9)
+  - [8.10 – RFID (BONI)](#section-8-10)
+  - [8.11 – Statut de transmission vers l'API Web](#section-8-11)
+  - [8.12 – Envoi de pression/altitude vers l'API (BONI)](#section-8-12)
+- [**Grille de correction**](#section-grille-de-correction)
+
+---
+
+## Résumé {#section-resume}
 
 ### Voici un bref résumé des tâches à réaliser dans ce projet:
 
@@ -42,7 +83,7 @@
 
 ---
 
-## 1 – Contexte de réalisation
+## 1 – Contexte de réalisation {#section-1}
 
 ### Considérant,
 
@@ -74,7 +115,7 @@
 
 ---
 
-## 2 – Description du système
+## 2 – Description du système {#section-2}
 
 Lors du **projet 01**, nous avons implémenté la partie '**À domicile**' d'un système d'alarme permettant de contrôler et de mesurer différents appareils y étant connectés et d'afficher, dans le terminal série, leurs états ou valeurs.
 
@@ -102,13 +143,13 @@ Le Mega reçoit les données, les valide, les affiche dans le terminal et finale
 
 ---
 
-## 2.1 Voici une représentation du système
+## 2.1 – Voici une représentation du système {#section-2-1}
 
 <img src="../images/ESH25-1024x335.png" alt="Schéma système" width="500" />
 
 ---
 
-## 2.2 Démonstration vidéo du projet
+## 2.2 – Démonstration vidéo du projet {#section-2-2}
 
 [Vidéo de démonstration](../videos/Enregistrement-decran-le-2025-04-02-a-11.45.35.mov)
 
@@ -116,7 +157,7 @@ Le Mega reçoit les données, les valide, les affiche dans le terminal et finale
 
 ---
 
-## 2.5 – Travail préliminaire – Actualiser le code UNO
+## 2.3 – Travail préliminaire – Actualiser le code UNO {#section-2-3}
 
 ### À réaliser avant de programmer le MEGA
 
@@ -160,7 +201,7 @@ lienAvecRecepteur.begin(57600);  // 57600 est la vitesse maximum recommandée!
 
 ---
 
-## 3 – Partie 1 – Station de contrôle (MEGA) Date de remise: Semaine 12-13 NOTE: Cette section sera corrigée en même temps que la partie 2. Il n'y aura pas de solutionnaire disponible avant la remise finale.
+## 3 – Partie 1 – Station de contrôle (MEGA) Date de remise: Semaine 12-13 NOTE: Cette section sera corrigée en même temps que la partie 2. Il n'y aura pas de solutionnaire disponible avant la remise finale. {#section-3}
 
 ---
 
@@ -174,7 +215,7 @@ La station de contrôle (Arduino **MEGA**), sur réception d'un message de longu
 
 ---
 
-## 4 – Les structures de données
+## 4 – Les structures de données {#section-4}
 
 Pour la préparation de l'envoi des données du système UNO, il faut utiliser les structures de données suivantes:
 
@@ -273,7 +314,7 @@ Pour économiser sur les données envoyées sur le port série, l'état de tous 
 
 ---
 
-## 5 – Explication des éléments d'interface de l'écran du MEGA
+## 5 – Explication des éléments d'interface de l'écran du MEGA {#section-5}
 
 <img src="../images/Capture-decran-le-2025-04-02-a-11.22.04.png" alt="Interface MEGA détails" width="500" />
 
@@ -281,7 +322,7 @@ Pour économiser sur les données envoyées sur le port série, l'état de tous 
 
 ---
 
-### 5.1 – La fonction afficherTexteAvecRemplissage()
+### 5.1 – La fonction afficherTexteAvecRemplissage() {#section-5-1}
 
 👉 Il faut programmer une fonction qui permet d'afficher un texte à l'écran, à la position XY et qui complète la ligne, sur une longueur de n, avec un caractère. Si le caractère n'est pas précisé à l'appel alors '-' sera utilisé.
 
@@ -304,7 +345,7 @@ Ce qui produira le résultat suivant:
 
 ---
 
-### 5.2 – Affichage de la durée de l'alarme
+### 5.2 – Affichage de la durée de l'alarme {#section-5-2}
 
 Les émojis 1️⃣ à 🔟 sont utilisés pour l'affichage de la durée de l'alarme.
 
@@ -318,7 +359,7 @@ const char * graphDigits[] = {"", "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5
 
 ---
 
-### 5.3 – Affichages des valeurs et états
+### 5.3 – Affichages des valeurs et états {#section-5-3}
 
 Rappel, les valeurs et états du système proviennent du UNO. Nous les avons reçus via la communication UART. Ils devraient être stockés dans un variable de type 'Systeme'.
 
@@ -348,7 +389,7 @@ void actualiserEtatDesAppareils()
 
 ---
 
-### 5.9 – Voici quelques définitions utiles
+### 5.4 – Voici quelques définitions utiles {#section-5-4}
 
 ```cpp
 #define _ON                           "♻️"  // ou "🟢" Selon votre préférence
@@ -361,7 +402,7 @@ const char * etatSysteme[] =         {"🥵", "ℹ️", "😡","💀", "🆘", "
 
 ---
 
-## 5.10 – Défi optionnel (1 point boni)
+## 5.5 – Défi optionnel (1 point boni) {#section-5-5}
 
 Animer les lignes 'Bouton de panique' et 'Mouvement détecté' en cas d'activité.
 
@@ -369,7 +410,7 @@ Animer les lignes 'Bouton de panique' et 'Mouvement détecté' en cas d'activit�
 
 ---
 
-## Validation des données reçues du UNO
+## 5.6 – Validation des données reçues du UNO {#section-5-6}
 
 👉 Il est primordial de mettre en place une mécanique de validation des données reçues du UNO avant le traitement et ou l'affichage.
 
@@ -395,7 +436,7 @@ Nous assumerons que les données sont valides seulement si le nombre d'octets re
 
 ---
 
-## Ligne de statut de réception
+## 5.7 – Ligne de statut de réception {#section-5-7}
 
 Il faut incrémenter et afficher un compteur à chaque réception validée.  
 Par exemple, l'image suivante indique que le MEGA a reçu 4076 transmissions de longueur valide.
@@ -412,7 +453,7 @@ Par exemple, l'image suivante indique que le MEGA a reçu 4076 transmissions de 
 
 ---
 
-## 6 **–** DESCRIPTION
+## 6 – Description {#section-6}
 
 Dans la partie 2 du projet, il faut envoyer les informations reçus par la station de surveillance (le MEGA) vers une base de données accessible via le module Grove WiFi et le réseau Internet.
 
@@ -436,7 +477,7 @@ La liste se met à jour seule aux 10 secondes. Les **filtres** du haut permetten
 
 ---
 
-## 7 – Utilisation de l'API
+## 7 – Utilisation de l'API {#section-7}
 
 L'API est disponible via l'URL suivante <http://esh25.ve2cuy.com/tp2-api.php>.
 
@@ -483,7 +524,7 @@ if (optionWifi == '1') {
 
 ---
 
-### 7.1 – Fonction pour préparer et encoder l'URL de la requête GET
+### 7.1 – Fonction pour préparer et encoder l'URL de la requête GET {#section-7-1}
 
 La fonction suivante met en forme correctement les différents paramètres à soumettre à L'API.
 
@@ -558,7 +599,7 @@ if ( $total > 20 ) alors grrr ... ;-(
 
 ---
 
-## 7.2 – Rappel – Postman pour tester les requêtes
+## 7.2 – Rappel – Postman pour tester les requêtes {#section-7-2}
 
 ```
 # Voici une requête valide:
@@ -569,7 +610,7 @@ esh25.ve2cuy.com/tp2-api.php?nomSys=VE2CUY&ipAdr=254.192.250.127&note=Syst%C3%A8
 
 ---
 
-## 7.3 – Tester sur votre ordinateur avec Docker
+## 7.3 – Tester sur votre ordinateur avec Docker {#section-7-3}
 
 Pendant le développement, vous pouvez faire rouler **votre propre copie** de l'API et de la page de consultation sur votre ordinateur. C'est la même application que celle du serveur, mais :
 
@@ -736,9 +777,9 @@ docker rmi alainboudreault/esh25-api alainboudreault/esh25-simulateur
 
 ---
 
-## 8 – Ce qui doit être réalisé dans cette partie
+## 8 – Ce qui doit être réalisé dans cette partie {#section-8}
 
-### 8.1 – evenement\_systeme\_enligne
+### 8.1 – evenement\_systeme\_enligne {#section-8-1}
 
 Lorsque le MEGA reçoit le **premier message** du UNO, il doit envoyer une requête de type '***evenement\_systeme\_enligne***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
@@ -748,7 +789,7 @@ Lorsque le MEGA reçoit le **premier message** du UNO, il doit envoyer une requ�
 
 ---
 
-### 8.2 – evenement\_statut\_appareils
+### 8.2 – evenement\_statut\_appareils {#section-8-2}
 
 À chaque minute, **mais pas plus**, le MEGA doit envoyer une requête de type '***evenement\_statut\_appareils***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
@@ -760,7 +801,7 @@ Un clic sur la ligne affichera plus de détails sur le système:
 
 ---
 
-### 8.3 – evenement\_changement\_etat
+### 8.3 – evenement\_changement\_etat {#section-8-3}
 
 À la réception des informations du UNO, il faut vérifier s'il y a eu un changement sur un des bits de la propriété '**etatAppareils**' par rapport à la réception précédente. Si c'est le cas, le MEGA doit envoyer une requête de type '***evenement\_changement\_etat***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
@@ -775,7 +816,7 @@ sendInfoTOWebAPI(evenement_changement_etat);
 
 ---
 
-### 8.4 – evenement\_dectection\_mouvement
+### 8.4 – evenement\_dectection\_mouvement {#section-8-4}
 
 Si le détecteur de mouvement a été déclenché, le MEGA doit envoyer, **immédiatement**, une requête de type '***evenement\_detection\_mouvement***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
@@ -800,13 +841,13 @@ Si le détecteur de mouvement a été déclenché, le MEGA doit envoyer, **immé
 
 ---
 
-### 8.5 – evenement\_bouton\_panique
+### 8.5 – evenement\_bouton\_panique {#section-8-5}
 
 Idem que 8.4.
 
 ---
 
-### 8.6 – evenement\_temperature\_depassee
+### 8.6 – evenement\_temperature\_depassee {#section-8-6}
 
 Si la valeur de la température est >= à 24c, le MEGA doit envoyer, **immédiatement**, une requête de type '***evenement\_temperature\_depassee***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
@@ -826,7 +867,7 @@ if (unSysteme.appareils.temperature > TEMPERATURE_MAXIMUM && temperaturtePreceda
 
 ---
 
-### 8.7 – evenement\_UNO\_non\_connecte
+### 8.7 – evenement\_UNO\_non\_connecte {#section-8-7}
 
 Si le MEGA ne reçoit aucun message du UNO pendant **5 minutes**, il faut envoyer une requête de type '***evenement\_UNO\_non\_connecte***' vers l'API. Ce qui devrait afficher la ligne suivante sur la page de consultation des événements systèmes:
 
@@ -843,7 +884,7 @@ if (aucune_reception_depuis_5_minutes){
 
 ---
 
-### 8.8 – 4Digit display
+### 8.8 – 4Digit display {#section-8-8}
 
 <img src="../images/Enregistrement-decran-le-2022-11-20-a-18.35.10.gif" alt="4Digit display" width="500" />
 
@@ -851,7 +892,7 @@ Connecté sur D6 et D7 du Mega, le 4Digit affiche l'heure reçue du UNO et le sy
 
 ---
 
-### 8.9 – NEOPixel
+### 8.9 – NEOPixel {#section-8-9}
 
 Connecté sur D4 et D5 du Mega, le NEOPixel affiche une animation différente selon les événements suivants:
 
@@ -866,7 +907,7 @@ Connecté sur D4 et D5 du Mega, le NEOPixel affiche une animation différente se
 
 ---
 
-### 8.10\* – RFID (BONI)
+### 8.10 – RFID (BONI) {#section-8-10}
 
 Un capteur RFID, connecté sur UART1 du MEGA, permet d'activer/désactiver l'envoi de messages vers l'API Web. Il y a un document de référence –> [ici](capteur-rfid.md).
 
@@ -892,7 +933,7 @@ Il y a trois valeurs possibles comme état:
 
 ---
 
-### 8.11 – Statut de transmission vers l'API Web
+### 8.11 – Statut de transmission vers l'API Web {#section-8-11}
 
 Il faut ajouter la ligne suivante à l'interface utilisateur de la station MEGA:
 
@@ -900,7 +941,7 @@ Il faut ajouter la ligne suivante à l'interface utilisateur de la station MEGA:
 
 ---
 
-### 8.12 – Envoi de pression/altitude vers l'API (BONI)
+### 8.12 – Envoi de pression/altitude vers l'API (BONI) {#section-8-12}
 
 Pour obtenir le point boni pour le traitement de la pression atmosphérique et l'altitude, il faut que ces informations soient envoyées vers l'API Web.
 
@@ -919,13 +960,13 @@ GET /tp2-api.php?nomSys=!VE2CUY!&ipAdr=192.168.1.191&note=exemple&statut=4&app=2
 
 ---
 
-## Grille de correction
+## Grille de correction {#section-grille-de-correction}
 
 **NOTE**: Les défis doivent-être réalisés sans l'aide de l'enseignant.
 
 | No. | Description | Note | Boni |
 | --- | --- | --- | --- |
-| **UNO** | Ajout des éléments de la section 2.5 | 3 |  |
+| **UNO** | Ajout des éléments de la section 2.3 | 3 |  |
 |  | Transmission des données vers la centrale. | 2 |  |
 | Défi optionnel | Remplacer le capteur de température par [bmp280](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/) et ajouter pression et altitude aux données transmises. **Important**, voir 8.12 |  | 1.5 |
 | **Présentation** | Présentation de votre partie 1 – Pénalité de 20% en cas d'absence |  |  |
@@ -934,7 +975,7 @@ GET /tp2-api.php?nomSys=!VE2CUY!&ipAdr=192.168.1.191&note=exemple&statut=4&app=2
 | 5 | Éléments d'interface | 2 |  |
 | 5.1 | fonction afficherLigne | 2 |  |
 |  | Réception et traitement des données reçues du UNO | 2 |  |
-| 5.10 Défi optionnel | Animation des lignes 'Bouton de panique'  et 'Mouvement détecté' |  | 1 |
+| 5.5 Défi optionnel | Animation des lignes 'Bouton de panique'  et 'Mouvement détecté' |  | 1 |
 | Partie 2 |  |  |  |
 |  | Traitement correct de l'adresse IP –> vers API | 1 |  |
 | 8.1 | evenement\_systeme\_enligne –> vers API | 1 |  |
@@ -957,6 +998,6 @@ GET /tp2-api.php?nomSys=!VE2CUY!&ipAdr=192.168.1.191&note=exemple&statut=4&app=2
 ## Crédits
 
 **Document rédigé par Alain Boudreault © 2021-2026**
-**Version 2025.03.15.01 - Révision 2026.04.27.1**
+**Version 2025.03.15.01 - Révision 2026.11.07.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

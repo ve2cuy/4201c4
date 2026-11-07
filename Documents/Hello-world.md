@@ -2,7 +2,7 @@
 
 <img src="../images/arduino-uno-00.jpg" alt="" width="500" />  
 
-## Contenu
+## Notions abordées
 - Création d’un projet Arduino
 - Code de départ, les fonctions *setup()* et *loop()*
 - Configuration des broches du MCU: la fonction *pinMode()*
@@ -18,7 +18,17 @@
 ---
 
 
-## 1 – Allumer la DEL sur D13
+## Contenu
+
+- [**1 – Allumer la DEL sur D13**](#section-1)
+- [**2 – Utilisation de la fonction delay()**](#section-2)
+- [**3 – Documentation du code**](#section-3)
+- [**4 – Utilisation de MACROs**](#section-4)
+- [**5 – Laboratoire**](#section-5)
+
+---
+
+## 1 – Allumer la DEL sur D13 {#section-1}
 
 En utilisant un module *Arduino Uno*, l’*IDE Arduino* et quelques *instructions en langage C*, nous allons changer l’état (ON/OFF) de la DEL reliée à la broche digitale 13.
 
@@ -48,7 +58,7 @@ void loop() {
 
 ---
 
-## 2 – Utilisation de la fonction *delay()*
+## 2 – Utilisation de la fonction *delay()* {#section-2}
 
 **Action 2.2** – Faire clignoter la DEL
 
@@ -72,7 +82,7 @@ Résultat :
 
 ---
 
-## 3 – Documentation du code
+## 3 – Documentation du code {#section-3}
 
 Exemple classique avec commentaires :
 
@@ -95,7 +105,7 @@ void loop() {
 
 ---
 
-## 4 – Utilisation de MACROs
+## 4 – Utilisation de MACROs {#section-4}
 
 ```c
 #define DEL_ROUGE 13
@@ -118,7 +128,7 @@ void loop() {
 
 ---
 
-## 5 – Laboratoire
+## 5 – Laboratoire {#section-5}
 
 **5.1 – Laboratoire 01**  
 <img src="../images/module-expansion-1024x586.png" alt="" width="500" />
@@ -132,7 +142,7 @@ void loop() {
 ## Crédits
 
 *Document rédigé par Alain Boudreault © 2021-2026*  
-*Version 2025.12.11.1*  
+*Version 2025.12.11.1 - Révision 2026.11.07.1*  
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*
 

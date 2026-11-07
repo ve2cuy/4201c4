@@ -2,7 +2,26 @@
 
 19 février 2025 - R/vision du 2025.12.12
 
-# 1 – Le module humidité et température – SHT31
+## Contenu
+
+- [**1 – Le module humidité et température – SHT31**](#section-1)
+  - [1.1 – Description](#section-1-1)
+  - [1.2 – Installation de la librairie](#section-1-2)
+  - [1.3 – Utilisation de la classe SHT31](#section-1-3)
+  - [1.4 – Lecture de la température sous Wokwi](#section-1-4)
+  - [1.5 – Utilisation d'une macro pour remplacer une fonction.](#section-1-5)
+  - [1.6 – Labo: Application universelle (Arduino IDE/Wokwi)](#section-1-6)
+- [**2 – Le module 4-Digit Display – TM1637**](#section-2)
+  - [2.1 – Description](#section-2-1)
+  - [2.2 – Installation des librairies](#section-2-2)
+  - [2.3 – Utilisation de la classe TM1637V2](#section-2-3)
+  - [2.4 – Afficher des chaines de caractères, la méthode displayStr()](#section-2-4)
+  - [2.5 – Laboratoire (40 minutes)](#section-2-5)
+  - [2.6 – TM-1637 sur Wokwi](#section-2-6)
+
+---
+
+# 1 – Le module humidité et température – SHT31 {#section-1}
 
 **Grove – I2C High Accuracy Temp&Humi Sensor ([SHT31](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html))**
 
@@ -13,7 +32,7 @@
 
 ---
 
-## 1.1 – Description
+## 1.1 – Description {#section-1-1}
 
 Le module SHT31 propose deux capteurs en un; un capteur de température et un capteur d'humidité relative.
 
@@ -23,7 +42,7 @@ Ce capteur peut-être utilisé pour lire en temps réel la température et l'hum
 
 ---
 
-## 1.2 – Installation de la librairie
+## 1.2 – Installation de la librairie {#section-1-2}
 
 Comme pour les autres modules complexes de Grove, il faut installer une librairie de support pour le capteur SHT31.
 
@@ -39,7 +58,7 @@ lib_deps =
 
 ---
 
-## 1.3 – Utilisation de la classe SHT31
+## 1.3 – Utilisation de la classe SHT31 {#section-1-3}
 
 ### 1.3.1 – Librairie et déclaration et d'un objet de type SHT31
 
@@ -111,7 +130,7 @@ Reprendre le labo précédent en y ajoutant l'affichage sur LCD.
 
 ---
 
-## 1.4 – Lecture de la température sous Wokwi
+## 1.4 – Lecture de la température sous Wokwi {#section-1-4}
 
 ### 1.4.1a – Code source
 
@@ -210,7 +229,7 @@ Version Wokwi disponible [ici](https://wokwi.com/projects/345799457851310676)
 
 ---
 
-## 1.5 – Utilisation d'une macro pour remplacer une fonction.
+## 1.5 – Utilisation d'une macro pour remplacer une fonction. {#section-1-5}
 
 ```
 #include "SHT31.h"
@@ -230,7 +249,7 @@ void setup() {
 
 ---
 
-## 1.6 – Labo: Application universelle (Arduino IDE/Wokwi)
+## 1.6 – Labo: Application universelle (Arduino IDE/Wokwi) {#section-1-6}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -248,7 +267,7 @@ void setup() {
 
 ---
 
-# 2 – Le module [4-Digit Display](https://wiki.seeedstudio.com/Grove-4-Digit_Display/) – TM1637
+# 2 – Le module [4-Digit Display](https://wiki.seeedstudio.com/Grove-4-Digit_Display/) – TM1637 {#section-2}
 
 <img src="../images/Grove-4_digit_display-1024x683.jpg" alt="" width="500" />
 
@@ -256,7 +275,7 @@ void setup() {
 
 ---
 
-## 2.1 – Description
+## 2.1 – Description {#section-2-1}
 
 Ce module permet un affichage alpha numérique à partir de 7 segments de type LED. Il est habituellement utilisé pour l'affichage des nombres de 0 à 9. Il peut aussi être employé pour présenter certain caractères alphabétiques.
 
@@ -266,7 +285,7 @@ Il faut habituellement 7 signaux digitaux pour contrôler un seul affichage 7 se
 
 <img src="../images/7segment-display-digital.gif" alt="" width="500" />
 
-## 2.2 – Installation des librairies
+## 2.2 – Installation des librairies {#section-2-2}
 
 **ATTENTION**: **Ne pas installer cette version de la librairie mais plutôt celle qui est proposée à l'étape 2.2.2.**
 
@@ -327,7 +346,7 @@ Décompresser le fichier Zip et déplacer dans le dossier '***libraries***' d'Ar
 
 ---
 
-## 2.3 – Utilisation de la classe TM1637V2
+## 2.3 – Utilisation de la classe TM1637V2 {#section-2-3}
 
 ### 2.3.1 -Utilisation de la librairie et déclaration d'un objet de type TM1637V2
 
@@ -431,7 +450,7 @@ void loop() {
 }
 ```
 
-### 2.4 – Afficher des chaines de caractères, la méthode displayStr()
+### 2.4 – Afficher des chaines de caractères, la méthode displayStr() {#section-2-4}
 
 ```
 #include "TM1637V2.h"
@@ -476,7 +495,7 @@ void loop() {
 
 ---
 
-## 2.5 – Laboratoire (40 minutes)
+## 2.5 – Laboratoire (40 minutes) {#section-2-5}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -496,7 +515,7 @@ void loop() {
 * Utiliser la fonction ***round***() pour convertir les **float** en **int**. Rappel, **sprintf**() d'Arduino ne supporte pas le type **float**.
 * Il est possible de souffler délicatement sur le capteur pour faire varier les valeurs de température et humidité.
 
-## Défi facultatif supplémentaire (20 minutes)
+## 2.5.1 – Défi facultatif supplémentaire (20 minutes)
 
 Le module **4-Digit** ne supporte pas l'affichage de '.' ou ',' et la fonction **sprintf** d'Arduino ne supportent pas les **float**.
 
@@ -533,7 +552,7 @@ sprintf(resultat, "Humidite = %s%%", chaine);  // Va produire:  Humidite = 45.55
 
 ---
 
-## 2.6 – TM-1637 sur Wokwi
+## 2.6 – TM-1637 sur Wokwi {#section-2-6}
 
 <img src="../images/Capture-décran-2022-10-23-à-14.17.32.png" alt="" width="500" />
 
@@ -574,6 +593,6 @@ void loop() {
 ## Crédits
 
 *Document rédigé par Alain Boudreault © 2021-2026*  
-*Version 2025.12.12.1*  
+*Version 2025.12.12.1 - Révision 2026.11.07.1*  
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

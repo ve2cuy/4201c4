@@ -4,7 +4,30 @@
   <img src="../images/platformio-logo-png-transparent.png" alt="" width="350" />  
 </p>
 
-## Définition
+## Contenu
+
+- [**Définition**](#section-definition)
+- [**Installation de l'extension PlatformIO IDE sous VS Code**](#section-installation-de-l-extension-platformio-i)
+- [**👉 Premiers pas**](#section-premiers-pas)
+- [**1 – Créer un nouveau projet sous PlatformIO**](#section-1)
+  - [1.1 – Examiner la structure de départ](#section-1-1)
+  - [1.2 – Le fichier main.cpp](#section-1-2)
+  - [1.3 – Remplacer le code source de main.cpp par](#section-1-3)
+- [**2 – Compiler le projet**](#section-2)
+- [**3 – Téléverser l'application vers le micro-contrôleur**](#section-3)
+- [**4 – Afficher le moniteur série (Pour les traces du programme)**](#section-4)
+- [**5 – Hello World avec une DEL (LED)**](#section-5)
+  - [5.1 – Exemple avec documentation et fichier de logs](#section-5-1)
+  - [5.2 – Utilisation de MACROs](#section-5-2)
+- [**6 – Utilisation d'un fichier d'entête (.h)**](#section-6)
+- [**7 – Configuration avancée dans platformio.ini**](#section-7)
+- [**8 – Raccourcis clavier utiles**](#section-8)
+- [**9 – Conseils pour bien débuter**](#section-9)
+- [**Conclusion**](#section-conclusion)
+
+---
+
+## Définition {#section-definition}
 
 **PlatformIO** est un écosystème complet pour le développement embarqué qui s'intègre dans Visual Studio Code. C'est une plateforme professionnelle de développement qui supporte plus de 1000 cartes de développement différentes et plus de 50 plateformes, incluant Arduino, ESP32, STM32, Raspberry Pi Pico, et bien d'autres.
 
@@ -66,7 +89,7 @@ PlatformIO présente plusieurs avantages significatifs par rapport à l'IDE Ardu
 
 ---
 
-## Installation de l'extension PlatformIO IDE sous VS Code
+## Installation de l'extension PlatformIO IDE sous VS Code {#section-installation-de-l-extension-platformio-i}
 
 PlatformIO s'installe sous VS Code en y ajoutant l'extension 'PlatformIO IDE':
 
@@ -74,9 +97,9 @@ PlatformIO s'installe sous VS Code en y ajoutant l'extension 'PlatformIO IDE':
 
 ---
 
-## 👉 Premiers pas
+## 👉 Premiers pas {#section-premiers-pas}
 
-## 1 - Créer un nouveau projet sous PlatformIO
+## 1 – Créer un nouveau projet sous PlatformIO {#section-1}
 
 <img src="../images/pio-01.png" alt="Nouveau projet PlatformIO" width="500" />
 
@@ -86,7 +109,7 @@ PlatformIO s'installe sous VS Code en y ajoutant l'extension 'PlatformIO IDE':
 
 ---
 
-### 1.1 - Examiner la structure de départ
+### 1.1 – Examiner la structure de départ {#section-1-1}
 
 <img src="../images/pio-02b.png" alt="Structure projet" width="500" />
 
@@ -98,14 +121,14 @@ La structure d'un projet PlatformIO est organisée de manière professionnelle:
 - **test/**: Pour les tests unitaires
 - **platformio.ini**: Fichier de configuration du projet
 
-### 1.2 - Le fichier main.cpp
+### 1.2 – Le fichier main.cpp {#section-1-2}
 
 <img src="../images/pio-03.png" alt="Fichier main.cpp" width="500" />
 
 
 ---
 
-### 1.3 - Remplacer le code source de main.cpp par:
+### 1.3 – Remplacer le code source de main.cpp par: {#section-1-3}
 
 ```cpp
 #include <Arduino.h>
@@ -130,7 +153,7 @@ void loop() {
 
 ---
 
-## 2 - Compiler le projet:
+## 2 – Compiler le projet: {#section-2}
 
 <img src="../images/pio-build.png" alt="Compiler projet" width="500" />
 
@@ -147,7 +170,7 @@ La compilation vérifie le code sans le téléverser sur la carte. C'est utile p
 
 ---
 
-## 3 - Téléverser l'application vers le micro-contrôleur
+## 3 – Téléverser l'application vers le micro-contrôleur {#section-3}
 
 > ou -> **CTRL+ALT+U**
 
@@ -161,7 +184,7 @@ Le téléversement (upload) compile automatiquement le projet si nécessaire, pu
 
 ---
 
-## 4 - Afficher le moniteur série (Pour les traces du programme)
+## 4 – Afficher le moniteur série (Pour les traces du programme) {#section-4}
 
 <img src="../images/pio-serial-monitor.png" alt="Moniteur série" width="500" />
 
@@ -182,9 +205,9 @@ Le moniteur série de PlatformIO offre plusieurs avantages:
 
 ---
 
-## 5 - Hello World avec une DEL (LED)
+## 5 – Hello World avec une DEL (LED) {#section-5}
 
-### 5.1 – Exemple avec documentation et fichier de logs
+### 5.1 – Exemple avec documentation et fichier de logs {#section-5-1}
 
 ```cpp
 // -----------------------------------------------
@@ -228,7 +251,7 @@ void loop() {
 
 ---
 
-### 5.2 – Utilisation de MACROs
+### 5.2 – Utilisation de MACROs {#section-5-2}
 
 ```cpp
 #include <Arduino.h>
@@ -266,7 +289,7 @@ void loop() {
 
 ---
 
-## 6 – Utilisation d'un fichier d'entête (.h)
+## 6 – Utilisation d'un fichier d'entête (.h) {#section-6}
 
 ```cpp
 // Fichier include/main.h 
@@ -343,7 +366,7 @@ mon_projet/
 
 ---
 
-## 7 - Configuration avancée dans platformio.ini
+## 7 – Configuration avancée dans platformio.ini {#section-7}
 
 Le fichier `platformio.ini` permet de configurer finement votre projet:
 
@@ -380,7 +403,7 @@ upload_speed = 115200
 
 ---
 
-## 8 - Raccourcis clavier utiles
+## 8 – Raccourcis clavier utiles {#section-8}
 
 | Action | Raccourci |
 |--------|-----------|
@@ -392,7 +415,7 @@ upload_speed = 115200
 
 ---
 
-## 9 - Conseils pour bien débuter
+## 9 – Conseils pour bien débuter {#section-9}
 
 1. **Toujours inclure `<Arduino.h>`**: C'est obligatoire dans les fichiers .cpp (contrairement aux .ino)
 
@@ -412,7 +435,7 @@ upload_speed = 115200
 
 ---
 
-## Conclusion
+## Conclusion {#section-conclusion}
 
 PlatformIO représente une solution efficace pour le développement Arduino et embarqué en général. En combinant la simplicité d'Arduino avec la puissance d'un IDE professionnel, avec lequel vous êtes déjà familier (VSCode), il permet aux développeurs de créer des projets plus robustes, maintenables et évolutifs (git).
 
@@ -422,6 +445,6 @@ PlatformIO représente une solution efficace pour le développement Arduino et e
 
 **Document rédigé par Alain Boudreault © 2021-2026**
 
-**Version 2026.01.25.01**
+**Version 2026.01.25.01 - Révision 2026.11.07.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

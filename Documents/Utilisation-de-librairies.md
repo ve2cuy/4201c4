@@ -1,8 +1,26 @@
 # 8 - Utilisation de librairies
 
-## 1 - Les librairies : Qu'est-ce que c'est et pourquoi les utiliser?
+## Contenu
 
-### 1.1 - Définition et rôle des librairies
+- [**1 – Les librairies : Qu'est-ce que c'est et pourquoi les utiliser?**](#section-1)
+  - [1.1 – Définition et rôle des librairies](#section-1-1)
+  - [1.2 – Types de librairies](#section-1-2)
+  - [1.3 – Structure d'une librairie](#section-1-3)
+  - [1.4 – Voici comment installer une librairie sous PlatformIO](#section-1-4)
+  - [1.5 – Comment choisir une bonne librairie?](#section-1-5)
+  - [1.6 – Exemple pratique : La librairie Streaming](#section-1-6)
+  - [1.7 – Remplacer le code source de main.cpp par et tester l'application](#section-1-7)
+  - [1.8 – Créer sa propre librairie locale](#section-1-8)
+  - [1.9 – Gestion des versions de librairies](#section-1-9)
+  - [1.10 – Dépendances entre librairies](#section-1-10)
+  - [1.11 – Résumé : Pourquoi les librairies sont essentielles](#section-1-11)
+- [**2 – Laboratoire**](#section-2)
+
+---
+
+## 1 – Les librairies : Qu'est-ce que c'est et pourquoi les utiliser? {#section-1}
+
+### 1.1 – Définition et rôle des librairies {#section-1-1}
 
 Une **librairie** (ou bibliothèque logicielle) est un ensemble de code pré-écrit et testé qui fournit des fonctionnalités réutilisables. Dans le contexte Arduino et PlatformIO, les librairies permettent de:
 
@@ -49,7 +67,7 @@ Les librairies sont souvent écrites par des experts qui connaissent parfaitemen
 
 ---
 
-### 1.2 - Types de librairies
+### 1.2 – Types de librairies {#section-1-2}
 
 #### **Librairies matérielles**
 Permettent de contrôler des composants électroniques:
@@ -82,7 +100,7 @@ Déjà incluses avec Arduino:
 
 ---
 
-### 1.3 - Structure d'une librairie
+### 1.3 – Structure d'une librairie {#section-1-3}
 
 Une librairie typique contient:
 
@@ -112,7 +130,7 @@ class MaLibrairie {
 
 ---
 
-### 1.4 - Voici comment installer une librairie sous PlatformIO
+### 1.4 – Voici comment installer une librairie sous PlatformIO {#section-1-4}
 
 <img src="../images/pio-librairie-01.png" alt="Librairies 1" width="500" />
 
@@ -132,7 +150,7 @@ class MaLibrairie {
 
 ---
 
-### 1.5 - Comment choisir une bonne librairie?
+### 1.5 – Comment choisir une bonne librairie? {#section-1-5}
 
 Critères à considérer:
 
@@ -147,7 +165,7 @@ Critères à considérer:
 
 ---
 
-### 1.6 - Exemple pratique : La librairie Streaming
+### 1.6 – Exemple pratique : La librairie Streaming {#section-1-6}
 
 La librairie **Streaming** est un excellent exemple de librairie utilitaire qui améliore l'expérience de développement.
 
@@ -169,7 +187,7 @@ C'est plus **concis**, plus **lisible** et plus **proche du C++ standard**.
 
 ---
 
-### 1.7 - Remplacer le code source de main.cpp par et tester l'application:
+### 1.7 – Remplacer le code source de main.cpp par et tester l'application: {#section-1-7}
 
 ```cpp
 #include <Arduino.h>
@@ -198,7 +216,7 @@ void loop() {
 
 ---
 
-### 1.8 - Créer sa propre librairie locale
+### 1.8 – Créer sa propre librairie locale {#section-1-8}
 
 Pour des fonctionnalités spécifiques à votre projet, vous pouvez créer une librairie locale dans le dossier `lib/`:
 
@@ -263,7 +281,7 @@ void loop() {
 
 ---
 
-### 1.9 - Gestion des versions de librairies
+### 1.9 – Gestion des versions de librairies {#section-1-9}
 
 Dans PlatformIO, vous pouvez spécifier la version exacte d'une librairie dans `platformio.ini`:
 
@@ -288,7 +306,7 @@ lib_deps =
 
 ---
 
-### 1.10 - Dépendances entre librairies
+### 1.10 – Dépendances entre librairies {#section-1-10}
 
 Certaines librairies dépendent d'autres librairies. PlatformIO gère automatiquement ces dépendances.
 
@@ -301,7 +319,7 @@ lib_deps =
 
 PlatformIO détecte et installe automatiquement `Adafruit GFX Library` et `Adafruit BusIO` qui sont requises.
 
-### 1.11 - Résumé : Pourquoi les librairies sont essentielles
+### 1.11 – Résumé : Pourquoi les librairies sont essentielles {#section-1-11}
 
 | Aspect | Sans librairie | Avec librairie |
 |--------|---------------|----------------|
@@ -316,7 +334,7 @@ PlatformIO détecte et installe automatiquement `Adafruit GFX Library` et `Adafr
 
 ---
 
-## Laboratoire
+## 2 – Laboratoire {#section-2}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -329,6 +347,6 @@ TODO:
 
 **Document rédigé par Alain Boudreault © 2021-2026**
 
-**Version 2025.12.14.01**
+**Version 2025.12.14.01 - Révision 2026.11.07.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

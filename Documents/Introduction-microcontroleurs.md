@@ -1,6 +1,6 @@
 # 1 - Introduction aux microcontrôleurs
 
-*Révision du 2025.12.10*
+*Révision du 2026.11.07*
 
 <img src="../images/favpng_arduino-computer-electronics-microcontroller-application-software.png" alt="Arduino Microcontroller" width="500" />
 
@@ -16,34 +16,26 @@ Finalement nous ***comprendrons***, je l'espère, la place qu'occupe le projet *
 
 ## Contenu
 
-1. **Définition d'un microcontrôleur (MCU pour *microcontroller unit*)**
-2. **Exemples d'utilisation d'un MCU**
-3. **Sommaire des fonctionnalités d'un MCU**
-4. **Apparence physique de boitiers de MCU**
-5. **Quelques microcontrôleurs populaires**
-6. **Anatomie d'un microcontrôleur (ATmega328P)**
-   1. Acronymes couramment utilisés avec les MCU
-   2. Spécifications de l'ATmega328P
-   3. Diagramme de définition de bloc de l'ATmega328P
-   4. Identification des broches de l'ATmega328P
-7. **Outils et langages de programmation des microcontrôleurs**
-   1. Langages: C, C++, assembleur, librairies, portabilité
-   2. Les programmateurs matériels dédiés
-   3. Les environnements de développement propriétaires
-      * Microchip Studio for AVR
-      * MPLAB® X IDE (PIC)
-      * STM32CubeIDE
-      * ESP-IDF
-      * Arduino IDE
-8. **Programme d'amorçage (BootLoader)**
-9. **Le projet Arduino.cc**
-   1. Historique
-   2. Le matériel
-   3. Les outils logiciels
+- [**1 – Définition d'un microcontrôleur**](#section-1)
+- [**2 – Exemples d'utilisation**](#section-2)
+- [**3 – Sommaire des fonctionnalités d'un MCU**](#section-3)
+- [**4 – Apparence physique des MCUs**](#section-4)
+- [**5 – Quelques microcontrôleurs populaires**](#section-5)
+- [**6 – Anatomie d'un microcontrôleur (ATmega328P)**](#section-6)
+  - [6.1 – Spécifications du ATmega328P](#section-6-1)
+  - [6.2 – Diagramme de définition de bloc de l'ATmega328P](#section-6-2)
+  - [6.3 – Identification des broches de l'ATmega328P](#section-6-3)
+- [**7 – Programmation d'un microcontrôleur**](#section-7)
+  - [7.1 – Plateformes de prototypage](#section-7-1)
+  - [7.2 – Programmateurs et débogueur en circuit de MCU](#section-7-2)
+  - [7.3 – Les environnements de développement (IDE/IPE) propriétaires](#section-7-3)
+  - [7.4 – Langages utilisés pour la programmation des MCUs](#section-7-4)
+- [**8 – Programme d'amorçage (BootLoader)**](#section-8)
+- [**9 – Le projet Arduino.cc**](#section-9)
 
 ---
 
-## 1 – Définition d'un microcontrôleur
+## 1 – Définition d'un microcontrôleur {#section-1}
 
 Que nous en soyons conscient ou pas, les *microcontrôleurs (MCU)* sont omniprésents dans notre vie de tous les jours.
 
@@ -89,7 +81,7 @@ Les microcontrôleurs sont aussi parfois appelés 'System on a Chip' ou **SoC**.
 
 ---
 
-## 2 – Exemples d'utilisation
+## 2 – Exemples d'utilisation {#section-2}
 
 Nous retrouvons les microcontrôleurs dans une multitude d'appareils électroniques tels que:
 
@@ -112,7 +104,7 @@ Ils sont aussi présents dans des objets comme les jouets, les appareils électr
 
 ---
 
-## 3 – Sommaire des fonctionnalités d'un MCU
+## 3 – Sommaire des fonctionnalités d'un MCU {#section-3}
 
 La fonction première d'un microcontrôleur est de proposer des méthodes d'acquisition et d'interaction avec le monde extérieur.
 
@@ -156,7 +148,7 @@ Comme par exemple:
 
 ---
 
-## 4 – Apparence physique des MCUs
+## 4 – Apparence physique des MCUs {#section-4}
 
 Les ***microcontrôleurs*** sont habituellement disponibles sous la forme d'un unique ***circuit intégré (IC)*** adoptant un des boîtiers suivants:
 
@@ -179,7 +171,7 @@ Par exemple, le microcontrôleur présent sur une des plateformes de prototypage
 
 ---
 
-## 5 – Quelques microcontrôleurs populaires
+## 5 – Quelques microcontrôleurs populaires {#section-5}
 
 De nombreuses entreprises fabriquent des microcontrôleurs proposant des fonctionnalités dans des formats de traitements de 8 à 32 bits, avec des vitesses de traitement multiples, un grand choix de formats de mémoire (RAM/FLASH, etc.), un nombre variable de lignes et de protocoles de communication avec le monde extérieur.
 
@@ -199,7 +191,7 @@ Au niveau des microcontrôleurs grand public, s'adressant aux enthousiastes de l
 
 ---
 
-## 6 – Anatomie d'un microcontrôleur (ATmega328P)
+## 6 – Anatomie d'un microcontrôleur (ATmega328P) {#section-6}
 
 Pour être en mesure de bien comprendre les différentes fonctions d'un microcontrôleur, commençons par apprivoiser le vocabulaire les définissant.
 
@@ -245,7 +237,7 @@ Pour être en mesure de bien comprendre les différentes fonctions d'un microcon
 
 ---
 
-### 6.1 – Spécifications du ATmega328P
+### 6.1 – Spécifications du ATmega328P {#section-6-1}
 
 Fort de nos nouveaux acronymes, examinons maintenant les spécifications techniques du microcontrôleur ATmega328P.
 
@@ -278,13 +270,13 @@ Fort de nos nouveaux acronymes, examinons maintenant les spécifications techniq
 
 ---
 
-### 6.2 – Diagramme de définition de bloc de l'ATmega328P
+### 6.2 – Diagramme de définition de bloc de l'ATmega328P {#section-6-2}
 
 <img src="../images/block-diagram-atmega328-microcontroller.png" alt="ATmega328P Block Diagram" width="500" />
 
 ---
 
-### 6.3 – Identification des broches de l'ATmega328P
+### 6.3 – Identification des broches de l'ATmega328P {#section-6-3}
 
 <img src="../images/atmega328-PIN.png" alt="ATmega328P Pinout" width="500" />
 
@@ -292,7 +284,7 @@ Fort de nos nouveaux acronymes, examinons maintenant les spécifications techniq
 
 ---
 
-## 7 – Programmation d'un microcontrôleur
+## 7 – Programmation d'un microcontrôleur {#section-7}
 
 Les fabricants de MCU proposent des solutions propriétaires pour la programmation des MCU, c'est-à-dire, des méthodes et outils pour développer, compiler, épurer, télécharger et tester les applications dans les MCU.
 
@@ -303,7 +295,7 @@ Ces solutions sont habituellement composées des éléments suivants:
 * Environnements intégrés de développement (IDE)
 * Langages de programmation, librairies et outils
 
-### 7.1 – Plateformes de prototypage
+### 7.1 – Plateformes de prototypage {#section-7-1}
 
 Une plateforme de prototypage est une plaquette électronique qui reçoit un MCU donné et qui permet d'expérimenter avec ce dernier. Par exemple, voici une des plateformes de prototypage de la cie Microchip pour leurs MCU 8 bits:
 
@@ -315,7 +307,7 @@ Une plateforme de prototypage est une plaquette électronique qui reçoit un MCU
 
 ---
 
-### 7.2 – Programmateurs et débogueur en circuit de MCU
+### 7.2 – Programmateurs et débogueur en circuit de MCU {#section-7-2}
 
 Un programmateur de MCU est habituellement un module électronique qui relie la plateforme de prototypage du MCU, via le connecteur **ICSP**, à un ordinateur personnel par l'entremise d'un port USB. Il sera piloté soit à partir de l'IDE, d'une application distincte fenêtrée ou à partir de la ligne de commande du système d'exploitation hôte.
 
@@ -341,7 +333,7 @@ Voici une liste de programmateurs/débogueurs populaires:
 
 ---
 
-### 7.3 – Les environnements de développement (IDE/IPE) propriétaires
+### 7.3 – Les environnements de développement (IDE/IPE) propriétaires {#section-7-3}
 
 Plusieurs concepteurs de MCU proposent des compilateurs, environnements de développement, librairies de code, des outils matériels et logiciels pour le développement de systèmes (embarqués) à partir de leurs MCU.
 
@@ -368,7 +360,7 @@ Voici un aperçu de quelques IDEs disponibles:
 
 *Tableau 07*
 
-### 7.4 – Langages utilisés pour la programmation des MCUs
+### 7.4 – Langages utilisés pour la programmation des MCUs {#section-7-4}
 
 Les langages les plus utilisés pour le développement d'applications pour les MCU sont:
 
@@ -383,7 +375,7 @@ Dans le cadre de ce cours, nous utiliserons le langage C(++).
 
 ---
 
-## 8 – Programme d'amorçage (BootLoader)
+## 8 – Programme d'amorçage (BootLoader) {#section-8}
 
 Une façon d'expliquer le rôle du 'bootloader' d'un MCU est de poser la question suivante: pourquoi ne puis-je pas programmer mon MCU directement à partir de mon PC?
 
@@ -413,7 +405,7 @@ Il y a un léger désavantage: lors du démarrage, le code du bootloader attend 
 
 ---
 
-## 9 – Le projet Arduino.cc
+## 9 – Le projet Arduino.cc {#section-9}
 
 Qu'est-ce qu'Arduino?
 
@@ -438,6 +430,6 @@ Le langage de programmation utilisé est le C++
 ## Crédits
 
 *Document rédigé par Alain Boudreault © 2021-2026*  
-*Version 2025.12.11.1*  
+*Version 2025.12.11.1 - Révision 2026.11.07.1*  
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

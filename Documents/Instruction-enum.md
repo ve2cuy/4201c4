@@ -6,7 +6,17 @@
 
 ---
 
-## 1.0 – L'instruction 'enum'
+## Contenu
+
+- [**1 – L'instruction 'enum'**](#section-1)
+- [**2 – Exemple d'utilisation d'une variable de type enum**](#section-2)
+- [**3 – Affecter une valeur aux membres d'un 'enum'.**](#section-3)
+- [**4 – Un autre exemple : une liste de fruits???**](#section-4)
+- [**5 – Gestion d'un menu avec enum – sous Wokwi**](#section-5)
+
+---
+
+## 1 – L'instruction 'enum' {#section-1}
 
 Énumération ou **enum** est un type de données défini par l'utilisateur en C.
 
@@ -57,7 +67,7 @@ void loop(){}
 
 ---
 
-## 1.1 – Exemple d'utilisation d'une variable de type *enum*
+## 2 – Exemple d'utilisation d'une variable de type *enum* {#section-2}
 
 ```c
 
@@ -88,7 +98,7 @@ void loop(){}
 
 ---
 
-## 1.2 – Affecter une valeur aux membres d'un 'enum'.
+## 3 – Affecter une valeur aux membres d'un 'enum'. {#section-3}
 
 ```c
 #include "Streaming.h"
@@ -122,7 +132,7 @@ void loop(){}
 
 ---
 
-## 1.3 – Un autre exemple : une liste de fruits???
+## 4 – Un autre exemple : une liste de fruits??? {#section-4}
 
 ```c
 // Exemple d'utilisation de l'instruction 'enum'
@@ -159,7 +169,7 @@ void loop() {
 
 ---
 
-## 1.4 – Gestion d'un menu avec enum – sous Wokwi
+## 5 – Gestion d'un menu avec enum – sous Wokwi {#section-5}
 
 <img src="../images/Capture-décran-2022-10-23-à-14.31.35.png" alt="" width="500" />
 
@@ -284,3 +294,12 @@ enum  optionMenu {
 ```
 
 Le projet Wokwi est disponible [ici](https://wokwi.com/projects/346330484426408531)
+
+---
+
+## Crédits
+
+*Document rédigé par Alain Boudreault © 2021-2026*  
+*Révision 2026.11.07.1*  
+
+*Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

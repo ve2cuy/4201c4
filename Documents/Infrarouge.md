@@ -14,14 +14,18 @@
 
 ## Contenu
 
-1. [**La lumière infrarouge et les télécommandes**](#section-1)
-2. [**Le module Grove – Infrared Receiver**](#section-2)
-3. [**Installation de la librairie Seeed Arduino IR**](#section-3)
-4. [**Lire les codes d'une télécommande**](#section-4)
-5. [**Contrôler une DEL avec une télécommande**](#section-5)
-6. [**Le module Grove – Infrared Emitter**](#section-6)
-7. [**Transmettre un code infrarouge**](#section-7)
-8. [**Laboratoires**](#section-8)
+- [**1 – La lumière infrarouge et les télécommandes**](#section-1)
+- [**2 – Le module Grove – Infrared Receiver**](#section-2)
+- [**3 – Installation de la librairie Seeed Arduino IR**](#section-3)
+- [**4 – Lire les codes d'une télécommande**](#section-4)
+- [**5 – Contrôler une DEL avec une télécommande**](#section-5)
+- [**6 – Le module Grove – Infrared Emitter**](#section-6)
+- [**7 – Transmettre un code infrarouge**](#section-7)
+- [**8 – Laboratoires**](#section-8)
+  - [8.1 – Laboratoire (durée 20 minutes)](#section-8-1)
+  - [8.2 – Laboratoire (durée 30 minutes)](#section-8-2)
+  - [8.3 – Laboratoire en équipe (durée 30 minutes)](#section-8-3)
+- [**Défi informatique**](#section-defi-informatique)
 
 ---
 
@@ -325,7 +329,7 @@ void loop() {
 
 ## 8 – Laboratoires {#section-8}
 
-### 8.1 – Laboratoire (durée 20 minutes)
+### 8.1 – Laboratoire (durée 20 minutes) {#section-8-1}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -337,7 +341,7 @@ Inscrire ces codes dans un fichier d'entête `include/telecommande.h`, sous form
 
 ---
 
-### 8.2 – Laboratoire (durée 30 minutes)
+### 8.2 – Laboratoire (durée 30 minutes) {#section-8-2}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -353,7 +357,7 @@ Inscrire ces codes dans un fichier d'entête `include/telecommande.h`, sous form
 
 ---
 
-### 8.3 – Laboratoire en équipe (durée 30 minutes)
+### 8.3 – Laboratoire en équipe (durée 30 minutes) {#section-8-3}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -368,7 +372,7 @@ Mesurer la portée maximale de la communication et l'angle à partir duquel le r
 
 ---
 
-## Défi informatique
+## Défi informatique {#section-defi-informatique}
 
 Utiliser une télécommande pour naviguer dans le menu du projet de session (TP01), à la place des boutons: flèches pour changer d'option, **OK** pour la choisir.
 

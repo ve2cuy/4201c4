@@ -2,7 +2,21 @@
 
 14 octobre 2021
 
-## 1 – Le module [Buzzer](https://wiki.seeedstudio.com/Grove-Buzzer/), pour faire du bruit 😉
+## Contenu
+
+- [**1 – Le module Buzzer, pour faire du bruit 😉**](#section-1)
+  - [1.1 – Description](#section-1-1)
+  - [1.2 – Exemple d'utilisation](#section-1-2)
+- [**2 – Le module RGB LED Stick – WS2813**](#section-2)
+  - [2.1 – Description](#section-2-1)
+  - [2.2 – Librairie](#section-2-2)
+  - [2.3 – Utilisation](#section-2-3)
+  - [2.4 – Laboratoire](#section-2-4)
+  - [2.5 – Laboratoire – Varier les pixels en fonction de la température](#section-2-5)
+
+---
+
+## 1 – Le module [Buzzer](https://wiki.seeedstudio.com/Grove-Buzzer/), pour faire du bruit 😉 {#section-1}
 
 <img src="../images/Grove-Buzzer.jpg" alt="" width="500" />
 
@@ -10,7 +24,7 @@
 
 ---
 
-## 1.1 – Description
+## 1.1 – Description {#section-1-1}
 
 Le module 'Buzzer' sert à produire un son de 2300 Hz à 85 dB d'intensité.
 
@@ -18,7 +32,7 @@ Il n'y a pas de librairie à installer.
 
 Il suffit d'appliquer un signal digital positif (ON) sur la broche de raccordement du Buzzer.
 
-## 1.2 – Exemple d'utilisation
+## 1.2 – Exemple d'utilisation {#section-1-2}
 
 ```
 #define BROCHE_DU_BUZZER 5
@@ -39,7 +53,7 @@ void loop()
 
 ---
 
-## 2 – Le module RGB LED Stick – [WS2813](https://wiki.seeedstudio.com/Grove-RGB_LED_Stick-10-WS2813_Mini/)
+## 2 – Le module RGB LED Stick – [WS2813](https://wiki.seeedstudio.com/Grove-RGB_LED_Stick-10-WS2813_Mini/) {#section-2}
 
 <img src="../images/led-strip.jpg" alt="" width="500" />
 
@@ -47,7 +61,7 @@ void loop()
 
 ---
 
-### 2.1 – Description
+### 2.1 – Description {#section-2-1}
 
 Le module RGB LED Stick propose 10 DEL RGB adressable individuellement.
 
@@ -55,7 +69,7 @@ Il est possible de contrôler la couleur de chacun des DEL en mode RGB (255,255,
 
 Il se connecte dans une GPIO en mode digitale (D2..D8).
 
-### 2.2 – Librairie
+### 2.2 – Librairie {#section-2-2}
 
 La librairie à installer se nomme « Adafruit NeoPixel ».
 
@@ -71,7 +85,7 @@ lib_deps = adafruit/Adafruit NeoPixel @ ^1.12.4
 
 ---
 
-### 2.3 – Utilisation
+### 2.3 – Utilisation {#section-2-3}
 
 ### 2.3.1 – Allumer un DEL
 
@@ -146,7 +160,7 @@ Utiliser le même délai qu'à l'étape 2.3.2.
 
 ---
 
-### 2.4 – Laboratoire
+### 2.4 – Laboratoire {#section-2-4}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -166,7 +180,7 @@ Lorsque tous les pixels seront allumés, attendre 1 seconde puis recommencer.
 
 ---
 
-### 2.5 – Laboratoire – Varier les pixels en fonction de la température
+### 2.5 – Laboratoire – Varier les pixels en fonction de la température {#section-2-5}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -188,6 +202,6 @@ Par exemple, pour 24C + 4\*0,75, les 6 premiers pixels sont bleus et les 4 derni
 ## Crédits
 
 **Document rédigé par Alain Boudreault © 2021-2026**
-**Version 2026.03.04.01**
+**Version 2026.03.04.01 - Révision 2026.11.07.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

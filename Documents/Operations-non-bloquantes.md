@@ -2,7 +2,19 @@
 
 19 février 2025
 
-## 1 – Utilisation de la fonction millis() pour clignoter une DEL
+## Contenu
+
+- [**1 – Utilisation de la fonction millis() pour clignoter une DEL**](#section-1)
+- [**2 – Interruptions**](#section-2)
+  - [2.1 – Quelques caractéristiques importantes des interruptions](#section-2-1)
+- [**3 – Types d'interruptions**](#section-3)
+- [**4 – Exemple – Traitement d'une interruption matérielle.**](#section-4)
+- [**5 – Interruption 'Timer' pour clignoter une DEL**](#section-5)
+  - [5.1 – Exemple de trace programme avec un Timer](#section-5-1)
+
+---
+
+## 1 – Utilisation de la fonction millis() pour clignoter une DEL {#section-1}
 
 ```
 #include <Arduino.h>
@@ -43,7 +55,7 @@ Dans certain cas, il pourrait être plus avantageux d'utiliser une interruption 
 
 ---
 
-## 2 – **Interruption**s
+## 2 – **Interruption**s {#section-2}
 
 Les interruptions permettent de traiter des événements asynchrones. Elles permettent de sortir temporairement du programme principale, pour y exécuter une fonction, puis y retourner.
 
@@ -51,7 +63,7 @@ Les interruptions sont utiles avec les processeurs et les microcontrôleurs car 
 
 Typiquement, des variables globales sont utilisées pour transmettre des données entre une ISR et le programme principal. Pour s'assurer que les variables partagées entre une ISR et le programme principal sont mises à jour correctement, il est recommandé de les déclarer comme `volatile`.
 
-### 2.1 – Quelques caractéristiques importantes des interruptions :
+### 2.1 – Quelques caractéristiques importantes des interruptions : {#section-2-1}
 
 * Les interruptions peuvent provenir de diverses sources. Dans ce cas, il s'agit d'une interruption matérielle déclenchée par un changement d'état sur l'un des pins numériques.
 * L'**Arduino UNO** possèdent deux interruptions matérielles (appelées « interrupt0 » et « interrupt1 ») câblées respectivement sur les pins numériques **2 et 3**.
@@ -62,7 +74,7 @@ Typiquement, des variables globales sont utilisées pour transmettre des donnée
 
 ---
 
-## 3 – **Types d'interruptions**
+## 3 – **Types d'interruptions** {#section-3}
 
 Il existe deux types d'interruptions :
 
@@ -71,7 +83,7 @@ Il existe deux types d'interruptions :
 
 ---
 
-## 4 – Exemple – Traitement d'une interruption matérielle.
+## 4 – Exemple – Traitement d'une interruption matérielle. {#section-4}
 
 ```
 #include <Arduino.h>
@@ -102,7 +114,7 @@ void blink() {
 
 ---
 
-## 5 – Interruption 'Timer' pour clignoter une DEL
+## 5 – Interruption 'Timer' pour clignoter une DEL {#section-5}
 
 ```
 /*
@@ -186,7 +198,7 @@ Arduino.cc propose aussi une [introduction aux 'Timers'](https://docs.arduino.cc
 
 ---
 
-## Exemple de trace programme avec un Timer.
+### 5.1 – Exemple de trace programme avec un Timer {#section-5-1}
 
 ```
 #include <Arduino.h>
@@ -241,6 +253,6 @@ ISR(TIMER1_COMPA_vect) {
 ## Crédits
 
 **Document rédigé par Alain Boudreault © 2021-2026**
-**Version 2025.02.26.01 - Révision 2025.12.12.1**
+**Version 2025.02.26.01 - Révision 2026.11.07.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

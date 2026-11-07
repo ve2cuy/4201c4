@@ -8,7 +8,19 @@
 
 En C, une **struct** (ou structure) est un type de données qui permet de regrouper plusieurs variables sous un même nom, même si elles sont de types différents. C'est une sorte de conteneur qui permet d'organiser et de structurer des données de manière logique.
 
-### Qu'est-ce qu'une struct ?
+## Contenu
+
+- [**1 – Qu'est-ce qu'une struct ?**](#section-1)
+- [**2 – Exemple – Définition d'une struct**](#section-2)
+- [**3 – Déclaration et utilisation d'une struct**](#section-3)
+- [**4 – Utilité des structures (struct) en C**](#section-4)
+- [**5 – Structure pour un ennemi avec utilisation de enum pour le type**](#section-5)
+- [**6 – Laboratoire**](#section-6)
+- [**7 – Utilisation d'un tableau de structures**](#section-7)
+
+---
+
+## 1 – Qu'est-ce qu'une struct ? {#section-1}
 
 Imaginons qu'il soit nécessaire de créer un personnage dans un jeu vidéo. Ce personnage pourrait avoir plusieurs attributs : un **nom**, une **position** dans le jeu (x et y), une **santé**, et une **arme**.
 
@@ -16,7 +28,7 @@ Chaque attribut peut être d'un type différent : le nom sera une chaîne de car
 
 En utilisant une `struct`, il est possible de regrouper toutes ces informations dans un seul bloc de données.
 
-### EXEMPLE – Définition d'une struct
+## 2 – Exemple – Définition d'une struct {#section-2}
 
 La syntaxe pour définir une `struct` en C est la suivante :
 
@@ -35,7 +47,7 @@ Chaque attribut peut être d'un type différent.
 
 ---
 
-### Déclaration et utilisation d'une struct
+## 3 – Déclaration et utilisation d'une struct {#section-3}
 
 Pour déclarer une variable de type `Personnage` et lui attribuer des valeurs, voici un exemple de code
 
@@ -101,7 +113,7 @@ Dans cet exemple :
 
 ---
 
-### Utilité des structures (struct) en C.
+## 4 – Utilité des structures (struct) en C {#section-4}
 
 PAR EXEMPLE, dans un contexte des jeux vidéo, les `struct` sont utiles pour organiser les informations liées aux différents objets et entités du jeu.
 
@@ -113,7 +125,7 @@ Par exemple :
 
 ---
 
-## Structure pour un ennemi avec utilisation de enum pour le type
+## 5 – Structure pour un ennemi avec utilisation de enum pour le type {#section-5}
 
 ```
 // Définition de l'énumération pour les types d'ennemis
@@ -190,7 +202,7 @@ Points de vie : 30
 
 ---
 
-## Laboratoire 
+## 6 – Laboratoire {#section-6}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -200,7 +212,7 @@ Modifier l'exemple précédent pour remplacer les propriétés `int x, y;` de la
 
 ---
 
-## Utilisation d'un tableau de structures
+## 7 – Utilisation d'un tableau de structures {#section-7}
 
 Voici un exemple qui utilise un tableau de **personnages** ainsi qu'une fonction pour ajouter de nouveaux personnages.
 
@@ -350,6 +362,6 @@ Arme            : Arco
 ## Crédits
 
 **Document rédigé par Alain Boudreault © 2021-2026**
-**Version 2025.02.26.01 - Révision 2026.02.15.1**
+**Version 2025.02.26.01 - Révision 2026.11.07.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

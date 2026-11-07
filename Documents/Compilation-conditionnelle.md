@@ -7,7 +7,19 @@
 
 Les directives `#ifdef`, `#ifndef`, `#else`, et `#endif` sont utilisées pour la **compilation conditionnelle** dans le langage C. Elles permettent d'inclure ou d'exclure certaines parties du code en fonction de conditions spécifiques. Cela peut être utile pour activer ou désactiver des sections de code selon des plateformes, des configurations de compilation, ou des environnements différents.
 
-### 1. `#ifdef` (If Defined)
+## Contenu
+
+- [**1 – `#ifdef` (If Defined)**](#section-1)
+- [**2 – `#ifndef` (If Not Defined)**](#section-2)
+- [**3 – `#else`**](#section-3)
+- [**4 – Combinaison de `#ifdef`, `#else`, et `#endif`**](#section-4)
+- [**5 – Utilisation conditionnelle de l'affichage dans la console**](#section-5)
+  - [5.1 – Exemple avec un nombre variable de paramètres](#section-5-1)
+- [**6 – MACRO de garde pour les fichiers.h**](#section-6)
+
+---
+
+## 1 – `#ifdef` (If Defined) {#section-1}
 
 La directive `#ifdef` permet de vérifier si une macro a été définie. Si la macro a été définie avant l'utilisation de `#ifdef`, le bloc de code entre `#ifdef` et `#endif` sera compilé. Si la macro n'est pas définie, le bloc de code est ignoré.
 
@@ -29,7 +41,7 @@ Dans cet exemple, puisque la macro `DEBUG` a été définie avant `#ifdef`, le c
 
 Si la ligne `#define DEBUG` est supprimée, alors la ligne `printf` sera ignorée.
 
-### 2. `#ifndef` (If Not Defined)
+## 2 – `#ifndef` (If Not Defined) {#section-2}
 
 La directive `#ifndef` est l'inverse de `#ifdef`. Elle permet de vérifier si une macro **n'a pas** été définie. Si la macro n'est pas définie avant `#ifndef`, le bloc de code sera compilé, sinon il sera ignoré.
 
@@ -43,7 +55,7 @@ La directive `#ifndef` est l'inverse de `#ifdef`. Elle permet de vérifier si un
 
 Ici, si la macro `DEBUG` n'était pas définie avant ce bloc, elle serait définie à `1`. Si elle l'était déjà, le code à l'intérieur de `#ifndef` sera ignoré.
 
-### 3. `#else`
+## 3 – `#else` {#section-3}
 
 La directive `#else` permet de spécifier un bloc de code à exécuter si la condition de la directive `#ifdef` ou `#ifndef` est fausse (si la macro n'est pas définie dans le cas de `#ifdef` ou si elle est définie dans le cas de `#ifndef`).
 
@@ -62,7 +74,7 @@ Dans cet exemple :
 * Si `DEBUG` est défini, le programme affiche « Mode débogage activé ».
 * Si `DEBUG` n'est pas défini, le programme affiche « Mode normal activé ».
 
-### 4. Combinaison de `#ifdef`, `#else`, et `#endif`
+## 4 – Combinaison de `#ifdef`, `#else`, et `#endif` {#section-4}
 
 Ces directives sont souvent utilisées ensemble pour gérer plusieurs configurations ou comportements dans le code en fonction des macros définies.
 
@@ -89,7 +101,7 @@ Dans cet exemple :
 
 ---
 
-## 5- Utilisation conditionnelle de l'affichage dans la console
+## 5 – Utilisation conditionnelle de l'affichage dans la console {#section-5}
 
 ```c
 #ifdef DEBUG
@@ -102,7 +114,7 @@ Dans cet exemple :
 AFFICHER("Un message ...\n");
 ```
 
-## 5.1 – Exemple avec un nombre variable de paramètres:
+## 5.1 – Exemple avec un nombre variable de paramètres: {#section-5-1}
 
 ```c
 #define AFFICHER(...)  Serial.print(__VA_ARGS__)
@@ -114,7 +126,7 @@ AFFICHER("Test");
 
 ---
 
-## 6 – MACRO de garde pour les fichiers.h
+## 6 – MACRO de garde pour les fichiers.h {#section-6}
 
 ```c
 #ifndef fichier_h
@@ -155,6 +167,6 @@ Ces directives permettent une gestion très flexible du code, particulièrement 
 ## Crédits
 
 **Document rédigé par Alain Boudreault © 2021-2026**
-**Version 2025.03.15.01 - Révision 2025.12.12.1**
+**Version 2025.03.15.01 - Révision 2026.11.07.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

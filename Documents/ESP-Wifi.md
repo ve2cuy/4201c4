@@ -2,7 +2,22 @@
 
 20 février 2025
 
-## 1 – Grove – UART Wifi V2
+## Contenu
+
+- [**1 – Grove – UART Wifi V2**](#section-1)
+- [**2 – ESP8285**](#section-2)
+- [**3 – Connexion – Port série (UART)**](#section-3)
+  - [3.1 – Solution: Arduino Mega](#section-3-1)
+- [**4 – Expérimentation**](#section-4)
+  - [4.1 – Les commandes `<AT>`](#section-4-1)
+  - [4.2 – LIB WifiEsp – Afficher les réseaux disponibles](#section-4-2)
+- [**5 – Utilisation d'une API Web**](#section-5)
+  - [5.1 – Voici un exemple d'une requête vers l'API](#section-5-1)
+- [**6 – Laboratoire (30 minutes)**](#section-6)
+
+---
+
+## 1 – Grove – UART Wifi V2 {#section-1}
 
 <img src="../images/grove-wifi-1024x768.jpg" alt="" width="500" />
 
@@ -12,7 +27,7 @@ Chaque module ESP8285 est déjà programmé avec un firmware utilisant des comma
 
 ---
 
-## 2 – ESP8285
+## 2 – ESP8285 {#section-2}
 
 L'ESP8285 est un système sur puce (SoC) basé sur un microcontrôleur à faible consommation, développé par Espressif Systems. Il est principalement utilisé dans des applications IoT (Internet des Objets) grâce à ses capacités Wi-Fi intégrées. Voici ses principales caractéristiques :
 
@@ -28,7 +43,7 @@ En résumé, l'ESP8285 est un SoC puissant et économique, parfait pour des proj
 
 ---
 
-## 3 – Connexion – Port série (UART)
+## 3 – Connexion – Port série (UART) {#section-3}
 
 Le module Grove Wifi doit-être connecté à un des ports séries du microcontrôleur à une vitesse de 115200 bauds.
 
@@ -40,7 +55,7 @@ Il est possible d'utiliser la librairie SoftwareSerial pour simuler un port sér
 
 ---
 
-## 3.1 – Solution: Arduino Mega
+## 3.1 – Solution: Arduino Mega {#section-3-1}
 
 ### Arduino Mega – 4 ports UART
 
@@ -48,7 +63,7 @@ Il est possible d'utiliser la librairie SoftwareSerial pour simuler un port sér
 
 ---
 
-## 4 – Expérimentation
+## 4 – Expérimentation {#section-4}
 
 Nous utiliserons la librairie 'WiFiEsp de bportaluri' pour piloter le module Grove Wifi V2
 
@@ -63,7 +78,7 @@ monitor_echo = yes
 
 ---
 
-## 4.1 – Les commandes <AT>
+## 4.1 – Les commandes `<AT>` {#section-4-1}
 
 **Contrôle du module WifiESP directement en envoyant des commandes <AT>.**
 
@@ -133,7 +148,7 @@ void loop()
 
 ---
 
-## 4.2 – LIB WifiEsp – Afficher les réseaux disponibles
+## 4.2 – LIB WifiEsp – Afficher les réseaux disponibles {#section-4-2}
 
 **Contrôle du module WifiESP en utilisant la librairie 'WiFiEsp'.**
 
@@ -271,7 +286,7 @@ void afficherTydeDeCryptage(int thisType) {
 
 ---
 
-## 5 – Utilisation d'une API Web
+## 5 – Utilisation d'une API Web {#section-5}
 
 **API = interface de programmation d'application**
 
@@ -293,7 +308,7 @@ Le résultat est disponible [ici](http://esh25.ve2cuy.com/jesuisv2.php)
 
 ---
 
-## 6.1 – Voici un exemple d'une requête vers l'API
+## 5.1 – Voici un exemple d'une requête vers l'API {#section-5-1}
 
 Résumé des étapes pour l'envoi d'une requête Web de type GET à partir de la classe WiFiEspClient:
 
@@ -489,7 +504,7 @@ Date: Mon, 31 [WiFiEsp] TIMEOUT: 224
 
 ---
 
-## LABORATOIRE (30 minutes)
+## 6 – Laboratoire (30 minutes) {#section-6}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -524,6 +539,6 @@ Les champs jesuis, systeme et IP doivent être fournis.
 ## Crédits
 
 **Document rédigé par Alain Boudreault © 2021-2026**
-**Version 2025.03.15.01 - Révision 2026.04.08.1**
+**Version 2025.03.15.01 - Révision 2026.11.07.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

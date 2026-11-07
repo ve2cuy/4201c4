@@ -1,16 +1,43 @@
 # 32 - Copier/Coller et projets Wokwi
 
-### A – Les copier/coller
+---
 
-### B – Les projets sur Wokwi
+## Contenu
 
-### C – Erreurs et solutions
+- [**A – Les copier/coller**](#section-a)
+  - [A.1 – Arduino – Stub de départ](#section-a-1)
+  - [A.2 – Configuration d'un 'snippet' C++ dans VS-Code pour le 'stub' Arduino de départ: (fichier cpp.json) F1-> snippet …](#section-a-2)
+  - [A.3 – Lier une librairie Installée, à un projet dans PatformIO](#section-a-3)
+  - [A.4 – Boite](#section-a-4)
+  - [A.5 – Séquence ANSI](#section-a-5)
+  - [A.6 – Fonction pour afficher une boite](#section-a-6)
+  - [1 – Afficher dans la console série](#section-1)
+  - [2 – Afficher un nombre en binaire et hexadécimal](#section-2)
+  - [3 – Augmenter la valeur d'une variable de 5](#section-3)
+  - [4 – Diminuer la valeur d'une variable de 47](#section-4)
+  - [5 – Renseigner une broche digitale en mode de sortie (OUTPUT) et y appliquer un signal 'ALLUMER' (HIGH)](#section-5)
+  - [6 – Renseigner une broche digitale en mode d'entrée/lecture (INPUT) et lire son état](#section-6)
+  - [7 – Attendre que le pushButton soit relâché avant de continuer](#section-7)
+  - [8 – Utilisation de la mémoire: char[] vs String vs F()](#section-8)
+  - [9 – Conversion d'un 'float' en chaine de caractères](#section-9)
+  - [10 – Utilisation d'une MACRO pour l'affichage au terminal](#section-10)
+  - [11 – Exemple de contenu du fichier platformio.ini](#section-11)
+  - [12 – lcd\_rgb – Variation de RED](#section-12)
+  - [13 – lcd\_rgb : Défilement de caractères](#section-13)
+  - [14 – Des exemples de la directive #pragma](#section-14)
+  - [15 – Utilisation de sizeof()](#section-15)
+  - [16 – millis() -> Jours-heures:minutes:sec.centieme](#section-16)
+  - [17 – Utilisation de pointeurs](#section-17)
+  - [18 – Transmetteur via UART ou broches digitales](#section-18)
+- [**B – Les projets sur Wokwi**](#section-b)
+- [**C – Erreurs et solutions**](#section-c)
+  - [C.1 – Erreur avec les librairies sous PlatformIO](#section-c-1)
 
 ---
 
-## A- Les copier/coller
+## A – Les copier/coller {#section-a}
 
-## A.1 – Arduino – Stub de départ
+## A.1 – Arduino – Stub de départ {#section-a-1}
 
 ```c
 #include <Arduino.h>
@@ -38,7 +65,7 @@ void main() {
 
 ---
 
-## A.2 – Configuration d'un 'snippet' C++ dans VS-Code pour le 'stub' Arduino de départ: (fichier cpp.json) F1-> snippet …
+## A.2 – Configuration d'un 'snippet' C++ dans VS-Code pour le 'stub' Arduino de départ: (fichier cpp.json) F1-> snippet … {#section-a-2}
 
 ```json
 {
@@ -87,7 +114,7 @@ Référence: [Snippets in Visual Studio Code](https://code.visualstudio.com/docs
 
 ---
 
-## A.3 – Lier une librairie Installée, à un projet dans PatformIO:
+## A.3 – Lier une librairie Installée, à un projet dans PatformIO: {#section-a-3}
 
 * Naviguer vers PlatformIO->Libraries->Installed
 * Sélectionner la librairie désirée puis choisir l'onglet: Installation
@@ -96,7 +123,7 @@ Référence: [Snippets in Visual Studio Code](https://code.visualstudio.com/docs
 
 ---
 
-## A.4 – Boite
+## A.4 – Boite {#section-a-4}
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
@@ -110,7 +137,7 @@ Référence: [Snippets in Visual Studio Code](https://code.visualstudio.com/docs
 └──────────────────────────────────────────────────────────────────┘
 ```
 
-## A.5 – Séquence ANSI
+## A.5 – Séquence ANSI {#section-a-5}
 
 | Couleur | Avant plan | Arrière plan |
 | --- | --- | --- |
@@ -215,7 +242,7 @@ Ce qui va produire ceci:
 
 ---
 
-## A.6 – Fonction pour afficher une boite
+## A.6 – Fonction pour afficher une boite {#section-a-6}
 
 ```c
 void setup(){
@@ -296,7 +323,7 @@ void afficherBoite(int largeur,
 
 ---
 
-## 1 – Afficher dans la console série
+## 1 – Afficher dans la console série {#section-1}
 
 ```c
 void setup() {
@@ -310,7 +337,7 @@ void setup() {
 
 ---
 
-## 2 – Afficher un nombre en binaire et hexadécimal:
+## 2 – Afficher un nombre en binaire et hexadécimal: {#section-2}
 
 ```c
 void setup() {
@@ -325,7 +352,7 @@ void setup() {
 
 ---
 
-## 3 – Augmenter la valeur d'une variable de 5
+## 3 – Augmenter la valeur d'une variable de 5 {#section-3}
 
 ```c
 uneVariable+=5;
@@ -333,7 +360,7 @@ uneVariable+=5;
 
 ---
 
-## 4 – Diminuer la valeur d'une variable de 47
+## 4 – Diminuer la valeur d'une variable de 47 {#section-4}
 
 ```c
 uneVariable-=47;
@@ -341,7 +368,7 @@ uneVariable-=47;
 
 ---
 
-## 5 – Renseigner une broche digitale en mode de sortie (OUTPUT) et y appliquer un signal 'ALLUMER' (HIGH)
+## 5 – Renseigner une broche digitale en mode de sortie (OUTPUT) et y appliquer un signal 'ALLUMER' (HIGH) {#section-5}
 
 ```c
 pinMode(noBroche, OUTPUT);
@@ -350,7 +377,7 @@ digitalWrite(noBroche, HIGH);  // Allume la DEL connectée à la broche noBroche
 
 ---
 
-## 6 – Renseigner une broche digitale en mode d'entrée/lecture (INPUT) et lire son état
+## 6 – Renseigner une broche digitale en mode d'entrée/lecture (INPUT) et lire son état {#section-6}
 
 ```c
 pinMode(pinPushButton, INPUT);
@@ -359,7 +386,7 @@ etatPushButton = digitalRead(pinPushButton, HIGH);  // Placer l'état du pushBut
 
 ---
 
-## 7 – Attendre que le pushButton soit relâché avant de continuer
+## 7 – Attendre que le pushButton soit relâché avant de continuer {#section-7}
 
 ```c
  if (digitalRead(BROCHE_BOUTON))        // Si bouton appuyé alors
@@ -410,7 +437,7 @@ void loop() {
 
 ---
 
-## 8 – Utilisation de la mémoire: char[] vs String vs F()
+## 8 – Utilisation de la mémoire: char[] vs String vs F() {#section-8}
 
 ```c
 /*
@@ -504,7 +531,7 @@ const char * obtenirJourSemaine(int jourSemaine){
 
 ---
 
-## 9 – Conversion d'un 'float' en chaine de caractères
+## 9 – Conversion d'un 'float' en chaine de caractères {#section-9}
 
 ```c
 float fPI = PI;  // sous Arduino, float == double.
@@ -525,7 +552,7 @@ void setup( void )
 
 ---
 
-## 10.1 – Utilisation d'une MACRO pour l'affichage au terminal
+## 10 – Utilisation d'une MACRO pour l'affichage au terminal {#section-10}
 
 ```c
 #ifdef DEBUG
@@ -550,7 +577,7 @@ AFFICHER("Test");
 
 ---
 
-## 11 – Exemple de contenu du fichier platformio.ini
+## 11 – Exemple de contenu du fichier platformio.ini {#section-11}
 
 ```ini
 ; PlatformIO Project Configuration File
@@ -584,7 +611,7 @@ build_flags   =  -felide-constructors -std=c++0x
 
 ---
 
-## 12 – lcd\_rgb – Variation de **RED**
+## 12 – lcd\_rgb – Variation de **RED** {#section-12}
 
 ```c
 /*
@@ -649,7 +676,7 @@ void loop() {
 
 ---
 
-## 13 – lcd\_rgb : Défilement de caractères:
+## 13 – lcd\_rgb : Défilement de caractères: {#section-13}
 
 ```c
 #include <Arduino.h>
@@ -696,7 +723,7 @@ void uneFonctionAmusante(){
 
 ---
 
-## 14 – Des exemples de la directive #pragma
+## 14 – Des exemples de la directive #pragma {#section-14}
 
 ```c
 #pragma once // Directive de garde
@@ -733,7 +760,7 @@ C99 a introduit l'opérateur `_Pragma`. Cette fonctionnalité résout un problè
 
 ---
 
-## 15 – Utilisation de sizeof()
+## 15 – Utilisation de sizeof() {#section-15}
 
 ```c
     char buffer[8];
@@ -758,7 +785,7 @@ Size of buffer[8]  : 8 octet(s)
 
 ---
 
-## 16 – millis() -> Jours-heures:minutes:sec.centieme
+## 16 – millis() -> Jours-heures:minutes:sec.centieme {#section-16}
 
 ```c
 #include <Arduino.h>
@@ -799,7 +826,7 @@ void loop() {
 } // loop()
 ```
 
-## 17 – Utilisation de pointeurs
+## 17 – Utilisation de pointeurs {#section-17}
 
 ```c
 int a = 10, b = 20;
@@ -856,7 +883,7 @@ Après l'échange: strA = Bonjour, strB = Salut
 
 ---
 
-## 20 – Transmetteur via UART ou broches digitales
+## 18 – Transmetteur via UART ou broches digitales {#section-18}
 
 ```c
 /*
@@ -911,7 +938,7 @@ void loop() {
 
 ---
 
-## B – Les projets sur Wokwi
+## B – Les projets sur Wokwi {#section-b}
 
 1 – [Serial.println()](https://wokwi.com/projects/340719193452184147)
 
@@ -949,21 +976,21 @@ void loop() {
 
 ---
 
-[7 – Solution DOC11.3.5 – Afficher valeur POT sur LCD](https://wokwi.com/projects/343893684389937748)
+[7 – Solution du laboratoire 3.3 (LCD) – Afficher valeur POT sur LCD](https://wokwi.com/projects/343893684389937748)
 
 [![](../images/Capture-decran-le-2022-09-26-a-16.11.25.png)](https://wokwi.com/projects/343893684389937748)
 
 ---
 
-[8 – Solution DOC11.3.6 – LCD + Temps qui passe + compteur bouton](https://wokwi.com/projects/343892046296121940)
+[8 – Solution du laboratoire 3.4 (LCD) – LCD + Temps qui passe + compteur bouton](https://wokwi.com/projects/343892046296121940)
 
 [![](../images/Capture-decran-le-2022-09-26-a-16.19.12.png)](https://wokwi.com/projects/343892046296121940)
 
 ---
 
-## C – Erreurs et solutions
+## C – Erreurs et solutions {#section-c}
 
-### C.1 – Erreur avec les librairies sous PlatformIO
+### C.1 – Erreur avec les librairies sous PlatformIO {#section-c-1}
 
 ```
 Dans une de ces situations:
@@ -979,3 +1006,12 @@ Removing unused dependencies…
 **Solution**: Effacer le contenu du fichier .pio/libdeps/integrity.dat
 
 <img src="../images/erreur-libs.png" alt="" width="500" />
+
+---
+
+## Crédits
+
+*Document rédigé par Alain Boudreault © 2021-2026*  
+*Révision 2026.11.07.1*  
+
+*Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

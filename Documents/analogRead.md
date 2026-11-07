@@ -1,7 +1,27 @@
 # 5 - Arduino – AnalogRead
 
 
-## 1 – Lecture d'une valeur analogique, analogRead()
+## Contenu
+
+- [**1 – Lecture d'une valeur analogique, analogRead()**](#section-1)
+  - [1.1 – Exemple d'une lecture du potentiomètre](#section-1-1)
+  - [1.2 – Tester l'exemple](#section-1-2)
+  - [1.3 – Laboratoire – Clignoter une DEL en fonction du potentiomètre](#section-1-3)
+- [**2 – Laboratoire (durée 15 minutes)**](#section-2)
+- [**3 – 👉 Laboratoire (durée 30 minutes)**](#section-3)
+- [**4 – Pulse Width Modulation (PWM), la fonction analogWrite()**](#section-4)
+  - [4.1 – Varier l'intensité d'une DEL grâce à PWM – version 01](#section-4-1)
+  - [4.2 – La fonction map()](#section-4-2)
+  - [4.3 – Syntaxe de la fonction map()](#section-4-3)
+  - [4.5 – Laboratoire (durée 15 minutes)](#section-4-5)
+- [**5 – Varier l'intensité d'une DEL avec une boucle 'for'**](#section-5)
+  - [5.1 – Voici un exemple complet d'une boucle 'for'](#section-5-1)
+  - [5.2 – Varier l'intensité d'une DEL en utilisant une boucle 'for'](#section-5-2)
+  - [5.3 – Tester l'application](#section-5-3)
+
+---
+
+## 1 – Lecture d'une valeur analogique, analogRead() {#section-1}
 
 L'Arduino Uno permet la lecture d'une valeur analogique à partir des broches A0..A5.
 
@@ -15,7 +35,7 @@ Pour l'exemple suivant, nous aurons besoin de connecter le module Grove 'Potenti
 <img src="../images/rotary-angle-sensor.jpg" alt="Potentiomètre rotatif" width="500" />
 
 
-### 1.1 – Exemple d'une lecture du potentiomètre
+### 1.1 – Exemple d'une lecture du potentiomètre {#section-1-1}
 
 ```cpp
 /* 
@@ -63,13 +83,13 @@ void loop() {
 //****** FIN DU FICHIER
 ```
 
-### 1.2 – Tester l'exemple
+### 1.2 – Tester l'exemple {#section-1-2}
 
 **ATTENTION** à la position de l'interrupteur de tension sur le Grove-Hat. Assurez-vous qu'il est à la position 5 volts. L'ATmega328P utilise cette tension pour déterminer la valeur limite d'entrée d'une broche analogique. À la position 3.3 volts, la valeur maximum sera autour de 710.
 
 ---
 
-## 1.3 – Laboratoire – Clignoter une DEL en fonction du potentiomètre
+## 1.3 – Laboratoire – Clignoter une DEL en fonction du potentiomètre {#section-1-3}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -122,7 +142,7 @@ void loop() {
 
 ---
 
-## 2 – Laboratoire (durée 15 minutes)
+## 2 – Laboratoire (durée 15 minutes) {#section-2}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -134,7 +154,7 @@ Il faut définir les valeurs limites avec des constantes (const int), c'est-à-d
 
 ---
 
-## 3 – 👉 Laboratoire (durée 30 minutes)
+## 3 – 👉 Laboratoire (durée 30 minutes) {#section-3}
 
 Écrire un programme qui démarre le clignotement d'une **DEL** si le bouton poussoir est appuyé une fois et qui arrête le clignotement de la **DEL** à la prochaine utilisation du bouton poussoir.
 
@@ -144,7 +164,7 @@ La vitesse de clignotement est renseignée par la valeur du potentiomètre.
 
 👉 Il ne faut pas que la **DEL** reste allumée si elle ne clignote pas.
 
-**INDICE**: Voir [permutation bouton](Serial-println-et-digitalread.md#51--exemple-dune-permutation-bouton)
+**INDICE**: Voir [permutation bouton](Serial-println-et-digitalread.md#section-5-1)
 
 ---
 
@@ -152,7 +172,7 @@ Voir la section 4.2 – La fonction `map(value, fromLow, fromHigh, toLow, toHigh
 
 ---
 
-## 4 – Pulse Width Modulation (PWM), la fonction analogWrite()
+## 4 – Pulse Width Modulation (PWM), la fonction analogWrite() {#section-4}
 
 Il est possible de simuler un signal de sortie de type analogique pour par exemple varier l'intensité d'une DEL ou bien la vitesse d'un moteur.
 
@@ -170,7 +190,7 @@ La fonctionnalité PWM est obtenue grâce à la fonction **analogWrite(0..255)**
 
 ---
 
-### 4.1 – Varier l'intensité d'une DEL grâce à PWM – version 01
+### 4.1 – Varier l'intensité d'une DEL grâce à PWM – version 01 {#section-4-1}
 
 ```cpp
 #include <Arduino.h>
@@ -198,7 +218,7 @@ void loop() {
 } // loop()
 ```
 
-### 4.1 – Varier l'intensité d'une DEL grâce à PWM – version 02 (optimisée)
+### 4.1.2 – Varier l'intensité d'une DEL grâce à PWM – version 02 (optimisée)
 
 ```cpp
 int ledPin        = 3;         // LED sur pin 3
@@ -221,7 +241,7 @@ void loop() {
 
 ---
 
-### 4.2 – La fonction map()
+### 4.2 – La fonction map() {#section-4-2}
 
 Il peut être parfois utile de ramener une plage de valeurs, par exemple [0..1023] vers une autre plage de valeurs, par exemple [0..255].
 
@@ -229,7 +249,7 @@ Si nous voulions contrôler l'intensité d'une DEL, en utilisant PWM, par un pot
 
 La librairie de développement Arduino propose la fonction map() pour adresser cette situation.
 
-### 4.3 – Syntaxe de la fonction map()
+### 4.3 – Syntaxe de la fonction map() {#section-4-3}
 
 ```cpp
 map(value, fromLow, fromHigh, toLow, toHigh)
@@ -454,7 +474,7 @@ Référence: [sprintf()](http://www.cplusplus.com/reference/cstdio/sprintf/), [f
 **NOTE**: Pour des raisons de performance et d'optimisation de la mémoire, la fonction *sprintf()* dans Arduino ne supporte pas les nombres réels (float). Une solution est disponible [ici](https://www.e-tinkers.com/2020/01/do-you-know-arduino-sprintf-and-floating-point/).
 
 
-## 4.5 – Laboratoire (durée 15 minutes)
+## 4.5 – Laboratoire (durée 15 minutes) {#section-4-5}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -466,7 +486,7 @@ Référence: [sprintf()](http://www.cplusplus.com/reference/cstdio/sprintf/), [f
 
 ---
 
-## 5 – Varier l'intensité d'une DEL avec une boucle 'for'
+## 5 – Varier l'intensité d'une DEL avec une boucle 'for' {#section-5}
 
 **Rappel** – Instruction 'for'
 
@@ -479,7 +499,7 @@ for (int variable; condition tant que vrai; modification de la variable) inst; o
 for (int i=0; i < 10; i++) {}
 ```
 
-### 5.1 – Voici un exemple complet d'une boucle 'for'
+### 5.1 – Voici un exemple complet d'une boucle 'for' {#section-5-1}
 
 ```cpp
 void setup() {
@@ -507,7 +527,7 @@ void loop() {
 
 ---
 
-### 5.2 – Varier l'intensité d'une DEL en utilisant une boucle 'for'
+### 5.2 – Varier l'intensité d'une DEL en utilisant une boucle 'for' {#section-5-2}
 
 ```cpp
 // Varier l'intensité d'une DEL, connectée sur D3, en utilisant une boucle 'for'
@@ -539,7 +559,7 @@ void loop() {
 }
 ```
 
-### 5.3 – Tester l'application
+### 5.3 – Tester l'application {#section-5-3}
 
 ---
 
@@ -552,6 +572,6 @@ void loop() {
 ## Crédits
 
 *Document rédigé par Alain Boudreault © 2021-2026*  
-*Version 2025.03.03.1 - Révision 2025.12.11.1*  
+*Version 2025.03.03.1 - Révision 2026.11.07.1*  
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

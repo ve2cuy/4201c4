@@ -8,7 +8,7 @@
 
 ---
 
-## Contenu
+## Notions abordées
 
 * Afficher dans la console série
   + Serial.begin()
@@ -30,7 +30,42 @@
 
 ---
 
-## 1.1 – La fonction Serial.println(val)
+## Contenu
+
+- [**1 – Afficher dans la console série**](#section-1)
+  - [1.1 – La fonction Serial.println(val)](#section-1-1)
+  - [1.2 – Dans un projet, initialiser la vitesse du port de communication série (UART/COM) et afficher](#section-1-2)
+  - [1.3 – Téléverser le projet vers l'Arduino puis afficher la console série](#section-1-3)
+  - [1.4 – Laboratoire](#section-1-4)
+  - [1.5 – Afficher le contenu d'une variable](#section-1-5)
+  - [1.6 – Laboratoire](#section-1-6)
+  - [1.7 – Afficher un nombre dans une autre base que 10](#section-1-7)
+  - [1.8 – Voici un exemple complet d'affichage](#section-1-8)
+  - [1.9 – Laboratoire](#section-1-9)
+  - [1.10 – Streaming.h](#section-1-10)
+- [**2 – Lecture de l'état d'une broche digitale, la fonction digitalRead(pin)**](#section-2)
+  - [2.1 – La fonction digitalRead(pin)](#section-2-1)
+  - [2.2 – Tester le projet](#section-2-2)
+  - [2.3 – Remplacer la fonction loop() par le code suivant](#section-2-3)
+  - [2.4 – Tester le projet](#section-2-4)
+  - [2.5 – Laboratoire](#section-2-5)
+  - [2.6 – Voici un exemple complet et documenté](#section-2-6)
+- [**3 – Laboratoire de synthèse (durée 30 minutes)**](#section-3)
+  - [3.1 – Détection du relâchement du bouton poussoir (pushButton)](#section-3-1)
+  - [3.2 – Laboratoire](#section-3-2)
+- [**4 – Inversion de l'état de lecture d'une GPIO digitale (pullUp)**](#section-4)
+  - [4.1 – Voici l'exemple d'un projet qui utilise la fonction pullup](#section-4-1)
+  - [4.2 – Laboratoire](#section-4-2)
+- [**5 – Détection d'un changement d'état**](#section-5)
+  - [5.1 – Exemple d'une permutation bouton](#section-5-1)
+  - [5.2 – Laboratoire (durée 15 minutes)](#section-5-2)
+- [**6 – Détection des bonds d'état d'un interrupteur (debounce)**](#section-6)
+
+---
+
+## 1 – Afficher dans la console série {#section-1}
+
+## 1.1 – La fonction Serial.println(val) {#section-1-1}
 
 L'IDE Arduino nous propose une console d'affichage qu'il est possible d'utiliser, via le protocole UART (COM[1..9] sous windows) pour afficher des messages et des états des éléments d'un projet.
 
@@ -44,7 +79,7 @@ La plaquette Arduino doit être connectée sur le port USB pour que cette foncti
 
 ## Voici la marche à suivre pour afficher des messages dans la console de 'débogage'
 
-### 1.2 – Dans un projet, initialiser la vitesse du port de communication série (UART/COM) et afficher
+### 1.2 – Dans un projet, initialiser la vitesse du port de communication série (UART/COM) et afficher {#section-1-2}
 
 ```cpp
 void setup() {
@@ -61,7 +96,7 @@ void setup() {
 } // setup()
 ```
 
-### 1.3 – Téléverser le projet vers l'Arduino puis afficher la console série
+### 1.3 – Téléverser le projet vers l'Arduino puis afficher la console série {#section-1-3}
 
 <img src="../images/Capture-decran-le-2021-09-07-a-12.33.47.png" alt="Console série" width="500" />
 
@@ -102,7 +137,7 @@ Serial.begin(115200);
 
 ---
 
-## 1.4 – Laboratoire
+## 1.4 – Laboratoire {#section-1-4}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -114,7 +149,7 @@ Programmer un projet qui affiche, dans la console série à 19200 bauds, le mess
 
 ---
 
-## 1.5 – Afficher le contenu d'une variable
+## 1.5 – Afficher le contenu d'une variable {#section-1-5}
 
 ```cpp
 int compteur = 1;  // Je suis une variable de type 'entier signé' de portée globale.
@@ -133,7 +168,7 @@ void setup() {
 } // setup()
 ```
 
-## 1.6 – Laboratoire
+## 1.6 – Laboratoire {#section-1-6}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -161,7 +196,7 @@ afficher("Afficher un message dans la console ...");
 
 ---
 
-## 1.7 – Afficher un nombre dans une autre base que 10
+## 1.7 – Afficher un nombre dans une autre base que 10 {#section-1-7}
 
 ```cpp
 Serial.println(88, BIN); 
@@ -171,7 +206,7 @@ Serial.println(88, BIN);
 
 ---
 
-## 1.8 – Voici un exemple complet d'affichage
+## 1.8 – Voici un exemple complet d'affichage {#section-1-8}
 
 ```cpp
 /*
@@ -234,7 +269,7 @@ void loop() {
 
 ---
 
-## 1.9 – Laboratoire
+## 1.9 – Laboratoire {#section-1-9}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -261,7 +296,7 @@ if ( ++i == 2 ) // Augmenter la valeur de i de 1 puis tester si i = 2
 
 ---
 
-## 1.10 – Streaming.h
+## 1.10 – Streaming.h {#section-1-10}
 
 Voici un exemple d'utilisation de la librairie <Streaming.h> de Mikal Hart pour l'affichage:
 
@@ -297,9 +332,9 @@ Référence sur [GitHub](https://github.com/janelia-arduino/Streaming) et [Ardui
 
 ---
 
-## 2 – Lecture de l'état d'une broche digitale, la fonction digitalRead(pin)
+## 2 – Lecture de l'état d'une broche digitale, la fonction digitalRead(pin) {#section-2}
 
-### 2.1 – La fonction digitalRead(pin)
+### 2.1 – La fonction digitalRead(pin) {#section-2-1}
 
 La fonction `digitalRead(pin)` permet de lire l'état d'une GPIO digitale qui est programmée en mode lecture. Voici comment l'utiliser:
 
@@ -334,9 +369,9 @@ void loop() {
 } // loop()
 ```
 
-### 2.2 – Tester le projet
+### 2.2 – Tester le projet {#section-2-2}
 
-### 2.3 – Remplacer la fonction loop() par le code suivant
+### 2.3 – Remplacer la fonction loop() par le code suivant {#section-2-3}
 
 ```cpp
 void loop() {
@@ -349,7 +384,7 @@ void loop() {
 } // loop()
 ```
 
-### 2.4 – Tester le projet
+### 2.4 – Tester le projet {#section-2-4}
 
 <img src="../images/Capture-decran-le-2021-09-07-a-13.56.28-1024x281.png" alt="Test interrupteur" width="500" />
 
@@ -377,7 +412,7 @@ if ( 1 )           // Toujours vrai
 
 ---
 
-## 2.5 – Laboratoire
+## 2.5 – Laboratoire {#section-2-5}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -389,7 +424,7 @@ Modifier le projet précédent pour qu'il affiche le nombre de fois que l'interr
 
 ---
 
-## 2.6 – Voici un exemple complet et documenté
+## 2.6 – Voici un exemple complet et documenté {#section-2-6}
 
 ```cpp
 /* 
@@ -481,7 +516,7 @@ void loop()
 
 ---
 
-## 3 – Laboratoire de synthèse (durée 30 minutes)
+## 3 – Laboratoire de synthèse (durée 30 minutes) {#section-3}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -501,7 +536,7 @@ La durée de l'état ON de la LED doit être affichée dans la console série.
 
 ---
 
-## 3.1 – Détection du relâchement du bouton poussoir (pushButton)
+## 3.1 – Détection du relâchement du bouton poussoir (pushButton) {#section-3-1}
 
 Dans les exemples précédents, nous avons utilisé un délai (delay(ms)) pour offrir à l'utilisateur une période de temps suffisante pour qu'il puisse relâcher le bouton et reprendre le programme.
 
@@ -575,7 +610,7 @@ void loop() {
 
 Nous allons maintenant utiliser l'instruction while() pour attendre jusqu'à ce que le bouton soit passé de l'état appuyé (vaut 1) à relâché (vaut 0).
 
-### 3.2 – Laboratoire
+### 3.2 – Laboratoire {#section-3-2}
 
 Écrire un programme qui compte le nombre de fois que le bouton sur D2 a été appuyé.
 
@@ -617,7 +652,7 @@ void loop() {
 
 ---
 
-## 4 – Inversion de l'état de lecture d'une GPIO digitale (pullUp)
+## 4 – Inversion de l'état de lecture d'une GPIO digitale (pullUp) {#section-4}
 
 Lorsque nous utilisons une GPIO digitale en mode INPUT, il est essentiel de forcer un état stable, soit 0 ou soit 1 au niveau électrique.
 
@@ -637,7 +672,7 @@ Note: il n'y a pas de fonction inverse disponible (pulldown) sur cette puce. Il 
 
 ---
 
-## 4.1 – Voici l'exemple d'un projet qui utilise la fonction pullup
+## 4.1 – Voici l'exemple d'un projet qui utilise la fonction pullup {#section-4-1}
 
 ```cpp
 /*
@@ -679,7 +714,7 @@ void loop() {
 }
 ```
 
-## 4.2 – Laboratoire
+## 4.2 – Laboratoire {#section-4-2}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -699,7 +734,7 @@ DELAI
 
 ---
 
-## 5 – Détection d'un changement d'état
+## 5 – Détection d'un changement d'état {#section-5}
 
 Parfois, il peut être utile de déterminer si nous passons d'un état de lecture vers un autre.
 
@@ -707,7 +742,7 @@ Par exemple, un 'push' sur un bouton pour allumer une DEL et un autre 'push' pou
 
 Voici justement un exemple de code qui fait exactement cela:
 
-### 5.1 – Exemple d'une permutation bouton
+### 5.1 – Exemple d'une permutation bouton {#section-5-1}
 
 ```cpp
 /*
@@ -777,7 +812,7 @@ void loop()
 
 ---
 
-## 5.2 – Laboratoire (durée 15 minutes)
+## 5.2 – Laboratoire (durée 15 minutes) {#section-5-2}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -791,7 +826,7 @@ Le tout en boucle infinie.
 
 ---
 
-## 6 – Détection des bonds d'état d'un interrupteur (debounce)
+## 6 – Détection des bonds d'état d'un interrupteur (debounce) {#section-6}
 
 **Note**: Ce projet vient des exemples disponibles dans l'IDE Arduino.
 
@@ -939,6 +974,6 @@ void loop() {
 ## Crédits
 
 *Document rédigé par Alain Boudreault © 2021-2026*  
-*Version 2025.12.11.1*  
+*Version 2025.12.11.1 - Révision 2026.11.07.1*  
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

@@ -19,7 +19,7 @@
 
 ---
 
-## Contenu
+## Notions abordées
 
 * Installer une librairie
   + Streaming
@@ -54,20 +54,55 @@
 
 ---
 
-## 1 – Installation de la librairie
+## Contenu
+
+- [**1 – Installation de la librairie**](#section-1)
+- [**2 – Exploration des exemples installés avec la librairie**](#section-2)
+- [**3 – Afficher un texte sur l'écran LCD-RGB de Grove**](#section-3)
+  - [3.1 – Afficher sur fond de couleur avec le temps qui passe](#section-3-1)
+  - [3.2 – Laboratoire (durée 10 minutes)](#section-3-2)
+  - [3.3 – Laboratoire (durée 30 minutes)](#section-3-3)
+  - [3.4 – Laboratoire (durée 30 minutes)](#section-3-4)
+- [**4 – Utilisation d'un LCD sur Wokwi**](#section-4)
+  - [4.1 – Schéma électrique de 4.0 sur Wokwi](#section-4-1)
+  - [4.2 – Projet universel avec #ifdef](#section-4-2)
+  - [4.3 – lcd\_rgb : IO Stream et sprintf()](#section-4-3)
+  - [4.4 – La fonction C sprintf()](#section-4-4)
+  - [4.5 – Exemples d'interpolation avec d'autres langages.](#section-4-5)
+  - [4.6 – Compilation conditionnelle](#section-4-6)
+- [**5 – Fonctions avancées du LCD**](#section-5)
+  - [5.1 – LCD : clear, setCursor et sprintf partie 2](#section-5-1)
+  - [5.2 – millis() et aligner à droite avec sprintf](#section-5-2)
+  - [5.3 – Changer la direction de l'affichage du LCD](#section-5-3)
+  - [5.4 – Déplacer le texte gauche<–>droite](#section-5-4)
+  - [5.5 – LCD : AutoScroll](#section-5-5)
+  - [5.6 – LCD : Caractères personnalisés](#section-5-6)
+- [**6 – Laboratoires**](#section-6)
+  - [6.1 – Laboratoire](#section-6-1)
+  - [6.2 – Laboratoire](#section-6-2)
+- [**7 – Reste de la division, enum et switch**](#section-7)
+  - [7.1 – Reste de la division, modulo (% n)](#section-7-1)
+  - [7.2 – L'opérateur ternaire](#section-7-2)
+  - [7.3 – L'instruction 'switch'](#section-7-3)
+  - [7.4 – L'instruction 'enum'](#section-7-4)
+  - [7.5 – Gestion d'un menu avec enum – sous Wokwi](#section-7-5)
+
+---
+
+## 1 – Installation de la librairie {#section-1}
 
 <img src="../images/grove-lcd.png" alt="" width="500" />
 
 ---
 
-## 2 – Exploration des exemples installés avec la librairie
+## 2 – Exploration des exemples installés avec la librairie {#section-2}
 
 <img src="../images/Capture-decran-le-2021-09-14-a-16.06.24-804x1024.png" alt="" width="500" />
 
 
 ---
 
-## 3 – Afficher un texte sur l'écran LCD-RGB de Grove
+## 3 – Afficher un texte sur l'écran LCD-RGB de Grove {#section-3}
 
 ```
 // Inclure les fonctions (librairie) du LCD
@@ -106,7 +141,7 @@ void loop() {}
 
 ---
 
-## 3.1 – Afficher sur fond de couleur avec le temps qui passe
+## 3.1 – Afficher sur fond de couleur avec le temps qui passe {#section-3-1}
 
 ```
 // Inclure les fonctions du LCD
@@ -154,7 +189,7 @@ void loop()
 
 ---
 
-## DOC11.3.4 – Laboratoire (durée 10 minutes)
+## 3.2 – Laboratoire (durée 10 minutes) {#section-3-2}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -172,7 +207,7 @@ Modifier le code précédent pour:
 
 ---
 
-## DOC11.3.5 – Laboratoire (durée 30 minutes)
+## 3.3 – Laboratoire (durée 30 minutes) {#section-3-3}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -195,7 +230,7 @@ De plus, il faut afficher un niveau de volume, à partir de la valeur du potenti
 
 ---
 
-### DOC11.3.5.b – En défi supplémentaire:
+### 3.3.1 – En défi supplémentaire:
 
 1. Un **bouton** qui permet d'**allumer et éteindre** le rétro éclairage du LCD
 2. Afficher le temps qui passe en **jours:heures:minutes:secondes**
@@ -206,7 +241,7 @@ La solution est [ici](https://wokwi.com/projects/344083019861066324).
 
 ---
 
-## DOC11.3.6 – Laboratoire (durée 30 minutes)
+## 3.4 – Laboratoire (durée 30 minutes) {#section-3-4}
 
 <img src="../images/labo02.png" alt="" width="700" />
 
@@ -238,7 +273,7 @@ Ligne2: Compteur:  9999999
 
 ---
 
-## 4 – Utilisation d'un LCD sur Wokwi
+## 4 – Utilisation d'un LCD sur Wokwi {#section-4}
 
 <img src="../images/wokwi-lcd.png" alt="" width="500" />
 
@@ -306,7 +341,7 @@ void loop() {
 } // loop()
 ```
 
-## 4.1 – Schéma électrique de 4.0 sur Wokwi
+## 4.1 – Schéma électrique de 4.0 sur Wokwi {#section-4-1}
 
 ```
 {
@@ -370,7 +405,7 @@ Pour avoir accès au projet, il faut cliquer sur l'image 🙂.
 
 ---
 
-## 4.2 – Projet universel avec #ifdef
+## 4.2 – Projet universel avec #ifdef {#section-4-2}
 
 ```
 #define WOKWI
@@ -430,7 +465,7 @@ void loop() {
 
 ---
 
-## 4.3 – lcd\_rgb : IO Stream et [sprintf](https://fr.wikipedia.org/wiki/Printf)()
+## 4.3 – lcd\_rgb : IO Stream et [sprintf](https://fr.wikipedia.org/wiki/Printf)() {#section-4-3}
 
 Utilisation de la librairie Streaming.h (Attention, sur Wokwi il faut ajouter la librairie au projet via le panneau Library Manager )
 
@@ -467,7 +502,7 @@ void loop() {}
 
 ---
 
-## 4.4 – La fonction C sprintf()
+## 4.4 – La fonction C sprintf() {#section-4-4}
 
 Référence sur [Wikipedia](https://fr.wikipedia.org/wiki/Printf#sprintf)
 
@@ -528,7 +563,7 @@ n      Nothing printed.
 Voir [ici](https://wokwi.com/projects/344179892553777747) pour le projet sur Wokwi
 
 ```
-// Solution du laboratoire: DOC11.3.5
+// Solution du laboratoire: 3.3
 
 #include <LiquidCrystal_I2C.h>
 
@@ -613,7 +648,7 @@ void loop() {
 
 ---
 
-## 4.5 – Exemples d'interpolation avec d'autres langages.
+## 4.5 – Exemples d'interpolation avec d'autres langages. {#section-4-5}
 
 ```
 // Exemple en C#
@@ -639,7 +674,7 @@ print(f'Bonjour {nom}! Ceci est écrit en {programme}')
 
 ---
 
-## 5.0.5 – Compilation conditionnelle
+## 4.6 – Compilation conditionnelle {#section-4-6}
 
 ```
 #define MACRO
@@ -701,7 +736,9 @@ void setup() {
 void loop() {}
 ```
 
-## 5.1 LCD – clear, setCursor et sprintf partie 2.
+## 5 – Fonctions avancées du LCD {#section-5}
+
+## 5.1 – LCD : clear, setCursor et sprintf partie 2 {#section-5-1}
 
 ```
 /*
@@ -765,7 +802,7 @@ void loop() {}
 
 ---
 
-## 5.2 – millis() et aligner à droite avec sprintf
+## 5.2 – millis() et aligner à droite avec sprintf {#section-5-2}
 
 ```
 /*
@@ -808,7 +845,7 @@ void loop() {
 
 ---
 
-## 5.3 – Changer la direction de l'affichage du LCD
+## 5.3 – Changer la direction de l'affichage du LCD {#section-5-3}
 
 ```
 #include <Wire.h>
@@ -859,7 +896,7 @@ void loop()
 
 ---
 
-## 5.4 – Déplacer le texte gauche<–>droite
+## 5.4 – Déplacer le texte gauche<–>droite {#section-5-4}
 
 ```
 #include <Wire.h>
@@ -905,7 +942,7 @@ void loop() {
 
 ---
 
-## 5.5 – LCD : AutoScroll
+## 5.5 – LCD : AutoScroll {#section-5-5}
 
 ```
 #include <Wire.h>
@@ -952,7 +989,7 @@ void loop()
 
 ---
 
-## 5.6 – LCD : Caractères personnalisés
+## 5.6 – LCD : Caractères personnalisés {#section-5-6}
 
 ```
 #include <Wire.h>
@@ -1063,7 +1100,9 @@ void loop()
 
 ---
 
-## 6.1 – Laboratoire
+## 6 – Laboratoires {#section-6}
+
+## 6.1 – Laboratoire {#section-6-1}
 
 <img src="../images/labo03.png" alt="" width="700" />
 
@@ -1074,7 +1113,7 @@ void loop()
 
 ---
 
-## 6.2 – Laboratoire
+## 6.2 – Laboratoire {#section-6-2}
 
 Écrire un programme qui permet de modifier la valeur Bleu de RGB à partir du potentiomètre.
 
@@ -1082,9 +1121,9 @@ Pour **Rouge** et **Vert**, utiliser la valeur 255.
 
 ---
 
-## 7 – Reste de la division, enum et switch
+## 7 – Reste de la division, enum et switch {#section-7}
 
-## 7.1 – Reste de la division, modulo (% n)
+## 7.1 – Reste de la division, modulo (% n) {#section-7-1}
 
 Le reste de la division peut être utilisé pour programmer une séquence dans une série de nombres.
 
@@ -1118,7 +1157,7 @@ Résultat:
 
 <img src="../images/Capture-decran-le-2021-09-28-a-16.34.49-1024x640.png" alt="" width="500" />
 
-## 7.2 – L'opérateur ternaire
+## 7.2 – L'opérateur ternaire {#section-7-2}
 
 ```
 variable = (condition) ? expressionSiVrai : expressionSiFaux;
@@ -1210,7 +1249,7 @@ void loop() {
 
 ---
 
-## 7.3 – L'instruction 'switch'
+## 7.3 – L'instruction 'switch' {#section-7-3}
 
 ```
 #include "Streaming.h"
@@ -1371,7 +1410,7 @@ void loop()
 
 ---
 
-## 7.4 – L'instruction 'enum'
+## 7.4 – L'instruction 'enum' {#section-7-4}
 
 ```
 #include "Streaming.h"
@@ -1469,7 +1508,7 @@ void loop() {
 
 ---
 
-## 7.5 – Gestion d'un menu avec enum – sous Wokwi
+## 7.5 – Gestion d'un menu avec enum – sous Wokwi {#section-7-5}
 
 <img src="../images/Capture-décran-2022-10-23-à-14.31.35.png" alt="" width="500" />
 
@@ -1601,5 +1640,5 @@ Le projet Wokwi est disponible [ici](https://wokwi.com/projects/3463304844264085
 
 *Document rédigé par Alain Boudreault © 2021-2026* 
 
-*Version 2025.03.03.1 - Révision 2025.12.11.1*  
+*Version 2025.03.03.1 - Révision 2026.11.07.1*  
 Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)

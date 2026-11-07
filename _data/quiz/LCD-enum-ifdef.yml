@@ -54,12 +54,12 @@ questions:
   - question: "Une variable de type int convient pour garder la valeur de millis() pendant des heures."
     type: vf
     reponse: faux
-    explication: "Sur l'Uno, un int (16 bits) dépasse 32 767 après environ 33 secondes; il faut un unsigned long (DOC11.3.4)."
+    explication: "Sur l'Uno, un int (16 bits) dépasse 32 767 après environ 33 secondes; il faut un unsigned long (section 3.2)."
 
   - question: "Quelle est la plus grande valeur d'un int sur 16 bits (Arduino Uno)?"
     choix: ["255", "1023", "32 767", "65 535"]
     reponse: 3
-    explication: "Un int signé sur 16 bits va de -32 768 à 32 767; 65 535 est le maximum d'un unsigned int (DOC11.3.4)."
+    explication: "Un int signé sur 16 bits va de -32 768 à 32 767; 65 535 est le maximum d'un unsigned int (section 3.2)."
 
   - question: "Quel type de variable faut-il pour garder la valeur de millis()?"
     choix: ["int", "byte", "unsigned long", "char"]
