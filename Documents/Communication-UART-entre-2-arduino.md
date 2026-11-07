@@ -31,6 +31,9 @@
 - [**4 – Exemple d'un système d'alarme à 2 Arduino**](#section-4)
   - [4.1 – Fichier d'entête](#section-4-1)
   - [4.2 – Code source du transmetteur](#section-4-2)
+  - [4.3 – Code source du récepteur](#section-4-3)
+- [**5 – Laboratoire**](#section-5)
+- [**6 – Laboratoire**](#section-6)
 
 ---
 
@@ -868,4 +871,195 @@ enum codesAlarme {
 
 rgb_lcd lcd;
 
-// Le RX du UNO doit être connecté au TX du MEGA et
+// Le RX du UNO doit être connecté au TX du MEGA et TX -> RX
+// Il faut donc inverser les signaux:
+SoftwareSerial mySerial(5, 4); // RX, TX
+
+codesAlarme unCodeAlarme = evenement_systeme_enligne;
+
+void setup() {
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // S'assurer que le port serie est pret.  Ceci n'est pas requis pour un SoftwareSerial.
+  }
+  Serial.println("Demarrage du systeme d'alarme...");
+  lcd.begin(16,2);
+  lcd.print("Master");
+  // Initialiser le port serie 'SoftwareSerial'
+  mySerial.begin(9600);
+
+  // Envoyer l'état du système d'alarme à la centrale (Mega)
+  mySerial.write(unCodeAlarme); // Attention, pour envoyer un seul octet (Byte), il faut utiliser la méthode write et non pas print.
+  delay(1000);
+}
+
+void loop() {  
+  unCodeAlarme = evenement_dectection_mouvement;
+  // Envoyer un code de détection du mouvement à toutes les secondes:
+    byte i;
+    i = random(evenement_nb_codes); 
+   mySerial.write(i);
+   Serial << "Envoi du code suivant: " << i << endl;
+   delay(1000);
+
+}
+```
+
+---
+
+### 4.3 – Code source du récepteur {#section-4-3}
+
+```
+/*
+    Simulation d'un système d'alarme UNO, qui envoie des événements
+    à une centrale de controle (MEGA) via le protocole UART.
+
+    Le UNO est connecté par son port D8 au port UART2 du MEGA.
+
+    Étant donné que le UNO n'a qu'un seul port UART et qu'il est utilisé
+    pour déboger l'application, la librairie 'SoftwareSerial' est utilisée
+    pour simuler un port UART à partir d'une GPIO.
+
+*/
+
+#include <SoftwareSerial.h>
+#include "code.alarme.h"
+#include "rgb_lcd.h"
+#include "Streaming.h"
+
+rgb_lcd lcd;
+
+// Le RX du UNO doit être connecté au TX du MEGA et TX -> RX
+// Il faut donc inverser les signaux:
+SoftwareSerial mySerial(5, 6); // RX, TX
+
+codesAlarme unCodeAlarme = evenement_systeme_enligne;
+
+void setup() {
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // S'assurer que le port serie est pret.  Ceci n'est pas requis pour un SoftwareSerial.
+  }
+  Serial.println("Demarrage du systeme d'alarme...");
+  lcd.begin(16,2);
+  lcd.print("Slave ready");
+  // Initialiser le port serie 'SoftwareSerial'
+  mySerial.begin(9600);
+
+  // Envoyer l'état du système d'alarme à la centrale (Mega)
+  //mySerial.write(unCodeAlarme); // Attention, pour envoyer un seul octet (Byte), il faut utiliser la méthode write et non pas print.
+  delay(1000);
+}
+
+void loop() {  
+   codesAlarme code;
+  if (mySerial.available()) {
+    code = mySerial.read();
+    // afficher la valeur du byte reçu
+    Serial.print("\nCode = "); Serial.print(code, DEC); Serial.println("");
+    lcd.setCursor(0, 1);
+    lcd << "Code recu: " << code;
+    // Tester les événements du système d'alarme
+    if (code == evenement_systeme_enligne) Serial.print("Systeme client en ligne !");
+    if (code == evenement_dectection_mouvement) Serial.print("DANGER: Il y a intrusion ....");
+    
+  }
+}
+```
+
+---
+
+## 5 – Laboratoire {#section-5}
+
+<img src="../images/labo02.png" alt="" width="700" />
+
+<br>
+
+Mettre en place un système de deux Arduino, reliés ensemble VIA le protocole UART qui s'échangent des données.
+
+* Un détecteur de température/humidité est relié au premier Arduino (UNO).
+  * La température et la valeur d'humidité sont affichées dans la console série, à raison d'une mise à jour à chaque seconde.
+  * La température et la valeur d'humidité sont transmises au deuxième Arduino à chaque deux secondes.
+* Le deuxième Arduino (MEGA) est relié au premier Arduino via le port UART2.
+  * Le deuxième Arduino affiche, sur un lcd_rgb, les valeurs de température sur la ligne 1 et d'humidité sur la ligne 2, reçues du premier Arduino.
+
+* **Version de base du labo:**
+  * traiter les valeurs température/humidité avec des nombres entiers.
+
+* **Version 'haut défi' du labo':** 
+  * traiter les valeurs température/humidité avec des nombres réels.
+
+---
+
+### Défi supplémentaire
+
+* Un '***push button***' est connecté sur le premier Arduino.
+  * S'il est appuyé plus d'une seconde,
+    * Une 'DEL', reliée au deuxième Arduino est activée deux fois pendant une seconde (250ms/on/off/on/off).
+* Il faut utiliser un 'enum' pour décrire l'événement '**urgenceBouton**' et l'utiliser dans la transmission du message vers le deuxième Arduino.
+
+---
+
+## 6 – Laboratoire {#section-6}
+
+<img src="../images/labo03.png" alt="" width="700" />
+
+<br>
+
+Il faut relier, correctement, deux Arduino via le protocole UART.
+
+Chaque Arduino possède un écran LCD.
+
+Le premier Arduino envoi vers le deuxième, un nombre aléatoire compris entre 0 et NB_CITATIONS. Le nombre aléatoire est affiché sur la ligne 1 du LCD du premier Arduino en respectant la forme suivante:
+
+> 1: Citation no: nn  
+> 2:
+
+Le deuxième Arduino reçoit le nombre aléatoire et l'utilise pour obtenir une citation dans le tableau des citations. Le nombre aléatoire est affiché sur la ligne no 2 du deuxième Arduino.
+
+> 1: Arduino no 2  
+> 2: Envoi de: nn
+
+La citation obtenue est envoyée vers le premier Arduino et affichée sur la ligne no 2 de ce dernier.
+
+> 1: Citation no: nn  
+> 2: Texte de la citation
+
+Voici le tableau des citations:
+
+```
+const String citations[] = {
+  "Bachi-bouzouk",
+  "Boit-sans-soif",
+  "Brontosaure",
+  "Calembredaine",
+  "Catachrese",
+  "Coupe-jarret",
+  "Doryphore",
+  "Dynamiteur",
+  "Empoisonneur",
+  "Hurluberlu",
+  "Cataplasme",
+  "Clysopompe",
+  "Cornemuse",
+  "Cornichon",
+  "Cyclotron"
+};
+```
+
+---
+
+### NOTE IMPORTANTE
+
+<img src="../images/evaluation.gif" alt="" width="500" />
+
+**Le contenu de ce document pourrait être évalué dans un examen.**
+
+---
+
+## Crédits
+
+*Document rédigé par Alain Boudreault © 2021-2027*  
+*Révision 2026.11.07.1*  
+
+*Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*
