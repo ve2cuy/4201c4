@@ -1,4 +1,4 @@
-# 12 - 420-1C4 » Opérations sur les bits
+# 12 - Opérations sur les bits
 
 Version du 27 janvier 2025 - Révision 2025.12.12
 
