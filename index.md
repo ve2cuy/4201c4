@@ -86,4 +86,5 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
 ![](dessins/feuilles.svg) *Copier/coller et solutions*
 
 - ![](dessins/copier-coller.svg) 31 · [Les copier/coller](Documents/copier-coller.md)
+  - Les variables de type scalaire · gestion du bruit sur un bouton – bounce2
 - ![](dessins/solutions.svg) 32 · [Solutions aux laboratoires](Documents/Solutions.md)
