@@ -12,18 +12,18 @@
 
 ## Contenu
 
-1. **Qu'est-ce que l'EEPROM?**
-2. **Les limites de l'EEPROM**
-3. **La librairie EEPROM.h**
-4. **Lire et écrire un octet – le compteur de démarrages**
-5. **EEPROM.update() – ménager l'EEPROM**
-6. **EEPROM.put() et EEPROM.get() – conserver une variable ou une structure**
-7. **Parcourir et effacer l'EEPROM**
-8. **Laboratoires**
+1. [**Qu'est-ce que l'EEPROM?**](#section-1)
+2. [**Les limites de l'EEPROM**](#section-2)
+3. [**La librairie EEPROM.h**](#section-3)
+4. [**Lire et écrire un octet – le compteur de démarrages**](#section-4)
+5. [**EEPROM.update() – ménager l'EEPROM**](#section-5)
+6. [**EEPROM.put() et EEPROM.get() – conserver une variable ou une structure**](#section-6)
+7. [**Parcourir et effacer l'EEPROM**](#section-7)
+8. [**Laboratoires**](#section-8)
 
 ---
 
-## 1 – Qu'est-ce que l'EEPROM?
+## 1 – Qu'est-ce que l'EEPROM? {#section-1}
 
 Rappel du document [Introduction aux microcontrôleurs](Introduction-microcontroleurs.md): l'ATmega328P possède trois types de mémoire.
 
@@ -62,7 +62,7 @@ L'EEPROM est organisée en **cases d'un octet**, numérotées à partir de 0. Le
 
 ---
 
-## 2 – Les limites de l'EEPROM
+## 2 – Les limites de l'EEPROM {#section-2}
 
 **1 – Le nombre d'écritures est limité**
 
@@ -86,7 +86,7 @@ Une écriture prend environ **3.3 ms** par octet. Écrire 1024 octets prend donc
 
 ---
 
-## 3 – La librairie EEPROM.h
+## 3 – La librairie EEPROM.h {#section-3}
 
 La librairie **EEPROM.h** fait partie de la plateforme Arduino. **Il n'y a rien à installer**, il suffit de l'inclure:
 
@@ -112,7 +112,7 @@ Elle propose un objet nommé `EEPROM` avec les méthodes suivantes:
 
 ---
 
-## 4 – Lire et écrire un octet – le compteur de démarrages
+## 4 – Lire et écrire un octet – le compteur de démarrages {#section-4}
 
 Ce premier exemple compte le nombre de démarrages de l'Arduino. Le compteur est conservé dans la case 0 de l'EEPROM.
 
@@ -168,7 +168,7 @@ void loop() {
 
 ---
 
-## 5 – EEPROM.update() – ménager l'EEPROM
+## 5 – EEPROM.update() – ménager l'EEPROM {#section-5}
 
 La méthode `update()` lit d'abord la case et n'écrit que si la valeur est **différente**. Elle est l'équivalent de:
 
@@ -230,7 +230,7 @@ void loop() {
 
 ---
 
-## 6 – EEPROM.put() et EEPROM.get() – conserver une variable ou une structure
+## 6 – EEPROM.put() et EEPROM.get() – conserver une variable ou une structure {#section-6}
 
 `read()` et `write()` ne traitent qu'un seul octet. Pour conserver un `int` (2 octets), un `float` (4 octets) ou une structure complète, on utilise `put()` et `get()`.
 
@@ -328,7 +328,7 @@ void loop() {
 
 ---
 
-## 7 – Parcourir et effacer l'EEPROM
+## 7 – Parcourir et effacer l'EEPROM {#section-7}
 
 L'objet `EEPROM` s'utilise comme un tableau d'octets, de `EEPROM[0]` à `EEPROM[EEPROM.length() - 1]`.
 
@@ -397,7 +397,7 @@ void loop() {}
 
 ---
 
-## 8 – Laboratoires
+## 8 – Laboratoires {#section-8}
 
 ### 8.1 – Laboratoire (durée 20 minutes)
 

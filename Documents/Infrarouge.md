@@ -14,18 +14,18 @@
 
 ## Contenu
 
-1. **La lumière infrarouge et les télécommandes**
-2. **Le module Grove – Infrared Receiver**
-3. **Installation de la librairie Seeed Arduino IR**
-4. **Lire les codes d'une télécommande**
-5. **Contrôler une DEL avec une télécommande**
-6. **Le module Grove – Infrared Emitter**
-7. **Transmettre un code infrarouge**
-8. **Laboratoires**
+1. [**La lumière infrarouge et les télécommandes**](#section-1)
+2. [**Le module Grove – Infrared Receiver**](#section-2)
+3. [**Installation de la librairie Seeed Arduino IR**](#section-3)
+4. [**Lire les codes d'une télécommande**](#section-4)
+5. [**Contrôler une DEL avec une télécommande**](#section-5)
+6. [**Le module Grove – Infrared Emitter**](#section-6)
+7. [**Transmettre un code infrarouge**](#section-7)
+8. [**Laboratoires**](#section-8)
 
 ---
 
-## 1 – La lumière infrarouge et les télécommandes
+## 1 – La lumière infrarouge et les télécommandes {#section-1}
 
 La lumière **infrarouge** (IR) est une lumière invisible pour l'œil humain. Celle utilisée par les télécommandes a une longueur d'onde d'environ **940 nm** (nanomètres).
 
@@ -49,7 +49,7 @@ Chaque touche de la télécommande envoie une suite d'impulsions (des périodes 
 
 ---
 
-## 2 – Le module Grove – Infrared Receiver
+## 2 – Le module Grove – Infrared Receiver {#section-2}
 
 ## Type de connexion: <span style="color:#00d084">digitale</span>
 
@@ -74,7 +74,7 @@ La librairie utilise une **interruption** pour mesurer les impulsions. Sur l'Ard
 
 ---
 
-## 3 – Installation de la librairie Seeed Arduino IR
+## 3 – Installation de la librairie Seeed Arduino IR {#section-3}
 
 Seeed Studio propose la librairie **Seeed Arduino IR**, une version de la librairie **IRLib2** de Chris Young. Elle permet de **recevoir**, de **décoder** et de **transmettre** des signaux infrarouges.
 
@@ -90,7 +90,7 @@ Sous l'IDE Arduino, la librairie est disponible sur [GitHub](https://github.com/
 
 ---
 
-## 4 – Lire les codes d'une télécommande
+## 4 – Lire les codes d'une télécommande {#section-4}
 
 Ce premier exemple affiche, dans la console série, le protocole et le code de chaque touche reçue.
 
@@ -151,7 +151,7 @@ void loop() {
 
 ---
 
-## 5 – Contrôler une DEL avec une télécommande
+## 5 – Contrôler une DEL avec une télécommande {#section-5}
 
 Une fois les codes des touches connus, il est possible de les utiliser dans un programme.
 
@@ -230,7 +230,7 @@ void loop() {
 
 ---
 
-## 6 – Le module Grove – Infrared Emitter
+## 6 – Le module Grove – Infrared Emitter {#section-6}
 
 <img src="../images/grove-ir-emetteur.jpg" alt="Grove - Infrared Emitter" width="400" />
 
@@ -264,7 +264,7 @@ L'angle d'émission est étroit: il faut **pointer** l'émetteur vers le récept
 
 ---
 
-## 7 – Transmettre un code infrarouge
+## 7 – Transmettre un code infrarouge {#section-7}
 
 L'exemple suivant transmet un code chaque fois que le bouton est appuyé. Il utilise un deuxième Arduino, avec le récepteur et le programme de la section 4, pour afficher le code reçu.
 
@@ -323,7 +323,7 @@ void loop() {
 
 ---
 
-## 8 – Laboratoires
+## 8 – Laboratoires {#section-8}
 
 ### 8.1 – Laboratoire (durée 20 minutes)
 
