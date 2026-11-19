@@ -228,7 +228,7 @@ Le moniteur série de PlatformIO offre plusieurs avantages:
 #include <Arduino.h>
 
 void setup() {
-  Serial.begin(9600)
+  Serial.begin(9600);
   pinMode(13, 1); // OUTPUT
 }
 
@@ -243,6 +243,8 @@ void loop() {
 ```
 
 👉 Tester l'application et consulter le fichier 'log'
+
+💡 Cet exemple est livré avec le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1) : commande **Simulateur Arduino : Ouvrir un exemple du cours…**, puis « Hello World avec une DEL ».
 
 **Explication du code:**
 - `pinMode(13, 1)`: Configure la broche 13 en sortie (OUTPUT = 1)
@@ -279,6 +281,8 @@ void loop() {
 ```
 
 👉 Tester l'application
+
+💡 Cet exemple est aussi livré avec le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1) : « Hello World avec des macros ».
 
 **Avantages des macros:**
 - **Lisibilité améliorée**: Le code devient auto-documenté
@@ -449,6 +453,6 @@ PlatformIO représente une solution efficace pour le développement Arduino et e
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.01.25.01 - Révision 2026.11.19.1**
+**Version 2026.01.25.01 - Révision 2026.11.19.2**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

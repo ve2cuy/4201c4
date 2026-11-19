@@ -3,7 +3,7 @@
 *Révision du 2026.11.19*
 
 <p align="center">
-  <img src="../images/simulateur-arduino.png" alt="Le panneau du simulateur : un Arduino UNO, un écran LCD, un capteur de température et le moniteur série" width="600" />
+  <img src="../images/simulateur-arduino.png" alt="Le panneau du simulateur : un Arduino UNO et son hat Grove, un relais, un bouton, une DEL, un écran LCD, un capteur de température et le moniteur série" width="600" />
 </p>
 
 ## Contenu
@@ -16,9 +16,11 @@
   - [1.4 – Vérifier l'installation](#section-1-4)
   - [1.5 – Mettre à jour ou désinstaller](#section-1-5)
 - [**2 – Premier essai**](#section-2)
+  - [2.1 – Les exemples du cours](#section-2-1)
 - [**3 – Brancher des modules**](#section-3)
   - [3.1 – Les modules disponibles](#section-3-1)
   - [3.2 – Les ports du hat Grove](#section-3-2)
+  - [3.3 – Avec ou sans le hat](#section-3-3)
 - [**4 – Le panneau du simulateur**](#section-4)
 - [**5 – L'oscilloscope**](#section-5)
   - [5.1 – Observer un signal](#section-5-1)
@@ -34,7 +36,7 @@
 
 ## Définition {#section-definition}
 
-Le **simulateur d'Arduino** est une extension de VS Code. Il fait tourner le programme compilé par PlatformIO dans un Arduino virtuel, affiché dans un panneau à côté du code : une carte **UNO** ou **MEGA** coiffée de son hat Grove, les modules qu'on y branche et le moniteur série.
+Le **simulateur d'Arduino** est une extension de VS Code. Il fait tourner le programme compilé par PlatformIO dans un Arduino virtuel, affiché dans un panneau à côté du code : une carte **UNO** ou **MEGA**, son hat Grove, les modules qu'on y branche et le moniteur série. Les cartes et les modules y sont dessinés d'après les vrais : on peut comparer son montage à celui de l'écran.
 
 Le code du projet reste tel quel : c'est le même programme qui sera téléversé dans la vraie carte.
 
@@ -51,7 +53,7 @@ Le simulateur sert à travailler **sans le kit**, à la maison par exemple. Il n
 
 ### 1.2 – Télécharger l'extension {#section-1-2}
 
-👉 [**simulateur-arduino-grove-1.0.0.vsix**](../telechargements/simulateur-arduino-grove-1.0.0.vsix) (version 1.0.0, environ 200 Ko)
+👉 [**simulateur-arduino-grove-1.1.0.vsix**](../telechargements/simulateur-arduino-grove-1.1.0.vsix) (version 1.1.0, environ 230 Ko)
 
 Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléchargements`. Un fichier `.vsix` est une extension de VS Code remise sous forme de fichier, plutôt que par la boutique d'extensions.
 
@@ -61,7 +63,7 @@ Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléc
 2. Ouvrir la vue des extensions : **Ctrl+Maj+X**.
 3. Cliquer sur les trois points **…** en haut à droite de cette vue.
 4. Choisir **Install from VSIX…** (« Installer à partir d'un VSIX… » si VS Code est en français).
-5. Choisir le fichier `simulateur-arduino-grove-1.0.0.vsix` téléchargé.
+5. Choisir le fichier `simulateur-arduino-grove-1.1.0.vsix` téléchargé.
 
 VS Code confirme l'installation par un message en bas à droite.
 
@@ -71,7 +73,7 @@ VS Code confirme l'installation par un message en bas à droite.
 - Dans un terminal, à partir du dossier où se trouve le fichier :
 
   ```bash
-  code --install-extension simulateur-arduino-grove-1.0.0.vsix
+  code --install-extension simulateur-arduino-grove-1.1.0.vsix
   ```
 
 ### 1.4 – Vérifier l'installation {#section-1-4}
@@ -111,6 +113,24 @@ Les mêmes actions se trouvent dans la palette de commandes (**Ctrl+Maj+P**), so
 | Afficher le simulateur | Ouvre le panneau |
 | Démarrer la simulation | Lance le programme déjà compilé |
 | Compiler et simuler | Enregistre les fichiers, compile, puis lance la simulation |
+| Ouvrir un exemple du cours… | Crée le projet d'un exemple de ces notes, avec son montage, et l'ouvre dans le simulateur |
+
+### 2.1 – Les exemples du cours {#section-2-1}
+
+Les exemples des notes de cours sont livrés avec le simulateur, **montage compris** :
+
+1. lancer la commande **Simulateur Arduino : Ouvrir un exemple du cours…** de la palette (**Ctrl+Maj+P**), ou cliquer sur le bouton **Exemples…** du panneau;
+2. choisir l'exemple dans la liste;
+3. choisir le dossier où créer le projet, par exemple `Documents/PlatformIO/Projects`.
+
+Le projet s'ouvre et la simulation démarre aussitôt : le programme est fourni déjà compilé. C'est un projet PlatformIO ordinaire, à modifier et à recompiler à votre guise.
+
+| Exemple | Dans les notes |
+|---------|----------------|
+| Hello World avec une DEL | [Introduction à PlatformIO, section 5.1](PlatformIO-Hello-world.md#section-5-1) |
+| Hello World avec des macros | [Introduction à PlatformIO, section 5.2](PlatformIO-Hello-world.md#section-5-2) |
+
+💡 Un dossier qui existe déjà n'est jamais remplacé : le simulateur propose de l'ouvrir, ou de créer une copie.
 
 ---
 
@@ -129,10 +149,10 @@ Le module apparaît sur le canevas, relié par un câble au connecteur choisi. L
 | Module | Port | Dans le simulateur |
 |--------|------|--------------------|
 | DEL rouge, verte, bleue | D | S'allume selon la sortie; son intensité suit `analogWrite()` |
-| Bouton | D | Bouton-poussoir : enfoncé tant qu'on le tient |
-| Détecteur de mouvement | D | Le bouton « Bouger » simule un mouvement; la sortie reste active 2 secondes |
-| Relais, buzzer | D | Affichent leur état (le buzzer ne fait pas de son) |
-| Potentiomètre | A | Un curseur règle la tension lue par `analogRead()` |
+| Bouton | D | Bouton-poussoir : enfoncé tant qu'on tient son capuchon avec la souris |
+| Détecteur de mouvement | D | Tenir le dôme du capteur enfoncé simule un mouvement; la sortie reste active 2 secondes |
+| Relais, buzzer | D | Le voyant du relais s'allume quand son contact est fermé; le buzzer indique qu'il sonne (sans faire de son) |
+| Potentiomètre | A | Un curseur règle la tension lue par `analogRead()`; l'axe du potentiomètre tourne avec lui |
 | Afficheur 4-Digit | D | Affiche les chiffres envoyés par la librairie TM1637 |
 | RGB LED Stick | D | Les 10 DEL prennent les couleurs envoyées par la librairie NeoPixel |
 | LCD RGB | I2C | Le texte et la couleur du rétroéclairage |
@@ -141,7 +161,7 @@ Le module apparaît sur le canevas, relié par un câble au connecteur choisi. L
 | Capteur BME280 | I2C | Des curseurs règlent la température, l'humidité et la pression |
 | Horloge RTC | I2C | Donne l'heure de l'ordinateur, ou celle que le programme a réglée |
 | Module Wi-Fi | UART | Se connecte réellement au réseau de l'ordinateur |
-| Lecteur RFID | UART | Le bouton « Présenter » passe une carte devant le lecteur |
+| Lecteur RFID | UART | Le bouton « Présenter » passe une carte devant l'antenne du lecteur |
 
 ### 3.2 – Les ports du hat Grove {#section-3-2}
 
@@ -150,8 +170,33 @@ Comme sur le vrai hat, un connecteur **Dn** porte deux broches : **Dn** et **Dn+
 - Un module série branché sur **Dn** se programme avec `SoftwareSerial(Dn, Dn+1)`.
 - Les modules I2C partagent le même bus : ils se branchent sur n'importe quel connecteur **I2C**.
 - Sur le MEGA, les connecteurs **UART1**, **UART2** et **UART3** correspondent à `Serial1`, `Serial2` et `Serial3`.
+- Le hat du MEGA (Grove Mega Shield) a une prise pour deux broches : « D2-D3 », « D4-D5 »… et « A0-A1 », « A2-A3 »… Dans le simulateur comme sur le vrai hat, on choisit donc **D2, D4, D6, D8, D10 ou D12**, et **A0, A2… A14** : il n'y a pas de prise D3 ou A1.
 
 💡 Pour le **LCD 20x4 I2C**, l'adresse choisie sous l'écran doit être celle du programme : `LiquidCrystal_I2C lcd(0x27, 20, 4);`. Sans `lcd.backlight()`, le rétroéclairage reste éteint, comme sur le vrai module.
+
+### 3.3 – Avec ou sans le hat {#section-3-3}
+
+<p align="center">
+  <img src="../images/simulateur-sans-hat.png" alt="Un Arduino UNO sans son hat : un bouton avec sa résistance de rappel et deux DEL avec leur résistance, reliés aux broches par des fils; les pistes du circuit s'illuminent" width="420" />
+</p>
+
+Le bouton **Hat**, dans l'en-tête de chaque carte, pose ou retire son hat Grove.
+
+- **Avec le hat**, chaque module est relié à sa prise par un câble Grove.
+- **Sans le hat**, on voit la carte seule, telle qu'elle sort de sa boîte, et les modules s'y branchent par des **fils** : un pour chaque signal, un rouge pour le 5 V et un gris pour la masse (GND).
+
+Sans le hat, la DEL et le bouton sont dessinés comme des composants nus, avec la **résistance** qu'il leur faut :
+
+| Composant | Résistance | Pourquoi |
+|-----------|------------|----------|
+| DEL | 220 Ω en série | Elle limite le courant; sans elle, la DEL et la broche de l'Arduino s'abîment |
+| Bouton | 10 kΩ entre la broche et la masse (résistance de rappel, *pull-down*) | Elle garde la broche à LOW tant que le bouton est relâché |
+
+Les modules Grove portent déjà ces résistances sur leur circuit : c'est pourquoi on ne les voit pas avec le hat.
+
+Sur la carte seule, les **pistes** du circuit sont tracées, de chaque broche jusqu'à la patte du microcontrôleur. Pendant la simulation, une piste **s'illumine** quand son signal est à HIGH : avec le programme de la section 2, on voit le signal de la broche 13 aller du microcontrôleur à la DEL **L**. Ce tracé est simplifié : le vrai circuit a deux faces et plus de détours.
+
+💡 Les modules gardent leur place quand on pose ou qu'on retire le hat.
 
 ---
 
@@ -161,7 +206,11 @@ Comme sur le vrai hat, un connecteur **Dn** porte deux broches : **Dn** et **Dn+
 |---------|------|
 | **Pause** | Arrête le temps de la simulation, puis le reprend |
 | **Réinitialiser** | Redémarre le programme, comme le bouton RESET de la carte |
-| **−**, **%**, **+**, **Tout voir** | Le zoom du canevas; « Tout voir » montre tout le montage |
+| **−**, **%**, **+**, **Tout voir** | Le zoom du canevas; « Tout voir » montre tout le montage. La molette de la souris, au-dessus du canevas, zoome aussi |
+| **Ranger…** | Replace tous les modules autour de leur carte, sans chevauchement : à l'horizontale (au-dessus et au-dessous) ou à la verticale (à gauche et à droite). La disposition faite à la main est remplacée |
+| **Exemples…** | Ouvre un exemple des notes de cours (section 2.1) |
+| **Hat** (dans l'en-tête d'une carte) | Pose ou retire le hat Grove (section 3.3) |
+| **☾ Sombre** / **☀ Clair** | Change les couleurs du panneau |
 | En-tête d'une carte ou d'un module | Le tenir avec la souris pour déplacer l'élément; les câbles se retracent tout seuls |
 | Voyants **ON**, **L**, **TX**, **RX** | Les mêmes que ceux de la vraie carte |
 | Sous la carte | L'état de la mémoire EEPROM, et le bouton « Effacer » pour la remettre à neuf |
@@ -268,7 +317,7 @@ Le simulateur enregistre le montage dans le projet, pour le retrouver à la proc
 
 | Fichier | Contenu |
 |---------|---------|
-| `circuit.json` | Les modules de la carte, leur port et leur position sur le canevas |
+| `circuit.json` | Les modules de la carte, leur port et leur position sur le canevas; le hat, posé ou retiré |
 | `montage.json` | Avec deux cartes : les cartes, leur position et le câble qui les relie. Il est à côté du fichier de l'espace de travail |
 
 Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
@@ -293,6 +342,8 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 | La carte indique « projet non compilé » | Compiler le projet (**Ctrl+Alt+B**) |
 | Le programme ne change pas après une modification, même avec **Reset** | Enregistrer et recompiler (**Ctrl+Alt+B**, ou le bouton **Recompiler** de la carte) : le simulateur exécute le programme **compilé** |
 | Un module ne réagit pas | Vérifier que son port dans le simulateur est le même que la broche utilisée dans le code |
+| Les modules se chevauchent après une mise à jour du simulateur | Choisir **Ranger…** dans la barre du haut : les modules de la version 1.1 sont dessinés plus grands |
+| Un module du MEGA a disparu après une mise à jour | Le rebrancher sur une prise qui existe sur le vrai hat : D2, D4… D12 ou A0, A2… A14 (section 3.2) |
 | Le MEGA ne joint pas l'API | Vérifier que le conteneur tourne (onglet **API**) et que l'adresse est `127.0.0.1` |
 
 ---
@@ -301,6 +352,6 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.11.19.01 - Révision 2026.11.19.3**
+**Version 2026.11.19.01 - Révision 2026.11.19.4**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*
