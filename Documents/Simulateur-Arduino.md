@@ -51,7 +51,7 @@ Le simulateur sert à travailler **sans le kit**, à la maison par exemple. Il n
 
 ### 1.2 – Télécharger l'extension {#section-1-2}
 
-👉 [**simulateur-arduino-grove-0.1.1.vsix**](../telechargements/simulateur-arduino-grove-0.1.1.vsix) (version 0.1.1, environ 200 Ko)
+👉 [**simulateur-arduino-grove-1.0.0.vsix**](../telechargements/simulateur-arduino-grove-1.0.0.vsix) (version 1.0.0, environ 200 Ko)
 
 Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléchargements`. Un fichier `.vsix` est une extension de VS Code remise sous forme de fichier, plutôt que par la boutique d'extensions.
 
@@ -61,7 +61,7 @@ Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléc
 2. Ouvrir la vue des extensions : **Ctrl+Maj+X**.
 3. Cliquer sur les trois points **…** en haut à droite de cette vue.
 4. Choisir **Install from VSIX…** (« Installer à partir d'un VSIX… » si VS Code est en français).
-5. Choisir le fichier `simulateur-arduino-grove-0.1.1.vsix` téléchargé.
+5. Choisir le fichier `simulateur-arduino-grove-1.0.0.vsix` téléchargé.
 
 VS Code confirme l'installation par un message en bas à droite.
 
@@ -71,7 +71,7 @@ VS Code confirme l'installation par un message en bas à droite.
 - Dans un terminal, à partir du dossier où se trouve le fichier :
 
   ```bash
-  code --install-extension simulateur-arduino-grove-0.1.1.vsix
+  code --install-extension simulateur-arduino-grove-1.0.0.vsix
   ```
 
 ### 1.4 – Vérifier l'installation {#section-1-4}
@@ -101,6 +101,8 @@ Le panneau s'ouvre à côté du code :
 - le **moniteur série**, au bas du panneau, affiche ce que le programme envoie par `Serial.print()`. On peut aussi y taper : les touches sont envoyées au programme.
 
 👉 Modifier le délai dans le code, recompiler (**Ctrl+Alt+B**) et observer : la carte **redémarre toute seule** avec le nouveau programme. Il n'y a rien à téléverser.
+
+💡 Le bouton **Reset** relance le programme **déjà compilé** : il ne recompile pas. Après une modification du code, le bouton **Recompiler** apparaît dans l'en-tête de la carte pour le rappeler.
 
 Les mêmes actions se trouvent dans la palette de commandes (**Ctrl+Maj+P**), sous « Simulateur Arduino » :
 
@@ -166,6 +168,8 @@ Comme sur le vrai hat, un connecteur **Dn** porte deux broches : **Dn** et **Dn+
 | **Moniteur série** | Un onglet par carte; le débit est celui de `Serial.begin()` |
 | **Côte à côte** | Affiche tous les moniteurs série en même temps |
 | **Oscilloscope** | Affiche ou masque l'oscilloscope, à droite du canevas (section 5) |
+| La poignée entre le canevas et le moniteur série | La glisser vers le haut ou le bas pour changer la hauteur des deux zones; un double-clic revient au réglage d'origine |
+| **Recompiler** (dans l'en-tête d'une carte) | N'apparaît que si le code a été enregistré sans être recompilé : un clic compile le projet et relance la simulation |
 
 La mémoire **EEPROM** garde son contenu d'une simulation à l'autre, comme celle de la vraie carte : voir le document [La mémoire EEPROM](EEPROM.md).
 
@@ -287,7 +291,7 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 |-----------------|------------|
 | L'icône du simulateur n'apparaît pas | Ouvrir le **dossier** du projet (celui qui contient `platformio.ini`), pas seulement un fichier |
 | La carte indique « projet non compilé » | Compiler le projet (**Ctrl+Alt+B**) |
-| Le programme ne change pas après une modification | Enregistrer et recompiler : le simulateur exécute le programme **compilé** |
+| Le programme ne change pas après une modification, même avec **Reset** | Enregistrer et recompiler (**Ctrl+Alt+B**, ou le bouton **Recompiler** de la carte) : le simulateur exécute le programme **compilé** |
 | Un module ne réagit pas | Vérifier que son port dans le simulateur est le même que la broche utilisée dans le code |
 | Le MEGA ne joint pas l'API | Vérifier que le conteneur tourne (onglet **API**) et que l'adresse est `127.0.0.1` |
 
@@ -297,6 +301,6 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.11.19.01 - Révision 2026.11.19.2**
+**Version 2026.11.19.01 - Révision 2026.11.19.3**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*
