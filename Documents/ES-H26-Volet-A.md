@@ -1,6 +1,6 @@
 # 24 - 2026.ES
 
-*Révision du 2026.11.07*
+*Révision du 2026.11.19*
 
 # Épreuve synthèse Volet A
 
@@ -715,10 +715,13 @@ La réponse doit se terminer par `Données insérées avec succès!`. Revenir à
 
    ```cpp
    // char server[] = "esh25.ve2cuy.com";   // Le serveur du cours
-   char server[] = "192.168.1.42";          // Mon ordinateur (Docker), pendant les tests
+   char server[] = "192.168.1.42";          // Mon ordinateur (Docker), avec la carte réelle
+   // char server[] = "127.0.0.1";          // Mon ordinateur (Docker), avec le simulateur
    ```
 
    Si vous avez dû utiliser le port 8080 à l'étape 2, remplacer aussi `client.connect(server, 80)` par `client.connect(server, 8080)`.
+
+   **NOTE** : avec le [**simulateur d'Arduino**](Simulateur-Arduino.md) de VS Code, utiliser plutôt `127.0.0.1`. Cette adresse veut dire « cet ordinateur-ci », et le MEGA simulé tourne justement sur votre ordinateur : les points 1, 3 et 4 ne s'appliquent alors pas. Avec la **carte réelle**, `127.0.0.1` ne fonctionne pas, car elle désignerait le MEGA lui-même : il faut l'adresse IP de l'ordinateur.
 
 3. Le module Wifi et l'ordinateur doivent être connectés **au même réseau Wifi**.
 4. Sous Windows, la première fois, une fenêtre du **pare-feu** peut demander d'autoriser Docker : cliquer sur **Autoriser**.
@@ -1000,6 +1003,6 @@ GET /tp2-api.php?nomSys=!VE2CUY!&ipAdr=192.168.1.191&note=exemple&statut=4&app=2
 ## Crédits
 
 **Document rédigé par Alain Boudreault © 2021-2027**
-**Version 2025.03.15.01 - Révision 2026.11.07.1**
+**Version 2025.03.15.01 - Révision 2026.11.19.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

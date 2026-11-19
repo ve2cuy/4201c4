@@ -16,6 +16,7 @@ quel sur github.com; sur le site, un petit script (`assets/js/accueil.js`) en fa
 | `Documents/*.md` | Le contenu des documents, en Markdown |
 | `dessins/*.svg` | Les dessins des cartes et des sections |
 | `images/` | Les images des documents et de l'accueil |
+| `telechargements/` | Les fichiers à télécharger : le paquet `.vsix` du simulateur d'Arduino (voir plus bas) |
 | `_layouts/`, `assets/` | Le thème, la mise en page de l'accueil et le tableau de bord (normalement, on n'y touche pas) |
 | `assets/data/sessions.json` | Le calendrier de la session, pour le tableau de bord |
 | `README.md` | La page du dépôt sur github.com; **elle n'apparaît pas sur le site** |
@@ -251,6 +252,21 @@ questions:
   (meilleur résultat : vert à 80 % et plus, ambre sous 80 %, rouge à 50 % et moins; même couleur pour le résultat du quiz). Un document qui a un quiz pas encore fait affiche « quiz ». Le résultat disparaît si les données du navigateur sont effacées.
 - Les réponses sont dans la page : c'est un outil d'autoévaluation, pas un examen.
 - Mettre les guillemets autour des textes qui contiennent « : » ou « # ».
+
+## Le simulateur d'Arduino à télécharger
+
+Le document `Documents/Simulateur-Arduino.md` offre en téléchargement l'extension VS Code du
+simulateur, sous la forme d'un paquet `.vsix` déposé dans `telechargements/`. Le code de
+l'extension est dans le dépôt privé `ve2cuy/Plugin-Arduino`.
+
+Pour publier une nouvelle version :
+
+1. Dans le dépôt de l'extension, augmenter `version` dans `package.json`, puis `npm run vsix` :
+   la commande produit `simulateur-arduino-grove-<version>.vsix`.
+2. Copier ce fichier dans `telechargements/` et retirer l'ancien.
+3. Dans `Documents/Simulateur-Arduino.md`, remplacer le nom du fichier aux sections 1.2 et 1.3
+   (quatre mentions), et mettre à jour la date de révision.
+4. Pousser.
 
 ## Aperçu local (valider avant de publier)
 

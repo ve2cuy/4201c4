@@ -17,7 +17,7 @@ Le cours **Objets connectés** initie l'étudiant aux capteurs d'environnement, 
 - **Pondération** : 1-3-2
 - **Préalable** : Aucun
 
-Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/circuits) (émulateurs Arduino en ligne), PlatformIO et l'Arduino IDE.
+Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/circuits) (émulateurs Arduino en ligne), PlatformIO, l'Arduino IDE et le [simulateur d'Arduino pour VS Code](Documents/Simulateur-Arduino.md).
 
 ## Horaire et disponibilités de l'enseignant
 
@@ -50,6 +50,8 @@ Outils : [Wokwi](https://wokwi.com/) et [TinkerCad](https://www.tinkercad.com/ci
   - Arduino Uno · émulateurs en ligne : Wokwi, TinkerCad
 - ![](dessins/terminal.svg) 02 · [Introduction à PlatformIO](Documents/PlatformIO-Hello-world.md)
   - VS Code · structure d'un projet · platformio.ini · Hello World
+- ![](dessins/carte-arduino.svg) + · [Simulateur d'Arduino pour VS Code](Documents/Simulateur-Arduino.md)
+  - Extension à télécharger · UNO et MEGA virtuels · modules Grove · moniteur série
 - ![](dessins/carte-arduino.svg) 03 · [Arduino IDE](Documents/Hello-world.md)
   - Hello World · DEL sur D13 · delay() · macros
 - ![](dessins/bouton.svg) 04 · [Console série et bouton](Documents/Serial-println-et-digitalread.md)

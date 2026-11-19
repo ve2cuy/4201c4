@@ -17,6 +17,7 @@
 - [Arduino Uno]()
 - Émulateurs Arduino en ligne; [Wokwi](https://wokwi.com/), [TinkerCad](https://www.tinkercad.com/circuits)
 - 3 - [Hello World – PlatformIO](Documents/PlatformIO-Hello-world.md) 
+- [Simulateur d'Arduino pour VS Code](Documents/Simulateur-Arduino.md) – extension à télécharger
 - [Hello World – Arduino IDE](Documents/Hello-world.md)
 - 4 - [Arduino – Serial.println(val), digitalRead() et l’instruction while() pour la gestion du bouton](Documents/Serial-println-et-digitalread.md)
 - 5 - [Arduino – Lecture/écriture d’une valeur analogique – analogRead()analogWrite() PWM](Documents/analogRead.md)

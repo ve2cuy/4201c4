@@ -1,6 +1,6 @@
 # 2 - Introduction à PlatformIO
 
-*Révision du 2026.11.07*
+*Révision du 2026.11.19*
 
 <p align="center">
   <img src="../images/platformio-logo-png-transparent.png" alt="" width="350" />  
@@ -96,6 +96,8 @@ PlatformIO présente plusieurs avantages significatifs par rapport à l'IDE Ardu
 PlatformIO s'installe sous VS Code en y ajoutant l'extension 'PlatformIO IDE':
 
 <img src="../images/pio-install.png" alt="Installation PlatformIO" width="500" />
+
+💡 Pour essayer vos programmes sans le kit, une seconde extension s'installe à côté de PlatformIO : le [simulateur d'Arduino pour VS Code](Simulateur-Arduino.md), qui fait tourner le programme compilé dans un Arduino virtuel.
 
 ---
 
@@ -447,6 +449,6 @@ PlatformIO représente une solution efficace pour le développement Arduino et e
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.01.25.01 - Révision 2026.11.07.1**
+**Version 2026.01.25.01 - Révision 2026.11.19.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*
