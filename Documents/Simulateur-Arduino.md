@@ -20,10 +20,15 @@
   - [3.1 – Les modules disponibles](#section-3-1)
   - [3.2 – Les ports du hat Grove](#section-3-2)
 - [**4 – Le panneau du simulateur**](#section-4)
-- [**5 – Deux Arduino reliés par UART**](#section-5)
-- [**6 – Le Wi-Fi et l'API du projet de session**](#section-6)
-- [**7 – Les fichiers ajoutés au projet**](#section-7)
-- [**8 – Limites et dépannage**](#section-8)
+- [**5 – L'oscilloscope**](#section-5)
+  - [5.1 – Observer un signal](#section-5-1)
+  - [5.2 – Décoder UART, I2C et PWM](#section-5-2)
+  - [5.3 – Le déclenchement](#section-5-3)
+  - [5.4 – Mesurer et explorer](#section-5-4)
+- [**6 – Deux Arduino reliés par UART**](#section-6)
+- [**7 – Le Wi-Fi et l'API du projet de session**](#section-7)
+- [**8 – Les fichiers ajoutés au projet**](#section-8)
+- [**9 – Limites et dépannage**](#section-9)
 
 ---
 
@@ -46,7 +51,7 @@ Le simulateur sert à travailler **sans le kit**, à la maison par exemple. Il n
 
 ### 1.2 – Télécharger l'extension {#section-1-2}
 
-👉 [**simulateur-arduino-grove-0.0.1.vsix**](../telechargements/simulateur-arduino-grove-0.0.1.vsix) (environ 180 Ko)
+👉 [**simulateur-arduino-grove-0.1.0.vsix**](../telechargements/simulateur-arduino-grove-0.1.0.vsix) (version 0.1.0, environ 200 Ko)
 
 Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléchargements`. Un fichier `.vsix` est une extension de VS Code remise sous forme de fichier, plutôt que par la boutique d'extensions.
 
@@ -56,7 +61,7 @@ Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléc
 2. Ouvrir la vue des extensions : **Ctrl+Maj+X**.
 3. Cliquer sur les trois points **…** en haut à droite de cette vue.
 4. Choisir **Install from VSIX…** (« Installer à partir d'un VSIX… » si VS Code est en français).
-5. Choisir le fichier `simulateur-arduino-grove-0.0.1.vsix` téléchargé.
+5. Choisir le fichier `simulateur-arduino-grove-0.1.0.vsix` téléchargé.
 
 VS Code confirme l'installation par un message en bas à droite.
 
@@ -66,7 +71,7 @@ VS Code confirme l'installation par un message en bas à droite.
 - Dans un terminal, à partir du dossier où se trouve le fichier :
 
   ```bash
-  code --install-extension simulateur-arduino-grove-0.0.1.vsix
+  code --install-extension simulateur-arduino-grove-0.1.0.vsix
   ```
 
 ### 1.4 – Vérifier l'installation {#section-1-4}
@@ -79,7 +84,7 @@ VS Code confirme l'installation par un message en bas à droite.
 
 ### 1.5 – Mettre à jour ou désinstaller {#section-1-5}
 
-- **Mettre à jour** : télécharger la nouvelle version sur cette page et refaire l'étape 1.3. La nouvelle version remplace l'ancienne.
+- **Mettre à jour** : télécharger la nouvelle version sur cette page et refaire l'étape 1.3. La nouvelle version remplace l'ancienne. Le numéro de la version installée est affiché dans la vue des extensions.
 - **Désinstaller** : dans la vue des extensions, cliquer sur la roue dentée de **Simulateur Arduino Grove**, puis sur **Uninstall** (« Désinstaller »).
 
 ---
@@ -129,6 +134,7 @@ Le module apparaît sur le canevas, relié par un câble au connecteur choisi. L
 | Afficheur 4-Digit | D | Affiche les chiffres envoyés par la librairie TM1637 |
 | RGB LED Stick | D | Les 10 DEL prennent les couleurs envoyées par la librairie NeoPixel |
 | LCD RGB | I2C | Le texte et la couleur du rétroéclairage |
+| LCD 20x4 I2C | I2C | Écran de 4 lignes de 20 caractères pour la librairie LiquidCrystal_I2C; son adresse (0x27 par défaut) et son contraste se règlent sous l'écran |
 | Capteur SHT31 | I2C | Des curseurs règlent la température et l'humidité |
 | Capteur BME280 | I2C | Des curseurs règlent la température, l'humidité et la pression |
 | Horloge RTC | I2C | Donne l'heure de l'ordinateur, ou celle que le programme a réglée |
@@ -142,6 +148,8 @@ Comme sur le vrai hat, un connecteur **Dn** porte deux broches : **Dn** et **Dn+
 - Un module série branché sur **Dn** se programme avec `SoftwareSerial(Dn, Dn+1)`.
 - Les modules I2C partagent le même bus : ils se branchent sur n'importe quel connecteur **I2C**.
 - Sur le MEGA, les connecteurs **UART1**, **UART2** et **UART3** correspondent à `Serial1`, `Serial2` et `Serial3`.
+
+💡 Pour le **LCD 20x4 I2C**, l'adresse choisie sous l'écran doit être celle du programme : `LiquidCrystal_I2C lcd(0x27, 20, 4);`. Sans `lcd.backlight()`, le rétroéclairage reste éteint, comme sur le vrai module.
 
 ---
 
@@ -157,12 +165,61 @@ Comme sur le vrai hat, un connecteur **Dn** porte deux broches : **Dn** et **Dn+
 | Sous la carte | L'état de la mémoire EEPROM, et le bouton « Effacer » pour la remettre à neuf |
 | **Moniteur série** | Un onglet par carte; le débit est celui de `Serial.begin()` |
 | **Côte à côte** | Affiche tous les moniteurs série en même temps |
+| **Oscilloscope** | Affiche ou masque l'oscilloscope, à droite du canevas (section 5) |
 
 La mémoire **EEPROM** garde son contenu d'une simulation à l'autre, comme celle de la vraie carte : voir le document [La mémoire EEPROM](EEPROM.md).
 
 ---
 
-## 5 – Deux Arduino reliés par UART {#section-5}
+## 5 – L'oscilloscope {#section-5}
+
+<p align="center">
+  <img src="../images/simulateur-oscilloscope.png" alt="L'oscilloscope du simulateur : la ligne TX décodée en caractères et un signal PWM à 50 %" width="700" />
+</p>
+
+Le bouton **Oscilloscope** de la barre du haut affiche, à droite du canevas, un oscilloscope numérique à **quatre voies**. Il montre les signaux tels qu'ils circulent sur les fils : on y voit ce que `Serial.print()`, `analogWrite()` ou la librairie d'un module I2C envoient réellement.
+
+### 5.1 – Observer un signal {#section-5-1}
+
+Sous l'écran, chaque voie a deux listes :
+
+1. la première choisit le **signal** : une broche (`D3`, `A0`…), une ligne série (`TX`, `RX`) ou une ligne du bus I2C (`SDA`, `SCL`);
+2. la seconde choisit le **décodeur**, ou « Sans décodage ».
+
+L'échelle verticale est de **1 V par division** : un signal de 5 V couvre cinq divisions. La base de temps (le temps par division) se règle avec les boutons **−** et **+**, ou avec la molette de la souris au-dessus de l'écran.
+
+### 5.2 – Décoder UART, I2C et PWM {#section-5-2}
+
+| Décodeur | Sur quels signaux | Ce qu'il affiche sous la trace |
+|----------|-------------------|--------------------------------|
+| **UART** | `TX`, `RX`, ou une broche utilisée par SoftwareSerial | Chaque octet : son caractère et sa valeur en hexadécimal. Le débit est trouvé automatiquement, ou choisi dans la liste |
+| **I2C** | `SDA` et `SCL` | Le départ (`S`), l'adresse et le sens (`3E W`, `44 R`), les octets, les refus (`NACK`) et l'arrêt (`P`) |
+| **PWM** | Une broche pilotée par `analogWrite()` | Le rapport cyclique en %, la valeur d'`analogWrite()` et la fréquence |
+
+Le même décodage est écrit en texte sous l'écran, par exemple `UART 9600 bauds : Bonjour`.
+
+### 5.3 – Le déclenchement {#section-5-3}
+
+Le déclenchement fixe l'image : l'écran se cale sur un événement du signal, repéré par un triangle orange.
+
+- **Front montant**, **front descendant** ou **tout front** : pour un signal ordinaire.
+- **Début de transmission UART** : le premier bit de départ après un silence. L'écran montre alors le début de chaque message.
+- **Départ I2C** : le début de chaque échange sur le bus.
+
+Le bouton **Auto / Normal** choisit ce que fait l'écran en attendant : en **Auto**, il défile; en **Normal**, il garde la dernière image. **UNIQUE** capture le prochain événement, puis arrête l'acquisition.
+
+### 5.4 – Mesurer et explorer {#section-5-4}
+
+- **MARCHE / ARRÊT** gèle l'écran. À l'arrêt, la molette agrandit le signal **autour de la souris** et les flèches **◀ ▶** le font défiler.
+- **Glisser** la souris sur l'écran pose deux curseurs et affiche le temps qui les sépare (ΔT) et la fréquence correspondante. Un double-clic les efface.
+- **AUTO** choisit une base de temps adaptée au signal.
+- Sous l'écran : le nombre de fronts, la période, la fréquence et la largeur d'impulsion de la voie de déclenchement.
+
+👉 Essayer avec le programme de la section 2 : voie 1 sur `TX` pour lire ce qu'envoie `Serial.print()`, voie 2 sur `D13` pour voir la DEL clignoter.
+
+---
+
+## 6 – Deux Arduino reliés par UART {#section-6}
 
 Le simulateur peut faire tourner **deux cartes en même temps**, par exemple le UNO et le MEGA du projet de session.
 
@@ -185,7 +242,7 @@ Voir le document [Communication UART](Communication-UART-entre-2-arduino.md).
 
 ---
 
-## 6 – Le Wi-Fi et l'API du projet de session {#section-6}
+## 7 – Le Wi-Fi et l'API du projet de session {#section-7}
 
 Le **module Wi-Fi** simulé ouvre de vraies connexions à partir de votre ordinateur. Le programme du MEGA peut donc envoyer ses requêtes à une vraie API, comme avec le vrai module.
 
@@ -201,7 +258,7 @@ Quand le montage contient un module Wi-Fi, un onglet **API** s'ajoute à côté 
 
 ---
 
-## 7 – Les fichiers ajoutés au projet {#section-7}
+## 8 – Les fichiers ajoutés au projet {#section-8}
 
 Le simulateur enregistre le montage dans le projet, pour le retrouver à la prochaine ouverture :
 
@@ -214,12 +271,13 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 ---
 
-## 8 – Limites et dépannage {#section-8}
+## 9 – Limites et dépannage {#section-9}
 
 **Ce que le simulateur ne fait pas**
 
 - Le **récepteur infrarouge** n'est pas simulé.
 - Le **buzzer** n'émet pas de son : son module indique seulement s'il est actif.
+- L'**oscilloscope** montre des signaux logiques (0 V ou 5 V) : il ne trace pas une tension analogique, comme celle du potentiomètre.
 - Le module Wi-Fi accepte n'importe quel nom de réseau et n'importe quel mot de passe.
 - Sur un ordinateur lent, le temps simulé peut avancer moins vite que le temps réel.
 
@@ -239,6 +297,6 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.11.19.01**
+**Version 2026.11.19.01 - Révision 2026.11.19.2**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*
