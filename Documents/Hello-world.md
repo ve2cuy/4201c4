@@ -43,6 +43,8 @@ En utilisant un module *Arduino Uno*, l’*IDE Arduino* et quelques *instruction
 **Action 1.3** – Insérer les lignes avec *pinMode()* et *digitalWrite()*  
 <img src="../images/Capture-decran-le-2021-07-17-a-16.49.21-1024x738.png" alt="" width="500" />
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```c
 void setup() {
   pinMode(13, 1);
@@ -90,6 +92,8 @@ Résultat :
 
 Exemple classique avec commentaires :
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-3) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```c
 // Projet: Introduction à Arduino
 // Auteur: Alain Boudreault
@@ -110,6 +114,8 @@ void loop() {
 ---
 
 ## 4 – Utilisation de MACROs {#section-4}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-4) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```c
 #define DEL_ROUGE 13

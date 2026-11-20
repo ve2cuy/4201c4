@@ -30,6 +30,8 @@ Le mot-clé '**enum**' est utilisé pour déclarer de nouveaux types d'énuméra
 
 Voici des exemples d'utilisation de l'instruction '***enum***':
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/enum-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```c
 // Exemple 01
 #include <Arduino.h> 
@@ -71,7 +73,10 @@ void loop(){}
 
 ## 2 – Exemple d'utilisation d'une variable de type *enum* {#section-2}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/enum-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```c
+#include <Streaming.h>
 
 
 enum Menu {
@@ -101,6 +106,8 @@ void loop(){}
 ---
 
 ## 3 – Affecter une valeur aux membres d'un 'enum'. {#section-3}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/enum-3) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```c
 #include "Streaming.h"
@@ -135,6 +142,8 @@ void loop(){}
 ---
 
 ## 4 – Un autre exemple : une liste de fruits??? {#section-4}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/enum-4) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```c
 // Exemple d'utilisation de l'instruction 'enum'
@@ -174,6 +183,8 @@ void loop() {
 ## 5 – Gestion d'un menu avec enum – sous Wokwi {#section-5}
 
 <img src="../images/Capture-décran-2022-10-23-à-14.31.35.png" alt="" width="500" />
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/enum-5) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```c
 /*

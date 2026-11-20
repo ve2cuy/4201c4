@@ -198,6 +198,8 @@ lib_deps =
 
 Voici un exemple fonctionnel:
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-a-5) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```c
 #include <Arduino.h>
 #include "ansi.h"
@@ -403,6 +405,8 @@ etatPushButton = digitalRead(pinPushButton, HIGH);  // Placer l'état du pushBut
 
 ## 7.1 – Bouton, compteur et relai
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-7-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```c
 /*
     Nos premiers pas avec un bouton interrupteur
@@ -440,6 +444,8 @@ void loop() {
 ---
 
 ## 8 – Utilisation de la mémoire: char[] vs String vs F() {#section-8}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-8) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```c
 /*
@@ -615,6 +621,8 @@ build_flags   =  -felide-constructors -std=c++0x
 
 ## 12 – lcd\_rgb – Variation de **RED** {#section-12}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-12) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```c
 /*
   Projet:  C:\Users\alin_\Documents\PlatformIO\Projects\Projet02\src
@@ -679,6 +687,8 @@ void loop() {
 ---
 
 ## 13 – lcd\_rgb : Défilement de caractères: {#section-13}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-13) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```c
 #include <Arduino.h>
@@ -789,6 +799,8 @@ Size of buffer[8]  : 8 octet(s)
 
 ## 16 – millis() -> Jours-heures:minutes:sec.centieme {#section-16}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-16) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```c
 #include <Arduino.h>
 #include <rgb_lcd.h>
@@ -886,6 +898,8 @@ Après l'échange: strA = Bonjour, strB = Salut
 ---
 
 ## 18 – Transmetteur via UART ou broches digitales {#section-18}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-18) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```c
 /*

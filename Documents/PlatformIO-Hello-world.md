@@ -134,6 +134,8 @@ La structure d'un projet PlatformIO est organisée de manière professionnelle:
 
 ### 1.3 – Remplacer le code source de main.cpp par: {#section-1-3}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/pio-1-3) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 #include <Arduino.h>
 
@@ -337,6 +339,8 @@ void loop() {
 ```
 
 **Et dans main.cpp:**
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/pio-6) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 #include <Arduino.h>

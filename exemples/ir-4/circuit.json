@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "port": "D2",
+      "type": "ir-recepteur"
+    }
+  ],
+  "hat": true
+}

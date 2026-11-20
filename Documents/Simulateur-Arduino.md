@@ -71,18 +71,18 @@ Installée ainsi, l'extension **se met à jour toute seule** quand une nouvelle 
 
 Sur un poste qui n'a pas accès à la boutique d'extensions, le simulateur s'installe aussi à partir d'un fichier. Un fichier `.vsix` est une extension de VS Code remise sous forme de fichier.
 
-👉 [**simulateur-arduino-grove-1.4.0.vsix**](../telechargements/simulateur-arduino-grove-1.4.0.vsix) (version 1.4.0, environ 280 Ko)
+👉 [**simulateur-arduino-grove-1.5.0.vsix**](../telechargements/simulateur-arduino-grove-1.5.0.vsix) (version 1.5.0, environ 285 Ko)
 
 1. Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléchargements`.
 2. Dans VS Code, ouvrir la vue des extensions : **Ctrl+Maj+X**.
 3. Cliquer sur les trois points **…** en haut à droite de cette vue.
 4. Choisir **Install from VSIX…** (« Installer à partir d'un VSIX… » si VS Code est en français).
-5. Choisir le fichier `simulateur-arduino-grove-1.4.0.vsix` téléchargé.
+5. Choisir le fichier `simulateur-arduino-grove-1.5.0.vsix` téléchargé.
 
 VS Code confirme l'installation par un message en bas à droite. On peut aussi passer par la palette de commandes (**Ctrl+Maj+P**, puis `Extensions: Install from VSIX`), ou par un terminal, à partir du dossier où se trouve le fichier :
 
 ```bash
-code --install-extension simulateur-arduino-grove-1.4.0.vsix
+code --install-extension simulateur-arduino-grove-1.5.0.vsix
 ```
 
 ### 1.4 – Vérifier l'installation {#section-1-4}
@@ -134,9 +134,108 @@ Le simulateur télécharge l'exemple depuis le site du cours (une connexion Inte
 
 | Exemple | Dans les notes | Ouvrir |
 |---------|----------------|--------|
-| Faire clignoter la DEL | [Hello World, section 2](Hello-world.md#section-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/blink-del) |
+| Le premier main.cpp | [Introduction à PlatformIO, section 1.3](PlatformIO-Hello-world.md#section-1-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/pio-1-3) |
 | Hello World avec une DEL | [Introduction à PlatformIO, section 5.1](PlatformIO-Hello-world.md#section-5-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-world-del) |
 | Hello World avec des macros | [Introduction à PlatformIO, section 5.2](PlatformIO-Hello-world.md#section-5-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-world-macros) |
+| Un fichier d'en-tête (.h) | [Introduction à PlatformIO, section 6](PlatformIO-Hello-world.md#section-6) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/pio-6) |
+| Allumer la DEL sur D13 | [Arduino IDE – Hello world, section 1](Hello-world.md#section-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-1) |
+| Faire clignoter la DEL | [Arduino IDE – Hello world, section 2](Hello-world.md#section-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/blink-del) |
+| Clignoter la DEL : code documenté | [Arduino IDE – Hello world, section 3](Hello-world.md#section-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-3) |
+| Clignoter la DEL avec des macros | [Arduino IDE – Hello world, section 4](Hello-world.md#section-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-4) |
+| Afficher au moniteur série | [Arduino – Serial.println() et digitalRead(), section 1.8](Serial-println-et-digitalread.md#section-1-8) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-1-8) |
+| Streaming.h | [Arduino – Serial.println() et digitalRead(), section 1.10](Serial-println-et-digitalread.md#section-1-10) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-1-10) |
+| La fonction digitalRead() | [Arduino – Serial.println() et digitalRead(), section 2.1](Serial-println-et-digitalread.md#section-2-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-2-1) |
+| Bouton et DEL : exemple documenté | [Arduino – Serial.println() et digitalRead(), section 2.6](Serial-println-et-digitalread.md#section-2-6) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-2-6) |
+| L'instruction while | [Arduino – Serial.println() et digitalRead(), section 3.1.1](Serial-println-et-digitalread.md#section-3-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-3-1-1) |
+| Résistance de rappel interne (INPUT_PULLUP) | [Arduino – Serial.println() et digitalRead(), section 4.1](Serial-println-et-digitalread.md#section-4-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-4-1) |
+| Permuter une DEL avec un bouton | [Arduino – Serial.println() et digitalRead(), section 5.1](Serial-println-et-digitalread.md#section-5-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-5-1) |
+| Anti-rebond d'un bouton | [Arduino – Serial.println() et digitalRead(), section 6](Serial-println-et-digitalread.md#section-6) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-6) |
+| Lire le potentiomètre | [Arduino – AnalogRead, section 1.1](analogRead.md#section-1-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-1-1) |
+| Varier l'intensité d'une DEL (PWM) | [Arduino – AnalogRead, section 4.1](analogRead.md#section-4-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-4-1) |
+| Varier l'intensité d'une DEL : version courte | [Arduino – AnalogRead, section 4.1.2](analogRead.md#section-4-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-4-1-2) |
+| La fonction map() : version a | [Arduino – AnalogRead, section 4.4.a](analogRead.md#section-4-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-4-4-a) |
+| La fonction map() : version b | [Arduino – AnalogRead, section 4.4.b](analogRead.md#section-4-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-4-4-b) |
+| La fonction map() : version c | [Arduino – AnalogRead, section 4.4.c](analogRead.md#section-4-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-4-4-c) |
+| Une boucle for | [Arduino – AnalogRead, section 5.1](analogRead.md#section-5-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-5-1) |
+| Varier l'intensité d'une DEL avec une boucle for | [Arduino – AnalogRead, section 5.2](analogRead.md#section-5-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-5-2) |
+| Afficher un texte sur le LCD RGB | [Grove – Module LCD-RGB i2c, section 3](LCD-enum-ifdef.md#section-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-3) |
+| Texte sur fond de couleur | [Grove – Module LCD-RGB i2c, section 3.1](LCD-enum-ifdef.md#section-3-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-3-1) |
+| Projet universel avec #ifdef | [Grove – Module LCD-RGB i2c, section 4.2](LCD-enum-ifdef.md#section-4-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-4-2) |
+| LCD RGB : flux et sprintf | [Grove – Module LCD-RGB i2c, section 4.3](LCD-enum-ifdef.md#section-4-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-4-3) |
+| sprintf et snprintf sur un LCD 20 × 4 | [Grove – Module LCD-RGB i2c, section 4.4.2](LCD-enum-ifdef.md#section-4-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-4-4-2) |
+| Compilation conditionnelle | [Grove – Module LCD-RGB i2c, section 4.6](LCD-enum-ifdef.md#section-4-6) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-4-6) |
+| LCD : clear, setCursor et sprintf | [Grove – Module LCD-RGB i2c, section 5.1](LCD-enum-ifdef.md#section-5-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-1) |
+| millis() aligné à droite sur le LCD | [Grove – Module LCD-RGB i2c, section 5.2](LCD-enum-ifdef.md#section-5-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-2) |
+| Changer la direction de l'affichage | [Grove – Module LCD-RGB i2c, section 5.3](LCD-enum-ifdef.md#section-5-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-3) |
+| Déplacer le texte de gauche à droite | [Grove – Module LCD-RGB i2c, section 5.4](LCD-enum-ifdef.md#section-5-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-4) |
+| LCD : défilement automatique | [Grove – Module LCD-RGB i2c, section 5.5](LCD-enum-ifdef.md#section-5-5) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-5) |
+| LCD : caractères personnalisés | [Grove – Module LCD-RGB i2c, section 5.6](LCD-enum-ifdef.md#section-5-6) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-6) |
+| Reste de la division (modulo) | [Grove – Module LCD-RGB i2c, section 7.1](LCD-enum-ifdef.md#section-7-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-1) |
+| L'opérateur ternaire | [Grove – Module LCD-RGB i2c, section 7.2](LCD-enum-ifdef.md#section-7-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-2) |
+| Nombres pairs et impairs | [Grove – Module LCD-RGB i2c, section 7.2.2](LCD-enum-ifdef.md#section-7-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-2-2) |
+| L'instruction switch | [Grove – Module LCD-RGB i2c, section 7.3](LCD-enum-ifdef.md#section-7-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-3) |
+| switch : moniteur série et LCD | [Grove – Module LCD-RGB i2c, section 7.3.1](LCD-enum-ifdef.md#section-7-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-3-1) |
+| Laboratoire : menu, bouton et DEL | [Grove – Module LCD-RGB i2c, section 7.3.3](LCD-enum-ifdef.md#section-7-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-3-3) |
+| L'instruction enum | [Grove – Module LCD-RGB i2c, section 7.4](LCD-enum-ifdef.md#section-7-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-4) |
+| Affecter une valeur aux éléments d'un enum | [Grove – Module LCD-RGB i2c, section 7.4.1](LCD-enum-ifdef.md#section-7-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-4-1-a) |
+| Affecter une valeur aux éléments d'un enum (suite) | [Grove – Module LCD-RGB i2c, section 7.4.1](LCD-enum-ifdef.md#section-7-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-4-1-b) |
+| Gestion d'un menu avec enum | [Grove – Module LCD-RGB i2c, section 7.5](LCD-enum-ifdef.md#section-7-5) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-5) |
+| Utiliser la bibliothèque Streaming | [Utilisation de librairies, section 1.7](Utilisation-de-librairies.md#section-1-7) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/librairies-1-7) |
+| Sa propre bibliothèque locale | [Utilisation de librairies, section 1.8](Utilisation-de-librairies.md#section-1-8) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/librairies-1-8) |
+| L'instruction enum | [L'instruction 'enum' du langage 'C', section 1](Instruction-enum.md#section-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/enum-1) |
+| Une variable de type enum | [L'instruction 'enum' du langage 'C', section 2](Instruction-enum.md#section-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/enum-2) |
+| Affecter une valeur aux membres d'un enum | [L'instruction 'enum' du langage 'C', section 3](Instruction-enum.md#section-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/enum-3) |
+| Un enum : une liste de fruits | [L'instruction 'enum' du langage 'C', section 4](Instruction-enum.md#section-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/enum-4) |
+| Gestion d'un menu avec enum | [L'instruction 'enum' du langage 'C', section 5](Instruction-enum.md#section-5) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/enum-5) |
+| Déclarer et utiliser une struct | [Structures et énumération sous C, section 3](Structures-de-donnees.md#section-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/struct-3) |
+| Une structure pour un ennemi | [Structures et énumération sous C, section 5](Structures-de-donnees.md#section-5) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/struct-5) |
+| Un tableau de structures | [Structures et énumération sous C, section 7](Structures-de-donnees.md#section-7) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/struct-7) |
+| L'opérateur AND binaire (&) | [Opérations sur les bits, section 1](Operations-sur-les-bits-et-structure-de-donnees.md#section-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-1) |
+| L'opérateur OR binaire (|) | [Opérations sur les bits, section 2](Operations-sur-les-bits-et-structure-de-donnees.md#section-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-2) |
+| L'opérateur XOR binaire (^) | [Opérations sur les bits, section 3](Operations-sur-les-bits-et-structure-de-donnees.md#section-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-3) |
+| L'opérateur NOT binaire (~) | [Opérations sur les bits, section 4](Operations-sur-les-bits-et-structure-de-donnees.md#section-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-4) |
+| Les opérateurs de décalage (<< et >>) | [Opérations sur les bits, section 6](Operations-sur-les-bits-et-structure-de-donnees.md#section-6) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-6) |
+| Décalage et opérations sur les bits | [Opérations sur les bits, section 6.1](Operations-sur-les-bits-et-structure-de-donnees.md#section-6-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-6-1) |
+| Les opérateurs binaires en pratique | [Opérations sur les bits, section 8](Operations-sur-les-bits-et-structure-de-donnees.md#section-8) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-8) |
+| Structures et opérations sur les bits | [Opérations sur les bits, section 9](Operations-sur-les-bits-et-structure-de-donnees.md#section-9) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-9) |
+| Afficher les multiples de 2 sur le 4-Digit | [SHT31 et TM1637, section 2.3.4](Capteur-temperature-humidite.md#section-2-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/tm1637-2-3-4) |
+| Afficher des chaînes sur le 4-Digit | [SHT31 et TM1637, section 2.4](Capteur-temperature-humidite.md#section-2-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/tm1637-2-4) |
+| Faire sonner le buzzer | [Buzzer et RGB LED Stick, section 1.2](NEOPixel.md#section-1-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/buzzer-1-2) |
+| Allumer une DEL du LED Stick | [Buzzer et RGB LED Stick, section 2.3.1](NEOPixel.md#section-2-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/neopixel-2-3-1) |
+| Allumer les DEL du LED Stick en séquence | [Buzzer et RGB LED Stick, section 2.3.2](NEOPixel.md#section-2-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/neopixel-2-3-2) |
+| Régler l'heure, puis la lire | [Grove – RTC_DS1307, section 4.1](RTC-DS1307.md#section-4-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/rtc-4-1) |
+| Afficher l'heure : version 1 | [Grove – RTC_DS1307, section 4.2](RTC-DS1307.md#section-4-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/rtc-4-2) |
+| Afficher l'heure : version 2 | [Grove – RTC_DS1307, section 4.3](RTC-DS1307.md#section-4-3) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/rtc-4-3) |
+| Afficher l'heure : version optimisée | [Grove – RTC_DS1307, section 4.4](RTC-DS1307.md#section-4-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/rtc-4-4) |
+| Détecteur de mouvement et DEL | [Détecteur de mouvements, section 2](Detecteur-de-mouvements.md#section-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/mouvement-2) |
+| Clignoter une DEL avec millis() | [Opérations non bloquantes, section 1](Operations-non-bloquantes.md#section-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/non-bloquant-1) |
+| Une interruption matérielle | [Opérations non bloquantes, section 4](Operations-non-bloquantes.md#section-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/non-bloquant-4) |
+| Interruption Timer pour clignoter une DEL | [Opérations non bloquantes, section 5](Operations-non-bloquantes.md#section-5) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/non-bloquant-5) |
+| Trace d'un programme avec un Timer | [Opérations non bloquantes, section 5.1](Operations-non-bloquantes.md#section-5-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/non-bloquant-5-1) |
+| Deux Arduino par UART : SoftwareSerial | [Écoute-moi, j'aimerais te parler, sections 2b.1 et 2b.2](Communication-UART-entre-2-arduino.md#section-2b-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-2b) |
+| Des messages du UNO vers le MEGA | [Écoute-moi, j'aimerais te parler, sections 3.1 et 3.2](Communication-UART-entre-2-arduino.md#section-3-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-3) |
+| UNO sur SoftwareSerial, MEGA sur UART2 | [Écoute-moi, j'aimerais te parler, sections 3.5.1 et 3.5.2](Communication-UART-entre-2-arduino.md#section-3-5) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-3-5) |
+| Un système d'alarme à deux Arduino | [Écoute-moi, j'aimerais te parler, sections 4.2 et 4.3](Communication-UART-entre-2-arduino.md#section-4-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-4) |
+| Les commandes AT du module Wi-Fi | [Grove – UART Wifi V2, section 4.1](ESP-Wifi.md#section-4-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/wifi-4-1) |
+| WiFiEsp : afficher les réseaux disponibles | [Grove – UART Wifi V2, section 4.2](ESP-Wifi.md#section-4-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/wifi-4-2) |
+| Requête vers une API Web | [Grove – UART Wifi V2, section 5.1](ESP-Wifi.md#section-5-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/wifi-5-1) |
+| Lire les codes d'une télécommande | [Infrarouge : récepteur et émetteur, section 4](Infrarouge.md#section-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/ir-4) |
+| Contrôler une DEL avec une télécommande | [Infrarouge : récepteur et émetteur, section 5](Infrarouge.md#section-5) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/ir-5) |
+| Compteur de démarrages dans l'EEPROM | [La mémoire EEPROM, section 4](EEPROM.md#section-4) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/eeprom-4) |
+| EEPROM.update() : retenir l'intensité de la DEL | [La mémoire EEPROM, section 5](EEPROM.md#section-5) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/eeprom-5) |
+| EEPROM.put() et EEPROM.get() : une configuration | [La mémoire EEPROM, section 6](EEPROM.md#section-6) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/eeprom-6) |
+| Afficher le contenu de l'EEPROM | [La mémoire EEPROM, section 7.1](EEPROM.md#section-7-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/eeprom-7-1) |
+| Effacer l'EEPROM | [La mémoire EEPROM, section 7.2](EEPROM.md#section-7-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/eeprom-7-2) |
+| Lire une carte RFID | [Capteur RFID de Grove, section 1](capteur-rfid.md#section-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/rfid-1) |
+| Séquences ANSI au moniteur série | [Copier/Coller et projets Wokwi, section A.5](copier-coller.md#section-a-5) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-a-5) |
+| Bouton, compteur et relais | [Copier/Coller et projets Wokwi, section 7.1](copier-coller.md#section-7) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-7-1) |
+| La mémoire : char[] ou String | [Copier/Coller et projets Wokwi, section 8](copier-coller.md#section-8) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-8) |
+| LCD RGB : variation du rouge | [Copier/Coller et projets Wokwi, section 12](copier-coller.md#section-12) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-12) |
+| LCD RGB : défilement de caractères | [Copier/Coller et projets Wokwi, section 13](copier-coller.md#section-13) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-13) |
+| millis() en jours, heures, minutes et secondes | [Copier/Coller et projets Wokwi, section 16](copier-coller.md#section-16) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-16) |
+| Transmettre par UART ou par des broches numériques | [Copier/Coller et projets Wokwi, section 18](copier-coller.md#section-18) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/copier-coller-18) |
+
+💡 Les exemples à deux cartes (« Écoute-moi, j'aimerais te parler ») ouvrent les deux Arduino déjà reliés par leur câble : ils demandent la version 1.5.0 du simulateur, ou une plus récente.
 
 💡 Un dossier qui existe déjà n'est jamais remplacé : le simulateur propose de l'ouvrir, ou de créer une copie.
 
@@ -308,6 +407,18 @@ SoftwareSerial lienAvecRecepteur(9, 8);   // RX, TX
 // Sur le MEGA : le port matériel Serial2
 ```
 
+Un câble peut aussi relier **deux connecteurs numériques**, par exemple *UNO D6 ↔ MEGA D10* : c'est alors `SoftwareSerial` des deux côtés. Le câble Grove est droit (D6 avec D10, D7 avec D11) : la broche sur laquelle une carte émet doit faire face à celle sur laquelle l'autre reçoit.
+
+```cpp
+// Sur le UNO : reçoit sur D6, émet sur D7
+SoftwareSerial transmetteur(6, 7);   // RX, TX
+
+// Sur le MEGA : reçoit sur D11 (en face de D7), émet sur D10 (en face de D6)
+SoftwareSerial recepteur(11, 10);    // RX, TX
+```
+
+Les exemples de la section [Les exemples du cours](#section-2-1) tirés de « Écoute-moi, j'aimerais te parler » s'ouvrent avec leurs deux cartes déjà reliées.
+
 Voir le document [Communication UART](Communication-UART-entre-2-arduino.md).
 
 ### 6.1 – Un projet complet à télécharger : la station Grove {#section-6-1}
@@ -381,6 +492,6 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.11.19.01 - Révision 2026.11.20.5**
+**Version 2026.11.19.01 - Révision 2026.11.20.7**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

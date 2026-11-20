@@ -51,6 +51,8 @@ Chaque attribut peut être d'un type différent.
 
 Pour déclarer une variable de type `Personnage` et lui attribuer des valeurs, voici un exemple de code
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/struct-3) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 // Définition de la struct Personnage
 struct Personnage {
@@ -126,6 +128,8 @@ Par exemple :
 ---
 
 ## 5 – Structure pour un ennemi avec utilisation de enum pour le type {#section-5}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/struct-5) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 // Définition de l'énumération pour les types d'ennemis
@@ -219,6 +223,8 @@ Voici un exemple qui utilise un tableau de **personnages** ainsi qu'une fonction
 De plus, nous utiliserons un type ***enum*** pour renseigner l'arme du personnage.
 
 De plus, la compilation conditionnelle est utilisée pour déterminer la langue des armes.
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/struct-7) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 #include <Arduino.h>

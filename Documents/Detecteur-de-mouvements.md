@@ -20,6 +20,8 @@
 
 ## 2 – Exemple d'utilisation {#section-2}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/mouvement-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 /*
     Auteur:       Alain Boudreault

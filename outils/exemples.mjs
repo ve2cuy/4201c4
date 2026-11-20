@@ -20,6 +20,13 @@
 //   3. node outils/exemples.mjs --compiler <id>;
 //   4. dans la note de cours, ajouter le lien :
 //      [Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/<id>)
+//
+// Un exemple à PLUSIEURS CARTES (deux Arduino reliés par UART) : un projet par
+// carte dans son sous-dossier, et montage.json (les cartes et leur câble) à la
+// racine de l'exemple. Son entrée de l'index nomme ses projets :
+//   "projets": [{ "dossier": "transmetteur-uno", "environnement": "uno" },
+//               { "dossier": "recepteur-mega", "environnement": "mega" }]
+// Il faut la version 1.5.0 de l'extension, ou une plus récente.
 
 import { spawnSync } from 'node:child_process';
 import { copyFileSync, cpSync, existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
@@ -40,8 +47,11 @@ function trouverPio() {
   return existsSync(local) ? local : 'pio';
 }
 
-/** Les fichiers d'un exemple, en chemins relatifs avec des « / », triés. */
-function listerFichiers(dossier) {
+/**
+ * Les fichiers d'un exemple, en chemins relatifs avec des « / », triés. Pour
+ * plusieurs cartes : montage.json, puis les fichiers permis de chaque projet.
+ */
+function listerFichiers(dossier, projets) {
   const fichiers = [];
   const parcourir = (courant) => {
     for (const entree of readdirSync(courant, { withFileTypes: true })) {
@@ -57,6 +67,15 @@ function listerFichiers(dossier) {
     }
   };
   parcourir(dossier);
+  if (projets) {
+    const sousDossiers = projets.map((projet) => projet.dossier);
+    return fichiers
+      .filter((f) => {
+        const [premier, ...reste] = f.split('/');
+        return f === 'montage.json' || (sousDossiers.includes(premier) && reste.length > 0 && RACINES_PERMISES.includes(reste[0]));
+      })
+      .sort();
+  }
   return fichiers.filter((f) => RACINES_PERMISES.includes(f.split('/')[0])).sort();
 }
 
@@ -72,26 +91,35 @@ if (inconnus.length > 0) {
 let echecs = 0;
 for (const exemple of index.exemples) {
   const source = join(racine, exemple.id);
+  // Un exemple à une carte est son propre projet; à plusieurs cartes, un projet par sous-dossier.
+  const projets = exemple.projets ?? [{ dossier: '', environnement: exemple.environnement }];
   if (compiler && (demandes.length === 0 || demandes.includes(exemple.id))) {
-    const copie = mkdtempSync(join(tmpdir(), `exemple-${exemple.id}-`));
-    try {
-      cpSync(source, copie, { recursive: true, filter: (fichier) => !fichier.endsWith('firmware.hex') });
-      console.log(`\n=== ${exemple.id} (${exemple.environnement}) ===`);
-      const resultat = spawnSync(trouverPio(), ['run', '-d', copie, '-e', exemple.environnement], { stdio: 'inherit' });
-      if (resultat.status !== 0) {
-        console.error(`La compilation de « ${exemple.id} » a échoué.`);
-        echecs++;
-      } else {
-        copyFileSync(join(copie, '.pio', 'build', exemple.environnement, 'firmware.hex'), join(source, 'firmware.hex'));
-        console.log(`Firmware rangé dans exemples/${exemple.id}/firmware.hex`);
+    for (const projet of projets) {
+      const dossierProjet = join(source, projet.dossier);
+      const nom = projet.dossier ? `${exemple.id}/${projet.dossier}` : exemple.id;
+      const copie = mkdtempSync(join(tmpdir(), `exemple-${exemple.id}-`));
+      try {
+        cpSync(dossierProjet, copie, { recursive: true, filter: (fichier) => !fichier.endsWith('firmware.hex') });
+        console.log(`\n=== ${nom} (${projet.environnement}) ===`);
+        const resultat = spawnSync(trouverPio(), ['run', '-d', copie, '-e', projet.environnement], { stdio: 'inherit' });
+        if (resultat.status !== 0) {
+          console.error(`La compilation de « ${nom} » a échoué.`);
+          echecs++;
+        } else {
+          copyFileSync(join(copie, '.pio', 'build', projet.environnement, 'firmware.hex'), join(dossierProjet, 'firmware.hex'));
+          console.log(`Firmware rangé dans exemples/${nom}/firmware.hex`);
+        }
+      } finally {
+        rmSync(copie, { recursive: true, force: true });
       }
-    } finally {
-      rmSync(copie, { recursive: true, force: true });
     }
   }
-  exemple.fichiers = listerFichiers(source);
-  if (!exemple.fichiers.includes('firmware.hex')) {
-    console.warn(`Attention : ${exemple.id} n'a pas de firmware.hex (node outils/exemples.mjs --compiler ${exemple.id})`);
+  exemple.fichiers = listerFichiers(source, exemple.projets);
+  for (const projet of projets) {
+    const hex = projet.dossier ? `${projet.dossier}/firmware.hex` : 'firmware.hex';
+    if (!exemple.fichiers.includes(hex)) {
+      console.warn(`Attention : ${exemple.id} n'a pas de ${hex} (node outils/exemples.mjs --compiler ${exemple.id})`);
+    }
   }
 }
 

@@ -34,6 +34,8 @@ Il suffit d'appliquer un signal digital positif (ON) sur la broche de raccordeme
 
 ## 1.2 – Exemple d'utilisation {#section-1-2}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/buzzer-1-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #define BROCHE_DU_BUZZER 5
 #define DELAI            1000
@@ -89,6 +91,8 @@ lib_deps = adafruit/Adafruit NeoPixel @ ^1.12.4
 
 ### 2.3.1 – Allumer un DEL
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/neopixel-2-3-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 // Constructeur:
 // Adafruit_NeoPixel (uint16_t n, int16_t pin=6, neoPixelType type=NEO_GRB+NEO_KHZ800)
@@ -111,6 +115,8 @@ void loop() {}
 ```
 
 ### 2.3.2 – Allumer tous les DEL en séquence
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/neopixel-2-3-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 #include <Adafruit_NeoPixel.h>

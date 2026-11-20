@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "port": "I2C",
+      "type": "lcd-i2c"
+    }
+  ],
+  "hat": true
+}

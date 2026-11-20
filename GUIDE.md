@@ -154,6 +154,24 @@ Pour **ajouter** un exemple :
 L'extension n'accepte que les fichiers d'un projet PlatformIO (`platformio.ini`, `circuit.json`,
 `montage.json`, `firmware.hex`, et le contenu de `src/`, `include/` et `lib/`), 64 fichiers au plus.
 
+Un programme écrit pour l'IDE Arduino (sans `#include <Arduino.h>`) se range dans `src/main.ino` :
+PlatformIO le convertit comme l'IDE, et le code reste identique à celui de la note.
+
+Un exemple à **deux cartes** (deux Arduino reliés par UART) contient un projet par carte, chacun dans
+son sous-dossier, et `montage.json` à la racine (les cartes et leur câble). Son entrée de l'index
+remplace `environnement` par `projets` :
+
+```json
+"projets": [
+  { "dossier": "transmetteur-uno", "environnement": "uno" },
+  { "dossier": "recepteur-mega", "environnement": "mega" }
+]
+```
+
+Il faut la version 1.5.0 du simulateur, ou une plus récente. Les tableaux d'exemples (section 2.1 de
+`Documents/Simulateur-Arduino.md` et `README.vsix.md` du dépôt de l'extension) se tiennent à jour au
+même moment.
+
 ## Exemples
 
 ### Ajouter un document

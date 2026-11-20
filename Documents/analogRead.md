@@ -39,6 +39,8 @@ Pour l'exemple suivant, nous aurons besoin de connecter le module Grove 'Potenti
 
 ### 1.1 – Exemple d'une lecture du potentiomètre {#section-1-1}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-1-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 /* 
    --------------------------------------------------------------------------
@@ -194,6 +196,8 @@ La fonctionnalité PWM est obtenue grâce à la fonction **analogWrite(0..255)**
 
 ### 4.1 – Varier l'intensité d'une DEL grâce à PWM – version 01 {#section-4-1}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-4-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 #include <Arduino.h>
 
@@ -221,6 +225,8 @@ void loop() {
 ```
 
 ### 4.1.2 – Varier l'intensité d'une DEL grâce à PWM – version 02 (optimisée)
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-4-1-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 int ledPin        = 3;         // LED sur pin 3
@@ -268,6 +274,8 @@ map(value, fromLow, fromHigh, toLow, toHigh)
 ---
 
 ### 4.4.a – Exemple d'utilisation de la fonction map() – version Serial.print
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-4-4-a) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 /*
@@ -341,6 +349,8 @@ void loop() {
 
 ### 4.4.b – Exemple d'utilisation de la fonction map() – version IO Stream
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-4-4-b) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 /*
     Fichier:  fn-map-stream.ino
@@ -406,6 +416,8 @@ void loop() {
 ```
 
 ### 4.4.c – Exemple d'utilisation de la fonction map() – version sprintf()
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-4-4-c) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 /*
@@ -503,6 +515,8 @@ for (int i=0; i < 10; i++) {}
 
 ### 5.1 – Voici un exemple complet d'une boucle 'for' {#section-5-1}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-5-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 void setup() {
   Serial.begin(9600);
@@ -530,6 +544,8 @@ void loop() {
 ---
 
 ### 5.2 – Varier l'intensité d'une DEL en utilisant une boucle 'for' {#section-5-2}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/analog-5-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 // Varier l'intensité d'une DEL, connectée sur D3, en utilisant une boucle 'for'

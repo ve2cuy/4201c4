@@ -16,6 +16,8 @@
 
 ## 1 – Utilisation de la fonction millis() pour clignoter une DEL {#section-1}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/non-bloquant-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include <Arduino.h>
 
@@ -85,6 +87,8 @@ Il existe deux types d'interruptions :
 
 ## 4 – Exemple – Traitement d'une interruption matérielle. {#section-4}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/non-bloquant-4) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include <Arduino.h>
 
@@ -115,6 +119,8 @@ void blink() {
 ---
 
 ## 5 – Interruption 'Timer' pour clignoter une DEL {#section-5}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/non-bloquant-5) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 /*
@@ -199,6 +205,8 @@ Arduino.cc propose aussi une [introduction aux 'Timers'](https://docs.arduino.cc
 ---
 
 ### 5.1 – Exemple de trace programme avec un Timer {#section-5-1}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/non-bloquant-5-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 #include <Arduino.h>

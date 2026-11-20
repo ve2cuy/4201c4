@@ -4,7 +4,7 @@
     {
       "id": "blink-del",
       "titre": "Faire clignoter la DEL",
-      "notes": "Hello World, section 2",
+      "notes": "Arduino IDE – Hello world, section 2",
       "description": "La DEL « L » de l'Arduino UNO (broche 13) s'allume et s'éteint aux 500 ms, avec delay().",
       "dossier": "Blink-DEL",
       "environnement": "uno",
@@ -14,12 +14,13 @@
         "firmware.hex",
         "platformio.ini",
         "src/main.cpp"
-      ]
+      ],
+      "titre_en": "Blink the LED"
     },
     {
       "id": "hello-world-del",
       "titre": "Hello World avec une DEL",
-      "notes": "PlatformIO – Hello World, section 5.1",
+      "notes": "Introduction à PlatformIO, section 5.1",
       "description": "La DEL « L » de l'Arduino UNO (broche 13) clignote et le moniteur série compte les itérations.",
       "dossier": "Hello-World-DEL",
       "environnement": "uno",
@@ -29,12 +30,13 @@
         "firmware.hex",
         "platformio.ini",
         "src/main.cpp"
-      ]
+      ],
+      "titre_en": "Hello World with an LED"
     },
     {
       "id": "hello-world-macros",
       "titre": "Hello World avec des macros",
-      "notes": "PlatformIO – Hello World, section 5.2",
+      "notes": "Introduction à PlatformIO, section 5.2",
       "description": "Le même clignotant sur la broche 13, écrit avec des macros : DEL_ROUGE, SORTIE, ALLUMER, ETEINDRE, DELAI.",
       "dossier": "Hello-World-Macros",
       "environnement": "uno",
@@ -44,6 +46,1634 @@
         "firmware.hex",
         "platformio.ini",
         "src/main.cpp"
+      ],
+      "titre_en": "Hello World with macros"
+    },
+    {
+      "id": "tm1637-2-3-4",
+      "titre": "Afficher les multiples de 2 sur le 4-Digit",
+      "titre_en": "Show multiples of 2 on the 4-Digit display",
+      "notes": "SHT31 et TM1637, section 2.3.4",
+      "description": "Afficher les multiples de 2 sur le 4-Digit",
+      "dossier": "tm1637-2-3-4",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Capteur-temperature-humidite.html#section-2-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "lib/4Digit/TM1637V2.cpp",
+        "lib/4Digit/TM1637V2.h",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "tm1637-2-4",
+      "titre": "Afficher des chaînes sur le 4-Digit",
+      "titre_en": "Show strings on the 4-Digit display",
+      "notes": "SHT31 et TM1637, section 2.4",
+      "description": "Afficher des chaînes sur le 4-Digit",
+      "dossier": "tm1637-2-4",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Capteur-temperature-humidite.html#section-2-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "lib/4Digit/TM1637V2.cpp",
+        "lib/4Digit/TM1637V2.h",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "mouvement-2",
+      "titre": "Détecteur de mouvement et DEL",
+      "titre_en": "Motion detector and LED",
+      "notes": "Détecteur de mouvements, section 2",
+      "description": "Détecteur de mouvement et DEL",
+      "dossier": "mouvement-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Detecteur-de-mouvements.html#section-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "eeprom-4",
+      "titre": "Compteur de démarrages dans l'EEPROM",
+      "titre_en": "Boot counter in EEPROM",
+      "notes": "La mémoire EEPROM, section 4",
+      "description": "Compteur de démarrages dans l'EEPROM",
+      "dossier": "eeprom-4",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/EEPROM.html#section-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "eeprom-5",
+      "titre": "EEPROM.update() : retenir l'intensité de la DEL",
+      "titre_en": "EEPROM.update(): remember the LED brightness",
+      "notes": "La mémoire EEPROM, section 5",
+      "description": "EEPROM.update() : retenir l'intensité de la DEL",
+      "dossier": "eeprom-5",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/EEPROM.html#section-5",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "eeprom-6",
+      "titre": "EEPROM.put() et EEPROM.get() : une configuration",
+      "titre_en": "EEPROM.put() and EEPROM.get(): a configuration",
+      "notes": "La mémoire EEPROM, section 6",
+      "description": "EEPROM.put() et EEPROM.get() : une configuration",
+      "dossier": "eeprom-6",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/EEPROM.html#section-6",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "eeprom-7-1",
+      "titre": "Afficher le contenu de l'EEPROM",
+      "titre_en": "Dump the EEPROM contents",
+      "notes": "La mémoire EEPROM, section 7.1",
+      "description": "Afficher le contenu de l'EEPROM",
+      "dossier": "eeprom-7-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/EEPROM.html#section-7-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "eeprom-7-2",
+      "titre": "Effacer l'EEPROM",
+      "titre_en": "Erase the EEPROM",
+      "notes": "La mémoire EEPROM, section 7.2",
+      "description": "Effacer l'EEPROM",
+      "dossier": "eeprom-7-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/EEPROM.html#section-7-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "wifi-4-1",
+      "titre": "Les commandes AT du module Wi-Fi",
+      "titre_en": "AT commands of the Wi-Fi module",
+      "notes": "Grove – UART Wifi V2, section 4.1",
+      "description": "Les commandes AT du module Wi-Fi",
+      "dossier": "wifi-4-1",
+      "environnement": "mega",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/ESP-Wifi.html#section-4-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "wifi-4-2",
+      "titre": "WiFiEsp : afficher les réseaux disponibles",
+      "titre_en": "WiFiEsp: list the available networks",
+      "notes": "Grove – UART Wifi V2, section 4.2",
+      "description": "WiFiEsp : afficher les réseaux disponibles",
+      "dossier": "wifi-4-2",
+      "environnement": "mega",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/ESP-Wifi.html#section-4-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "wifi-5-1",
+      "titre": "Requête vers une API Web",
+      "titre_en": "Request to a web API",
+      "notes": "Grove – UART Wifi V2, section 5.1",
+      "description": "Requête vers une API Web",
+      "dossier": "wifi-5-1",
+      "environnement": "mega",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/ESP-Wifi.html#section-5-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "include/main.h",
+        "include/secrets.h",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "hello-1",
+      "titre": "Allumer la DEL sur D13",
+      "titre_en": "Turn on the LED on D13",
+      "notes": "Arduino IDE – Hello world, section 1",
+      "description": "Allumer la DEL sur D13",
+      "dossier": "hello-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Hello-world.html#section-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "hello-3",
+      "titre": "Clignoter la DEL : code documenté",
+      "titre_en": "Blink the LED: documented code",
+      "notes": "Arduino IDE – Hello world, section 3",
+      "description": "Clignoter la DEL : code documenté",
+      "dossier": "hello-3",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Hello-world.html#section-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "hello-4",
+      "titre": "Clignoter la DEL avec des macros",
+      "titre_en": "Blink the LED with macros",
+      "notes": "Arduino IDE – Hello world, section 4",
+      "description": "Clignoter la DEL avec des macros",
+      "dossier": "hello-4",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Hello-world.html#section-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "ir-4",
+      "titre": "Lire les codes d'une télécommande",
+      "titre_en": "Read the codes of a remote control",
+      "notes": "Infrarouge : récepteur et émetteur, section 4",
+      "description": "Lire les codes d'une télécommande",
+      "dossier": "ir-4",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Infrarouge.html#section-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "ir-5",
+      "titre": "Contrôler une DEL avec une télécommande",
+      "titre_en": "Control an LED with a remote control",
+      "notes": "Infrarouge : récepteur et émetteur, section 5",
+      "description": "Contrôler une DEL avec une télécommande",
+      "dossier": "ir-5",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Infrarouge.html#section-5",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "enum-1",
+      "titre": "L'instruction enum",
+      "titre_en": "The enum statement",
+      "notes": "L'instruction 'enum' du langage 'C', section 1",
+      "description": "L'instruction enum",
+      "dossier": "enum-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Instruction-enum.html#section-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "enum-2",
+      "titre": "Une variable de type enum",
+      "titre_en": "An enum-typed variable",
+      "notes": "L'instruction 'enum' du langage 'C', section 2",
+      "description": "Une variable de type enum",
+      "dossier": "enum-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Instruction-enum.html#section-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "enum-3",
+      "titre": "Affecter une valeur aux membres d'un enum",
+      "titre_en": "Assign values to enum members",
+      "notes": "L'instruction 'enum' du langage 'C', section 3",
+      "description": "Affecter une valeur aux membres d'un enum",
+      "dossier": "enum-3",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Instruction-enum.html#section-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "enum-4",
+      "titre": "Un enum : une liste de fruits",
+      "titre_en": "An enum: a list of fruits",
+      "notes": "L'instruction 'enum' du langage 'C', section 4",
+      "description": "Un enum : une liste de fruits",
+      "dossier": "enum-4",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Instruction-enum.html#section-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "enum-5",
+      "titre": "Gestion d'un menu avec enum",
+      "titre_en": "A menu driven by an enum",
+      "notes": "L'instruction 'enum' du langage 'C', section 5",
+      "description": "Gestion d'un menu avec enum",
+      "dossier": "enum-5",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Instruction-enum.html#section-5",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "include/projet.h",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-3",
+      "titre": "Afficher un texte sur le LCD RGB",
+      "titre_en": "Show text on the RGB LCD",
+      "notes": "Grove – Module LCD-RGB i2c, section 3",
+      "description": "Afficher un texte sur le LCD RGB",
+      "dossier": "lcd-3",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-3-1",
+      "titre": "Texte sur fond de couleur",
+      "titre_en": "Text on a colored background",
+      "notes": "Grove – Module LCD-RGB i2c, section 3.1",
+      "description": "Texte sur fond de couleur",
+      "dossier": "lcd-3-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-3-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-4-2",
+      "titre": "Projet universel avec #ifdef",
+      "titre_en": "Universal project with #ifdef",
+      "notes": "Grove – Module LCD-RGB i2c, section 4.2",
+      "description": "Projet universel avec #ifdef",
+      "dossier": "lcd-4-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-4-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-4-3",
+      "titre": "LCD RGB : flux et sprintf",
+      "titre_en": "RGB LCD: streams and sprintf",
+      "notes": "Grove – Module LCD-RGB i2c, section 4.3",
+      "description": "LCD RGB : flux et sprintf",
+      "dossier": "lcd-4-3",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-4-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-4-4-2",
+      "titre": "sprintf et snprintf sur un LCD 20 × 4",
+      "titre_en": "sprintf and snprintf on a 20 × 4 LCD",
+      "notes": "Grove – Module LCD-RGB i2c, section 4.4.2",
+      "description": "sprintf et snprintf sur un LCD 20 × 4",
+      "dossier": "lcd-4-4-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-4-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-4-6",
+      "titre": "Compilation conditionnelle",
+      "titre_en": "Conditional compilation",
+      "notes": "Grove – Module LCD-RGB i2c, section 4.6",
+      "description": "Compilation conditionnelle",
+      "dossier": "lcd-4-6",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-4-6",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-5-1",
+      "titre": "LCD : clear, setCursor et sprintf",
+      "titre_en": "LCD: clear, setCursor and sprintf",
+      "notes": "Grove – Module LCD-RGB i2c, section 5.1",
+      "description": "LCD : clear, setCursor et sprintf",
+      "dossier": "lcd-5-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-5-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-5-2",
+      "titre": "millis() aligné à droite sur le LCD",
+      "titre_en": "millis() right-aligned on the LCD",
+      "notes": "Grove – Module LCD-RGB i2c, section 5.2",
+      "description": "millis() aligné à droite sur le LCD",
+      "dossier": "lcd-5-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-5-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-5-3",
+      "titre": "Changer la direction de l'affichage",
+      "titre_en": "Change the text direction",
+      "notes": "Grove – Module LCD-RGB i2c, section 5.3",
+      "description": "Changer la direction de l'affichage",
+      "dossier": "lcd-5-3",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-5-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-5-4",
+      "titre": "Déplacer le texte de gauche à droite",
+      "titre_en": "Move the text left and right",
+      "notes": "Grove – Module LCD-RGB i2c, section 5.4",
+      "description": "Déplacer le texte de gauche à droite",
+      "dossier": "lcd-5-4",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-5-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-5-5",
+      "titre": "LCD : défilement automatique",
+      "titre_en": "LCD: autoscroll",
+      "notes": "Grove – Module LCD-RGB i2c, section 5.5",
+      "description": "LCD : défilement automatique",
+      "dossier": "lcd-5-5",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-5-5",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-5-6",
+      "titre": "LCD : caractères personnalisés",
+      "titre_en": "LCD: custom characters",
+      "notes": "Grove – Module LCD-RGB i2c, section 5.6",
+      "description": "LCD : caractères personnalisés",
+      "dossier": "lcd-5-6",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-5-6",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-7-1",
+      "titre": "Reste de la division (modulo)",
+      "titre_en": "Remainder of a division (modulo)",
+      "notes": "Grove – Module LCD-RGB i2c, section 7.1",
+      "description": "Reste de la division (modulo)",
+      "dossier": "lcd-7-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-7-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-7-2",
+      "titre": "L'opérateur ternaire",
+      "titre_en": "The ternary operator",
+      "notes": "Grove – Module LCD-RGB i2c, section 7.2",
+      "description": "L'opérateur ternaire",
+      "dossier": "lcd-7-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-7-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-7-2-2",
+      "titre": "Nombres pairs et impairs",
+      "titre_en": "Even and odd numbers",
+      "notes": "Grove – Module LCD-RGB i2c, section 7.2.2",
+      "description": "Nombres pairs et impairs",
+      "dossier": "lcd-7-2-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-7-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-7-3",
+      "titre": "L'instruction switch",
+      "titre_en": "The switch statement",
+      "notes": "Grove – Module LCD-RGB i2c, section 7.3",
+      "description": "L'instruction switch",
+      "dossier": "lcd-7-3",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-7-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-7-3-1",
+      "titre": "switch : moniteur série et LCD",
+      "titre_en": "switch: serial monitor and LCD",
+      "notes": "Grove – Module LCD-RGB i2c, section 7.3.1",
+      "description": "switch : moniteur série et LCD",
+      "dossier": "lcd-7-3-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-7-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-7-3-3",
+      "titre": "Laboratoire : menu, bouton et DEL",
+      "titre_en": "Lab: menu, button and LED",
+      "notes": "Grove – Module LCD-RGB i2c, section 7.3.3",
+      "description": "Laboratoire : menu, bouton et DEL",
+      "dossier": "lcd-7-3-3",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-7-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-7-4",
+      "titre": "L'instruction enum",
+      "titre_en": "The enum statement",
+      "notes": "Grove – Module LCD-RGB i2c, section 7.4",
+      "description": "L'instruction enum",
+      "dossier": "lcd-7-4",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-7-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-7-4-1-a",
+      "titre": "Affecter une valeur aux éléments d'un enum",
+      "titre_en": "Assign values to enum elements",
+      "notes": "Grove – Module LCD-RGB i2c, section 7.4.1",
+      "description": "Affecter une valeur aux éléments d'un enum",
+      "dossier": "lcd-7-4-1-a",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-7-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-7-4-1-b",
+      "titre": "Affecter une valeur aux éléments d'un enum (suite)",
+      "titre_en": "Assign values to enum elements (continued)",
+      "notes": "Grove – Module LCD-RGB i2c, section 7.4.1",
+      "description": "Affecter une valeur aux éléments d'un enum (suite)",
+      "dossier": "lcd-7-4-1-b",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-7-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "lcd-7-5",
+      "titre": "Gestion d'un menu avec enum",
+      "titre_en": "A menu driven by an enum",
+      "notes": "Grove – Module LCD-RGB i2c, section 7.5",
+      "description": "Gestion d'un menu avec enum",
+      "dossier": "lcd-7-5",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/LCD-enum-ifdef.html#section-7-5",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "include/projet.h",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "buzzer-1-2",
+      "titre": "Faire sonner le buzzer",
+      "titre_en": "Sound the buzzer",
+      "notes": "Buzzer et RGB LED Stick, section 1.2",
+      "description": "Faire sonner le buzzer",
+      "dossier": "buzzer-1-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/NEOPixel.html#section-1-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "neopixel-2-3-1",
+      "titre": "Allumer une DEL du LED Stick",
+      "titre_en": "Light one LED of the LED Stick",
+      "notes": "Buzzer et RGB LED Stick, section 2.3.1",
+      "description": "Allumer une DEL du LED Stick",
+      "dossier": "neopixel-2-3-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/NEOPixel.html#section-2-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "neopixel-2-3-2",
+      "titre": "Allumer les DEL du LED Stick en séquence",
+      "titre_en": "Light the LED Stick in sequence",
+      "notes": "Buzzer et RGB LED Stick, section 2.3.2",
+      "description": "Allumer les DEL du LED Stick en séquence",
+      "dossier": "neopixel-2-3-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/NEOPixel.html#section-2-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "non-bloquant-1",
+      "titre": "Clignoter une DEL avec millis()",
+      "titre_en": "Blink an LED with millis()",
+      "notes": "Opérations non bloquantes, section 1",
+      "description": "Clignoter une DEL avec millis()",
+      "dossier": "non-bloquant-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-non-bloquantes.html#section-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "non-bloquant-4",
+      "titre": "Une interruption matérielle",
+      "titre_en": "A hardware interrupt",
+      "notes": "Opérations non bloquantes, section 4",
+      "description": "Une interruption matérielle",
+      "dossier": "non-bloquant-4",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-non-bloquantes.html#section-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "non-bloquant-5",
+      "titre": "Interruption Timer pour clignoter une DEL",
+      "titre_en": "Timer interrupt to blink an LED",
+      "notes": "Opérations non bloquantes, section 5",
+      "description": "Interruption Timer pour clignoter une DEL",
+      "dossier": "non-bloquant-5",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-non-bloquantes.html#section-5",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "non-bloquant-5-1",
+      "titre": "Trace d'un programme avec un Timer",
+      "titre_en": "Tracing a program with a timer",
+      "notes": "Opérations non bloquantes, section 5.1",
+      "description": "Trace d'un programme avec un Timer",
+      "dossier": "non-bloquant-5-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-non-bloquantes.html#section-5-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "bits-1",
+      "titre": "L'opérateur AND binaire (&)",
+      "titre_en": "The bitwise AND operator (&)",
+      "notes": "Opérations sur les bits, section 1",
+      "description": "L'opérateur AND binaire (&)",
+      "dossier": "bits-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-sur-les-bits-et-structure-de-donnees.html#section-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "bits-2",
+      "titre": "L'opérateur OR binaire (|)",
+      "titre_en": "The bitwise OR operator (|)",
+      "notes": "Opérations sur les bits, section 2",
+      "description": "L'opérateur OR binaire (|)",
+      "dossier": "bits-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-sur-les-bits-et-structure-de-donnees.html#section-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "bits-3",
+      "titre": "L'opérateur XOR binaire (^)",
+      "titre_en": "The bitwise XOR operator (^)",
+      "notes": "Opérations sur les bits, section 3",
+      "description": "L'opérateur XOR binaire (^)",
+      "dossier": "bits-3",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-sur-les-bits-et-structure-de-donnees.html#section-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "bits-4",
+      "titre": "L'opérateur NOT binaire (~)",
+      "titre_en": "The bitwise NOT operator (~)",
+      "notes": "Opérations sur les bits, section 4",
+      "description": "L'opérateur NOT binaire (~)",
+      "dossier": "bits-4",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-sur-les-bits-et-structure-de-donnees.html#section-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "bits-6",
+      "titre": "Les opérateurs de décalage (<< et >>)",
+      "titre_en": "The shift operators (<< and >>)",
+      "notes": "Opérations sur les bits, section 6",
+      "description": "Les opérateurs de décalage (<< et >>)",
+      "dossier": "bits-6",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-sur-les-bits-et-structure-de-donnees.html#section-6",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "bits-6-1",
+      "titre": "Décalage et opérations sur les bits",
+      "titre_en": "Shifts and bit operations",
+      "notes": "Opérations sur les bits, section 6.1",
+      "description": "Décalage et opérations sur les bits",
+      "dossier": "bits-6-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-sur-les-bits-et-structure-de-donnees.html#section-6-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "bits-8",
+      "titre": "Les opérateurs binaires en pratique",
+      "titre_en": "Bitwise operators in practice",
+      "notes": "Opérations sur les bits, section 8",
+      "description": "Les opérateurs binaires en pratique",
+      "dossier": "bits-8",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-sur-les-bits-et-structure-de-donnees.html#section-8",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "include/projet.h",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "bits-9",
+      "titre": "Structures et opérations sur les bits",
+      "titre_en": "Structures and bit operations",
+      "notes": "Opérations sur les bits, section 9",
+      "description": "Structures et opérations sur les bits",
+      "dossier": "bits-9",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Operations-sur-les-bits-et-structure-de-donnees.html#section-9",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "pio-1-3",
+      "titre": "Le premier main.cpp",
+      "titre_en": "The first main.cpp",
+      "notes": "Introduction à PlatformIO, section 1.3",
+      "description": "Le premier main.cpp",
+      "dossier": "pio-1-3",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/PlatformIO-Hello-world.html#section-1-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "pio-6",
+      "titre": "Un fichier d'en-tête (.h)",
+      "titre_en": "A header file (.h)",
+      "notes": "Introduction à PlatformIO, section 6",
+      "description": "Un fichier d'en-tête (.h)",
+      "dossier": "pio-6",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/PlatformIO-Hello-world.html#section-6",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "include/main.h",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "rtc-4-1",
+      "titre": "Régler l'heure, puis la lire",
+      "titre_en": "Set the time, then read it",
+      "notes": "Grove – RTC_DS1307, section 4.1",
+      "description": "Régler l'heure, puis la lire",
+      "dossier": "rtc-4-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/RTC-DS1307.html#section-4-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "rtc-4-2",
+      "titre": "Afficher l'heure : version 1",
+      "titre_en": "Show the time: version 1",
+      "notes": "Grove – RTC_DS1307, section 4.2",
+      "description": "Afficher l'heure : version 1",
+      "dossier": "rtc-4-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/RTC-DS1307.html#section-4-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "rtc-4-3",
+      "titre": "Afficher l'heure : version 2",
+      "titre_en": "Show the time: version 2",
+      "notes": "Grove – RTC_DS1307, section 4.3",
+      "description": "Afficher l'heure : version 2",
+      "dossier": "rtc-4-3",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/RTC-DS1307.html#section-4-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "rtc-4-4",
+      "titre": "Afficher l'heure : version optimisée",
+      "titre_en": "Show the time: optimized version",
+      "notes": "Grove – RTC_DS1307, section 4.4",
+      "description": "Afficher l'heure : version optimisée",
+      "dossier": "rtc-4-4",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/RTC-DS1307.html#section-4-4",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "serial-1-8",
+      "titre": "Afficher au moniteur série",
+      "titre_en": "Print to the serial monitor",
+      "notes": "Arduino – Serial.println() et digitalRead(), section 1.8",
+      "description": "Afficher au moniteur série",
+      "dossier": "serial-1-8",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Serial-println-et-digitalread.html#section-1-8",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "serial-1-10",
+      "titre": "Streaming.h",
+      "titre_en": "Streaming.h",
+      "notes": "Arduino – Serial.println() et digitalRead(), section 1.10",
+      "description": "Streaming.h",
+      "dossier": "serial-1-10",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Serial-println-et-digitalread.html#section-1-10",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "serial-2-1",
+      "titre": "La fonction digitalRead()",
+      "titre_en": "The digitalRead() function",
+      "notes": "Arduino – Serial.println() et digitalRead(), section 2.1",
+      "description": "La fonction digitalRead()",
+      "dossier": "serial-2-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Serial-println-et-digitalread.html#section-2-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "serial-2-6",
+      "titre": "Bouton et DEL : exemple documenté",
+      "titre_en": "Button and LED: documented example",
+      "notes": "Arduino – Serial.println() et digitalRead(), section 2.6",
+      "description": "Bouton et DEL : exemple documenté",
+      "dossier": "serial-2-6",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Serial-println-et-digitalread.html#section-2-6",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "serial-3-1-1",
+      "titre": "L'instruction while",
+      "titre_en": "The while statement",
+      "notes": "Arduino – Serial.println() et digitalRead(), section 3.1.1",
+      "description": "L'instruction while",
+      "dossier": "serial-3-1-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Serial-println-et-digitalread.html#section-3-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "serial-4-1",
+      "titre": "Résistance de rappel interne (INPUT_PULLUP)",
+      "titre_en": "Internal pull-up resistor (INPUT_PULLUP)",
+      "notes": "Arduino – Serial.println() et digitalRead(), section 4.1",
+      "description": "Résistance de rappel interne (INPUT_PULLUP)",
+      "dossier": "serial-4-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Serial-println-et-digitalread.html#section-4-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "serial-5-1",
+      "titre": "Permuter une DEL avec un bouton",
+      "titre_en": "Toggle an LED with a button",
+      "notes": "Arduino – Serial.println() et digitalRead(), section 5.1",
+      "description": "Permuter une DEL avec un bouton",
+      "dossier": "serial-5-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Serial-println-et-digitalread.html#section-5-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "serial-6",
+      "titre": "Anti-rebond d'un bouton",
+      "titre_en": "Button debouncing",
+      "notes": "Arduino – Serial.println() et digitalRead(), section 6",
+      "description": "Anti-rebond d'un bouton",
+      "dossier": "serial-6",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Serial-println-et-digitalread.html#section-6",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "struct-3",
+      "titre": "Déclarer et utiliser une struct",
+      "titre_en": "Declare and use a struct",
+      "notes": "Structures et énumération sous C, section 3",
+      "description": "Déclarer et utiliser une struct",
+      "dossier": "struct-3",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Structures-de-donnees.html#section-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "struct-5",
+      "titre": "Une structure pour un ennemi",
+      "titre_en": "A structure for an enemy",
+      "notes": "Structures et énumération sous C, section 5",
+      "description": "Une structure pour un ennemi",
+      "dossier": "struct-5",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Structures-de-donnees.html#section-5",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "struct-7",
+      "titre": "Un tableau de structures",
+      "titre_en": "An array of structures",
+      "notes": "Structures et énumération sous C, section 7",
+      "description": "Un tableau de structures",
+      "dossier": "struct-7",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Structures-de-donnees.html#section-7",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "librairies-1-7",
+      "titre": "Utiliser la bibliothèque Streaming",
+      "titre_en": "Using the Streaming library",
+      "notes": "Utilisation de librairies, section 1.7",
+      "description": "Utiliser la bibliothèque Streaming",
+      "dossier": "librairies-1-7",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Utilisation-de-librairies.html#section-1-7",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "librairies-1-8",
+      "titre": "Sa propre bibliothèque locale",
+      "titre_en": "Your own local library",
+      "notes": "Utilisation de librairies, section 1.8",
+      "description": "Sa propre bibliothèque locale",
+      "dossier": "librairies-1-8",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Utilisation-de-librairies.html#section-1-8",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "lib/MesUtilitaires/MesUtilitaires.cpp",
+        "lib/MesUtilitaires/MesUtilitaires.h",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "analog-1-1",
+      "titre": "Lire le potentiomètre",
+      "titre_en": "Read the potentiometer",
+      "notes": "Arduino – AnalogRead, section 1.1",
+      "description": "Lire le potentiomètre",
+      "dossier": "analog-1-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/analogRead.html#section-1-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "analog-4-1",
+      "titre": "Varier l'intensité d'une DEL (PWM)",
+      "titre_en": "Fade an LED (PWM)",
+      "notes": "Arduino – AnalogRead, section 4.1",
+      "description": "Varier l'intensité d'une DEL (PWM)",
+      "dossier": "analog-4-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/analogRead.html#section-4-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "analog-4-1-2",
+      "titre": "Varier l'intensité d'une DEL : version courte",
+      "titre_en": "Fade an LED: short version",
+      "notes": "Arduino – AnalogRead, section 4.1.2",
+      "description": "Varier l'intensité d'une DEL : version courte",
+      "dossier": "analog-4-1-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/analogRead.html#section-4-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "analog-4-4-a",
+      "titre": "La fonction map() : version a",
+      "titre_en": "The map() function: version a",
+      "notes": "Arduino – AnalogRead, section 4.4.a",
+      "description": "La fonction map() : version a",
+      "dossier": "analog-4-4-a",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/analogRead.html#section-4-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "analog-4-4-b",
+      "titre": "La fonction map() : version b",
+      "titre_en": "The map() function: version b",
+      "notes": "Arduino – AnalogRead, section 4.4.b",
+      "description": "La fonction map() : version b",
+      "dossier": "analog-4-4-b",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/analogRead.html#section-4-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "analog-4-4-c",
+      "titre": "La fonction map() : version c",
+      "titre_en": "The map() function: version c",
+      "notes": "Arduino – AnalogRead, section 4.4.c",
+      "description": "La fonction map() : version c",
+      "dossier": "analog-4-4-c",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/analogRead.html#section-4-3",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "analog-5-1",
+      "titre": "Une boucle for",
+      "titre_en": "A for loop",
+      "notes": "Arduino – AnalogRead, section 5.1",
+      "description": "Une boucle for",
+      "dossier": "analog-5-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/analogRead.html#section-5-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "analog-5-2",
+      "titre": "Varier l'intensité d'une DEL avec une boucle for",
+      "titre_en": "Fade an LED with a for loop",
+      "notes": "Arduino – AnalogRead, section 5.2",
+      "description": "Varier l'intensité d'une DEL avec une boucle for",
+      "dossier": "analog-5-2",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/analogRead.html#section-5-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "rfid-1",
+      "titre": "Lire une carte RFID",
+      "titre_en": "Read an RFID card",
+      "notes": "Capteur RFID de Grove, section 1",
+      "description": "Lire une carte RFID",
+      "dossier": "rfid-1",
+      "environnement": "mega",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/capteur-rfid.html#section-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "copier-coller-a-5",
+      "titre": "Séquences ANSI au moniteur série",
+      "titre_en": "ANSI sequences in the serial monitor",
+      "notes": "Copier/Coller et projets Wokwi, section A.5",
+      "description": "Séquences ANSI au moniteur série",
+      "dossier": "copier-coller-a-5",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/copier-coller.html#section-a-5",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "copier-coller-7-1",
+      "titre": "Bouton, compteur et relais",
+      "titre_en": "Button, counter and relay",
+      "notes": "Copier/Coller et projets Wokwi, section 7.1",
+      "description": "Bouton, compteur et relais",
+      "dossier": "copier-coller-7-1",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/copier-coller.html#section-7",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "copier-coller-8",
+      "titre": "La mémoire : char[] ou String",
+      "titre_en": "Memory: char[] or String",
+      "notes": "Copier/Coller et projets Wokwi, section 8",
+      "description": "La mémoire : char[] ou String",
+      "dossier": "copier-coller-8",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/copier-coller.html#section-8",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "copier-coller-12",
+      "titre": "LCD RGB : variation du rouge",
+      "titre_en": "RGB LCD: red fade",
+      "notes": "Copier/Coller et projets Wokwi, section 12",
+      "description": "LCD RGB : variation du rouge",
+      "dossier": "copier-coller-12",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/copier-coller.html#section-12",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "include/main.h",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "copier-coller-13",
+      "titre": "LCD RGB : défilement de caractères",
+      "titre_en": "RGB LCD: scrolling characters",
+      "notes": "Copier/Coller et projets Wokwi, section 13",
+      "description": "LCD RGB : défilement de caractères",
+      "dossier": "copier-coller-13",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/copier-coller.html#section-13",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "copier-coller-16",
+      "titre": "millis() en jours, heures, minutes et secondes",
+      "titre_en": "millis() as days, hours, minutes and seconds",
+      "notes": "Copier/Coller et projets Wokwi, section 16",
+      "description": "millis() en jours, heures, minutes et secondes",
+      "dossier": "copier-coller-16",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/copier-coller.html#section-16",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "copier-coller-18",
+      "titre": "Transmettre par UART ou par des broches numériques",
+      "titre_en": "Transmit over UART or digital pins",
+      "notes": "Copier/Coller et projets Wokwi, section 18",
+      "description": "Transmettre par UART ou par des broches numériques",
+      "dossier": "copier-coller-18",
+      "environnement": "mega",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/copier-coller.html#section-18",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.ino"
+      ]
+    },
+    {
+      "id": "uart-2b",
+      "titre": "Deux Arduino par UART : SoftwareSerial",
+      "titre_en": "Two Arduinos over UART: SoftwareSerial",
+      "notes": "Écoute-moi, j'aimerais te parler, sections 2b.1 et 2b.2",
+      "description": "Deux Arduino par UART : SoftwareSerial",
+      "dossier": "uart-2b",
+      "environnement": "uno",
+      "projets": [
+        {
+          "dossier": "transmetteur-uno",
+          "environnement": "uno"
+        },
+        {
+          "dossier": "recepteur-mega",
+          "environnement": "mega"
+        }
+      ],
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Communication-UART-entre-2-arduino.html#section-2b-1",
+      "fichiers": [
+        "montage.json",
+        "recepteur-mega/circuit.json",
+        "recepteur-mega/firmware.hex",
+        "recepteur-mega/platformio.ini",
+        "recepteur-mega/src/main.cpp",
+        "transmetteur-uno/circuit.json",
+        "transmetteur-uno/firmware.hex",
+        "transmetteur-uno/platformio.ini",
+        "transmetteur-uno/src/main.cpp"
+      ]
+    },
+    {
+      "id": "uart-3",
+      "titre": "Des messages du UNO vers le MEGA",
+      "titre_en": "Messages from the UNO to the MEGA",
+      "notes": "Écoute-moi, j'aimerais te parler, sections 3.1 et 3.2",
+      "description": "Des messages du UNO vers le MEGA",
+      "dossier": "uart-3",
+      "environnement": "uno",
+      "projets": [
+        {
+          "dossier": "transmetteur-uno",
+          "environnement": "uno"
+        },
+        {
+          "dossier": "recepteur-mega",
+          "environnement": "mega"
+        }
+      ],
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Communication-UART-entre-2-arduino.html#section-3-1",
+      "fichiers": [
+        "montage.json",
+        "recepteur-mega/circuit.json",
+        "recepteur-mega/firmware.hex",
+        "recepteur-mega/platformio.ini",
+        "recepteur-mega/src/main.ino",
+        "transmetteur-uno/circuit.json",
+        "transmetteur-uno/firmware.hex",
+        "transmetteur-uno/platformio.ini",
+        "transmetteur-uno/src/main.cpp"
+      ]
+    },
+    {
+      "id": "uart-3-5",
+      "titre": "UNO sur SoftwareSerial, MEGA sur UART2",
+      "titre_en": "UNO on SoftwareSerial, MEGA on UART2",
+      "notes": "Écoute-moi, j'aimerais te parler, sections 3.5.1 et 3.5.2",
+      "description": "UNO sur SoftwareSerial, MEGA sur UART2",
+      "dossier": "uart-3-5",
+      "environnement": "uno",
+      "projets": [
+        {
+          "dossier": "transmetteur-uno",
+          "environnement": "uno"
+        },
+        {
+          "dossier": "recepteur-mega",
+          "environnement": "mega"
+        }
+      ],
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Communication-UART-entre-2-arduino.html#section-3-5",
+      "fichiers": [
+        "montage.json",
+        "recepteur-mega/circuit.json",
+        "recepteur-mega/firmware.hex",
+        "recepteur-mega/platformio.ini",
+        "recepteur-mega/src/main.cpp",
+        "transmetteur-uno/circuit.json",
+        "transmetteur-uno/firmware.hex",
+        "transmetteur-uno/platformio.ini",
+        "transmetteur-uno/src/main.cpp"
+      ]
+    },
+    {
+      "id": "uart-4",
+      "titre": "Un système d'alarme à deux Arduino",
+      "titre_en": "An alarm system with two Arduinos",
+      "notes": "Écoute-moi, j'aimerais te parler, sections 4.2 et 4.3",
+      "description": "Un système d'alarme à deux Arduino",
+      "dossier": "uart-4",
+      "environnement": "uno",
+      "projets": [
+        {
+          "dossier": "transmetteur-uno",
+          "environnement": "uno"
+        },
+        {
+          "dossier": "recepteur-uno",
+          "environnement": "uno"
+        }
+      ],
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Communication-UART-entre-2-arduino.html#section-4-2",
+      "fichiers": [
+        "montage.json",
+        "recepteur-uno/circuit.json",
+        "recepteur-uno/firmware.hex",
+        "recepteur-uno/include/code.alarme.h",
+        "recepteur-uno/platformio.ini",
+        "recepteur-uno/src/main.ino",
+        "transmetteur-uno/circuit.json",
+        "transmetteur-uno/firmware.hex",
+        "transmetteur-uno/include/code.alarme.h",
+        "transmetteur-uno/platformio.ini",
+        "transmetteur-uno/src/main.ino"
       ]
     }
   ]

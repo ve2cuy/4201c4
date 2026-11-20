@@ -100,6 +100,8 @@ Ce premier exemple affiche, dans la console série, le protocole et le code de c
 
 Utiliser n'importe quelle télécommande de la maison (téléviseur, climatiseur, lecteur, etc.).
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/ir-4) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 /*
     Fichier:      ir-lire-codes.cpp
@@ -172,6 +174,8 @@ La classe `IRdecode` expose, après l'appel de `decode()`, les propriétés suiv
 Dans l'exemple suivant, la touche **1** allume la DEL et la touche **2** l'éteint.
 
 **IMPORTANT**: Remplacer les valeurs des macros `TOUCHE_1` et `TOUCHE_2` par les codes obtenus à la section 4 avec **votre** télécommande.
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/ir-5) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 /*

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "port": "I2C",
+      "type": "lcd-rgb"
+    },
+    {
+      "port": "D4",
+      "type": "bouton"
+    },
+    {
+      "port": "D3",
+      "type": "del-rouge"
+    }
+  ],
+  "hat": true
+}

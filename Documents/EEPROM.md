@@ -122,6 +122,8 @@ Elle propose un objet nommé `EEPROM` avec les méthodes suivantes:
 
 Ce premier exemple compte le nombre de démarrages de l'Arduino. Le compteur est conservé dans la case 0 de l'EEPROM.
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/eeprom-4) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 /*
     Fichier:      eeprom-compteur.cpp
@@ -190,6 +192,8 @@ Elle économise donc à la fois des écritures (la durée de vie de l'EEPROM) et
 
 Dans l'exemple suivant, l'intensité d'une DEL est réglée avec le potentiomètre. Le réglage est conservé dans l'EEPROM et la DEL reprend la même intensité au prochain démarrage.
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/eeprom-5) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 /*
     Fichier:      eeprom-intensite.cpp
@@ -247,6 +251,8 @@ Ces méthodes écrivent et lisent **autant d'octets que la taille de la variable
 L'exemple suivant conserve la **configuration** d'un système dans une structure (voir le document [Structures de données](Structures-de-donnees.md)).
 
 Comment savoir si l'EEPROM contient une configuration valide ou seulement des 255? Une technique courante consiste à placer une **signature** (un nombre choisi) dans la structure. Si la signature lue n'est pas la bonne, on utilise la configuration par défaut.
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/eeprom-6) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 /*
@@ -340,6 +346,8 @@ L'objet `EEPROM` s'utilise comme un tableau d'octets, de `EEPROM[0]` à `EEPROM[
 
 ### 7.1 – Afficher le contenu de l'EEPROM {#section-7-1}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/eeprom-7-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 /*
     Fichier:      eeprom-afficher.cpp
@@ -382,6 +390,8 @@ void loop() {}
 > 💡Les octets de la signature sont rangés à l'envers: l'ATmega328P range l'octet de poids faible en premier (*little-endian*).
 
 ### 7.2 – Effacer l'EEPROM {#section-7-2}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/eeprom-7-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 #include <Arduino.h>

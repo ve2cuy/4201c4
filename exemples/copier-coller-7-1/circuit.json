@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "port": "D2",
+      "type": "relais"
+    },
+    {
+      "port": "D3",
+      "type": "bouton"
+    },
+    {
+      "port": "D4",
+      "type": "del-rouge"
+    }
+  ],
+  "hat": true
+}

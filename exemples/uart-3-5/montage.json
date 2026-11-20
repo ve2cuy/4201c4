@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "cartes": [
+    {
+      "projet": "transmetteur-uno",
+      "x": 40,
+      "y": 260
+    },
+    {
+      "projet": "recepteur-mega",
+      "x": 620,
+      "y": 260
+    }
+  ],
+  "cables": [
+    {
+      "de": {
+        "carte": "transmetteur-uno",
+        "port": "D6"
+      },
+      "a": {
+        "carte": "recepteur-mega",
+        "port": "UART2"
+      }
+    }
+  ]
+}

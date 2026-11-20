@@ -413,6 +413,8 @@ tm1637.displayNum(-555, 0, false);
 
 ### 2.3.4 – Afficher les multiples de 2, par multiplication
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/tm1637-2-3-4) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include "TM1637V2.h"
 
@@ -451,6 +453,8 @@ void loop() {
 ```
 
 ### 2.4 – Afficher des chaines de caractères, la méthode displayStr() {#section-2-4}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/tm1637-2-4) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 #include "TM1637V2.h"

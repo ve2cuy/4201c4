@@ -191,6 +191,8 @@ C'est plus **concis**, plus **lisible** et plus **proche du C++ standard**.
 
 ### 1.7 – Remplacer le code source de main.cpp par et tester l'application: {#section-1-7}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/librairies-1-7) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 #include <Arduino.h>
 #include <Streaming.h>
@@ -267,6 +269,9 @@ float MesUtilitaires::convertirCelsiusVersF(float celsius) {
 ```
 
 **Utilisation dans main.cpp:**
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/librairies-1-8) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 #include <Arduino.h>
 #include "MesUtilitaires.h"

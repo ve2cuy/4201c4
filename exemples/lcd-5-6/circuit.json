@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "port": "I2C",
+      "type": "lcd-rgb"
+    },
+    {
+      "port": "A0",
+      "type": "potentiometre"
+    }
+  ],
+  "hat": true
+}

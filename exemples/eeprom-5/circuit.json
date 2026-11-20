@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "port": "A0",
+      "type": "potentiometre"
+    },
+    {
+      "port": "D3",
+      "type": "del-rouge"
+    }
+  ],
+  "hat": true
+}

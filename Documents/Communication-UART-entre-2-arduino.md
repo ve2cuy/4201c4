@@ -211,6 +211,8 @@ SoftwareSerial portSerieRecepteur(11, 10);  // RX, TX
 
 ### 2b.1 – Code source du transmetteur – le UNO {#section-2b-1}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-2b) — les deux cartes reliées, dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 /*
   Relier deux Arduino via le port UART physique
@@ -259,6 +261,8 @@ void loop() {
 ```
 
 ### 2b.2 – Code source du récepteur – Le Mega {#section-2b-2}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-2b) — les deux cartes reliées, dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 /*
@@ -364,6 +368,8 @@ Pour la réception, nous utiliserons le méthode [Serial.readString()](https://w
 
 ### 3.1 – Code source du transmetteur (UNO) {#section-3-1}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-3) — les deux cartes reliées, dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 /*
   Laboratoire 3: Réception/transmission d'une chaine de caractères
@@ -438,6 +444,8 @@ Envoi du message suivant: Boit-sans-soif
 ```
 
 ### 3.2 – Code source du récepteur (MEGA) {#section-3-2}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-3) — les deux cartes reliées, dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 /*
@@ -523,6 +531,8 @@ Voici un exemple de transmission d'une structure de données entre deux Arduino 
 
 ### 3.5.1 – Le transmetteur – (UNO sur SoftwareSerial:D6/D7)
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-3-5) — les deux cartes reliées, dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 /*
     Arduino UNO 
@@ -593,6 +603,8 @@ Erreur de transmission: 27 octets envoyés.
 ```
 
 ### 3.5.2 – Le récepteur (MEGA sur UART2)
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-3-5) — les deux cartes reliées, dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 /*
@@ -850,6 +862,8 @@ enum codesAlarme {
 
 ### 4.2 – Code source du transmetteur {#section-4-2}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-4) — les deux cartes reliées, dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 /*
     Simulation d'un système d'alarme UNO, qui envoie des événements
@@ -908,6 +922,8 @@ void loop() {
 ---
 
 ### 4.3 – Code source du récepteur {#section-4-3}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/uart-4) — les deux cartes reliées, dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 /*

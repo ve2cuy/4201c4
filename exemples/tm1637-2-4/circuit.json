@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "port": "D6",
+      "type": "afficheur-4-digit"
+    }
+  ],
+  "hat": true
+}

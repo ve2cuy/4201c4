@@ -37,6 +37,8 @@ Cet opérateur effectue une opération « **ET** » bit à bit entre deux entier
 
 **Exemple :**
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 #include <arduino.h>
 #include <Streaming.h>
@@ -60,8 +62,11 @@ Cet opérateur effectue une opération « **OU** » bit à bit entre deux entier
 
 **Exemple :**
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 #include <arduino.h>
+#include <Streaming.h>
 #define VITESSE_SERIAL 9600
 void setup() {
     Serial.begin(VITESSE_SERIAL);
@@ -81,8 +86,11 @@ L’opérateur « **OU exclusif** » effectue une opération bit à bit entre de
 
 **Exemple :**
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-3) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 #include <arduino.h>
+#include <Streaming.h>
 #define VITESSE_SERIAL 9600
 void setup() {
     Serial.begin(VITESSE_SERIAL);
@@ -102,8 +110,11 @@ Cet opérateur effectue une **inversion** de tous les bits de l’entier. Tous l
 
 **Exemple :**
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-4) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 #include <arduino.h>
+#include <Streaming.h>
 #define VITESSE_SERIAL 9600
 void setup() {
     Serial.begin(VITESSE_SERIAL);
@@ -130,6 +141,8 @@ void loop(){}
 
 **Exemple :**
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-6) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 #include <arduino.h>
 #define VITESSE_SERIAL 9600
@@ -148,6 +161,8 @@ void loop(){}
 ---
 
 ## 6.1 – Décalage et opération sur bits {#section-6-1}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-6-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 #include <arduino.h>
@@ -219,6 +234,8 @@ En résumé, ces opérateurs sont puissants pour manipuler directement les bits 
 ---
 
 ## 8 – Exemple d’implémentation des opérateurs binaires {#section-8}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-8) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 /*
@@ -417,6 +434,8 @@ void exempleCompterBinaire();
 ## 9 – Structures et opérations sur bits {#section-9}
 
 **NOTE pour H25** : Cet exemple est utile pour la réalisation du **TP02**
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/bits-9) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 #include <Arduino.h>

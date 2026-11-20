@@ -82,6 +82,8 @@ monitor_echo = yes
 
 **Contrôle du module WifiESP directement en envoyant des commandes <AT>.**
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/wifi-4-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 /*
   ESP8266 AT Command Tester
@@ -151,6 +153,8 @@ void loop()
 ## 4.2 – LIB WifiEsp – Afficher les réseaux disponibles {#section-4-2}
 
 **Contrôle du module WifiESP en utilisant la librairie 'WiFiEsp'.**
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/wifi-4-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 /*
@@ -325,6 +329,8 @@ Résumé des étapes pour l'envoi d'une requête Web de type GET à partir de la
   + **client.println**(buffer); **client.println**(« Host: esh25.ve2cuy.com »);
 
 **Le fichier main.cpp**
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/wifi-5-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 /*

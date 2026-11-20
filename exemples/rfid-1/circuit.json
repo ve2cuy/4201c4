@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "port": "UART1",
+      "type": "rfid"
+    }
+  ],
+  "hat": true
+}

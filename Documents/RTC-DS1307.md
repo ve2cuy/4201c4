@@ -61,6 +61,8 @@ lib_deps = seeed-studio/Grove - RTC DS1307@^1.0.0
 
 ### 4.1 – Renseigner le temps, puis le lire – version de départ {#section-4-1}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/rtc-4-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include <Wire.h>
 #include "DS1307.h"
@@ -99,6 +101,8 @@ void loop() {} // loop
 ---
 
 ### 4.2 – Afficher le temps courant – version 1 (Inutilement longue) {#section-4-2}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/rtc-4-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 #include <Wire.h>
@@ -179,6 +183,8 @@ void AfficherLeTemps()
 
 ### 4.3 – Afficher le temps courant – version 2 (Beaucoup mieux) {#section-4-3}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/rtc-4-3) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include <Wire.h>
 #include "DS1307.h"
@@ -230,6 +236,8 @@ void AfficherLeTemps()
 ---
 
 ### 4.4 – Afficher le temps courant – version optimisée (Qui dit mieux?) {#section-4-4}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/rtc-4-4) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 #include <Wire.h>

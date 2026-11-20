@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "port": "D4",
+      "type": "bouton"
+    },
+    {
+      "port": "D3",
+      "type": "del-rouge"
+    }
+  ],
+  "hat": true
+}

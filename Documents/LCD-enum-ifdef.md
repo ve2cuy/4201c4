@@ -104,6 +104,8 @@
 
 ## 3 – Afficher un texte sur l'écran LCD-RGB de Grove {#section-3}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-3) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 // Inclure les fonctions (librairie) du LCD
 #include "rgb_lcd.h"                
@@ -142,6 +144,8 @@ void loop() {}
 ---
 
 ## 3.1 – Afficher sur fond de couleur avec le temps qui passe {#section-3-1}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-3-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 // Inclure les fonctions du LCD
@@ -407,6 +411,8 @@ Pour avoir accès au projet, il faut cliquer sur l'image 🙂.
 
 ## 4.2 – Projet universel avec #ifdef {#section-4-2}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-4-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #define WOKWI
 
@@ -472,6 +478,8 @@ Utilisation de la librairie Streaming.h (Attention, sur Wokwi il faut ajouter la
 **4.3.1** – Installer la librairie ([Streaming by Mikal Hart](https://github.com/janelia-arduino/Streaming))
 
 **4.3.2** – Exemple d'utilisation de la librairie Streaming:
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-4-3) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 /*
@@ -561,6 +569,8 @@ n      Nothing printed.
 ## 4.4.2 – Exemple à réaliser sur Wokwi
 
 Voir [ici](https://wokwi.com/projects/344179892553777747) pour le projet sur Wokwi
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-4-4-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 // Solution du laboratoire: 3.3
@@ -717,6 +727,8 @@ print(f'Bonjour {nom}! Ceci est écrit en {programme}')
 
 **Voici un exemple:**
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-4-6) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include "Streaming.h"
 
@@ -739,6 +751,8 @@ void loop() {}
 ## 5 – Fonctions avancées du LCD {#section-5}
 
 ## 5.1 – LCD : clear, setCursor et sprintf partie 2 {#section-5-1}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 /*
@@ -804,6 +818,8 @@ void loop() {}
 
 ## 5.2 – millis() et aligner à droite avec sprintf {#section-5-2}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 /*
     Utilisation du lcd_rgb avec un IO-Stream
@@ -846,6 +862,8 @@ void loop() {
 ---
 
 ## 5.3 – Changer la direction de l'affichage du LCD {#section-5-3}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-3) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 #include <Wire.h>
@@ -898,6 +916,8 @@ void loop()
 
 ## 5.4 – Déplacer le texte gauche<–>droite {#section-5-4}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-4) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include <Wire.h>
 #include "rgb_lcd.h"
@@ -943,6 +963,8 @@ void loop() {
 ---
 
 ## 5.5 – LCD : AutoScroll {#section-5-5}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-5) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 #include <Wire.h>
@@ -990,6 +1012,8 @@ void loop()
 ---
 
 ## 5.6 – LCD : Caractères personnalisés {#section-5-6}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-5-6) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 #include <Wire.h>
@@ -1129,6 +1153,8 @@ Le reste de la division peut être utilisé pour programmer une séquence dans u
 
 Par exemple, le code suivant permet d'identifier les nombres pairs et les nombres impaires:
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include <Streaming.h> 
 #define INIT_SERIAL Serial.begin(9600);  // Remarquer la MACRO!
@@ -1164,6 +1190,8 @@ variable = (condition) ? expressionSiVrai : expressionSiFaux;
 ```
 
 Par exemple,
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 #include "Streaming.h"
@@ -1224,6 +1252,8 @@ Global variables use 29 bytes (1%) of dynamic memory, leaving 2019 bytes for loc
 
 ## 7.2.2 – Afficher les nombres pair/impair en utilisant l'opérateur ternaire
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-2-2) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include "Streaming.h"
 
@@ -1251,6 +1281,8 @@ void loop() {
 
 ## 7.3 – L'instruction 'switch' {#section-7-3}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-3) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include "Streaming.h"
 
@@ -1277,6 +1309,8 @@ void loop(){}
 ---
 
 ## 7.3.1 – Version Serial et LCD
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-3-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 #include "Streaming.h"
@@ -1337,6 +1371,8 @@ Si le macro 'DEBUG' est définie, le message suivant doit apparaitre dans le mon
 **La DEL clignote n fois.**
 
 **Note**: Si le reste de la division n'est pas entre [0..2] il faut afficher un message d'erreur dans le moniteur série.
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-3-3) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 /*
@@ -1412,6 +1448,8 @@ void loop()
 
 ## 7.4 – L'instruction 'enum' {#section-7-4}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-4) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include "Streaming.h"
 
@@ -1443,6 +1481,8 @@ void loop(){}
 
 ## 7.4.1 – Affecter une valeur aux éléments d'un 'enum'.
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-4-1-a) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```
 #include "Streaming.h"
 
@@ -1472,6 +1512,8 @@ void setup(){
 
 void loop(){}
 ```
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-4-1-b) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 // Exemple d'utilisation de l'instruction 'enum'
@@ -1511,6 +1553,8 @@ void loop() {
 ## 7.5 – Gestion d'un menu avec enum – sous Wokwi {#section-7-5}
 
 <img src="../images/Capture-décran-2022-10-23-à-14.31.35.png" alt="" width="500" />
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/lcd-7-5) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```
 /*

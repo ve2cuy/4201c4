@@ -17,6 +17,8 @@
 
 Voici un exemple de code qui affiche, dans la console moniteur, le numéro d'identification d'une clé RFDI (à droite sur les photos) déposée sur un capteur (à gauche sur les photos).
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/rfid-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 /*
   Auteur: Alain Boubreault

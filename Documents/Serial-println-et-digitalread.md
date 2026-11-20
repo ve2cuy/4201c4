@@ -208,6 +208,8 @@ Serial.println(88, BIN);
 
 ## 1.8 – Voici un exemple complet d'affichage {#section-1-8}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-1-8) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 /*
   Fichier:      afficher-entier.ino
@@ -300,6 +302,8 @@ if ( ++i == 2 ) // Augmenter la valeur de i de 1 puis tester si i = 2
 
 Voici un exemple d'utilisation de la librairie <Streaming.h> de Mikal Hart pour l'affichage:
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-1-10) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 #include <Arduino.h>
 #include <Streaming.h>
@@ -337,6 +341,8 @@ Référence sur [GitHub](https://github.com/janelia-arduino/Streaming) et [Ardui
 ### 2.1 – La fonction digitalRead(pin) {#section-2-1}
 
 La fonction `digitalRead(pin)` permet de lire l'état d'une GPIO digitale qui est programmée en mode lecture. Voici comment l'utiliser:
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-2-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 /*
@@ -425,6 +431,8 @@ Modifier le projet précédent pour qu'il affiche le nombre de fois que l'interr
 ---
 
 ## 2.6 – Voici un exemple complet et documenté {#section-2-6}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-2-6) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 /* 
@@ -552,6 +560,8 @@ L'instruction 'while' du langage C permet d'exécuter un bloc d'instruction tant
 
 Par exemple, le programme suivant va afficher le message '**Objet connecté**' dans la console à l'infini car la condition ( 1 == 1 ) sera toujours vraie.
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-3-1-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 /*
     Cours:    Objets connectés
@@ -674,6 +684,8 @@ Note: il n'y a pas de fonction inverse disponible (pulldown) sur cette puce. Il 
 
 ## 4.1 – Voici l'exemple d'un projet qui utilise la fonction pullup {#section-4-1}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-4-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
+
 ```cpp
 /*
   Programme:  Exemple d'une lecture GPIO avec PullUP
@@ -743,6 +755,8 @@ Par exemple, un 'push' sur un bouton pour allumer une DEL et un autre 'push' pou
 Voici justement un exemple de code qui fait exactement cela:
 
 ### 5.1 – Exemple d'une permutation bouton {#section-5-1}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-5-1) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 /*
@@ -829,6 +843,8 @@ Le tout en boucle infinie.
 ## 6 – Détection des bonds d'état d'un interrupteur (debounce) {#section-6}
 
 **Note**: Ce projet vient des exemples disponibles dans l'IDE Arduino.
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-6) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp
 /*
