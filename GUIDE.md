@@ -154,8 +154,10 @@ Pour **ajouter** un exemple :
 L'extension n'accepte que les fichiers d'un projet PlatformIO (`platformio.ini`, `circuit.json`,
 `montage.json`, `firmware.hex`, et le contenu de `src/`, `include/` et `lib/`), 64 fichiers au plus.
 
-Un programme écrit pour l'IDE Arduino (sans `#include <Arduino.h>`) se range dans `src/main.ino` :
-PlatformIO le convertit comme l'IDE, et le code reste identique à celui de la note.
+Un exemple est toujours un projet PlatformIO, avec son code dans `src/main.cpp` (jamais de `.ino`).
+Pour un programme écrit pour l'IDE Arduino, ajouter `#include <Arduino.h>` en tête s'il manque, et
+déclarer avant `setup()` les fonctions appelées avant d'être définies (le C++ l'exige; l'IDE Arduino
+le faisait tout seul).
 
 Un exemple à **deux cartes** (deux Arduino reliés par UART) contient un projet par carte, chacun dans
 son sous-dossier, et `montage.json` à la racine (les cartes et leur câble). Son entrée de l'index

@@ -71,18 +71,18 @@ Installée ainsi, l'extension **se met à jour toute seule** quand une nouvelle 
 
 Sur un poste qui n'a pas accès à la boutique d'extensions, le simulateur s'installe aussi à partir d'un fichier. Un fichier `.vsix` est une extension de VS Code remise sous forme de fichier.
 
-👉 [**simulateur-arduino-grove-1.5.0.vsix**](../telechargements/simulateur-arduino-grove-1.5.0.vsix) (version 1.5.0, environ 285 Ko)
+👉 [**simulateur-arduino-grove-1.5.1.vsix**](../telechargements/simulateur-arduino-grove-1.5.1.vsix) (version 1.5.1, environ 285 Ko)
 
 1. Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléchargements`.
 2. Dans VS Code, ouvrir la vue des extensions : **Ctrl+Maj+X**.
 3. Cliquer sur les trois points **…** en haut à droite de cette vue.
 4. Choisir **Install from VSIX…** (« Installer à partir d'un VSIX… » si VS Code est en français).
-5. Choisir le fichier `simulateur-arduino-grove-1.5.0.vsix` téléchargé.
+5. Choisir le fichier `simulateur-arduino-grove-1.5.1.vsix` téléchargé.
 
 VS Code confirme l'installation par un message en bas à droite. On peut aussi passer par la palette de commandes (**Ctrl+Maj+P**, puis `Extensions: Install from VSIX`), ou par un terminal, à partir du dossier où se trouve le fichier :
 
 ```bash
-code --install-extension simulateur-arduino-grove-1.5.0.vsix
+code --install-extension simulateur-arduino-grove-1.5.1.vsix
 ```
 
 ### 1.4 – Vérifier l'installation {#section-1-4}
@@ -492,6 +492,6 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.11.19.01 - Révision 2026.11.20.7**
+**Version 2026.11.19.01 - Révision 2026.11.20.8**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

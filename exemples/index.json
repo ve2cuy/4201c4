@@ -64,7 +64,7 @@
         "lib/4Digit/TM1637V2.cpp",
         "lib/4Digit/TM1637V2.h",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -82,7 +82,7 @@
         "lib/4Digit/TM1637V2.cpp",
         "lib/4Digit/TM1637V2.h",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -98,7 +98,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -228,7 +228,7 @@
         "include/main.h",
         "include/secrets.h",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -244,7 +244,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -260,7 +260,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -276,7 +276,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -340,7 +340,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -356,7 +356,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -372,7 +372,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -389,7 +389,7 @@
         "firmware.hex",
         "include/projet.h",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -405,7 +405,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -421,7 +421,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -437,7 +437,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -453,7 +453,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -469,7 +469,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -485,7 +485,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -501,7 +501,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -517,7 +517,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -533,7 +533,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -549,7 +549,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -565,7 +565,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -581,7 +581,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -597,7 +597,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -613,7 +613,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -629,7 +629,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -645,7 +645,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -661,7 +661,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -677,7 +677,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -693,7 +693,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -709,7 +709,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -725,7 +725,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -742,7 +742,7 @@
         "firmware.hex",
         "include/projet.h",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -758,7 +758,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -774,7 +774,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -790,7 +790,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -967,7 +967,7 @@
         "firmware.hex",
         "include/projet.h",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1032,7 +1032,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1048,7 +1048,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1064,7 +1064,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1080,7 +1080,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1096,7 +1096,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1128,7 +1128,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1144,7 +1144,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1160,7 +1160,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1176,7 +1176,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1192,7 +1192,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1208,7 +1208,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1224,7 +1224,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1240,7 +1240,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1338,7 +1338,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1402,7 +1402,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1499,7 +1499,7 @@
         "firmware.hex",
         "include/main.h",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1547,7 +1547,7 @@
         "circuit.json",
         "firmware.hex",
         "platformio.ini",
-        "src/main.ino"
+        "src/main.cpp"
       ]
     },
     {
@@ -1605,7 +1605,7 @@
         "recepteur-mega/circuit.json",
         "recepteur-mega/firmware.hex",
         "recepteur-mega/platformio.ini",
-        "recepteur-mega/src/main.ino",
+        "recepteur-mega/src/main.cpp",
         "transmetteur-uno/circuit.json",
         "transmetteur-uno/firmware.hex",
         "transmetteur-uno/platformio.ini",
@@ -1668,12 +1668,12 @@
         "recepteur-uno/firmware.hex",
         "recepteur-uno/include/code.alarme.h",
         "recepteur-uno/platformio.ini",
-        "recepteur-uno/src/main.ino",
+        "recepteur-uno/src/main.cpp",
         "transmetteur-uno/circuit.json",
         "transmetteur-uno/firmware.hex",
         "transmetteur-uno/include/code.alarme.h",
         "transmetteur-uno/platformio.ini",
-        "transmetteur-uno/src/main.ino"
+        "transmetteur-uno/src/main.cpp"
       ]
     }
   ]
