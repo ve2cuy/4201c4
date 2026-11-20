@@ -213,6 +213,8 @@ Le moniteur série de PlatformIO offre plusieurs avantages:
 
 ### 5.1 – Exemple avec documentation et fichier de logs {#section-5-1}
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-world-del) — crée le projet avec son montage et l'ouvre dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1) (l'extension doit être installée).
+
 ```cpp
 // -----------------------------------------------
 // Projet: Introduction à Arduino
@@ -244,7 +246,7 @@ void loop() {
 
 👉 Tester l'application et consulter le fichier 'log'
 
-💡 Cet exemple est livré avec le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1) : commande **Simulateur Arduino : Ouvrir un exemple du cours…**, puis « Hello World avec une DEL ».
+💡 Pour l'essayer sans le kit : le lien **▶ Ouvrir avec VS Code**, au début de cette section, l'ouvre dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1).
 
 **Explication du code:**
 - `pinMode(13, 1)`: Configure la broche 13 en sortie (OUTPUT = 1)
@@ -258,6 +260,8 @@ void loop() {
 ---
 
 ### 5.2 – Utilisation de MACROs {#section-5-2}
+
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-world-macros) — crée le projet avec son montage et l'ouvre dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1) (l'extension doit être installée).
 
 ```cpp
 #include <Arduino.h>

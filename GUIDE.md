@@ -115,6 +115,45 @@ navigation:
     lien: "https://ve2cuy.github.io/blog/"
 ```
 
+## Les exemples « Ouvrir avec VS Code »
+
+Un exemple des notes peut s'ouvrir d'un clic dans le simulateur d'Arduino, **montage compris** :
+le lien `vscode://ve2cuy.simulateur-arduino-grove/exemple/<id>` demande à l'extension de
+télécharger l'exemple depuis ce site (dossier `exemples/`), de créer le projet chez l'étudiant et
+de lancer la simulation. Les exemples ne font donc plus partie du paquet de l'extension : on en
+ajoute ou on en corrige sans publier de nouvelle version du simulateur.
+
+```
+exemples/
+├── index.json               le catalogue : un exemple par entrée, avec la liste de ses fichiers
+└── hello-world-del/         un exemple : un projet PlatformIO ordinaire
+    ├── platformio.ini
+    ├── circuit.json         son montage dans le simulateur
+    ├── firmware.hex         son programme déjà compilé (la simulation démarre sans compiler)
+    └── src/main.cpp
+```
+
+Pour **ajouter** un exemple :
+
+1. Créer `exemples/<id>/` (l'id en minuscules et traits d'union, par exemple `capteur-sht31`) avec
+   `platformio.ini`, `src/main.cpp` et `circuit.json`. Pour le montage, le plus simple est de le
+   faire dans le simulateur, puis de copier le `circuit.json` du projet.
+2. Ajouter son entrée dans `exemples/index.json` : `id`, `titre`, `notes`, `description`,
+   `dossier` (le nom du dossier créé chez l'étudiant), `environnement` (celui de `platformio.ini`),
+   `lien` (la section des notes).
+3. `node outils/exemples.mjs --compiler <id>` : compile le firmware et met à jour la liste
+   `fichiers` de l'index (seuls ces fichiers sont téléchargés).
+4. Dans la note, ajouter le lien :
+
+   ```markdown
+   [**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/<id>)
+   ```
+
+5. Pousser. Après une modification du code d'un exemple, refaire l'étape 3.
+
+L'extension n'accepte que les fichiers d'un projet PlatformIO (`platformio.ini`, `circuit.json`,
+`montage.json`, `firmware.hex`, et le contenu de `src/`, `include/` et `lib/`), 64 fichiers au plus.
+
 ## Exemples
 
 ### Ajouter un document

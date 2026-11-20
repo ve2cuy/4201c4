@@ -64,6 +64,8 @@ void loop() {
 
 **Action 2.2** – Faire clignoter la DEL
 
+[**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/blink-del) — crée le projet PlatformIO de cet exemple et l'ouvre dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1) (l'extension doit être installée).
+
 ```c
 void setup() {
   pinMode(13, 1);

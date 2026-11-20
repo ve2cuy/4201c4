@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "exemples": [
+    {
+      "id": "blink-del",
+      "titre": "Faire clignoter la DEL",
+      "notes": "Hello World, section 2",
+      "description": "La DEL « L » de l'Arduino UNO (broche 13) s'allume et s'éteint aux 500 ms, avec delay().",
+      "dossier": "Blink-DEL",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/Hello-world.html#section-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "hello-world-del",
+      "titre": "Hello World avec une DEL",
+      "notes": "PlatformIO – Hello World, section 5.1",
+      "description": "La DEL « L » de l'Arduino UNO (broche 13) clignote et le moniteur série compte les itérations.",
+      "dossier": "Hello-World-DEL",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/PlatformIO-Hello-world.html#section-5-1",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    },
+    {
+      "id": "hello-world-macros",
+      "titre": "Hello World avec des macros",
+      "notes": "PlatformIO – Hello World, section 5.2",
+      "description": "Le même clignotant sur la broche 13, écrit avec des macros : DEL_ROUGE, SORTIE, ALLUMER, ETEINDRE, DELAI.",
+      "dossier": "Hello-World-Macros",
+      "environnement": "uno",
+      "lien": "https://ve2cuy.github.io/4201c4/Documents/PlatformIO-Hello-world.html#section-5-2",
+      "fichiers": [
+        "circuit.json",
+        "firmware.hex",
+        "platformio.ini",
+        "src/main.cpp"
+      ]
+    }
+  ]
+}

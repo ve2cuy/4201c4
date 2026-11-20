@@ -113,22 +113,21 @@ Les mêmes actions se trouvent dans la palette de commandes (**Ctrl+Maj+P**), so
 | Afficher le simulateur | Ouvre le panneau |
 | Démarrer la simulation | Lance le programme déjà compilé |
 | Compiler et simuler | Enregistre les fichiers, compile, puis lance la simulation |
-| Ouvrir un exemple du cours… | Crée le projet d'un exemple de ces notes, avec son montage, et l'ouvre dans le simulateur |
 
 ### 2.1 – Les exemples du cours {#section-2-1}
 
-Les exemples des notes de cours sont livrés avec le simulateur, **montage compris** :
+Dans les notes de cours, un exemple prêt à essayer porte un lien **▶ Ouvrir avec VS Code**. Il s'ouvre avec son **montage déjà fait** :
 
-1. lancer la commande **Simulateur Arduino : Ouvrir un exemple du cours…** de la palette (**Ctrl+Maj+P**), ou cliquer sur le bouton **Exemples…** du panneau;
-2. choisir l'exemple dans la liste;
-3. choisir le dossier où créer le projet, par exemple `Documents/PlatformIO/Projects`.
+1. cliquer sur le lien; le navigateur demande la permission d'ouvrir VS Code : l'accepter;
+2. dans VS Code, choisir le dossier où créer le projet, par exemple `Documents/PlatformIO/Projects`.
 
-Le projet s'ouvre et la simulation démarre aussitôt : le programme est fourni déjà compilé. C'est un projet PlatformIO ordinaire, à modifier et à recompiler à votre guise.
+Le simulateur télécharge l'exemple depuis le site du cours (une connexion Internet est nécessaire), le projet s'ouvre et la simulation démarre aussitôt : le programme est fourni déjà compilé. C'est un projet PlatformIO ordinaire, à modifier et à recompiler à votre guise.
 
-| Exemple | Dans les notes |
-|---------|----------------|
-| Hello World avec une DEL | [Introduction à PlatformIO, section 5.1](PlatformIO-Hello-world.md#section-5-1) |
-| Hello World avec des macros | [Introduction à PlatformIO, section 5.2](PlatformIO-Hello-world.md#section-5-2) |
+| Exemple | Dans les notes | Ouvrir |
+|---------|----------------|--------|
+| Faire clignoter la DEL | [Hello World, section 2](Hello-world.md#section-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/blink-del) |
+| Hello World avec une DEL | [Introduction à PlatformIO, section 5.1](PlatformIO-Hello-world.md#section-5-1) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-world-del) |
+| Hello World avec des macros | [Introduction à PlatformIO, section 5.2](PlatformIO-Hello-world.md#section-5-2) | [▶ Ouvrir avec VS Code](vscode://ve2cuy.simulateur-arduino-grove/exemple/hello-world-macros) |
 
 💡 Un dossier qui existe déjà n'est jamais remplacé : le simulateur propose de l'ouvrir, ou de créer une copie.
 
@@ -213,7 +212,6 @@ Sur la carte seule, les **pistes** du circuit sont tracées, de chaque broche ju
 | **Réinitialiser** | Redémarre le programme, comme le bouton RESET de la carte |
 | **−**, **%**, **+**, **Tout voir** | Le zoom du canevas; « Tout voir » montre tout le montage. La molette de la souris, au-dessus du canevas, zoome aussi |
 | **Ranger…** | Replace tous les modules autour de leur carte, sans chevauchement : à l'horizontale (au-dessus et au-dessous) ou à la verticale (à gauche et à droite). La disposition faite à la main est remplacée |
-| **Exemples…** | Ouvre un exemple des notes de cours (section 2.1) |
 | **Hat** (dans l'en-tête d'une carte) | Pose ou retire le hat Grove (section 3.3) |
 | Noms des broches sur le hat | Pendant la simulation, **vert** quand la broche est à 1, **rouge** quand elle est à 0 : après `digitalWrite(4, HIGH)`, « D4 » passe au vert |
 | **☾ Sombre** / **☀ Clair** | Change les couleurs du panneau |
