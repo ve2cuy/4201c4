@@ -28,6 +28,7 @@
   - [5.3 – Le déclenchement](#section-5-3)
   - [5.4 – Mesurer et explorer](#section-5-4)
 - [**6 – Deux Arduino reliés par UART**](#section-6)
+  - [6.1 – Un projet complet à télécharger : la station Grove](#section-6-1)
 - [**7 – Le Wi-Fi et l'API du projet de session**](#section-7)
 - [**8 – Les fichiers ajoutés au projet**](#section-8)
 - [**9 – Limites et dépannage**](#section-9)
@@ -70,18 +71,18 @@ Installée ainsi, l'extension **se met à jour toute seule** quand une nouvelle 
 
 Sur un poste qui n'a pas accès à la boutique d'extensions, le simulateur s'installe aussi à partir d'un fichier. Un fichier `.vsix` est une extension de VS Code remise sous forme de fichier.
 
-👉 [**simulateur-arduino-grove-1.3.0.vsix**](../telechargements/simulateur-arduino-grove-1.3.0.vsix) (version 1.3.0, environ 270 Ko)
+👉 [**simulateur-arduino-grove-1.4.0.vsix**](../telechargements/simulateur-arduino-grove-1.4.0.vsix) (version 1.4.0, environ 280 Ko)
 
 1. Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléchargements`.
 2. Dans VS Code, ouvrir la vue des extensions : **Ctrl+Maj+X**.
 3. Cliquer sur les trois points **…** en haut à droite de cette vue.
 4. Choisir **Install from VSIX…** (« Installer à partir d'un VSIX… » si VS Code est en français).
-5. Choisir le fichier `simulateur-arduino-grove-1.3.0.vsix` téléchargé.
+5. Choisir le fichier `simulateur-arduino-grove-1.4.0.vsix` téléchargé.
 
 VS Code confirme l'installation par un message en bas à droite. On peut aussi passer par la palette de commandes (**Ctrl+Maj+P**, puis `Extensions: Install from VSIX`), ou par un terminal, à partir du dossier où se trouve le fichier :
 
 ```bash
-code --install-extension simulateur-arduino-grove-1.3.0.vsix
+code --install-extension simulateur-arduino-grove-1.4.0.vsix
 ```
 
 ### 1.4 – Vérifier l'installation {#section-1-4}
@@ -171,9 +172,11 @@ Le module apparaît sur le canevas, déjà relié par un câble au connecteur ch
 | LCD 20x4 I2C | I2C | Écran de 4 lignes de 20 caractères pour la librairie LiquidCrystal_I2C; son adresse (0x27 par défaut) et son contraste se règlent sous l'écran |
 | Capteur SHT31 | I2C | Des curseurs règlent la température et l'humidité |
 | Capteur BME280 | I2C | Des curseurs règlent la température, l'humidité et la pression |
+| Capteur BMP280 | I2C | Des curseurs règlent la température et la pression (adresse 0x77) |
 | Horloge RTC | I2C | Donne l'heure de l'ordinateur, ou celle que le programme a réglée |
 | Module Wi-Fi | UART | Se connecte réellement au réseau de l'ordinateur |
 | Lecteur RFID | UART | Le bouton « Présenter » passe une carte devant l'antenne du lecteur |
+| Récepteur infrarouge | D | Une télécommande de 21 touches envoie les codes NEC du cours; tenue enfoncée, une touche envoie le code de répétition |
 
 ### 3.2 – Les ports du hat Grove {#section-3-2}
 
@@ -307,6 +310,19 @@ SoftwareSerial lienAvecRecepteur(9, 8);   // RX, TX
 
 Voir le document [Communication UART](Communication-UART-entre-2-arduino.md).
 
+### 6.1 – Un projet complet à télécharger : la station Grove {#section-6-1}
+
+La **station Grove** met en place deux Arduino reliés par UART et **les 17 modules** du simulateur : un poste de capteurs (UNO) et une centrale (MEGA) qui affiche, alerte, lit des badges RFID et joint Internet par Wi-Fi. Chaque module s'active et s'essaie à partir d'un menu, dans le moniteur série. Le code est abondamment commenté : c'est une référence pour brancher chaque module, faire dialoguer deux cartes, et écrire un programme qui fait plusieurs choses à la fois sans `delay()`.
+
+👉 [**station-grove-uart.zip**](../telechargements/station-grove-uart.zip) (environ 45 Ko)
+
+1. Décompresser l'archive, par exemple dans `Documents/PlatformIO/Projects`.
+2. Dans VS Code : *Fichier → Ouvrir l'espace de travail à partir d'un fichier…*, puis choisir `Station-Grove.code-workspace`.
+3. Compiler les deux projets (le UNO, puis le MEGA) : la première compilation télécharge les librairies.
+4. Le simulateur s'ouvre avec le montage complet, les deux cartes reliées. Taper `?` dans chaque moniteur série pour voir le menu.
+
+Le fichier `README.md` de l'archive explique les branchements, le protocole entre les cartes, les menus et une visite guidée qui fait fonctionner chaque module.
+
 ---
 
 ## 7 – Le Wi-Fi et l'API du projet de session {#section-7}
@@ -342,7 +358,7 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 **Ce que le simulateur ne fait pas**
 
-- Le **récepteur infrarouge** n'est pas simulé.
+- L'**émetteur infrarouge** n'est pas simulé (le récepteur, oui).
 - L'**oscilloscope** montre des signaux logiques (0 V ou 5 V) : il ne trace pas une tension analogique, comme celle du potentiomètre.
 - Le module Wi-Fi accepte n'importe quel nom de réseau et n'importe quel mot de passe.
 - Sur un ordinateur lent, le temps simulé peut avancer moins vite que le temps réel.
@@ -365,6 +381,6 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.11.19.01 - Révision 2026.11.20.3**
+**Version 2026.11.19.01 - Révision 2026.11.20.5**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*
