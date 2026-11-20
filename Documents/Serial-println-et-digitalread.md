@@ -844,6 +844,8 @@ Le tout en boucle infinie.
 
 **Note**: Ce projet vient des exemples disponibles dans l'IDE Arduino.
 
+💡 Dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-5-4), activer **Rebonds** sous le bouton : son contact rebondit comme celui d'un vrai bouton, et l'oscilloscope permet de mesurer ces rebonds sur la broche du bouton.
+
 [**▶ Ouvrir avec VS Code**](vscode://ve2cuy.simulateur-arduino-grove/exemple/serial-6) — dans le [simulateur d'Arduino](Simulateur-Arduino.md#section-2-1)
 
 ```cpp

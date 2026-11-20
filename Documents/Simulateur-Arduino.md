@@ -71,18 +71,18 @@ Installée ainsi, l'extension **se met à jour toute seule** quand une nouvelle 
 
 Sur un poste qui n'a pas accès à la boutique d'extensions, le simulateur s'installe aussi à partir d'un fichier. Un fichier `.vsix` est une extension de VS Code remise sous forme de fichier.
 
-👉 [**simulateur-arduino-grove-1.5.1.vsix**](../telechargements/simulateur-arduino-grove-1.5.1.vsix) (version 1.5.1, environ 285 Ko)
+👉 [**simulateur-arduino-grove-1.6.0.vsix**](../telechargements/simulateur-arduino-grove-1.6.0.vsix) (version 1.6.0, environ 325 Ko)
 
 1. Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléchargements`.
 2. Dans VS Code, ouvrir la vue des extensions : **Ctrl+Maj+X**.
 3. Cliquer sur les trois points **…** en haut à droite de cette vue.
 4. Choisir **Install from VSIX…** (« Installer à partir d'un VSIX… » si VS Code est en français).
-5. Choisir le fichier `simulateur-arduino-grove-1.5.1.vsix` téléchargé.
+5. Choisir le fichier `simulateur-arduino-grove-1.6.0.vsix` téléchargé.
 
 VS Code confirme l'installation par un message en bas à droite. On peut aussi passer par la palette de commandes (**Ctrl+Maj+P**, puis `Extensions: Install from VSIX`), ou par un terminal, à partir du dossier où se trouve le fichier :
 
 ```bash
-code --install-extension simulateur-arduino-grove-1.5.1.vsix
+code --install-extension simulateur-arduino-grove-1.6.0.vsix
 ```
 
 ### 1.4 – Vérifier l'installation {#section-1-4}
@@ -122,6 +122,9 @@ Les mêmes actions se trouvent dans la palette de commandes (**Ctrl+Maj+P**), so
 | Afficher le simulateur | Ouvre le panneau |
 | Démarrer la simulation | Lance le programme déjà compilé |
 | Compiler et simuler | Enregistre les fichiers, compile, puis lance la simulation |
+| Ouvrir l'exemple intégré | Crée le projet de l'exemple livré avec le simulateur (ci-dessous) |
+
+💡 **L'exemple intégré**, livré avec le simulateur (version 1.6.0 et plus) : un **MEGA** qui affiche la température, l'humidité et la pression (BME280) sur un **LCD 20 x 4**, va chercher par **Wi-Fi** les nouvelles du monde de la BBC et les fait défiler, émet un bip à chaque lecture, anime le **RGB LED Stick** et règle avec le **potentiomètre** le délai entre deux lectures. Rien à télécharger ni à compiler : palette de commandes, *Simulateur Arduino : Ouvrir l'exemple intégré*. Son code, abondamment commenté, montre comment faire plusieurs choses à la fois sans `delay()`.
 
 ### 2.1 – Les exemples du cours {#section-2-1}
 
@@ -261,7 +264,7 @@ Le module apparaît sur le canevas, déjà relié par un câble au connecteur ch
 | Module | Port | Dans le simulateur |
 |--------|------|--------------------|
 | DEL rouge, verte, bleue | D | S'allume selon la sortie; son intensité suit `analogWrite()` |
-| Bouton | D | Bouton-poussoir : enfoncé tant qu'on tient son capuchon avec la souris |
+| Bouton | D | Bouton-poussoir : enfoncé tant qu'on tient son capuchon avec la souris. Son option **Rebonds** fait rebondir le contact à l'appui et au relâchement, comme un vrai bouton (voir [5.4](#section-5-4)) |
 | Détecteur de mouvement | D | Tenir le dôme du capteur enfoncé simule un mouvement; la sortie reste active 2 secondes |
 | Relais, buzzer | D | Le voyant du relais s'allume quand son contact est fermé; le buzzer s'anime quand il sonne, et son bouton **🔇 Son** le fait aussi sonner dans les haut-parleurs de l'ordinateur, à la fréquence de `tone()` (son coupé par défaut) |
 | Potentiomètre | A | Un curseur règle la tension lue par `analogRead()`; l'axe du potentiomètre tourne avec lui |
@@ -273,7 +276,7 @@ Le module apparaît sur le canevas, déjà relié par un câble au connecteur ch
 | Capteur BME280 | I2C | Des curseurs règlent la température, l'humidité et la pression |
 | Capteur BMP280 | I2C | Des curseurs règlent la température et la pression (adresse 0x77) |
 | Horloge RTC | I2C | Donne l'heure de l'ordinateur, ou celle que le programme a réglée |
-| Module Wi-Fi | UART | Se connecte réellement au réseau de l'ordinateur |
+| Module Wi-Fi | UART | Se connecte réellement au réseau de l'ordinateur, en HTTP comme en HTTPS (`client.connectSSL()`) |
 | Lecteur RFID | UART | Le bouton « Présenter » passe une carte devant l'antenne du lecteur |
 | Récepteur infrarouge | D | Une télécommande de 21 touches envoie les codes NEC du cours; tenue enfoncée, une touche envoie le code de répétition |
 
@@ -373,7 +376,22 @@ Le déclenchement fixe l'image : l'écran se cale sur un événement du signal, 
 - **Début de transmission UART** : le premier bit de départ après un silence. L'écran montre alors le début de chaque message.
 - **Départ I2C** : le début de chaque échange sur le bus.
 
-Le bouton **Auto / Normal** choisit ce que fait l'écran en attendant : en **Auto**, il défile; en **Normal**, il garde la dernière image. **UNIQUE** capture le prochain événement, puis arrête l'acquisition.
+L'écran se cale sur le **premier** front qui convient, puis ignore les suivants tant qu'il se remplit, comme un vrai oscilloscope : une rafale de fronts (les rebonds d'un bouton) s'affiche depuis son début.
+
+Le bouton **Auto / Normal** choisit ce que fait l'écran en attendant : en **Auto**, la dernière capture reste affichée une dizaine de secondes, puis l'écran défile; en **Normal**, il garde la dernière image. **UNIQUE** capture le prochain événement, puis arrête l'acquisition.
+
+### 5.4 – Les rebonds d'un bouton {#section-5-4}
+
+Le contact d'un vrai bouton-poussoir est une lame de métal : en se fermant (et en s'ouvrant), elle **rebondit** quelques fois sur l'autre contact avant de s'immobiliser. Pendant 1 à 5 ms, la broche passe plusieurs fois de LOW à HIGH. Le programme qui lit le bouton sans précaution croit alors à plusieurs appuis : c'est pourquoi on écrit un **anti-rebond** (*debounce*, voir [Serial.println() et digitalRead(), section 6](Serial-println-et-digitalread.md#section-6)).
+
+Pour le voir dans le simulateur :
+
+1. sous le bouton, cliquer sur **Rebonds** : l'option reste active (elle est gardée dans `circuit.json`);
+2. ouvrir l'**Oscilloscope**, choisir la broche du bouton (par exemple `D2`) sur la voie 1, déclenchement **Front montant**;
+3. appuyer sur le bouton : l'écran montre la rafale de rebonds, et la ligne sous l'écran compte les **fronts** d'un seul appui;
+4. réduire la base de temps (**−**, ou la molette) jusqu'à 100 µs par division pour mesurer chaque rebond; **UNIQUE** fige la capture.
+
+Le relâchement rebondit aussi : choisir **Front descendant** pour le voir.
 
 ### 5.4 – Mesurer et explorer {#section-5-4}
 
@@ -492,6 +510,6 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.11.19.01 - Révision 2026.11.20.8**
+**Version 2026.11.19.01 - Révision 2026.11.20.10**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*
