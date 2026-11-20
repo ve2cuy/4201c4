@@ -40,6 +40,8 @@ Le **simulateur d'Arduino** est une extension de VS Code. Il fait tourner le pro
 
 Le code du projet reste tel quel : c'est le même programme qui sera téléversé dans la vraie carte.
 
+L'interface du simulateur est en français ou en anglais, selon la langue de VS Code.
+
 Le simulateur sert à travailler **sans le kit**, à la maison par exemple. Il ne remplace pas le matériel : un montage se valide toujours sur la vraie carte, avec les vrais modules.
 
 ---
@@ -53,7 +55,7 @@ Le simulateur sert à travailler **sans le kit**, à la maison par exemple. Il n
 
 ### 1.2 – Télécharger l'extension {#section-1-2}
 
-👉 [**simulateur-arduino-grove-1.2.0.vsix**](../telechargements/simulateur-arduino-grove-1.2.0.vsix) (version 1.2.0, environ 245 Ko)
+👉 [**simulateur-arduino-grove-1.3.0.vsix**](../telechargements/simulateur-arduino-grove-1.3.0.vsix) (version 1.3.0, environ 270 Ko)
 
 Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléchargements`. Un fichier `.vsix` est une extension de VS Code remise sous forme de fichier, plutôt que par la boutique d'extensions.
 
@@ -63,7 +65,7 @@ Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléc
 2. Ouvrir la vue des extensions : **Ctrl+Maj+X**.
 3. Cliquer sur les trois points **…** en haut à droite de cette vue.
 4. Choisir **Install from VSIX…** (« Installer à partir d'un VSIX… » si VS Code est en français).
-5. Choisir le fichier `simulateur-arduino-grove-1.2.0.vsix` téléchargé.
+5. Choisir le fichier `simulateur-arduino-grove-1.3.0.vsix` téléchargé.
 
 VS Code confirme l'installation par un message en bas à droite.
 
@@ -73,7 +75,7 @@ VS Code confirme l'installation par un message en bas à droite.
 - Dans un terminal, à partir du dossier où se trouve le fichier :
 
   ```bash
-  code --install-extension simulateur-arduino-grove-1.2.0.vsix
+  code --install-extension simulateur-arduino-grove-1.3.0.vsix
   ```
 
 ### 1.4 – Vérifier l'installation {#section-1-4}
@@ -357,6 +359,6 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.11.19.01 - Révision 2026.11.20.1**
+**Version 2026.11.19.01 - Révision 2026.11.20.2**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*
