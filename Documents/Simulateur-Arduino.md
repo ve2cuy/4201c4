@@ -11,8 +11,8 @@
 - [**Définition**](#section-definition)
 - [**1 – Installer l'extension**](#section-1)
   - [1.1 – Ce qu'il faut déjà avoir](#section-1-1)
-  - [1.2 – Télécharger l'extension](#section-1-2)
-  - [1.3 – L'installer dans VS Code](#section-1-3)
+  - [1.2 – L'installer depuis la boutique d'extensions](#section-1-2)
+  - [1.3 – Autre façon : le fichier .vsix](#section-1-3)
   - [1.4 – Vérifier l'installation](#section-1-4)
   - [1.5 – Mettre à jour ou désinstaller](#section-1-5)
 - [**2 – Premier essai**](#section-2)
@@ -53,42 +53,48 @@ Le simulateur sert à travailler **sans le kit**, à la maison par exemple. Il n
 - **VS Code**, version 1.85 ou plus récente.
 - L'extension **PlatformIO IDE**, installée comme dans le document [Introduction à PlatformIO](PlatformIO-Hello-world.md) : c'est elle qui compile les projets.
 
-### 1.2 – Télécharger l'extension {#section-1-2}
+### 1.2 – L'installer depuis la boutique d'extensions {#section-1-2}
 
-👉 [**simulateur-arduino-grove-1.3.0.vsix**](../telechargements/simulateur-arduino-grove-1.3.0.vsix) (version 1.3.0, environ 270 Ko)
-
-Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléchargements`. Un fichier `.vsix` est une extension de VS Code remise sous forme de fichier, plutôt que par la boutique d'extensions.
-
-### 1.3 – L'installer dans VS Code {#section-1-3}
+Le simulateur est publié dans la boutique d'extensions de VS Code (le *Visual Studio Marketplace*) :
 
 1. Ouvrir VS Code.
 2. Ouvrir la vue des extensions : **Ctrl+Maj+X**.
+3. Chercher **Simulateur Arduino Grove** (éditeur **ve2cuy**).
+4. Cliquer sur **Install** (« Installer »).
+
+👉 Page de l'extension : [Simulateur Arduino Grove sur le Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ve2cuy.simulateur-arduino-grove)
+
+Installée ainsi, l'extension **se met à jour toute seule** quand une nouvelle version est publiée.
+
+### 1.3 – Autre façon : le fichier `.vsix` {#section-1-3}
+
+Sur un poste qui n'a pas accès à la boutique d'extensions, le simulateur s'installe aussi à partir d'un fichier. Un fichier `.vsix` est une extension de VS Code remise sous forme de fichier.
+
+👉 [**simulateur-arduino-grove-1.3.0.vsix**](../telechargements/simulateur-arduino-grove-1.3.0.vsix) (version 1.3.0, environ 270 Ko)
+
+1. Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléchargements`.
+2. Dans VS Code, ouvrir la vue des extensions : **Ctrl+Maj+X**.
 3. Cliquer sur les trois points **…** en haut à droite de cette vue.
 4. Choisir **Install from VSIX…** (« Installer à partir d'un VSIX… » si VS Code est en français).
 5. Choisir le fichier `simulateur-arduino-grove-1.3.0.vsix` téléchargé.
 
-VS Code confirme l'installation par un message en bas à droite.
+VS Code confirme l'installation par un message en bas à droite. On peut aussi passer par la palette de commandes (**Ctrl+Maj+P**, puis `Extensions: Install from VSIX`), ou par un terminal, à partir du dossier où se trouve le fichier :
 
-**Autres façons d'arriver au même résultat :**
-
-- Par la palette de commandes : **Ctrl+Maj+P**, puis taper `Extensions: Install from VSIX`.
-- Dans un terminal, à partir du dossier où se trouve le fichier :
-
-  ```bash
-  code --install-extension simulateur-arduino-grove-1.3.0.vsix
-  ```
+```bash
+code --install-extension simulateur-arduino-grove-1.3.0.vsix
+```
 
 ### 1.4 – Vérifier l'installation {#section-1-4}
 
 1. Dans la vue des extensions, **Simulateur Arduino Grove** apparaît dans la liste des extensions installées.
 2. Ouvrir un projet PlatformIO, c'est-à-dire un dossier qui contient le fichier `platformio.ini`.
-3. L'icône du simulateur, un petit circuit imprimé, apparaît **en haut à droite de l'éditeur**.
+3. L'icône du simulateur, la puce bleue du cours, apparaît **en haut à droite de l'éditeur**.
 
 💡 L'icône n'apparaît que si le dossier ouvert contient un fichier `platformio.ini`.
 
 ### 1.5 – Mettre à jour ou désinstaller {#section-1-5}
 
-- **Mettre à jour** : télécharger la nouvelle version sur cette page et refaire l'étape 1.3. La nouvelle version remplace l'ancienne. Le numéro de la version installée est affiché dans la vue des extensions.
+- **Mettre à jour** : installée depuis la boutique (section 1.2), l'extension se met à jour toute seule. Installée par le fichier `.vsix` (section 1.3), télécharger la nouvelle version sur cette page et refaire l'installation : elle remplace l'ancienne. Le numéro de la version installée est affiché dans la vue des extensions.
 - **Désinstaller** : dans la vue des extensions, cliquer sur la roue dentée de **Simulateur Arduino Grove**, puis sur **Uninstall** (« Désinstaller »).
 
 ---
@@ -359,6 +365,6 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.11.19.01 - Révision 2026.11.20.2**
+**Version 2026.11.19.01 - Révision 2026.11.20.3**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*

@@ -298,14 +298,22 @@ Le document `Documents/Simulateur-Arduino.md` offre en téléchargement l'extens
 simulateur, sous la forme d'un paquet `.vsix` déposé dans `telechargements/`. Le code de
 l'extension est dans le dépôt privé `ve2cuy/Plugin-Arduino`.
 
+L'extension est aussi publiée sur le Visual Studio Marketplace (éditeur `ve2cuy`) : c'est la
+façon d'installer recommandée aux étudiants (section 1.2), le `.vsix` reste la solution de rechange.
+
 Pour publier une nouvelle version :
 
-1. Dans le dépôt de l'extension, augmenter `version` dans `package.json`, puis `npm run vsix` :
-   la commande produit `simulateur-arduino-grove-<version>.vsix`.
-2. Copier ce fichier dans `telechargements/` et retirer l'ancien.
-3. Dans `Documents/Simulateur-Arduino.md`, remplacer le nom du fichier aux sections 1.2 et 1.3
+1. Dans le dépôt de l'extension, augmenter `version` dans `package.json` (et `package-lock.json`),
+   ajouter la version dans `CHANGELOG.md`, puis `npm run vsix` : la commande produit
+   `simulateur-arduino-grove-<version>.vsix`. L'essayer.
+2. `npm run publier` : publie ce paquet sur le Marketplace, avec la connexion Azure CLI (voir le
+   README de l'extension, « Méthode 3 »). Les postes qui l'ont installé de la boutique se mettent à
+   jour tout seuls.
+3. Release GitHub du dépôt de l'extension, avec le paquet joint.
+4. Copier le paquet dans `telechargements/` et retirer l'ancien.
+5. Dans `Documents/Simulateur-Arduino.md`, remplacer le nom du fichier à la section 1.3
    (quatre mentions), et mettre à jour la date de révision.
-4. Pousser.
+6. Pousser.
 
 ## Aperçu local (valider avant de publier)
 
