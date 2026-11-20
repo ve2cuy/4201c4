@@ -1,6 +1,6 @@
 # Simulateur d'Arduino pour VS Code
 
-*Révision du 2026.11.19*
+*Révision du 2026.11.20*
 
 <p align="center">
   <img src="../images/simulateur-arduino.png" alt="Le panneau du simulateur : un Arduino UNO et son hat Grove, un relais, un bouton, une DEL, un écran LCD, un capteur de température et le moniteur série" width="600" />
@@ -53,7 +53,7 @@ Le simulateur sert à travailler **sans le kit**, à la maison par exemple. Il n
 
 ### 1.2 – Télécharger l'extension {#section-1-2}
 
-👉 [**simulateur-arduino-grove-1.1.0.vsix**](../telechargements/simulateur-arduino-grove-1.1.0.vsix) (version 1.1.0, environ 230 Ko)
+👉 [**simulateur-arduino-grove-1.2.0.vsix**](../telechargements/simulateur-arduino-grove-1.2.0.vsix) (version 1.2.0, environ 245 Ko)
 
 Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléchargements`. Un fichier `.vsix` est une extension de VS Code remise sous forme de fichier, plutôt que par la boutique d'extensions.
 
@@ -63,7 +63,7 @@ Enregistrer le fichier dans un dossier facile à retrouver, par exemple `Téléc
 2. Ouvrir la vue des extensions : **Ctrl+Maj+X**.
 3. Cliquer sur les trois points **…** en haut à droite de cette vue.
 4. Choisir **Install from VSIX…** (« Installer à partir d'un VSIX… » si VS Code est en français).
-5. Choisir le fichier `simulateur-arduino-grove-1.1.0.vsix` téléchargé.
+5. Choisir le fichier `simulateur-arduino-grove-1.2.0.vsix` téléchargé.
 
 VS Code confirme l'installation par un message en bas à droite.
 
@@ -73,7 +73,7 @@ VS Code confirme l'installation par un message en bas à droite.
 - Dans un terminal, à partir du dossier où se trouve le fichier :
 
   ```bash
-  code --install-extension simulateur-arduino-grove-1.1.0.vsix
+  code --install-extension simulateur-arduino-grove-1.2.0.vsix
   ```
 
 ### 1.4 – Vérifier l'installation {#section-1-4}
@@ -142,7 +142,12 @@ Dans la barre du haut du panneau :
 2. choisir le **port** du hat où le brancher;
 3. cliquer sur **Ajouter**.
 
-Le module apparaît sur le canevas, relié par un câble au connecteur choisi. Le **×** de son en-tête le retire.
+Le module apparaît sur le canevas, déjà relié par un câble au connecteur choisi, et **suit la souris** : un clic sur le canevas le pose à cet endroit (**Échap** annule l'ajout). Le reste du montage ne bouge pas.
+
+- Un **clic** sur un module le sélectionne : son câble et la prise où il arrive ressortent en magenta.
+- Le **port**, dans l'en-tête du module, est une liste : y choisir un autre port libre y branche le module, qui garde sa place.
+- Le **×** de son en-tête, ou la touche **Suppr** quand il est sélectionné, le retire.
+- **Ctrl+Z** (**Cmd+Z** sur Mac) annule les dernières actions : un module, un câble ou une carte retirés, un déplacement, un rangement. Après un retrait, le bandeau au bas du canevas propose aussi **Annuler**.
 
 ### 3.1 – Les modules disponibles {#section-3-1}
 
@@ -151,7 +156,7 @@ Le module apparaît sur le canevas, relié par un câble au connecteur choisi. L
 | DEL rouge, verte, bleue | D | S'allume selon la sortie; son intensité suit `analogWrite()` |
 | Bouton | D | Bouton-poussoir : enfoncé tant qu'on tient son capuchon avec la souris |
 | Détecteur de mouvement | D | Tenir le dôme du capteur enfoncé simule un mouvement; la sortie reste active 2 secondes |
-| Relais, buzzer | D | Le voyant du relais s'allume quand son contact est fermé; le buzzer indique qu'il sonne (sans faire de son) |
+| Relais, buzzer | D | Le voyant du relais s'allume quand son contact est fermé; le buzzer s'anime quand il sonne, et son bouton **🔇 Son** le fait aussi sonner dans les haut-parleurs de l'ordinateur, à la fréquence de `tone()` (son coupé par défaut) |
 | Potentiomètre | A | Un curseur règle la tension lue par `analogRead()`; l'axe du potentiomètre tourne avec lui |
 | Afficheur 4-Digit | D | Affiche les chiffres envoyés par la librairie TM1637 |
 | RGB LED Stick | D | Les 10 DEL prennent les couleurs envoyées par la librairie NeoPixel |
@@ -210,6 +215,7 @@ Sur la carte seule, les **pistes** du circuit sont tracées, de chaque broche ju
 | **Ranger…** | Replace tous les modules autour de leur carte, sans chevauchement : à l'horizontale (au-dessus et au-dessous) ou à la verticale (à gauche et à droite). La disposition faite à la main est remplacée |
 | **Exemples…** | Ouvre un exemple des notes de cours (section 2.1) |
 | **Hat** (dans l'en-tête d'une carte) | Pose ou retire le hat Grove (section 3.3) |
+| Noms des broches sur le hat | Pendant la simulation, **vert** quand la broche est à 1, **rouge** quand elle est à 0 : après `digitalWrite(4, HIGH)`, « D4 » passe au vert |
 | **☾ Sombre** / **☀ Clair** | Change les couleurs du panneau |
 | En-tête d'une carte ou d'un module | Le tenir avec la souris pour déplacer l'élément; les câbles se retracent tout seuls |
 | Voyants **ON**, **L**, **TX**, **RX** | Les mêmes que ceux de la vraie carte |
@@ -282,6 +288,8 @@ Le simulateur peut faire tourner **deux cartes en même temps**, par exemple le 
 4. Cliquer sur **Ajouter une carte…** et choisir le second projet.
 5. Dans la liste **Relier deux cartes…**, choisir le câble, par exemple *UNO D8 ↔ MEGA UART2*.
 
+Comme un module, la carte ajoutée suit la souris jusqu'au clic qui fixe sa place. Pendant la simulation, les octets qui passent sur le câble défilent en **0** (rouge) et **1** (vert), précédés d'une flèche qui montre dans quel sens ils vont.
+
 Pour un câble entre deux cartes branché sur le connecteur **Dn**, le programme utilise `SoftwareSerial(Dn+1, Dn)`. Avec le câble *UNO D8 ↔ MEGA UART2* :
 
 ```cpp
@@ -329,7 +337,6 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 **Ce que le simulateur ne fait pas**
 
 - Le **récepteur infrarouge** n'est pas simulé.
-- Le **buzzer** n'émet pas de son : son module indique seulement s'il est actif.
 - L'**oscilloscope** montre des signaux logiques (0 V ou 5 V) : il ne trace pas une tension analogique, comme celle du potentiomètre.
 - Le module Wi-Fi accepte n'importe quel nom de réseau et n'importe quel mot de passe.
 - Sur un ordinateur lent, le temps simulé peut avancer moins vite que le temps réel.
@@ -352,6 +359,6 @@ Ces fichiers font partie du projet : les garder avec le code, dans Git aussi.
 
 **Document rédigé par Alain Boudreault © 2021-2027**
 
-**Version 2026.11.19.01 - Révision 2026.11.19.4**
+**Version 2026.11.19.01 - Révision 2026.11.20.1**
 
 *Contenu par [VE2CUY](https://ve2cuy.github.io/blog/)*
